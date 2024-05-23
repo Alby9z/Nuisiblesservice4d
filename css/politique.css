@@ -1,0 +1,105 @@
+* {
+  font-family: "poppins", sans-serif;
+}
+
+#logo-politique {
+  margin-top: -14px;
+  height: 110px;
+  width: 120px;
+}
+
+.header-politique {
+  height: 125px;
+}
+
+.header__navegation-politique {
+  float: right;
+  padding: 50px 25px 0 0;
+}
+
+.header__navegation-politique ul {
+  padding: 0;
+  list-style-type: none;
+  color: #fff;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.header__navegation-politique ul li a {
+  position: relative;
+  color: #c2c2c2;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 1.1em;
+}
+
+.header__navegation-politique a:hover {
+  color: #fff;
+}
+
+.header__navegation-politique a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff0000;
+  transition: all 0.5s ease;
+}
+
+.header__navegation-politique a:hover::after {
+  width: 100%;
+}
+
+.politiques {
+  background-image: url("/img/back.jpg");
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.li-footer:hover {
+  border-bottom: 1px solid white;
+  display: inline-block;
+}
+
+.container-politique {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.h1-politique {
+  color: #ffff;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.p-politique {
+  color: #ffff;
+}
+
+.collecte,
+.utilisation,
+.partage,
+.protection,
+.droits,
+.contact {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .collecte,
+  .utilisation,
+  .partage,
+  .protection,
+  .droits,
+  .contact {
+    width: 80%;
+  }
+}

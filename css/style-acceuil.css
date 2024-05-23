@@ -423,31 +423,25 @@ section {
 
 .product-desc__title {
   margin-top: 5px;
-  display: inline-block;
-  border-bottom: solid 1px red;
+  display: flex;
+  justify-content: center;
+  font-size: clamp(1rem, 2vw, 2.5rem);
 }
 /*-----------------------titre-card--+btn-------------------------------------------*/
-.destru {
-  margin-left: 30px;
+.souligner {
+  position: relative;
+  display: inline-block;
 }
 
-.dera,
-.desinfec {
-  margin-left: 85px;
+.souligner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px; 
+  height: 1px; 
+  background-color: #ff0000; 
 }
-
-.desinsec {
-  margin-left: 50px;
-}
-
-.depig {
-  margin-left: 60px;
-}
-
-.cave {
-  margin-left: 55px;
-}
-
 .btn-destru,
 .btn-depig,
 .btn-cave,
@@ -838,33 +832,6 @@ footer .copyright {
   .products__item .card-responsive {
     width: 26%;
   }
-  .destru {
-    font-size: 19px;
-    margin-left: 10px;
-  }
-  .dera,
-  .desinfec {
-    margin-left: 49px;
-    font-size: 21px;
-  }
-  .desinsec {
-    font-size: 21px;
-    margin-left: 25px;
-  }
-  .depig {
-    font-size: 21px;
-    margin-left: 34px;
-  }
-  .cave {
-    font-size: 21px;
-    margin-left: 29px;
-  }
-  .h3-footer {
-    font-size: 12px;
-  }
-  .product-desc__text {
-    font-size: 13px;
-  }
   .btn-rat,
   .desinfe {
     margin-top: 80px;
@@ -942,22 +909,6 @@ footer .copyright {
   }
   .products__item {
     width: 35%;
-  }
-  .destru {
-    margin-left: 25px;
-  }
-  .dera,
-  .desinfec {
-    margin-left: 53px;
-  }
-  .desinsec {
-    margin-left: 30px;
-  }
-  .depig {
-    margin-left: 40px;
-  }
-  .cave {
-    margin-left: 33px;
   }
   .btn-destru,
   .btn-rat,
@@ -1102,22 +1053,6 @@ footer .copyright {
     margin-left: 55px;
     font-size: 11px;
   }
-  #destru-425 {
-    margin-left: 22px;
-  }
-  #dera-425,
-  #desinfec-425 {
-    margin-left: 47px;
-  }
-  #desinsec-425 {
-    margin-left: 28px;
-  }
-  #depig-425 {
-    margin-left: 36px;
-  }
-  #cave-425 {
-    margin-left: 30px;
-  }
   .product-desc__text {
     font-size: 12px;
   }
@@ -1238,24 +1173,6 @@ footer .copyright {
   }
   #card {
     margin-bottom: 20px;
-  }
-  #destru-425 {
-    margin-left: 17px;
-    font-size: 16px;
-  }
-  #dera-425,
-  #desinfec-425 {
-    margin-left: 47px;
-    font-size: 16px;
-  }
-  #desinsec-425 {
-    font-size: 16px;
-  }
-  #depig-425 {
-    font-size: 16px;
-  }
-  #cave-425 {
-    font-size: 16px;
   }
   #btn-destru-425 {
     font-size: 9px;

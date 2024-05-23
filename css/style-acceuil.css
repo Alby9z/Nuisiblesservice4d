@@ -295,6 +295,17 @@ nav ul li {
 }
 /* ------------------------top-section--------------------------------------------*/
 
+.texte-acceuil {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  margin: 60px 145px 10px 145px;
+}
+
 @keyframes slideInDown {
   0% {
     transform: translateY(-100%);
@@ -304,18 +315,9 @@ nav ul li {
   }
 }
 
-.texte-acceuil {
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: white;
-  margin: 60px 145px 10px 145px;
-
-  animation-name: slideInUp;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
+.slideInDown-active {
+  opacity: 1;
+  animation: slideInDown 1s ease;
 }
 
 a {
@@ -380,6 +382,22 @@ section {
 }
 
 /*-------------------------animation-card-------------------------------------------*/
+.animate__slideOutRight {
+  animation-name: animate__slideOutRight;
+  animation-duration: 2s;
+  animation-fill-mode: both; /* Change 'forwards' to 'both' */
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0); /* Start from the original position */
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%); /* Move to the right */
+    opacity: 1;
+  }
+}
 
 .cards {
   width: 25%;

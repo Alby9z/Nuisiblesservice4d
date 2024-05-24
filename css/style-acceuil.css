@@ -240,7 +240,6 @@ nav ul li {
   font-size: 35px;
   font-weight: bold;
   margin: 5px 65px;
-  color: #252525;
 }
 
 #barre-nav-acceuil {
@@ -248,10 +247,8 @@ nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px 0 0;
+  margin: 18px 0 0;
   width: 100%;
-  border-bottom: solid 1px #ff0000;
-  border-top: solid 1px #ff0000;
 }
 
 .from-group {
@@ -299,7 +296,6 @@ nav ul li {
 /* ------------------------top-section--------------------------------------------*/
 
 .texte-acceuil {
-  opacity: 0;
   transition: opacity 0.8s ease;
   font-size: 15px;
   display: flex;
@@ -320,7 +316,7 @@ nav ul li {
 
 .slideInDown-active {
   opacity: 1;
-  animation: slideInDown 1s ease;
+  animation: slideInUp 2s ease;
 }
 
 a {
@@ -385,18 +381,11 @@ section {
 }
 
 /*-------------------------animation-card-------------------------------------------*/
-<<<<<<< HEAD
 
 .animate__slideInLeft {
   animation-name: animate__slideInLeft;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-=======
-.animate__slideOutRight {
-  animation-name: animate__slideInLeft;
-  animation-duration: 2s;
-  animation-fill-mode: forwards; /* Change 'forwards' to 'both' */
->>>>>>> a13e11ef79e89659980556827a503709bf0fec6e
 }
 
 @keyframes slideInLeft {
@@ -454,7 +443,7 @@ section {
   margin-top: 5px;
   display: flex;
   justify-content: center;
-  font-size: clamp(0.9rem, 2.5vw, 1.8rem);
+  font-size: clamp(1rem, 2vw, 2.5rem);
 }
 /*-----------------------titre-card--+btn-------------------------------------------*/
 .souligner {

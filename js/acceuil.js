@@ -36,3 +36,21 @@ window.addEventListener("scroll", addAnimationClass);
 
 // Appel initial pour vérifier si l'élément est déjà visible au chargement de la page
 addAnimationClass();
+
+function scrollTrigger(selector) {
+  const elements = document.querySelectorAll(selector);
+
+  elements.forEach((el) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          el.classList.add("active");
+        }
+      });
+    });
+
+    observer.observe(el);
+  });
+}
+
+scrollTrigger(".animate__slideInLeft");

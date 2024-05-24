@@ -382,19 +382,20 @@ section {
 }
 
 /*-------------------------animation-card-------------------------------------------*/
-.animate__slideOutRight {
-  animation-name: animate__slideOutRight;
+
+.animate__slideInLeft {
+  animation-name: animate__slideInLeft;
   animation-duration: 2s;
-  animation-fill-mode: both; /* Change 'forwards' to 'both' */
+  animation-fill-mode: forwards;
 }
 
-@keyframes slideOutRight {
+@keyframes slideInLeft {
   0% {
-    transform: translateX(0); /* Start from the original position */
+    transform: translateX(0);
     opacity: 1;
   }
   100% {
-    transform: translateX(100%); /* Move to the right */
+    transform: translateX(100%);
     opacity: 1;
   }
 }
@@ -452,13 +453,13 @@ section {
 }
 
 .souligner::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0px; 
-  height: 1px; 
-  background-color: #ff0000; 
+  bottom: 0px;
+  height: 1px;
+  background-color: #ff0000;
 }
 .btn-destru,
 .btn-depig,

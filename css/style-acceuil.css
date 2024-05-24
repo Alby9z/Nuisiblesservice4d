@@ -385,19 +385,10 @@ section {
 }
 
 /*-------------------------animation-card-------------------------------------------*/
-<<<<<<< HEAD
-
 .animate__slideInLeft {
   animation-name: animate__slideInLeft;
   animation-duration: 2s;
-  animation-fill-mode: forwards;
-=======
-.animate__slideOutRight {
-  animation-name: animate__slideInLeft;
-  animation-duration: 2s;
-  animation-fill-mode: forwards; /* Change 'forwards' to 'both' */
->>>>>>> a13e11ef79e89659980556827a503709bf0fec6e
-}
+  animation-fill-mode: forwards;}
 
 @keyframes slideInLeft {
   0% {

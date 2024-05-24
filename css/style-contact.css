@@ -146,7 +146,7 @@ nav ul li {
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #3a3232;
+  background-color: #252525;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -431,7 +431,7 @@ textarea.input {
   opacity: 0.2;
 }
 
-/*------------------------map-------------------------------------------------------*/
+/*------------------------map-------------------------------------------------------
 
 section {
   background: rgb(2, 0, 36);
@@ -481,10 +481,8 @@ section {
   margin-top: 13px;
   padding: 0px 10px 0 10px;
 }
-
+--*/
 .map {
-  margin-right: 7px;
-  flex: 1;
 }
 
 /*---------------------------footer-------------------------------------------------*/

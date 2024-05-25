@@ -431,60 +431,16 @@ textarea.input {
   opacity: 0.2;
 }
 
-/*------------------------map-------------------------------------------------------
-
-section {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    127deg,
-    rgba(2, 0, 36, 0.9808298319327731) 0%,
-    rgba(13, 13, 13, 0.804359243697479) 24%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  display: flex;
-  justify-content: center;
-}
-
-.company-info {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title {
-  border-top: solid 3px #ff0000;
-  padding: 40px 20px 0;
-  color: #ffff;
-}
-
-.h3-intervention {
-  border-bottom: 2px solid white;
-  display: inline-block;
-  font-size: 23px;
-}
-
-.paragraph {
-  font-size: 14px;
-  padding: 20px;
-  margin-top: 20px;
-  color: #ffff;
-}
-
-.text {
-  flex: 1;
-  padding-right: 20px;
-  padding: 0 20px 0 20px;
-}
-
-.text-block {
-  margin-top: 13px;
-  padding: 0px 10px 0 10px;
-}
---*/
+/*------------------------map-------------------------------------------------------*/
 .map {
+  margin: 0;
+  padding: 0;
 }
-
+    
+.map iframe {
+  display: block;
+  border: none;
+}
 /*---------------------------footer-------------------------------------------------*/
 
 footer {

@@ -1,208 +1,414 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/produit.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIepsPLhG4ymXTVhMRCnekr7gB65GDD3o&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <link rel="stylesheet" href="/css/produit.css" />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    <title>Nuisibles_Services_4D_Nid-Guêpe&Frelon</title>
-</head>
-<header>
-<!---------------------logo---------------------------------------------------------->  
-  <div class="logo">
-    <img src="/img/logo-valide-23122021.png" alt="logo">
-  </div>
-<!-----------------------nav-header-------------------------------------------------->  
-<div class="burger">
-  <a id="hamburger-icon" href="#" class="open-close-btn">
-    <span class="span-burger"></span>
-    <span class="span-burger"></span>
-    <span class="span-burger"></span>
-  </a>
-</div>
-
-<div id="myNav" class="overlay">
-  <nav class="header__navegation">
-    <ul>
-      <li><a href="/html/Acceuil.html">Acceuil</a></li>
-      <li><a href="#">Nos Préstations</a>
-        <ul class="sous-menu sous-menu-responsive">
-          <li class="li-sous-menu"><a href="/html/dératisation.html">Dératisation</a></li>
-          <li class="li-sous-menu"><a href="/html/destruction.html">Destruction nids</a></li>
-          <li class="li-sous-menu"><a href="/html/desinsectisation.html">Désinsectisation</a></li>
-          <li class="li-sous-menu"><a href="/html/depigeonnage.html">Dépigeonnage</a></li>
-          <li class="li-sous-menu"><a href="/html/fouine.html">Fouiness et Martres</a></li>
-          <li class="li-sous-menu"><a href="/html/cafard.html">Cafards & Blattes</a></li>
-          <li class="li-sous-menu"><a href="/html/fourmis.html">Fourmis</a></li>
-          <li class="li-sous-menu"><a href="/html/cave-local.html">Cave-Local</a></li>
-          <li class="li-sous-menu sous-menu-maladie"><a href="/html/deces.html">Désinfection</a></li>
-        </ul>
-      </li>
-      <li><a href="/html/galerie.html">Galerie</a></li>
-      <li><a href="/contact/contact.html">Contact</a>
-        <ul class="sous-menu sous-menu-responsive">
-          <li class="li-sous-menu"><a href="/contact/contact70.html">Haute-Saône</a></li>
-          <li class="li-sous-menu"><a href="/contact/contact25.html">Doubs & Haut-Doubs</a></li>
-          <li class="li-sous-menu"><a href="/contact/contact90.html">Territoire De Belfort</a></li>
-        </ul>
-      </li>
-      <li><a href="/html/avis.html">Avis</a></li>
-    </ul>
-  </nav>
-</div>
-</header>
-<body class="body body-produit">
-  <!------------------------header-produit------------------------------------------->  
-  <h1 class="h1-produit">Les Nids De Guêpe & Frelon</h1>
-  <div class="details-tabs">
-    <!---------------------------comportement---------------------------------------->  
-    <details class="details-item" open>
-      <summary class="details-tab">Comportement</summary>
-      <div class="details-content">
-        <p class="p-produit titre-details">Découvrez le mode de vie des abeilles, guêpes et frelons dans leur environnement naturel.</p>
-        <details>
-          <summary>Détails</summary>
-          <p class="p-produit-details border-details">   
-            - Organisation sociale : <br> Les abeilles vivent en colonies organisées, avec une division claire du travail entre la reine, les ouvrières et les mâles. Les guêpes et frelons ont également des sociétés sociales, bien que leur organisation puisse varier selon l'espèce. <br><br>
-            - Communication : <br> Ces insectes utilisent différents moyens de communication pour coordonner leurs activités au sein de la colonie, y compris les danses, les phéromones et les signaux visuels. <br><br>            
-            - Construction de nids : <br> Les abeilles construisent des rayons de cire dans lesquels elles élèvent leur progéniture et stockent le miel. Les guêpes et frelons construisent des nids à partir de fibres végétales mâchées ou de boue. <br><br>
-            - Alimentation : <br> Ces insectes jouent un rôle important dans la pollinisation des plantes tout en se nourrissant du nectar des fleurs. Certaines espèces sont également des prédateurs d'autres insectes. <br><br>
-            Comprendre le comportement de ces insectes est essentiel pour mieux cohabiter avec eux et prévenir les conflits dans notre environnement.
-          </p>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Nuisibles_Services_4D_Nid_Guêpe_&_Frelon</title>
+  </head>
+  <body class="body body-produit">
+    <header>
+      <!-- Logo -->
+      <div class="logo">
+        <img id="logo-img" src="/img/logo-valide-23122021.png" alt="logo" />
+      </div>
+      <!-- Burger Menu -->
+      <div class="burger">
+        <a id="hamburger-icon" href="#" class="open-close-btn">
+          <span class="span-burger"></span>
+          <span class="span-burger"></span>
+          <span class="span-burger"></span>
+        </a>
+      </div>
+      <!-- Navigation -->
+      <div id="myNav" class="overlay">
+        <nav class="header__navegation">
+          <ul>
+            <li><a href="/html/Acceuil.html">Acceuil</a></li>
+            <li>
+              <a href="#">Nos Préstations</a>
+              <ul class="sous-menu sous-menu-responsive">
+                <li class="li-sous-menu">
+                  <a href="/html/dératisation.html">Rats & Souris</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/destruction.html">Guêpes & Abeille</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/destruction.html">Frelons Asiatique</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/punaise.html">Punaise De Lit</a>
+                </li>
+                <li class="li-sous-menu"><a href="/html/puce.html">Puce</a></li>
+                <li class="li-sous-menu">
+                  <a href="/html/depigeonnage.html">Dépigeonnage</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/fouine.html">Fouiness et Martres</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/cafard.html">Cafards & Blattes</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/fourmis.html">Fourmis</a>
+                </li>
+                <li class="li-sous-menu"><a href="/html/gale.html">Gale</a></li>
+                <li class="li-sous-menu">
+                  <a href="/html/syndrome.html">Symdrôme De Diogéne</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/cave-local.html">Cave-Local</a>
+                </li>
+                <li class="li-sous-menu sous-menu-maladie">
+                  <a href="/html/deces.html">Désinfection</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/html/galerie.html">Galerie</a></li>
+            <li>
+              <a href="/contact/contact.html">Contact</a>
+              <ul class="sous-menu sous-menu-responsive">
+                <li class="li-sous-menu">
+                  <a href="/contact/contact70.html">Haute-Saône</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/contact/contact25.html">Doubs & Haut-Doubs</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/contact/contact90.html">Territoire De Belfort</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/html/avis.html">Avis</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <!-- Produit Header -->
+      <h1 class="h1-produit">Les Nids De Guêpe & Frelon</h1>
+      <!-- Details Tabs -->
+      <div class="details-tabs">
+        <!-- Comportement -->
+        <details class="details-item" open>
+          <summary class="details-tab">Comportement</summary>
+          <div class="details-content">
+            <p class="p-produit titre-details">
+              Découvrez le mode de vie des abeilles, guêpes et frelons dans leur
+              environnement naturel.
+            </p>
+            <details>
+              <summary>Détails</summary>
+              <p class="p-produit-details border-details">
+                - Organisation sociale : <br />
+                Les abeilles vivent en colonies organisées, avec une division
+                claire du travail entre la reine, les ouvrières et les mâles.
+                Les guêpes et frelons ont également des sociétés sociales, bien
+                que leur organisation puisse varier selon l'espèce. <br /><br />
+                - Communication : <br />
+                Ces insectes utilisent différents moyens de communication pour
+                coordonner leurs activités au sein de la colonie, y compris les
+                danses, les phéromones et les signaux visuels. <br /><br />
+                - Construction de nids : <br />
+                Les abeilles construisent des rayons de cire dans lesquels elles
+                élèvent leur progéniture et stockent le miel. Les guêpes et
+                frelons construisent des nids à partir de fibres végétales
+                mâchées ou de boue. <br /><br />
+                - Alimentation : <br />
+                Ces insectes jouent un rôle important dans la pollinisation des
+                plantes tout en se nourrissant du nectar des fleurs. Certaines
+                espèces sont également des prédateurs d'autres insectes.
+                <br /><br />
+                Comprendre le comportement de ces insectes est essentiel pour
+                mieux cohabiter avec eux et prévenir les conflits dans notre
+                environnement.
+              </p>
+            </details>
+          </div>
         </details>
-      </div>      
-    </details> 
-    <!---------------------------les-metodes---------------------------------------------->     
-    <details class="details-item" open> 
-      <summary class="details-tab">Les Méthodes</summary>
-      <div class="details-content">
-        <p class="p-produit titre-details">les différentes méthodes utilisées pour contrôler les populations de guêpes et frelons.</p>
-        <details>
-          <p class="p-produit-details border-details">
-            - Répulsion : <br> Utilisation de dispositifs et de produits pour dissuader les guêpes et frelons de s'installer dans des zones spécifiques. <br><br>    
-            - Capture : <br> Utilisation de pièges et de filets pour capturer les guêpes et frelons indésirables. <br><br>
-            - Élimination : <br> Mise en œuvre de méthodes humaines et respectueuses pour réduire les populations de guêpes et frelons de manière efficace. <br><br>
-            - Prévention : <br> Adoption de mesures proactives pour empêcher les guêpes et frelons de nidifier et de se reproduire dans les environnements urbains. <br><br>
-            Chaque méthode a ses avantages et ses inconvénients, et le choix de la meilleure approche dépendra des besoins spécifiques de votre situation.
+        <!-- Les Méthodes -->
+        <details class="details-item" open>
+          <summary class="details-tab">Les Méthodes</summary>
+          <div class="details-content">
+            <p class="p-produit titre-details">
+              les différentes méthodes utilisées pour contrôler les populations
+              de guêpes et frelons.
+            </p>
+            <details>
+              <p class="p-produit-details border-details">
+                - Répulsion : <br />
+                Utilisation de dispositifs et de produits pour dissuader les
+                guêpes et frelons de s'installer dans des zones spécifiques.
+                <br /><br />
+                - Capture : <br />
+                Utilisation de pièges et de filets pour capturer les guêpes et
+                frelons indésirables. <br /><br />
+                - Élimination : <br />
+                Mise en œuvre de méthodes humaines et respectueuses pour réduire
+                les populations de guêpes et frelons de manière efficace.
+                <br /><br />
+                - Prévention : <br />
+                Adoption de mesures proactives pour empêcher les guêpes et
+                frelons de nidifier et de se reproduire dans les environnements
+                urbains. <br /><br />
+                Chaque méthode a ses avantages et ses inconvénients, et le choix
+                de la meilleure approche dépendra des besoins spécifiques de
+                votre situation.
+              </p>
+            </details>
+          </div>
+        </details>
+        <!-- Les Risques -->
+        <details class="details-item" open>
+          <summary class="details-tab">Les Risques</summary>
+          <div class="details-content">
+            <p class="p-produit titre-details">
+              Les guêpes et les frelons peuvent présenter plusieurs risques pour
+              la santé humaine, et la sécurité de l'environnement.
+            </p>
+            <details>
+              <p class="p-produit-details border-details">
+                - Dommages Matériels : <br />
+                Les guêpes et les frelons peuvent causer des dommages aux
+                bâtiments, aux infrastructures et aux biens en raison de la
+                construction de leurs nids et de leurs comportements agressifs.
+                Leurs nids peuvent être construits dans des endroits dangereux
+                et nécessitent souvent une intervention professionnelle pour les
+                enlever en toute sécurité.<br /><br />
+                - Risques pour la Santé : <br />
+                Les piqûres de guêpes et de frelons peuvent entraîner des
+                réactions allergiques graves chez certaines personnes. De plus,
+                leurs piqûres peuvent être extrêmement douloureuses et causer
+                des douleurs, des démangeaisons et des gonflements. En cas de
+                piqûres multiples ou de piqûres chez les personnes allergiques,
+                une intervention médicale d'urgence peut être nécessaire.<br /><br />
+                - Problèmes Esthétiques : <br />
+                En plus des dommages matériels et des risques pour la santé, la
+                présence de nids de guêpes et de frelons peut également causer
+                des problèmes esthétiques en rendant les espaces extérieurs peu
+                attrayants et en perturbant les activités de plein air. Les nids
+                visibles peuvent décourager l'utilisation des zones affectées et
+                affecter la valeur esthétique des propriétés.<br /><br />
+                Face à ces défis, il est essentiel de mettre en place des
+                stratégies de gestion des populations de guêpes et de frelons
+                pour protéger les personnes, les biens et l'environnement. Les
+                services professionnels de votre entreprise offrent des
+                solutions efficaces et durables pour contrôler les populations
+                de guêpes et de frelons et réduire les risques associés à leur
+                présence.
+              </p>
+            </details>
+          </div>
+        </details>
+        <!-- Préventions -->
+        <details class="details-item">
+          <summary class="details-tab">Préventions</summary>
+          <div class="details-content">
+            <p class="p-produit titre-details">
+              La prévention est essentielle pour éviter les problèmes futurs
+              avec les guêpes, frelons et abeilles.
+            </p>
+            <details>
+              <summary>Détails</summary>
+              <p class="p-produit-details border-details">
+                1. Évitez les sources d'alimentation : <br />
+                Éliminez les sources de nourriture sucrée et protéinée, comme
+                les restes de nourriture, les poubelles non couvertes et les
+                fruits mûrs, pour dissuader les guêpes, frelons et abeilles de
+                s'installer près de votre domicile.<br /><br />
+                2. Gardez les zones propres : <br />
+                Maintenez un environnement propre en nettoyant régulièrement les
+                surfaces et en éliminant les débris susceptibles d'attirer les
+                guêpes, frelons et abeilles à la recherche de matériaux de
+                nidification.<br /><br />
+                3. Identifiez et éliminez les nids : <br />
+                Inspectez votre propriété régulièrement pour repérer les nids de
+                guêpes, frelons ou abeilles et faites appel à des professionnels
+                pour les éliminer en toute sécurité. Ne tentez pas de détruire
+                les nids vous-même, car cela peut provoquer des attaques
+                agressives.<br /><br />
+                4. Utilisez des répulsifs naturels : <br />
+                Utilisez des répulsifs naturels à base de plantes ou d'huiles
+                essentielles pour dissuader les guêpes, frelons et abeilles de
+                s'approcher de votre maison et de votre jardin.<br /><br />
+                En mettant en œuvre ces mesures préventives, vous pouvez réduire
+                les risques d'interactions indésirables avec les guêpes, frelons
+                et abeilles et protéger votre famille et vos animaux domestiques
+                des piqûres potentielles.
+              </p>
+            </details>
+          </div>
         </details>
       </div>
-    </details>    
-    <!---------------------------les-risques---------------------------------------------->  
-    <details class="details-item" open> 
-      <summary class="details-tab">Les Risques</summary>
-      <div class="details-content">
-        <p class="p-produit titre-details">Les guêpes et les frelons peuvent présenter plusieurs risques pour la santé humaine, et la sécurité de l'environnement.</p>
-        <details>
-          <p class="p-produit-details border-details">
-            - Dommages Matériels : <br> Les guêpes et les frelons peuvent causer des dommages aux bâtiments, aux infrastructures et aux biens en raison de la construction de leurs nids et de leurs comportements agressifs. Leurs nids peuvent être construits dans des endroits dangereux et nécessitent souvent une intervention professionnelle pour les enlever en toute sécurité.<br><br>
-            - Risques pour la Santé : <br> Les piqûres de guêpes et de frelons peuvent entraîner des réactions allergiques graves chez certaines personnes. De plus, leurs piqûres peuvent être extrêmement douloureuses et causer des douleurs, des démangeaisons et des gonflements. En cas de piqûres multiples ou de piqûres chez les personnes allergiques, une intervention médicale d'urgence peut être nécessaire.<br><br>
-            - Problèmes Esthétiques : <br> En plus des dommages matériels et des risques pour la santé, la présence de nids de guêpes et de frelons peut également causer des problèmes esthétiques en rendant les espaces extérieurs peu attrayants et en perturbant les activités de plein air. Les nids visibles peuvent décourager l'utilisation des zones affectées et affecter la valeur esthétique des propriétés.<br><br>
-            Face à ces défis, il est essentiel de mettre en place des stratégies de gestion des populations de guêpes et de frelons pour protéger les personnes, les biens et l'environnement. Les services professionnels de votre entreprise offrent des solutions efficaces et durables pour contrôler les populations de guêpes et de frelons et réduire les risques associés à leur présence.
-        </details>
+      <!-- Additional Content -->
+      <p class="p-produit">
+        Nos services sont adaptés pour répondre aux besoins spécifiques de
+        chaque situation, en proposant des solutions personnalisées et durables
+        pour protéger votre propriété et votre environnement. Avec notre
+        expertise et notre engagement envers la qualité, nous nous engageons à
+        vous offrir les meilleures solutions de gestion des guêpes, frelons et
+        abeilles disponibles sur le marché.
+      </p>
+      <p class="p-produit">
+        Que vous soyez confronté à des problèmes liés au comportement des
+        guêpes, frelons et abeilles, aux risques pour la santé et à la sécurité
+        qu'ils représentent, aux différentes méthodes de gestion disponibles ou
+        aux mesures préventives à mettre en place, notre équipe est là pour vous
+        accompagner.
+      </p>
+      <p class="p-produit">
+        <img class="img-guêpe" src="/img/nid de guepes07.jpg" alt="" />Explorez
+        notre site pour découvrir nos services, nos approches de travail et nos
+        succès antérieurs. N'hésitez pas à nous contacter pour obtenir des
+        conseils personnalisés ou pour organiser une consultation.<br /><br />Nous
+        sommes là pour vous aider à trouver la meilleure solution pour vos
+        besoins en matière de gestion des guêpes, frelons et abeilles.
+      </p>
+      <!-- Contact Button -->
+      <button class="btn btn-produit">
+        <a href="/contact/contact.html">Contactez-nous</a>
+      </button>
+    </main>
+    <!-- Barre Agreement -->
+    <div class="barre-agreement">
+      <div class="agreement-content">
+        <h2>Entreprise Agréé et Certifiée</h2>
       </div>
-    </details>    
-    <!---------------------------prevention---------------------------------------------->  
-    <details class="details-item">
-      <summary class="details-tab">Préventions</summary>
-      <div class="details-content">
-        <p class="p-produit titre-details">La prévention est essentielle pour éviter les problèmes futurs avec les guêpes, frelons et abeilles.</p>
-        <details>
-          <summary>Détails</summary>
-          <p class="p-produit-details border-details">   
-            1. Évitez les sources d'alimentation : <br> Éliminez les sources de nourriture sucrée et protéinée, comme les restes de nourriture, les poubelles non couvertes et les fruits mûrs, pour dissuader les guêpes, frelons et abeilles de s'installer près de votre domicile.<br><br>          
-            2. Gardez les zones propres : <br> Maintenez un environnement propre en nettoyant régulièrement les surfaces et en éliminant les débris susceptibles d'attirer les guêpes, frelons et abeilles à la recherche de matériaux de nidification.<br><br>
-            3. Identifiez et éliminez les nids : <br> Inspectez votre propriété régulièrement pour repérer les nids de guêpes, frelons ou abeilles et faites appel à des professionnels pour les éliminer en toute sécurité. Ne tentez pas de détruire les nids vous-même, car cela peut provoquer des attaques agressives.<br><br>
-            4. Utilisez des répulsifs naturels : <br> Utilisez des répulsifs naturels à base de plantes ou d'huiles essentielles pour dissuader les guêpes, frelons et abeilles de s'approcher de votre maison et de votre jardin.<br><br>
-            En mettant en œuvre ces mesures préventives, vous pouvez réduire les risques d'interactions indésirables avec les guêpes, frelons et abeilles et protéger votre famille et vos animaux domestiques des piqûres potentielles.
-          </p>
-        </details>
-      </div>      
-    </details>
+      <div class="container">
+        <div class="image-container">
+          <img
+            src="/img/partenaire-ministere-ecologie-dev-durable-energie@2x-300x109.png"
+            alt="logo-bio"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="/img/logo-certibiocide@2x-300x108.png"
+            alt="logo-certibiocide"
+          />
+        </div>
+      </div>
     </div>
-    <p class="p-produit">Nos services sont adaptés pour répondre aux besoins spécifiques de chaque situation, en proposant des solutions personnalisées et durables pour protéger votre propriété et votre environnement. Avec notre expertise et notre engagement envers la qualité, nous nous engageons à vous offrir les meilleures solutions de gestion des guêpes, frelons et abeilles disponibles sur le marché.</p>
-    <p class="p-produit">Que vous soyez confronté à des problèmes liés au comportement des guêpes, frelons et abeilles, aux risques pour la santé et à la sécurité qu'ils représentent, aux différentes méthodes de gestion disponibles ou aux mesures préventives à mettre en place, notre équipe est là pour vous accompagner.</p>
-    <p class="p-produit"><img class="img-guêpe" src="/img/nid de guepes07.jpg" alt="">Explorez notre site pour découvrir nos services, nos approches de travail et nos succès antérieurs. N'hésitez pas à nous contacter pour obtenir des conseils personnalisés ou pour organiser une consultation.<br><br>Nous sommes là pour vous aider à trouver la meilleure solution pour vos besoins en matière de gestion des guêpes, frelons et abeilles.
-    </p>
-  </details>
-  <button class="btn btn-produit"><a href="/contact/contact.html">Contactez-nous</a></button>
-</div>
-<!-------------------------barre-agreement------------------------------------------->  
-<section class="barre-agreement">
-  <div class="agreement-content">
-      <h2>Entreprise Agréé et Certifiée</h2>
-  </div>
-  <div class="container">
-    <div class="image-container">
-        <img src="/img/partenaire-ministere-ecologie-dev-durable-energie@2x-300x109.png" alt="logo-bio">
-    </div>
-    <div class="image-container">
-        <img src="/img/logo-certibiocide@2x-300x108.png" alt="logo-certibiocide">
-    </div>
-</section>
-<!---------------------------zone-d-intervention------------------------------------->  
-<section class="section">
-  <div class="content">
-      <div class="text-block">
+    <!-- Zone d'Intervention -->
+    <div class="section">
+      <div class="content">
+        <div class="text-block">
           <div class="title">
-              <h3 class="h3-intervention">À propos de Services Nuisibles 4D </h3>
+            <h3 class="h3-intervention">À propos de Services Nuisibles 4D</h3>
           </div>
           <p class="paragraph">
-            Services Nuisibles 4D est votre allié de confiance dans la région de Montbéliard et jusqu'à 100 km aux alentours. Spécialisés dans l'élimination des nuisibles tels que les rats, les cafards, les termites et autres indésirables, nos experts s'engagent à vous offrir des solutions efficaces pour garantir un environnement sécurisé et sain.<br><br>
-            Que ce soit à votre domicile ou dans votre entreprise, notre équipe expérimentée met en œuvre des méthodes de lutte antiparasitaire adaptées à vos besoins spécifiques.<br><br>Nous nous engageons à respecter les normes de sécurité et d'hygiène les plus strictes tout en travaillant avec diligence et professionnalisme pour éliminer rapidement et efficacement les nuisibles.
+            Services Nuisibles 4D est votre allié de confiance dans la région de
+            Montbéliard et jusqu'à 100 km aux alentours. Spécialisés dans
+            l'élimination des nuisibles tels que les rats, les cafards, les
+            termites et autres indésirables, nos experts s'engagent à vous
+            offrir des solutions efficaces pour garantir un environnement
+            sécurisé et sain.<br /><br />
+            Que ce soit à votre domicile ou dans votre entreprise, notre équipe
+            expérimentée met en œuvre des méthodes de lutte antiparasitaire
+            adaptées à vos besoins spécifiques.<br /><br />Nous nous engageons à
+            respecter les normes de sécurité et d'hygiène les plus strictes tout
+            en travaillant avec diligence et professionnalisme pour éliminer
+            rapidement et efficacement les nuisibles.
           </p>
+        </div>
       </div>
-  </div>
-<!----------------------------maps--------------------------------------------------->    
-  <div class="map">
-      <!-- Votre code pour intégrer la carte Google Maps ici -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43114.71689098716!2d6.767212120432803!3d47.51582136045668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792168cd6c87ad9%3A0x409ce34b313da10!2s25200%20Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1711764725539!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</section>
-</body> 
-<!---------------------------footer---------------------------------------------->  
-<footer>
-    <div class="row row-footer">
+      <!----------------------------maps--------------------------------------------------->
+      <div class="map">
+        <!-- Votre code pour intégrer la carte Google Maps ici -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43114.71689098716!2d6.767212120432803!3d47.51582136045668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792168cd6c87ad9%3A0x409ce34b313da10!2s25200%20Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1711764725539!5m2!1sfr!2sfr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="row row-footer">
         <div class="col col-footer">
-            <img src="/img/logo-valide-23122021.png" alt="logo-footer" class="footer_logo">
-            <p class="footer_about">"Nuisibles services 4D est spécialisé dans la gestion efficace des nuisibles. 
-                Nous offrons des solutions professionnelles fiables et expérimentés, nous assurons un environnement propre et sécurisé pour nos clients."
-            </p>
+          <img
+            src="/img/logo-valide-23122021.png"
+            alt="logo-footer"
+            class="footer_logo"
+          />
+          <p class="footer_about">
+            "Nuisibles services 4D est spécialisé dans la gestion efficace des
+            nuisibles. Nous offrons des solutions professionnelles fiables et
+            expérimentés, nous assurons un environnement propre et sécurisé pour
+            nos clients."
+          </p>
         </div>
         <div class="col">
-            <h3 class="h3-footer">Sièges Social<div class="bottom_line"><span></span></div></h3>
-            <p><i class="fas fa-envelope"></i>&nbsp &nbsp25200 Montbéliard</p>
-            <p>FRANCE</p>
-            <p class="footer_email">nuisiblesservices4d@gmail.com</p>
-            <h4><i class="fas fa-phone"></i>&nbsp&nbsp06-41-40-71-75</h4>
+          <h3 class="h3-footer">
+            Sièges Social
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p><i class="fas fa-envelope"></i>&nbsp &nbsp25200 Montbéliard</p>
+          <p>FRANCE</p>
+          <p class="footer_email">nuisiblesservices4d@gmail.com</p>
+          <h4><i class="fas fa-phone"></i>&nbsp&nbsp06-41-40-71-75</h4>
         </div>
         <div class="col">
-            <h3 class="h3-footer">Liens Utiles<div class="bottom_line"><span></span></div></h3>
-            <ul class="ul-footer">
-             <li class="li-footer"><a href="/politiques/condition.html">Condition D'utilisation</a></li>
-             <li class="li-footer"><a href="/politiques/politique-de-conf.html">Politique De Confidentialité</a></li>
-             <li class="li-footer"><a href="/politiques/securite.html">Politique De Sécurité</a></li>
-             <li class="li-footer"><a href="/politiques/cookie.html">Politique De Cookies</a></li>
-             <li class="li-footer"><a href="/politiques/mention.html">Mentions Légales</a></li>
-            </ul>
+          <h3 class="h3-footer">
+            Liens Utiles
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <ul class="ul-footer">
+            <li class="li-footer">
+              <a href="/politiques/condition.html">Condition D'utilisation</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/politique-de-conf.html"
+                >Politique De Confidentialité</a
+              >
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/securite.html">Politique De Sécurité</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/cookie.html">Politique De Cookies</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/mention.html">Mentions Légales</a>
+            </li>
+          </ul>
         </div>
         <div class="col col-intervention">
-            <h3 class="h3-footer">Horaires D'intervention<div class="bottom_line"><span></span></div></h3>
-            <p>Lundi - Vendredi</p>
-            <p>8h00 à 19h00</p><br>
-            <p>Samedi</p>
-            <p>9h00 à 18h00</p><br><br>
-            <div class="social_icons">
-                <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
-                <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
-                <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
-                <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
-            </div>
+          <h3 class="h3-footer">
+            Horaires D'intervention
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p>Lundi - Vendredi</p>
+          <p>8h00 à 19h00</p>
+          <br />
+          <p>Samedi</p>
+          <p>9h00 à 18h00</p>
+          <br /><br />
+          <div class="social_icons">
+            <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+            <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
         </div>
-    </div>
-    <hr>
-    <p class="copyright">Digiprogtech Ⓒ 2024 - All Rights Reserved</p>
- </footer>  
- <script src="/js/produit.js"></script>
+      </div>
+    </footer>
+    <script src="/js/produit.js"></script>
+  </body>
 </html>

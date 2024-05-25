@@ -384,25 +384,20 @@ section {
 }
 
 /*-------------------------animation-card-------------------------------------------*/
-<<<<<<< HEAD
-<<<<<<< HEAD .animate__slideInLeft {
-=======
+
 .animate__slideInLeft {
->>>>>>> b976a4054c2063a6e4f03a17c19bd41d804170cd
   animation-name: animate__slideInLeft;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-<<<<<<< HEAD
-======= .animate__slideInLeft {
+
+.animate__slideInLeft {
   animation-name: animate__slideInLeft;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
->>>>>>>815c7d4a5bab8f0d34709315ea41928d2447730a @keyframes slideInLeft {
-=======
+
 @keyframes slideInLeft {
->>>>>>> b976a4054c2063a6e4f03a17c19bd41d804170cd
   0% {
     transform: translateX(0);
     opacity: 1;

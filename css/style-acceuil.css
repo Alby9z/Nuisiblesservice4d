@@ -234,6 +234,9 @@ nav ul li {
 }
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
+.logo_rat {
+}
+
 .titre-barre {
   display: flex;
   justify-content: center;
@@ -381,21 +384,17 @@ section {
 }
 
 /*-------------------------animation-card-------------------------------------------*/
-<<<<<<< HEAD
-
-.animate__slideInLeft {
+<<<<<<< HEAD .animate__slideInLeft {
   animation-name: animate__slideInLeft;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-=======
-.animate__slideInLeft {
+======= .animate__slideInLeft {
   animation-name: animate__slideInLeft;
   animation-duration: 2s;
-  animation-fill-mode: forwards;}
->>>>>>> 815c7d4a5bab8f0d34709315ea41928d2447730a
-
-@keyframes slideInLeft {
+  animation-fill-mode: forwards;
+}
+>>>>>>>815c7d4a5bab8f0d34709315ea41928d2447730a @keyframes slideInLeft {
   0% {
     transform: translateX(0);
     opacity: 1;

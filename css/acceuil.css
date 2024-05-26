@@ -183,7 +183,7 @@ nav ul li {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  margin: 40px 0px 0 395px;
+  margin: 40px 0px 0px 0px;
 }
 
 .header__content {
@@ -545,6 +545,11 @@ section {
   cursor: pointer;
 }
 
+.container-carousel,
+.section {
+  display: flex;
+}
+
 #cCarousel #prev {
   left: 0px;
 }
@@ -699,14 +704,13 @@ footer {
   width: 100%;
   background: #252525;
   color: #fff;
-  padding: 50px 0 30px;
+  padding: 50px 0px 0px;
   font-size: 13px;
   line-height: 15px;
 }
 
 .row {
   width: 100%;
-  margin-left: -60px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

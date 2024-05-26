@@ -531,7 +531,7 @@ section {
 
 #cCarousel .arrow {
   position: absolute;
-  top: 50%;
+  top: 45%;
   display: flex;
   width: 45px;
   height: 45px;
@@ -551,11 +551,11 @@ section {
 }
 
 #cCarousel #prev {
-  left: 0px;
+  left: -124px;
 }
 
 #cCarousel #next {
-  right: 0px;
+  right: -114px;
 }
 
 #carousel-vp {
@@ -721,7 +721,6 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid #ddd;
 }
 
 .section-left {
@@ -732,11 +731,13 @@ section {
   flex-direction: row-reverse;
 }
 .section-left .text {
-  order: 1; /* Le texte apparaîtra en premier dans l'ordre de flex */
+  order: 1;
+  margin: 15px 80px 15px 10px;
 }
 
 .section-right .text {
-  order: 2; /* Le texte apparaîtra après l'image dans l'ordre de flex */
+  order: 2;
+  margin: 15px 80px 15px 10px;
 }
 
 .text {
@@ -760,6 +761,18 @@ h2 {
   margin-top: 0;
 }
 
+.h2-section2 {
+  border-top: solid 1px #ff0000;
+  color: white;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.text-section2 {
+  color: white;
+  font-size: 15px;
+}
 /*------------------------map-------------------------------------------------------*/
 
 .company-info {

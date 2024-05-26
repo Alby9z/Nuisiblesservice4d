@@ -35,7 +35,7 @@ module.exports = {
     "css/style-contact.css",
   ],
   keyframes: true,
-  output: "dist/css",
+  output: "distdossierpurger",
   rejected: true,
   variables: true,
 };

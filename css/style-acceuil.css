@@ -10,8 +10,7 @@
   font-family: "poppins", sans-serif;
 }
 
-body,
-html {
+body {
   font-family: "poppins", sans-serif;
   background-image: url("/img/back.jpg");
   background-size: cover;
@@ -551,165 +550,12 @@ section {
   }
 }
 
-.cards {
-  width: 25%;
-}
-
-.card {
-  height: 205px;
-  perspective: 1000px;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-}
-
-.card-front {
-  border-radius: 10px;
-  background-color: #f0f0f0;
-}
-
-.card-back {
-  border: solid 1px;
-  background-color: #e7e4e4;
-  transform: rotateY(180deg);
-}
-
-.product-desc__title {
-  margin-top: 5px;
-  display: flex;
-  justify-content: center;
-  font-size: clamp(1rem, 2vw, 2.5rem);
-}
-/*-----------------------titre-card--+btn-------------------------------------------*/
-.souligner {
-  font-size: 19px;
-  position: relative;
-  display: inline-block;
-}
-
-.souligner::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 1px;
-  background-color: #ff0000;
-}
-.btn-destru,
-.btn-depig,
-.btn-cave,
-.item-button {
-  font-size: 15px;
-  margin-top: 45px;
-  display: flex;
-  justify-content: center;
-  padding: 5px 5px;
-  margin-left: 70px;
-  margin-right: 70px;
-  background-color: #000000;
-  border-radius: 25px;
-  transition: 0.6s;
-  color: #fff;
-}
-
-.btn-destru:hover,
-.btn-rat:hover,
-.btn-depig:hover,
-.btn-cave:hover,
-.item-button:hover,
-.btn-desinsectisation:hover {
-  background-color: #ff0000;
-}
-.btn-rat {
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-  padding: 5px 5px;
-  margin-left: 70px;
-  margin-right: 70px;
-  background-color: #000000;
-  border-radius: 25px;
-  transition: 0.6s;
-  color: #fff;
-}
-.btn-desinsectisation {
-  margin-top: 95px;
-  display: flex;
-  justify-content: center;
-  padding: 5px 5px;
-  margin-left: 70px;
-  margin-right: 70px;
-  background-color: #000000;
-  border-radius: 25px;
-  transition: 0.6s;
-  color: #fff;
-}
-
-/*---------------------------------------------------------------------------------*/
-.product-img {
-  width: 300px;
-  height: 300px;
-}
-
-.product-desc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.product-desc h2 {
-  border-bottom: 1px solid #ff3232;
-  font-size: 1.3em;
-  transition: 0.6s;
-}
-
-.product-desc h2:hover {
-  border-bottom: 1px solid #ff0000;
-}
-
-.product-desc p {
-  margin-bottom: 2%;
-  margin: 10px;
-  text-align: center;
-  font-size: 0.8em;
-}
-
-.product-desc__text {
-  text-align: center;
-  padding: 5px 10px 0px 10px;
-}
-
-.wrap-item-button {
-  margin: 0.9em auto;
-  text-align: center;
-}
-
-/*------------------------ slider -------------------------------------------*/
-
-.button-slider-acceuil {
+button {
   border: none;
   cursor: pointer;
 }
 
-.container-slider-aceuil {
+.container {
   max-width: 1200px;
   margin: auto;
   padding: 10px;
@@ -788,90 +634,152 @@ section {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  .container {
-    max-width: 350px;
-    margin: auto;
-    padding: 10px;
-  }
-
-  .card-wrapper img {
-    height: 100px;
-    width: 80px;
-    cursor: pointer;
-  }
-
-  .label-container h2 {
-    color: #111;
-    font-family: Poppins, serif;
-    margin-right: auto;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .label-container i {
-    font-size: 14px;
-  }
+  .cards {
+  width: 25%;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+.card {
+  height: 205px;
+  perspective: 1000px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-/*------------------------barre agreement-------------------------------------------*/
-
-.barre-agreement {
+.card-inner {
   width: 100%;
-  display: block;
-  background-color: #252525;
-  text-align: center;
-  padding: 2em 0em 2em 0em;
-  margin-bottom: 80px;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
 }
 
-.agreement-content {
-  color: #fff;
-  font-size: 25px;
-  font-weight: 600;
+.card:hover .card-inner {
+  transform: rotateY(180deg);
 }
 
-.container {
+.card-front,
+.card-back {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+
+.card-back {
+  border: solid 1px;
+  background-color: #e7e4e4;
+  transform: rotateY(180deg);
+}
+
+.product-desc__title {
+  margin-top: 5px;
   display: flex;
+  justify-content: center;
+  font-size: clamp(1rem, 2vw, 2.5rem);
 }
 
-.image-container {
-  flex: 1;
-  margin: 40px;
+.souligner {
+  font-size: 19px;
+  position: relative;
+  display: inline-block;
 }
 
-.image-container img {
-  max-width: 100%;
-  height: 85px;
+.souligner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 1px;
+  background-color: #ff0000;
 }
+.btn-destru,
+.btn-depig,
+.btn-cave,
+.item-button {
+  font-size: 15px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 5px;
+  margin-left: 70px;
+  margin-right: 70px;
+  background-color: #000000;
+  border-radius: 25px;
+  transition: 0.6s;
+  color: #fff;
+}
+
+.btn-destru:hover,
+.btn-rat:hover,
+.btn-depig:hover,
+.btn-cave:hover,
+.item-button:hover,
+.btn-desinsectisation:hover {
+  background-color: #ff0000;
+}
+.btn-rat {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 5px;
+  margin-left: 70px;
+  margin-right: 70px;
+  background-color: #000000;
+  border-radius: 25px;
+  transition: 0.6s;
+  color: #fff;
+}
+.btn-desinsectisation {
+  margin-top: 95px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 5px;
+  margin-left: 70px;
+  margin-right: 70px;
+  background-color: #000000;
+  border-radius: 25px;
+  transition: 0.6s;
+  color: #fff;
+}
+.product-img {
+  margin-left: 15px;
+  border-radius: 51%;
+  width: 85%;
+  height: 100px;
+}
+
+.product-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-desc h2 {
+  border-bottom: 1px solid #ff3232;
+  font-size: 1.3em;
+  transition: 0.6s;
+}
+
+.product-desc h2:hover {
+  border-bottom: 1px solid #ff0000;
+}
+
+.product-desc p {
+  margin-bottom: 2%;
+  margin: 10px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.product-desc__text {
+  text-align: center;
+  padding: 5px 10px 0px 10px;
+}
+
 
 /*------------------------map-------------------------------------------------------*/
 

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIepsPLhG4ymXTVhMRCnekr7gB65GDD3o&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <link rel="stylesheet" href="/css/acceuil.css" />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Nuisibles_Services_4D_Cafards&Blattes</title>
+  </head>
+  <body class="body body-produit">
+    <header>
+      <!-- Logo -->
+      <img class="devis" src="/img/devis-grt.png" alt="logo-devis" />
+      <div class="logo">
+        <img src="/img/logo-valide-23122021.png" alt="logo" />
+      </div>
+      <!-- Burger Menu -->
+      <div class="burger">
+        <a id="hamburger-icon" href="#" class="open-close-btn">
+          <span class="span-burger"></span>
+          <span class="span-burger"></span>
+          <span class="span-burger"></span>
+        </a>
+      </div>
+      <!-- Navigation -->
+      <div id="myNav" class="overlay">
+        <nav class="header__navegation">
+          <ul>
+            <li><a href="/html/Acceuil.html">Acceuil</a></li>
+            <li>
+              <a href="#">Nos Préstations</a>
+              <ul class="sous-menu sous-menu-responsive">
+                <li class="li-sous-menu">
+                  <a href="/html/dératisation.html">Rats & Souris</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/destruction.html">Guêpes & Abeille</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/destruction.html">Frelons Asiatique</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/punaise.html">Punaise De Lit</a>
+                </li>
+                <li class="li-sous-menu"><a href="/html/puce.html">Puce</a></li>
+                <li class="li-sous-menu">
+                  <a href="/html/depigeonnage.html">Dépigeonnage</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/fouine.html">Fouiness et Martres</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/cafard.html">Cafards & Blattes</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/fourmis.html">Fourmis</a>
+                </li>
+                <li class="li-sous-menu"><a href="/html/gale.html">Gale</a></li>
+                <li class="li-sous-menu">
+                  <a href="/html/syndrome.html">Symdrôme De Diogéne</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/html/cave-local.html">Cave-Local</a>
+                </li>
+                <li class="li-sous-menu sous-menu-maladie">
+                  <a href="/html/deces.html">Désinfection</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/html/galerie.html">Galerie</a></li>
+            <li>
+              <a href="/contact/contact.html">Contact</a>
+              <ul class="sous-menu sous-menu-responsive">
+                <li class="li-sous-menu">
+                  <a href="/contact/contact70.html">Haute-Saône</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/contact/contact25.html">Doubs & Haut-Doubs</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/contact/contact90.html">Territoire De Belfort</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/html/avis.html">Avis</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__content">
+        <h1 class="h1-acceuil">
+          <span class="red">N</span>uisibles
+          <span class="red">S</span>ervices<span class="red"> 4D</span>
+        </h1>
+        <h2 class="h2-acceuil">Votre partenaire contre les nuisances</h2>
+        <h3 class="h3-acceuil">
+          Efficacité garantie pour des résultats impeccables.
+        </h3>
+        <button
+          class="btn btn-produit"
+          onclick="location.href='/contact/contact.html'"
+        >
+          Contactez-nous
+        </button>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <div id="barre-nav-acceuil">
+        <div class="container-nav-acceuil">
+          <div class="search-block">
+            <p class="titre-barre">J’aimerais Me Débarrasser</p>
+            <form action="......" class="chercher" method="post">
+              <div class="row justify-content-lg-center">
+                <div class="col-lg col-12">
+                  <div class="custom-select">
+                    <select
+                      name="nuisible"
+                      class="form-control"
+                      id="nuisible-select"
+                    >
+                      <option value="1" data-img-src="/img/icon/rat.png">
+                        Rats ou Souris
+                      </option>
+                      <option value="2" data-img-src="/img/icon/guêpe.png">
+                        Guêpes & Abeille
+                      </option>
+                      <option value="3" data-img-src="/img/icon/frelon.png">
+                        Frelons Asiatique
+                      </option>
+                      <option value="4" data-img-src="/img/icon/punaise.png">
+                        Punaise De Lit
+                      </option>
+                      <option value="5" data-img-src="/img/icon/puce.png">
+                        Puce
+                      </option>
+                      <option value="6" data-img-src="/img/icon/fourmis.png">
+                        Fourmis
+                      </option>
+                      <option value="7" data-img-src="/img/icon/piegon.png">
+                        Dépigeonnage
+                      </option>
+                      <option value="8" data-img-src="/img/icon/fouine.png">
+                        Fouines & Martres
+                      </option>
+                      <option value="9" data-img-src="/img/icon/cafard.png">
+                        Cafards & Blattes
+                      </option>
+                      <option value="10" data-img-src="/img/icon/fourmis.png">
+                        Fourmis
+                      </option>
+                      <option value="11" data-img-src="/img/icon/gale.png">
+                        Gale
+                      </option>
+                      <option value="12" data-img-src="/img/icon/diogene.png">
+                        Symdrôme De Diogéne
+                      </option>
+                      <option value="13" data-img-src="/img/icon/eco.png">
+                        Traitements éco-responsables
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg col-12">
+                  <div class="form-group">
+                    <select name="type" class="form-control">
+                      <option value="particulier">
+                        Je suis un particulier
+                      </option>
+                      <option value="professionnel">
+                        Je suis une entreprise
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                  <div class="form-group cp-field">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        name="cp"
+                        class="form-controle"
+                        placeholder="Code postal"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- HTML pour l'interrupteur et le texte "Urgent" -->
+                <div class="switch-container">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                  <span class="urgent">Urgent</span>
+                </div>
+
+                <div class="col-auto">
+                  <div class="form-group">
+                    <button type="submit" class="btn-barre btn-red btn-rounded">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div id="cCarousel">
+          <div class="arrow" id="prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="arrow" id="next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div id="carousel-vp">
+            <div id="cCarousel-inner">
+              <article class="cCarousel-item">
+                <img
+                  src="/img/nid-de-guepes05.jpg"
+                  alt="img-guêpe"
+                  class="product-img"
+                />
+                <div class="infos">
+                  <h3>Nids De Guêpes</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Les nids d'insectes de guêpe ou d'oiseaux peuvent poser de
+                      sérieux problèmes. Avec notre service de destruction de
+                      nids, dites adieu aux intrus volants ou rampants qui
+                      menacent votre tranquillité.
+                    </p>
+                  </div>
+                  <button type="button">En Savoir Plus</button>
+                </div>
+              </article>
+
+              <article class="cCarousel-item">
+                <img src="/img/rat.jpg" alt="img-rat" class="product-img" />
+                <div class="infos">
+                  <h3>Dératisation</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Les rongeurs peuvent causer d'importants dégâts et
+                      constituer un risque pour la santé. Faites confiance à
+                      notre équipe pour éliminer efficacement les rats et les
+                      souris de votre propriété.
+                    </p>
+                  </div>
+                  <button type="button">En Savoir Plus</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="/img/Cockroach.jpg"
+                  alt="img-desinsectisation"
+                  class="product-img"
+                />
+                <div class="infos">
+                  <h3>Désinsectisation</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Les insectes nuisibles peuvent rapidement devenir une
+                      source de frustration et de stress. Notre équipe qualifiée
+                      vous débarrasse de ces envahisseurs indésirables.
+                    </p>
+                  </div>
+                  <button type="button">En Savoir Plus</button>
+                </div>
+              </article>
+
+              <article class="cCarousel-item">
+                <img
+                  src="/img/toit-pigeons.jpeg"
+                  alt="img-depigeonnage"
+                  class="product-img"
+                />
+                <div class="infos">
+                  <h3>Dépigeonnage</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Les pigeons peuvent causer des dommages et des nuisances
+                      dans vos espaces extérieurs. Avec notre service de
+                      dépigeonnage, dites adieu aux dégradations et aux
+                      nuisances sonores causées par ces oiseaux.
+                    </p>
+                  </div>
+                  <button type="button">En Savoir Plus</button>
+                </div>
+              </article>
+
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Caves & Locaux</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Notre équipe expérimentée vous aide à retrouver l'espace
+                      perdu dans vos caves et locaux en éliminant efficacement
+                      les objets encombrants et inutiles. Profitez d'un espace
+                      propre et fonctionnel dès maintenant !
+                    </p>
+                  </div>
+                  <button type="button">En Savoir Plus</button>
+                </div>
+              </article>
+
+              <article class="cCarousel-item">
+                <img
+                  src="/img/virus.jpeg"
+                  alt="img-desinfection"
+                  class="product-img"
+                />
+                <div class="infos">
+                  <h3>Désinfection</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">En Savoir Plus</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Cafards</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">En Savoir Plus</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Fouines</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">See</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Fourmis</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">See</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Frelon</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">See</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Gale</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">See</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Puce</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">See</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Punaise</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">See</button>
+                </div>
+              </article>
+              <article class="cCarousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1564292284209-60cce69f08ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODQ0MTA1MTJ8&ixlib=rb-4.0.3&q=80&w=400"
+                  alt="Moon"
+                />
+                <div class="infos">
+                  <h3>Symdrôme De Diogéne</h3>
+                  <div class="card-back">
+                    <p class="product-desc__text">
+                      Lutter contre les maladies, prévenir les risques de
+                      suicide, maintenir un espace hygiénique, nous sommes là
+                      pour vous. Faites confiance à notre expertise pour
+                      garantir la tranquillité d'esprit de ceux qui vous sont
+                      chers.
+                    </p>
+                  </div>
+                  <button type="button">See</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Barre Agreement -->
+    <div class="barre-agreement">
+      <div class="agreement-content">
+        <h2>Entreprise Agréé et Certifiée</h2>
+      </div>
+      <div class="container-carousel">
+        <div class="image-container">
+          <img
+            src="/img/partenaire-ministere-ecologie-dev-durable-energie@2x-300x109.png"
+            alt="logo-bio"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="/img/logo-certibiocide@2x-300x108.png"
+            alt="logo-certibiocide"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Zone d'Intervention -->
+    <div class="section">
+      <div class="content">
+        <div class="text-block">
+          <div class="title">
+            <h3 class="h3-intervention">À propos de Services Nuisibles 4D :</h3>
+          </div>
+          <p class="paragraph">
+            Services Nuisibles 4D est votre allié de confiance dans la région de
+            Montbéliard et jusqu'à 100 km aux alentours. Spécialisés dans
+            l'élimination des nuisibles tels que les rats, les cafards, les
+            termites et autres indésirables, nos experts s'engagent à vous
+            offrir des solutions efficaces pour garantir un environnement
+            sécurisé et sain.<br /><br />
+            Que ce soit à votre domicile ou dans votre entreprise, notre équipe
+            expérimentée met en œuvre des méthodes de lutte antiparasitaire
+            adaptées à vos besoins spécifiques.<br /><br />Nous nous engageons à
+            respecter les normes de sécurité et d'hygiène les plus strictes tout
+            en travaillant avec diligence et professionnalisme pour éliminer
+            rapidement et efficacement les nuisibles.
+          </p>
+        </div>
+      </div>
+      <div class="map">
+        <!-- Insérer votre code d'intégration de Google Maps ici -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43114.71689098716!2d6.767212120432803!3d47.51582136045668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792168cd6c87ad9%3A0x409ce34b313da10!2s25200%20Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1711764725539!5m2!1sfr!2sfr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="row row-footer">
+        <div class="col col-footer">
+          <img
+            src="/img/logo-valide-23122021.png"
+            alt="logo-footer"
+            class="footer_logo"
+          />
+          <p class="footer_about">
+            "Nuisibles services 4D est spécialisé dans la gestion efficace des
+            nuisibles. Nous offrons des solutions professionnelles fiables et
+            expérimentés, nous assurons un environnement propre et sécurisé pour
+            nos clients."
+          </p>
+        </div>
+        <div class="col">
+          <h3 class="h3-footer">
+            Sièges Social
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p><i class="fas fa-envelope"></i>&nbsp &nbsp25200 Montbéliard</p>
+          <p>FRANCE</p>
+          <p class="footer_email">nuisiblesservices4d@gmail.com</p>
+          <h4><i class="fas fa-phone"></i>&nbsp&nbsp06-41-40-71-75</h4>
+        </div>
+        <div class="col">
+          <h3 class="h3-footer">
+            Liens Utiles
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <ul class="ul-footer">
+            <li class="li-footer">
+              <a href="/politiques/condition.html">Condition D'utilisation</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/politique-de-conf.html"
+                >Politique De Confidentialité</a
+              >
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/securite.html">Politique De Sécurité</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/cookie.html">Politique De Cookies</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/mention.html">Mentions Légales</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col col-intervention">
+          <h3 class="h3-footer">
+            Horaires D'intervention
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p>Lundi - Vendredi</p>
+          <p>8h00 à 19h00</p>
+          <br />
+          <p>Samedi</p>
+          <p>9h00 à 18h00</p>
+          <br /><br />
+          <div class="social_icons">
+            <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+            <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">Digiprogtech Ⓒ 2024 - All Rights Reserved</p>
+    </footer>
+    <script src="/js/acceuil.js"></script>
+  </body>
+</html>

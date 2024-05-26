@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nuisibles Services 4D - Accueil</title>
+    <link rel="stylesheet" href="/css/style-acceuil.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=maps,marker&v=beta"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <header class="container_header">
+        <img class="devis" src="/img/devis-grt.png" alt="logo-devis" />
+        <div class="logo">
+          <img src="/img/logo-valide-23122021.png" alt="logo" />
+        </div>
+
+        <div class="burger">
+          <a id="hamburger-icon" href="#" class="open-close-btn">
+            <span class="span-burger"></span>
+            <span class="span-burger"></span>
+            <span class="span-burger"></span>
+          </a>
+        </div>
+
+        <div id="myNav" class="overlay">
+          <nav class="header__navegation">
+            <ul>
+              <li><a href="/html/Acceuil.html">Acceuil</a></li>
+              <li>
+                <a href="#">Nos Préstations</a>
+                <ul class="sous-menu sous-menu-responsive">
+                  <li class="li-sous-menu">
+                    <a href="/html/dératisation.html">Rats & Souris</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/destruction.html">Guêpes & Abeille</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/destruction.html">Frelons Asiatique</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/punaise.html">Punaise De Lit</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/puce.html">Puce</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/depigeonnage.html">Dépigeonnage</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/fouine.html">Fouiness et Martres</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/cafard.html">Cafards & Blattes</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/fourmis.html">Fourmis</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/gale.html">Gale</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/syndrome.html">Symdrôme De Diogéne</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/html/cave-local.html">Cave-Local</a>
+                  </li>
+                  <li class="li-sous-menu sous-menu-maladie">
+                    <a href="/html/deces.html">Désinfection</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/html/galerie.html">Galerie</a></li>
+              <li>
+                <a href="/contact/contact.html">Contact</a>
+                <ul class="sous-menu sous-menu-responsive">
+                  <li class="li-sous-menu">
+                    <a href="/contact/contact70.html">Haute-Saône</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/contact/contact25.html">Doubs & Haut-Doubs</a>
+                  </li>
+                  <li class="li-sous-menu">
+                    <a href="/contact/contact90.html">Territoire De Belfort</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/html/avis.html">Avis</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__content">
+          <h1 class="h1-acceuil">
+            <span class="red">N</span>uisibles
+            <span class="red">S</span>ervices<span class="red"> 4D</span>
+          </h1>
+          <h2 class="h2-acceuil">Votre partenaire contre les nuisances</h2>
+          <h3 class="h3-acceuil">
+            Efficacité garantie pour des résultats impeccables.
+          </h3>
+          <button
+            class="btn btn-produit"
+            onclick="location.href='/contact/contact.html'"
+          >
+            Contactez-nous
+          </button>
+        </div>
+      </header>
+
+      <div class="container-slider-acceuil">
+        <div class="main-slider">
+          <div class="label-container">
+            <h2>What's on your mind?</h2>
+            <button class="button-slider-acceuil arrow-left">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button class="button-slider-acceuil arrow-right">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+          <div class="card-slider-main">
+            <div class="card-wrapper">
+              <div>
+                <img
+                  src="/img/nid-de-guepes05.jpg"
+                  alt="img-guêpe"
+                  class="product-img"
+                />
+              </div>
+            </div>
+            <div class="card-wrapper">
+              <img src="/img/rat.jpg" alt="img-rat" class="product-img" />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1675667625/PC_Creative%20refresh/Biryani_2.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Shakes.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Cakes.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Rolls.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029860/PC_Creative%20refresh/3D_bau/banners_new/Sandwich.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029859/PC_Creative%20refresh/3D_bau/banners_new/Shawarma.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029854/PC_Creative%20refresh/3D_bau/banners_new/Pav_Bhaji.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029858/PC_Creative%20refresh/3D_bau/banners_new/Pure_Veg.png"
+                alt=""
+              />
+            </div>
+            <div class="card-wrapper">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029848/PC_Creative%20refresh/3D_bau/banners_new/Chinese.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Barre Agreement -->
+    <div class="barre-agreement">
+      <div class="agreement-content">
+        <h2>Entreprise Agréé et Certifiée</h2>
+      </div>
+      <div class="container">
+        <div class="image-container">
+          <img
+            src="/img/partenaire-ministere-ecologie-dev-durable-energie@2x-300x109.png"
+            alt="logo-bio"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="/img/logo-certibiocide@2x-300x108.png"
+            alt="logo-certibiocide"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Zone d'Intervention -->
+    <div class="section">
+      <div class="content">
+        <div class="text-block">
+          <div class="title">
+            <h3 class="h3-intervention">À propos de Services Nuisibles 4D :</h3>
+          </div>
+          <p class="paragraph">
+            Services Nuisibles 4D est votre allié de confiance dans la région de
+            Montbéliard et jusqu'à 100 km aux alentours. Spécialisés dans
+            l'élimination des nuisibles tels que les rats, les cafards, les
+            termites et autres indésirables, nos experts s'engagent à vous
+            offrir des solutions efficaces pour garantir un environnement
+            sécurisé et sain.<br /><br />
+            Que ce soit à votre domicile ou dans votre entreprise, notre équipe
+            expérimentée met en œuvre des méthodes de lutte antiparasitaire
+            adaptées à vos besoins spécifiques.<br /><br />Nous nous engageons à
+            respecter les normes de sécurité et d'hygiène les plus strictes tout
+            en travaillant avec diligence et professionnalisme pour éliminer
+            rapidement et efficacement les nuisibles.
+          </p>
+        </div>
+      </div>
+      <div class="map">
+        <!-- Insérer votre code d'intégration de Google Maps ici -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43114.71689098716!2d6.767212120432803!3d47.51582136045668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792168cd6c87ad9%3A0x409ce34b313da10!2s25200%20Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1711764725539!5m2!1sfr!2sfr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="row row-footer">
+        <div class="col col-footer">
+          <img
+            src="/img/logo-valide-23122021.png"
+            alt="logo-footer"
+            class="footer_logo"
+          />
+          <p class="footer_about">
+            "Nuisibles services 4D est spécialisé dans la gestion efficace des
+            nuisibles. Nous offrons des solutions professionnelles fiables et
+            expérimentés, nous assurons un environnement propre et sécurisé pour
+            nos clients."
+          </p>
+        </div>
+        <div class="col">
+          <h3 class="h3-footer">
+            Sièges Social
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p><i class="fas fa-envelope"></i>&nbsp &nbsp25200 Montbéliard</p>
+          <p>FRANCE</p>
+          <p class="footer_email">nuisiblesservices4d@gmail.com</p>
+          <h4><i class="fas fa-phone"></i>&nbsp&nbsp06-41-40-71-75</h4>
+        </div>
+        <div class="col">
+          <h3 class="h3-footer">
+            Liens Utiles
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <ul class="ul-footer">
+            <li class="li-footer">
+              <a href="/politiques/condition.html">Condition D'utilisation</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/politique-de-conf.html"
+                >Politique De Confidentialité</a
+              >
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/securite.html">Politique De Sécurité</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/cookie.html">Politique De Cookies</a>
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/mention.html">Mentions Légales</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col col-intervention">
+          <h3 class="h3-footer">
+            Horaires D'intervention
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p>Lundi - Vendredi</p>
+          <p>8h00 à 19h00</p>
+          <br />
+          <p>Samedi</p>
+          <p>9h00 à 18h00</p>
+          <br /><br />
+          <div class="social_icons">
+            <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+            <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

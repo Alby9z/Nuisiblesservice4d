@@ -235,6 +235,7 @@ nav ul li {
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
 .custom-select {
+  border: solid 2px #9b9b9b;
   position: relative;
   width: 100%;
 }
@@ -315,12 +316,14 @@ nav ul li {
 }
 
 .form-control {
+  border: solid 2px #9b9b9b;
   margin-left: 10px;
   height: 47px;
   background-color: #e7e1e1;
 }
 
 .form-controle {
+  border: solid 2px #9b9b9b;
   background-color: #e7e1e1;
   margin: 1px 0 45px -112px;
   height: 47px;
@@ -567,6 +570,11 @@ section {
   overflow: hidden;
   margin: 0px 0px 0px -70px;
 }
+.paragraph {
+  font-size: 14px;
+  padding: 0px 20px 20px 20px;
+  color: #ffff;
+}
 
 @media (max-width: 770px) {
   #carousel-vp {
@@ -617,9 +625,9 @@ section {
 }
 
 .cCarousel-item .infos button {
-  background: #222;
-  padding: 10px 30px;
-  border-radius: 15px;
+  background: #cbcbcb;
+  padding: 6px 25px;
+  border-radius: 25px;
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -658,7 +666,6 @@ section {
   transform: rotateY(180deg);
 }
 
-/* Optional: Adding some styles to card-back */
 .card-back .infos {
   display: flex;
   flex-direction: column;
@@ -669,12 +676,16 @@ section {
 
 .product-desc__text {
   font-size: 13px;
-  height: 200px;
+  height: 205px;
+}
+
+#img-fouine {
+  height: 0;
 }
 
 .card-back button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #ff0000;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -683,7 +694,7 @@ section {
 }
 
 .card-back button:hover {
-  background-color: #0056b3;
+  background-color: #ff0000;
 }
 
 .barre-agreement {
@@ -716,11 +727,23 @@ section {
 }
 
 /*------------------------section-2- acceuil------------------------------------------------------*/
+.animate__animated .animate__slideInRight {
+  animation: animate__slideInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
 .section-2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+
+  animation: animate__slideInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 .section-left {

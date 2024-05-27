@@ -198,6 +198,7 @@ nav ul li {
 }
 
 .titre-details {
+  margin: 40px 0 0 22px;
   border-bottom: 2px solid white;
   display: inline-block;
 }
@@ -283,14 +284,7 @@ nav ul li {
   border-radius: 0px 140px;
   float: right;
 }
-.piegon-1 {
-  margin-right: 25px;
-  border-radius: 50%;
-  margin-top: -2px;
-  width: 22%;
-  position: relative;
-  float: right;
-}
+
 .img-produit-piegon {
   width: 30%;
   margin: 0px 0px 0px 30px;
@@ -315,6 +309,16 @@ nav ul li {
   border-radius: 0px 140px;
   float: right;
 }
+
+.rats-souris,
+.piegon-1 {
+  margin-left: 750px;
+  position: absolute;
+  width: 22%;
+  height: 123px;
+  border-radius: 39%;
+}
+
 /*------------------------fin-taille-image-produit----------------------------------*/
 
 /*------------------------boutton-produit----------------------------------*/

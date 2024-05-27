@@ -318,7 +318,7 @@ nav ul li {
 
 .rats-souris,
 .piegon-1 {
-  margin-left: 750px;
+  margin-left: 600px;
   position: absolute;
   width: 22%;
   height: 123px;
@@ -702,6 +702,7 @@ footer .copyright {
     margin-bottom: 20px;
     font-size: 28px;
   }
+  .rats-souris,
   .piegon-1 {
     display: none;
   }

@@ -183,7 +183,7 @@ nav ul li {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  margin: 40px 0px 0px 0px;
+  margin: 50px 110px 0px 0px;
 }
 
 .header__content {
@@ -234,21 +234,23 @@ nav ul li {
 }
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
+.rat-barre {
+}
 .custom-select {
-  border: solid 2px #9b9b9b;
+  border-radius: 5px;
+  border: solid 2px #cfd0f9;
   position: relative;
   width: 100%;
 }
 
 .custom-select select {
-  display: none; /* Cache le menu déroulant natif */
+  display: none;
 }
 
 .custom-select::before {
-  background-color: #e7e1e1;
+  background-color: #585858;
   content: attr(data-selected);
   display: block;
-  border: 1px solid #ccc;
   padding: 10px;
   cursor: pointer;
   position: relative;
@@ -262,7 +264,7 @@ nav ul li {
   transform: translateY(-50%);
   border: 5px solid transparent;
   border-top-color: #333;
-  background-color: #e7e1e1;
+  background-color: #585858;
 }
 
 .custom-select.open::after {
@@ -273,8 +275,8 @@ nav ul li {
 .custom-select ul {
   display: none;
   position: absolute;
-  background: #fff;
-  border: 1px solid #ccc;
+  background: #ddd;
+  border: 1px solid #cfd0f9;
   width: 100%;
   z-index: 1;
   list-style: none;
@@ -316,15 +318,17 @@ nav ul li {
 }
 
 .form-control {
-  border: solid 2px #9b9b9b;
+  border-radius: 5px;
+  border: solid 2px #cfd0f9;
   margin-left: 10px;
   height: 47px;
-  background-color: #e7e1e1;
+  background-color: #585858;
 }
 
 .form-controle {
-  border: solid 2px #9b9b9b;
-  background-color: #e7e1e1;
+  border-radius: 5px;
+  border: solid 2px #cfd0f9;
+  background-color: #585858;
   margin: 1px 0 45px -112px;
   height: 47px;
 }
@@ -335,7 +339,7 @@ nav ul li {
   justify-content: center;
   font-size: 35px;
   font-weight: bold;
-  margin: 20px 0px 20px 0px;
+  margin: 20px -10px 20px 0px;
 }
 
 #barre-nav-acceuil {
@@ -394,7 +398,8 @@ nav ul li {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  border: solid 1px #cfd0f9;
+  background-color: #585858;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -656,7 +661,7 @@ section {
 
 .card-back {
   transform: rotateY(180deg);
-  background-color: #fff; /* You can change the background color */
+  background-color: #fff;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;

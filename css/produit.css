@@ -171,7 +171,7 @@ nav ul li {
   background-size: cover;
 }
 .h1-produit {
-  margin-bottom: 2em;
+  margin-bottom: -1em;
   text-align: center;
   color: #fff;
   span {
@@ -185,11 +185,17 @@ nav ul li {
   padding: 10px 20px 0px 20px;
   color: #ffff;
   line-height: 1.66;
-  margin: 1rem 0 1.5rem;
+  margin: 25px 170px 20px;
   strong {
     color: #ddd;
     font-weight: 700;
   }
+}
+
+.back-produit {
+  margin: 45px 400px;
+  position: absolute;
+  z-index: -2;
 }
 
 .border-details {

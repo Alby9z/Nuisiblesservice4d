@@ -102,10 +102,15 @@ nav ul li {
   text-decoration: none;
 }
 
-.sous-menu-maladie {
+.sous-menu-maladie-1 {
   background-color: #ff0000;
   transition: all 0.5s ease;
-  border-radius: 0 0 10px 10px;
+}
+
+.sous-menu-maladie-2 {
+  background-color: #22ca00;
+  transition: all 0.5s ease;
+   border-radius: 0 0 10px 10px;
 }
 
 .header__navegation li:hover .sous-menu {

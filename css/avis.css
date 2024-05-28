@@ -141,14 +141,15 @@ nav ul li {
 }
 
 #testimonial-area {
-  background-color: #585858;
+  background-image: url(/img/back.jpg);
+  background-size: cover;
   font-size: 48px;
   line-height: 58px;
 }
 .section-heading .h2-avis {
   display: flex;
   justify-content: center;
-  background-color: #585858;
+  background-color: #101010;
   font-size: 30px;
   line-height: 30px;
 }
@@ -163,7 +164,7 @@ nav ul li {
 
 .testi-wrap {
   position: relative;
-  height: 800px;
+  height: 650px;
   margin-top: -50px;
 }
 
@@ -590,16 +591,22 @@ span i {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f7f7f7;
+  background-color: #342f2f;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.form-avis {
+  background-image: url(/img/back.jpg);
+  background-size: cover;
+}
+
 .note-avis {
+  padding: 35px;
   text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 25px;
+  margin: 0px 0px 15px;
+  color: #fff;
 }
 
 form {
@@ -610,12 +617,13 @@ form {
 form label {
   font-size: 1em;
   margin-bottom: 5px;
-  color: #555;
+  color: #ffffff;
 }
 
 form input[type="text"],
 form input[type="email"],
 form textarea {
+  background-color: #585858;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;

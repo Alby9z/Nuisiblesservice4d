@@ -14,15 +14,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <!-- Inclure Ionicons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
-    ></script>
     <!-- Inclure Google Maps API -->
     <script
       async
@@ -239,7 +230,7 @@
                 <div class="col-auto">
                   <div class="form-group">
                     <button type="submit" class="btn-barre btn-red btn-rounded">
-                      <i class="<i class="fa fa-search" aria-hidden="true"></i>
+                      <ion-icon name="search-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -247,6 +238,8 @@
             </form>
           </div>
         </div>
+      </div>
+      <div class="separator">
       </div>
       <div class="texte-acceuil">
         <h1>Bienvenue chez Nuisibles Services 4D</h1>
@@ -801,10 +794,10 @@
             Sièges Social
             <div class="bottom_line"><span></span></div>
           </h3>
-          <p><i class="fas fa-envelope"></i>&nbsp &nbsp25200 Montbéliard</p>
+          <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;25200 Montbéliard</p>
           <p>FRANCE</p>
-          <p class="footer_email">nuisiblesservices4d@gmail.com</p>
-          <h4><i class="fas fa-phone"></i>&nbsp&nbsp06-41-40-71-75</h4>
+          <p class="footer_email"><span class="souligner-rouge">nuisiblesservices4d@gmail.com</span></p>
+          <h4><i class="fas fa-phone"></i>&nbsp;&nbsp;06-41-40-71-75</h4>
         </div>
         <div class="col">
           <h3 class="h3-footer">
@@ -816,9 +809,7 @@
               <a href="/politiques/condition.html">Condition D'utilisation</a>
             </li>
             <li class="li-footer">
-              <a href="/politiques/politique-de-conf.html"
-                >Politique De Confidentialité</a
-              >
+              <a href="/politiques/politique-de-conf.html">Politique De Confidentialité</a>
             </li>
             <li class="li-footer">
               <a href="/politiques/securite.html">Politique De Sécurité</a>
@@ -853,6 +844,8 @@
       <hr />
       <p class="copyright">Digiprogtech Ⓒ 2024 - All Rights Reserved</p>
     </footer>
-    <script src="/js/acceuil.js"></script>
+      <script src="/js/acceuil.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

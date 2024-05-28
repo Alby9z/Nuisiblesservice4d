@@ -1,44 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const burgerIcon = document.getElementById("hamburger-icon");
-  const navMenu = document.getElementById("myNav");
+  const customSelect = document.querySelector(".custom-select");
+  const select = customSelect.querySelector("select");
+  const selectedOptionDiv = customSelect.querySelector(".selected-option");
 
-  burgerIcon.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  var customSelect = document.querySelector(".custom-select");
-  var select = customSelect.querySelector("select");
-  var selectedOption = select.options[select.selectedIndex];
-  var selectedText = selectedOption.text;
-  var selectedImgSrc = selectedOption.getAttribute("data-img-src");
+  if (!selectedOptionDiv) {
+    console.error(".selected-option element is missing");
+    return;
+  }
 
-  customSelect.setAttribute("data-selected", selectedText);
-  var ul = document.createElement("ul");
+  function updateSelectedOption() {
+    const selectedOption = select.options[select.selectedIndex];
+    const selectedText = selectedOption.textContent.trim();
+    const selectedImgSrc = selectedOption.getAttribute("data-img-src");
 
-  Array.from(select.options).forEach(function (option) {
-    var li = document.createElement("li");
-    li.textContent = option.textContent;
-    li.setAttribute("data-value", option.value);
+    console.log("Selected option:", selectedText, selectedImgSrc);
 
-    var img = document.createElement("img");
-    img.src = option.getAttribute("data-img-src");
-    li.prepend(img);
+    // Vider l'option sélectionnée
+    selectedOptionDiv.innerHTML = "";
 
-    li.addEventListener("click", function () {
-      select.value = option.value;
-      customSelect.setAttribute("data-selected", option.textContent);
-      customSelect.classList.remove("open");
-    });
+    // Ajouter l'image si elle existe
+    if (selectedImgSrc) {
+      const selectedImg = document.createElement("img");
+      selectedImg.src = selectedImgSrc;
+      selectedOptionDiv.appendChild(selectedImg);
+      console.log("Image added:", selectedImgSrc);
+    } else {
+      console.log("No image for this option");
+    }
 
-    ul.appendChild(li);
-  });
+    // Ajouter le texte sélectionné
+    const selectedTextNode = document.createTextNode(selectedText);
+    selectedOptionDiv.appendChild(selectedTextNode);
+    console.log("Text added:", selectedText);
+  }
 
-  customSelect.appendChild(ul);
+  select.addEventListener("change", updateSelectedOption);
 
-  customSelect.addEventListener("click", function () {
-    customSelect.classList.toggle("open");
-  });
+  updateSelectedOption(); // Mettre à jour l'option sélectionnée au chargement de la page
 });
 
 /*---------------------slider-card ------------------------------------------------------------------*/

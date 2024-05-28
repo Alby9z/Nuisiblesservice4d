@@ -318,7 +318,7 @@ nav ul li {
 
 .rats-souris,
 .piegon-1 {
-  margin-left: 600px;
+  margin-left: 690px;
   position: absolute;
   width: 22%;
   height: 123px;
@@ -329,7 +329,7 @@ nav ul li {
 
 /*------------------------boutton-produit----------------------------------*/
 .btn-produit {
-  margin: 20px 0px 25px 500px;
+  margin: 20px 0px 25px 550px;
   width: 20%;
   padding: 9px 20px;
   background-color: #ff0000;
@@ -407,7 +407,7 @@ a {
 
 .text {
   flex: 1;
-  padding-right: 20px; /* Ajoute de l'espace entre le texte et la carte */
+  padding-right: 20px;
   margin-top: -172px;
   padding: 0 20px 0 20px;
 }
@@ -608,12 +608,83 @@ footer .copyright {
     width: 21%;
     margin: 5px 5px 0px 0px;
   }
-  .btn-produit {
-    margin: 20px 0px 25px 600px;
-  }
   .col-footer {
     margin-left: 25px;
   }
+}
+
+/*------------------------section-2- acceuil------------------------------------------------------*/
+.animate__animated .animate__slideInRight {
+  animation: animate__slideInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.section-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+
+  animation: animate__slideInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.section-left {
+  flex-direction: row;
+}
+
+.section-right {
+  flex-direction: row-reverse;
+}
+.section-left .text {
+  font-size: 14px;
+  order: 1;
+  margin: 15px 80px 15px 10px;
+}
+
+.section-right .text {
+  font-size: 14px;
+  order: 2;
+  margin: 15px 80px 15px 10px;
+}
+
+.image-section-2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section-2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.h2-section2 {
+  border-top: solid 1px #ff0000;
+  color: white;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.text-section2 {
+  color: white;
+  font-size: 14px;
+}
+
+.text {
+  font-size: 15px;
+  flex: 1;
+  padding: 20px;
 }
 
 /*---------------responsive-------1024Px--------------------------------------------*/

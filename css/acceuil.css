@@ -238,7 +238,7 @@ nav ul li {
 }
 .custom-select {
   border-radius: 5px;
-  border: solid 2px #cfd0f9;
+  border: solid 2px white;
   position: relative;
   width: 100%;
 }
@@ -319,7 +319,7 @@ nav ul li {
 
 .form-control {
   border-radius: 5px;
-  border: solid 2px #cfd0f9;
+  border: solid 2px white;
   margin-left: 10px;
   height: 47px;
   background-color: #585858;
@@ -327,7 +327,7 @@ nav ul li {
 
 .form-controle {
   border-radius: 5px;
-  border: solid 2px #cfd0f9;
+  border: solid 2px white;
   background-color: #585858;
   margin: 1px 0 45px -112px;
   height: 47px;
@@ -471,6 +471,7 @@ input:checked + .slider:before {
 }
 
 a {
+  font-size: 13px;
   text-decoration: none;
   color: #000000;
 }

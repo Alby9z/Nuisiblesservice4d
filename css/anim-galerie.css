@@ -112,7 +112,24 @@ nav ul li {
 .sous-menu-maladie-2 {
   background-color: #22ca00;
   transition: all 0.5s ease;
-   border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+/*--------------header barre acceuil navig------------------------------------------*/
+main {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background-image: url(/img/Bandeau3.jpg);
+  height: 155px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  background-position: center;
+  font-family: "poppins", sans-serif;
 }
 
 .header__navegation li:hover .sous-menu {
@@ -185,8 +202,8 @@ nav ul li {
 }
 
 .ul-galerie {
-  width: 620px;
-  margin: 80px auto;
+  width: 78%;
+  margin: 80px 0px 80px 220px;
   list-style: none;
   float: left;
   padding: 10px;
@@ -249,6 +266,29 @@ nav ul li {
 .li-galerie:nth-child(6) img {
   -webkit-transform: translate(-40px) rotate(5deg);
 }
+.li-galerie:nth-child(7) img {
+  -webkit-transform: translate(-10px, 20px) rotate(-10deg);
+}
+
+.li-galerie:nth-child(8) img {
+  -webkit-transform: translate(-20px, 70px) rotate(10deg);
+}
+
+.li-galerie:nth-child(9) img {
+  -webkit-transform: translate(-40px, 5px) rotate(13deg);
+}
+
+.li-galerie:nth-child(10) img {
+  -webkit-transform: translate(-20px, 20px) rotate(5deg);
+}
+
+.li-galerie:nth-child(11) img {
+  -webkit-transform: translate(-30px, 50px) rotate(-10deg);
+}
+
+.li-galerie:nth-child(12) img {
+  -webkit-transform: translate(-40px) rotate(5deg);
+}
 
 .li-galerie img:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.7);
@@ -283,12 +323,6 @@ nav ul li {
 .image-container img {
   max-width: 100%;
   height: 85px;
-}
-
-@media (max-height: 600px) {
-  .container {
-    height: 100vh;
-  }
 }
 
 /*------------------------map-------------------------------------------------------*/

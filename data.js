@@ -71,8 +71,8 @@ app.post("/rechercher", (req, res) => {
 });
 
 // Route pour la page des rats et souris
-app.get("/rats-souris", (req, res) => {
-  res.sendFile(path.join(__dirname, "/html/rats-souris.html"));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/html/"));
 });
 
 // Route pour la page des guêpes et abeilles

@@ -129,68 +129,68 @@
         <div class="container-nav-acceuil">
           <div class="search-block">
             <p class="titre-barre">J’aimerais Me Débarrasser</p>
-            <form action="......" class="chercher" method="post">
+            <form action="/rechercher" class="chercher" method="post">
               <div class="row justify-content-lg-center">
                 <div class="col-lg col-12">
-                  <div class="custom-select">
-                    <select
-                      name="nuisible"
-                      class="form-control"
-                      id="nuisible-select"
-                    >
-                      <option
-                        value="1"
-                        data-img-src="/img/icon/rat.png"
-                        class="rat-barre"
-                      >
-                        Rats ou Souris
-                      </option>
-                      <option value="2" data-img-src="/img/icon/guêpe.png">
-                        Guêpes & Abeille
-                      </option>
-                      <option value="3" data-img-src="/img/icon/frelon.png">
-                        Frelons Asiatique
-                      </option>
-                      <option value="4" data-img-src="/img/icon/punaise.png">
-                        Punaise De Lit
-                      </option>
-                      <option value="5" data-img-src="/img/icon/puce.png">
-                        Puce
-                      </option>
-                      <option value="6" data-img-src="/img/icon/fourmis.png">
-                        Fourmis
-                      </option>
-                      <option value="7" data-img-src="/img/icon/piegon.png">
-                        Dépigeonnage
-                      </option>
-                      <option value="8" data-img-src="/img/icon/fouine.png">
-                        Fouines & Martres
-                      </option>
-                      <option value="9" data-img-src="/img/icon/cafard.png">
-                        Cafards & Blattes
-                      </option>
-                      <option value="10" data-img-src="/img/icon/fourmis.png">
-                        Fourmis
-                      </option>
-                      <option value="11" data-img-src="/img/icon/gale.png">
-                        Gale
-                      </option>
-                      <option value="12" data-img-src="/img/icon/diogene.png">
-                        Symdrôme De Diogéne
-                      </option>
-                      <option value="13" data-img-src="/img/icon/poubelle.png">
-                        Cave-Local
-                      </option>
-                      <option
-                        value="14"
-                        data-img-src="/img/icon/desinfection.png"
-                      >
-                        Désinfection
-                      </option>
-                      <option value="15" data-img-src="/img/icon/eco.png">
-                        Traitements éco-responsables
-                      </option>
-                    </select>
+                  <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                      <select name="nuisible" id="nuisible-select">
+                        <option value="" disabled selected>
+                          Choisissez un nuisible
+                        </option>
+                        <option value="1" data-img-src="/img/icon/rat.png">
+                          Rats ou Souris
+                        </option>
+                        <option value="2" data-img-src="/img/icon/guêpe.png">
+                          Guêpes & Abeille
+                        </option>
+                        <option value="3" data-img-src="/img/icon/frelon.png">
+                          Frelons Asiatique
+                        </option>
+                        <option value="4" data-img-src="/img/icon/punaise.png">
+                          Punaise De Lit
+                        </option>
+                        <option value="5" data-img-src="/img/icon/puce.png">
+                          Puce
+                        </option>
+                        <option value="6" data-img-src="/img/icon/fourmis.png">
+                          Fourmis
+                        </option>
+                        <option value="7" data-img-src="/img/icon/piegon.png">
+                          Dépigeonnage
+                        </option>
+                        <option value="8" data-img-src="/img/icon/fouine.png">
+                          Fouines & Martres
+                        </option>
+                        <option value="9" data-img-src="/img/icon/cafard.png">
+                          Cafards & Blattes
+                        </option>
+                        <option value="10" data-img-src="/img/icon/fourmis.png">
+                          Fourmis
+                        </option>
+                        <option value="11" data-img-src="/img/icon/gale.png">
+                          Gale
+                        </option>
+                        <option value="12" data-img-src="/img/icon/diogene.png">
+                          Syndrôme De Diogéne
+                        </option>
+                        <option
+                          value="13"
+                          data-img-src="/img/icon/poubelle.png"
+                        >
+                          Cave-Local
+                        </option>
+                        <option
+                          value="14"
+                          data-img-src="/img/icon/desinfection.png"
+                        >
+                          Désinfection
+                        </option>
+                        <option value="15" data-img-src="/img/icon/eco.png">
+                          Traitements éco-responsables
+                        </option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg col-12">
@@ -218,7 +218,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- HTML pour l'interrupteur et le texte "Urgent" -->
                 <div class="switch-container">
                   <label class="switch">
                     <input type="checkbox" />
@@ -226,7 +225,6 @@
                   </label>
                   <span class="urgent">Urgent</span>
                 </div>
-
                 <div class="col-auto">
                   <div class="form-group">
                     <button type="submit" class="btn-barre btn-red btn-rounded">
@@ -239,6 +237,7 @@
           </div>
         </div>
       </div>
+
       <div class="separator"></div>
       <div class="texte-acceuil">
         <h1>Bienvenue chez Nuisibles Services 4D</h1>
@@ -847,7 +846,7 @@
       <hr />
       <p class="copyright">Digiprogtech Ⓒ 2024 - All Rights Reserved</p>
     </footer>
-    <script src="/html/acceuil.js"></script>
+    <script src="/js/acceuil.js"></script>
     <script src="/html/data.js"></script>
     <script
       type="module"

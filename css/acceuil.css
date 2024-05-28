@@ -146,7 +146,7 @@ nav ul li {
 .sous-menu-maladie-2 {
   background-color: #22ca00;
   transition: all 0.5s ease;
-   border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .header__navegation li:hover .sous-menu {
@@ -239,42 +239,52 @@ nav ul li {
 }
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
+
 .rat-barre {
 }
+.custom-select-wrapper {
+  position: relative;
+}
+
 .custom-select {
   border-radius: 5px;
   border: solid 2px white;
   position: relative;
   width: 100%;
+  background-color: #585858;
 }
 
 .custom-select select {
-  display: none;
-}
-
-.custom-select::before {
-  background-color: #585858;
-  content: attr(data-selected);
-  display: block;
+  width: 100%;
   padding: 10px;
-  cursor: pointer;
-  position: relative;
-}
-
-.custom-select::after {
-  content: "";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 5px solid transparent;
-  border-top-color: #333;
+  border: none;
+  border-radius: 5px;
   background-color: #585858;
+  color: white;
 }
 
-.custom-select.open::after {
-  border-top-color: transparent;
-  border-bottom-color: #333;
+.custom-select {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #585858;
+  color: white;
+  cursor: pointer;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #585858;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-select .selected-option img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .custom-select ul {
@@ -328,6 +338,7 @@ nav ul li {
   margin-left: 10px;
   height: 47px;
   background-color: #585858;
+  color: white;
 }
 
 .form-controle {
@@ -336,6 +347,7 @@ nav ul li {
   background-color: #585858;
   margin: 1px 0 45px -112px;
   height: 47px;
+  color: white;
 }
 
 .titre-barre {
@@ -382,6 +394,7 @@ nav ul li {
 }
 
 /* ----------CSS pour l'interrupteur et le texte "Urgent" -------------------------------*/
+
 .switch {
   margin: 7px -10px 0px 5px;
   position: relative;
@@ -452,11 +465,11 @@ input:checked + .slider:before {
 /* ------------------------top-section--------------------------------------------*/
 
 .separator {
-  width: 50%; 
-  max-width: 600px; 
-  height: 2px; 
-  background-color: #ff0000; 
-  margin: 100px auto; 
+  width: 50%;
+  max-width: 600px;
+  height: 2px;
+  background-color: #ff0000;
+  margin: 100px auto;
   display: block;
 }
 
@@ -892,7 +905,7 @@ footer {
   }
 }
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
   .col-footer {
     display: none;
   }
@@ -1016,7 +1029,7 @@ footer {
   height: 30px;
   border-radius: 50%;
   text-align: center;
-  line-height: 30px; 
+  line-height: 30px;
   font-size: 20px;
   color: #fff;
   background: #ff0000;

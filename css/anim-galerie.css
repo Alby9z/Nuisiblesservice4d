@@ -248,7 +248,7 @@ header {
 }
 
 .li-galerie:nth-child(2) img {
-  -webkit-transform: translate(-20px, 70px) rotate(10deg);
+  transform: translate(-32px, 7px) rotate(-21deg);
 }
 
 .li-galerie:nth-child(3) img {
@@ -271,7 +271,7 @@ header {
 }
 
 .li-galerie:nth-child(8) img {
-  -webkit-transform: translate(-20px, 70px) rotate(10deg);
+  -webkit-transform: translate(-29px, 10px) rotate(-24deg);
 }
 
 .li-galerie:nth-child(9) img {

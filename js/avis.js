@@ -1,26 +1,33 @@
-document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
+$(document).ready(
+  (function () {
+    $(".client-single").on("click", function (event) {
+      event.preventDefault();
 
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+      var active = $(this).hasClass("active");
 
-    // Récupération des valeurs des champs
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
+      var parent = $(this).parents(".testi-wrap");
 
-    // Affichage du message de confirmation
-    var confirmationMessage = document.getElementById("confirmationMessage");
-    confirmationMessage.classList.remove("hidden");
+      if (!active) {
+        var activeBlock = parent.find(".client-single.active");
 
-    // Masquage du message de confirmation après 4 secondes
-    setTimeout(function () {
-      confirmationMessage.classList.add("hidden");
-    }, 4000);
+        var currentPos = $(this).attr("data-position");
 
-    // Réinitialisation des champs du formulaire
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-  });
+        var newPos = activeBlock.attr("data-position");
+
+        activeBlock
+          .removeClass("active")
+          .removeClass(newPos)
+          .addClass("inactive")
+          .addClass(currentPos);
+        activeBlock.attr("data-position", currentPos);
+
+        $(this)
+          .addClass("active")
+          .removeClass("inactive")
+          .removeClass(currentPos)
+          .addClass(newPos);
+        $(this).attr("data-position", newPos);
+      }
+    });
+  })(jQuery)
+);

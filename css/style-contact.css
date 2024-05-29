@@ -48,7 +48,7 @@ textarea {
 /*------------------------nav-bar---------------------------------------------------*/
 header {
   background-image: url("/img/Bandeau3.jpg");
-  height: 600px;
+  height: 150px;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 20px;
@@ -171,43 +171,6 @@ nav ul li {
 
 .header__navegation a:hover::after {
   width: 100%;
-}
-
-/*--------nav--------------sous-menu------------------------------------------------*/
-.sous-menu {
-  margin-left: -15px;
-  opacity: 0.9;
-  border-radius: 10px;
-  display: none;
-  position: absolute;
-  background-color: black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0.2);
-  z-index: 1;
-}
-
-.sous-menu .li-sous-menu {
-  display: block;
-  padding: 10px;
-}
-
-.sous-menu .li-sous-menu a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.sous-menu-maladie-1 {
-  background-color: #ff0000;
-  transition: all 0.5s ease;
-}
-
-.sous-menu-maladie-2 {
-  background-color: #22ca00;
-  transition: all 0.5s ease;
-  border-radius: 0 0 10px 10px;
-}
-
-.header__navegation li:hover .sous-menu {
-  display: block;
 }
 
 /*--nav----------fin-sous-menu------------------------------------------------------*/

@@ -772,6 +772,7 @@ section {
 }
 
 /*------------------------section-2- acceuil------------------------------------------------------*/
+
 .animate__animated .animate__slideInRight {
   animation: animate__slideInRight;
   animation-duration: 2s;
@@ -800,7 +801,7 @@ section {
 }
 .section-left .text {
   order: 1;
-  margin: 15px 80px 15px 10px;
+  margin: 15px 10px 15px 80px;
 }
 
 .section-right .text {
@@ -835,12 +836,45 @@ h2 {
   display: flex;
   margin-bottom: 15px;
   justify-content: center;
+  padding: 20px 20px 0;
 }
 
 .text-section2 {
   color: white;
   font-size: 15px;
 }
+
+/* Responsive Design for 970px and below */
+
+@media (max-width: 970px) {
+  .section-2 {
+    flex-direction: column;
+  }
+
+  .h2-section2 {
+    text-align: center;
+  }
+
+  .section-right .text {
+    order: 1;
+    margin: 15px 10px 15px 10px;
+  }
+
+  .section-left .text {
+    order: 1;
+    margin: 15px 10px 15px 10px;
+  }
+
+  .image-section-2 {
+    order: 2;
+    margin: 15px 10px 15px 10px;
+  }
+
+  .image-section-2 img {
+    height: 250px;
+  }
+}
+
 /*------------------------map-------------------------------------------------------*/
 
 .company-info {
@@ -851,7 +885,7 @@ h2 {
 }
 
 .title {
-  border-top: solid 3px #ff0000;
+  border-top: solid 2px #ff0000;
   padding: 20px 20px 0;
   color: #ffff;
 }

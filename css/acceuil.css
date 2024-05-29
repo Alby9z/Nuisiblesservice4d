@@ -240,8 +240,23 @@ nav ul li {
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
 
-.rat-barre {
+#icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
 }
+
+#icon-container img {
+  width: 50px; /* Ajustez la taille selon vos besoins */
+  height: 50px; /* Ajustez la taille selon vos besoins */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f9f9f9;
+}
+
 .custom-select-wrapper {
   position: relative;
 }
@@ -273,12 +288,7 @@ nav ul li {
 }
 
 .selected-option {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #585858;
-  color: white;
-  cursor: pointer;
+  display: none;
 }
 
 .custom-select .selected-option img {

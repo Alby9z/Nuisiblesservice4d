@@ -101,19 +101,3 @@ function mediaManagement() {
     oldViewportWidth = newViewportWidth;
   }
 }
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('hamburger-icon').addEventListener('click', function(event) {
-      event.preventDefault();
-      var overlay = document.getElementById('myNav');
-      var icon = document.getElementById('hamburger-icon');
-      if (overlay.classList.contains('open')) {
-        overlay.classList.remove('open');
-        icon.classList.remove('open');
-      } else {
-        overlay.classList.add('open');
-        icon.classList.add('open');
-      }
-    });
-  });
-</script>

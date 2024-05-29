@@ -1,42 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
   const customSelect = document.querySelector(".custom-select");
   const select = customSelect.querySelector("select");
-  const selectedOptionDiv = customSelect.querySelector(".selected-option");
-
-  if (!selectedOptionDiv) {
-    console.error(".selected-option element is missing");
-    return;
-  }
+  const selectedOptionDiv = document.createElement("div");
+  selectedOptionDiv.className = "selected-option";
+  customSelect.insertBefore(selectedOptionDiv, select);
 
   function updateSelectedOption() {
     const selectedOption = select.options[select.selectedIndex];
     const selectedText = selectedOption.textContent.trim();
     const selectedImgSrc = selectedOption.getAttribute("data-img-src");
 
-    console.log("Selected option:", selectedText, selectedImgSrc);
-
-    // Vider l'option sélectionnée
+    // Clear the current content
     selectedOptionDiv.innerHTML = "";
 
-    // Ajouter l'image si elle existe
+    // Add the image if it exists
     if (selectedImgSrc) {
       const selectedImg = document.createElement("img");
       selectedImg.src = selectedImgSrc;
+      selectedImg.alt = selectedText;
       selectedOptionDiv.appendChild(selectedImg);
-      console.log("Image added:", selectedImgSrc);
-    } else {
-      console.log("No image for this option");
     }
 
-    // Ajouter le texte sélectionné
-    const selectedTextNode = document.createTextNode(selectedText);
+    // Add the selected text
+    const selectedTextNode = document.createTextNode(" " + selectedText);
     selectedOptionDiv.appendChild(selectedTextNode);
-    console.log("Text added:", selectedText);
   }
 
   select.addEventListener("change", updateSelectedOption);
 
-  updateSelectedOption(); // Mettre à jour l'option sélectionnée au chargement de la page
+  updateSelectedOption(); // Update the selected option on page load
 });
 
 /*---------------------slider-card ------------------------------------------------------------------*/

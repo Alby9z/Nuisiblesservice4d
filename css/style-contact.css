@@ -14,7 +14,6 @@ textarea {
 }
 
 /*---------------------menu-burger--------------------------------------------------*/
-
 .burger {
   display: none;
   position: fixed;
@@ -47,10 +46,9 @@ textarea {
 }
 
 /*------------------------nav-bar---------------------------------------------------*/
-
-.header-contact {
+header {
   background-image: url("/img/Bandeau3.jpg");
-  height: 150px;
+  height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 20px;
@@ -58,19 +56,50 @@ textarea {
   background-position: center;
 }
 
+.devis {
+  position: absolute;
+  height: 110px;
+  display: flex;
+  margin-top: 332px;
+  right: 250px;
+  transition: transform 0.3s ease-in-out;
+  animation: rotation 40s linear infinite;
+}
+
+.devis:hover {
+  transform: scale(1.2);
+}
+/*-------------------animation-devis-----------------------------------------------*/
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*-------------------animation-devis-----------------------------------------------*/
+
 .logo img {
   float: left;
   width: 150px;
-  margin-left: -15px;
-  margin-top: -25px;
+  margin-left: -10px;
+  margin-top: -20px;
 }
 
 .header__navegation {
   float: right;
-  padding: 50px 40px 0 0;
+  padding: 30px 40px 0 0;
 }
 
 .header__navegation ul {
+  padding: 0;
+  list-style-type: none;
+  color: #fff;
+}
+
+.header__navegation-contact ul {
+  margin-left: -85px;
   padding: 0;
   list-style-type: none;
   color: #fff;
@@ -110,7 +139,71 @@ nav ul li {
 .sous-menu-maladie-2 {
   background-color: #22ca00;
   transition: all 0.5s ease;
-   border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.header__navegation li:hover .sous-menu {
+  display: block;
+}
+
+.header__navegation ul li a {
+  position: relative;
+  color: #c2c2c2;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 1.1em;
+}
+
+.header__navegation a:hover {
+  color: #fff;
+}
+
+.header__navegation a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff0000;
+  transition: all 0.5s ease;
+}
+
+.header__navegation a:hover::after {
+  width: 100%;
+}
+
+/*--------nav--------------sous-menu------------------------------------------------*/
+.sous-menu {
+  margin-left: -15px;
+  opacity: 0.9;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0.2);
+  z-index: 1;
+}
+
+.sous-menu .li-sous-menu {
+  display: block;
+  padding: 10px;
+}
+
+.sous-menu .li-sous-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sous-menu-maladie-1 {
+  background-color: #ff0000;
+  transition: all 0.5s ease;
+}
+
+.sous-menu-maladie-2 {
+  background-color: #22ca00;
+  transition: all 0.5s ease;
+  border-radius: 0 0 10px 10px;
 }
 
 .header__navegation li:hover .sous-menu {
@@ -441,7 +534,7 @@ textarea.input {
   margin: 0;
   padding: 0;
 }
-    
+
 .map iframe {
   display: block;
   border: none;

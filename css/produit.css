@@ -354,19 +354,31 @@ a {
   color: #000000;
 }
 
-/*------------------------barre-agreement-------------------------------------------*/
+/*------------------------barre agreement------------------------------------------------------*/
+#image-certif-punaise {
+  height: 110px;
+  margin-top: -10px;
+}
+
+.container-carousel {
+  display: flex;
+}
+
 .barre-agreement {
+  width: 100%;
   display: block;
   background-color: #252525;
   text-align: center;
   padding: 2em 0em 2em 0em;
   margin-bottom: 80px;
 }
+
 .agreement-content {
   color: #fff;
   font-size: 25px;
   font-weight: 600;
 }
+
 .container {
   display: flex;
 }
@@ -424,6 +436,80 @@ a {
 .map {
   margin-right: 2px;
   flex: 1;
+}
+
+/*------------------------section-2- acceuil------------------------------------------------------*/
+.animate__animated .animate__slideInRight {
+  animation: animate__slideInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.section-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+
+  animation: animate__slideInRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.section-left {
+  flex-direction: row;
+}
+
+.section-right {
+  flex-direction: row-reverse;
+}
+.section-left .text {
+  font-size: 14px;
+  order: 1;
+  margin: 15px 80px 15px 10px;
+}
+
+.section-right .text {
+  font-size: 14px;
+  order: 2;
+  margin: 15px 80px 15px 10px;
+}
+
+.image-section-2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section-2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.h2-section2 {
+  border-top: solid 1px #ff0000;
+  color: white;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.text-section2 {
+  color: white;
+  font-size: 14px;
+}
+
+.text {
+  font-size: 15px;
+  flex: 1;
+  padding: 20px;
 }
 
 /*---------------------------footer-------------------------------------------------*/
@@ -629,80 +715,6 @@ footer .copyright {
   100% {
     left: 100%;
   }
-}
-
-/*------------------------section-2- acceuil------------------------------------------------------*/
-.animate__animated .animate__slideInRight {
-  animation: animate__slideInRight;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-
-.section-2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-
-  animation: animate__slideInRight;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-
-.section-left {
-  flex-direction: row;
-}
-
-.section-right {
-  flex-direction: row-reverse;
-}
-.section-left .text {
-  font-size: 14px;
-  order: 1;
-  margin: 15px 80px 15px 10px;
-}
-
-.section-right .text {
-  font-size: 14px;
-  order: 2;
-  margin: 15px 80px 15px 10px;
-}
-
-.image-section-2 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-section-2 img {
-  max-width: 100%;
-  height: auto;
-}
-
-h2 {
-  margin-top: 0;
-}
-
-.h2-section2 {
-  border-top: solid 1px #ff0000;
-  color: white;
-  display: flex;
-  margin-bottom: 15px;
-  justify-content: center;
-}
-
-.text-section2 {
-  color: white;
-  font-size: 14px;
-}
-
-.text {
-  font-size: 15px;
-  flex: 1;
-  padding: 20px;
 }
 
 /*---------------responsive-------1024Px--------------------------------------------*/

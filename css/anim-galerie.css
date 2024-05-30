@@ -312,6 +312,10 @@ header {
   -webkit-transform: scale(2);
 }
 /*------------------------barre agreement------------------------------------------------------*/
+#image-certif-punaise {
+  height: 110px;
+  margin-top: -10px;
+}
 
 .barre-agreement {
   width: 100%;

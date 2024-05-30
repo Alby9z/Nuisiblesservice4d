@@ -201,6 +201,23 @@ header {
   margin: 50px;
 }
 
+/* ----------------------photo - galerie ------------------------------ */
+.section-galerie {
+  color: #fff;
+}
+
+.h2-galerie {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.section-1-galerie {
+  line-height: 25px;
+  text-align: center;
+  padding: 50px;
+}
+
 .ul-galerie {
   width: 78%;
   margin: 80px 0px 80px 220px;
@@ -399,7 +416,7 @@ footer {
   }
 }
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
   .col-footer {
     display: none;
   }
@@ -523,7 +540,7 @@ footer {
   height: 30px;
   border-radius: 50%;
   text-align: center;
-  line-height: 30px; 
+  line-height: 30px;
   font-size: 20px;
   color: #fff;
   background: #ff0000;

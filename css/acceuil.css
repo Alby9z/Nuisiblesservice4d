@@ -237,6 +237,9 @@ nav ul li {
 }
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
+.from-group {
+  margin-left: 90px;
+}
 
 #icon-container {
   display: flex;

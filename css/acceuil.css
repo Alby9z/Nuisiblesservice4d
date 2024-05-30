@@ -279,6 +279,7 @@ nav ul li {
 }
 
 .custom-select {
+  height: 47px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -355,7 +356,7 @@ nav ul li {
   border-radius: 5px;
   border: solid 2px white;
   background-color: #585858;
-  margin: 1px 0 45px -112px;
+  margin: 0px 0 45px -112px;
   height: 47px;
   color: white;
 }
@@ -479,7 +480,7 @@ input:checked + .slider:before {
   max-width: 600px;
   height: 2px;
   background-color: #ff0000;
-  margin: 100px auto;
+  margin: 60px auto;
   display: block;
 }
 
@@ -628,15 +629,17 @@ section {
 
 @media (max-width: 1159px) {
   #carousel-vp {
-    width: calc(3 * 250px + 2 * 10px); 
+    width: calc(3 * 250px + 2 * 10px);
     margin: 0px;
   }
 
-@media (max-width: 1029px){
-  #carousel-vp {
-    width: calc(2 * (250px + 10px)); /* Calcul de la largeur pour afficher 2 cases avec de l'espace entre */
+  @media (max-width: 1029px) {
+    #carousel-vp {
+      width: calc(
+        2 * (250px + 10px)
+      ); /* Calcul de la largeur pour afficher 2 cases avec de l'espace entre */
+    }
   }
-}
 
   #cCarousel #prev {
     left: -114px;
@@ -651,7 +654,9 @@ section {
 
 @media (max-width: 530px) {
   #carousel-vp {
-    width: calc(1 * (250px + 10px)); /* Largeur réduite pour une seule case avec de l'espace entre */
+    width: calc(
+      1 * (250px + 10px)
+    ); /* Largeur réduite pour une seule case avec de l'espace entre */
   }
 
   #cCarousel .arrow {
@@ -661,30 +666,31 @@ section {
   #cCarousel #prev {
     left: -55px;
   }
-  
+
   #cCarousel #next {
     right: -45px;
   }
 }
 
-  @media (max-width: 359px) {
-    #carousel-vp {
-      width: calc(1 * (250px + 10px)); /* Largeur réduite pour une seule case avec de l'espace entre */
-    }
-  
-    #cCarousel .arrow {
-      background: none;
-    }
-  
-    #cCarousel #prev {
-      left: -40px;
-    }
-    
-    #cCarousel #next {
-      right: -30px;
-    }
-}
+@media (max-width: 359px) {
+  #carousel-vp {
+    width: calc(
+      1 * (250px + 10px)
+    ); /* Largeur réduite pour une seule case avec de l'espace entre */
+  }
 
+  #cCarousel .arrow {
+    background: none;
+  }
+
+  #cCarousel #prev {
+    left: -40px;
+  }
+
+  #cCarousel #next {
+    right: -30px;
+  }
+}
 
 #cCarousel #cCarousel-inner {
   display: flex;
@@ -1003,7 +1009,7 @@ iframe {
   }
 
   .map {
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 
   .content {

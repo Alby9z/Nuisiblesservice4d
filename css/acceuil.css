@@ -389,19 +389,32 @@ nav ul li {
 }
 
 .btn-barre {
-  margin: 5px 0px 0px 105px;
-  background-color: red;
-  border: none;
+  /* Ajuster la largeur et la hauteur pour faire un bouton rond */
+  width: 50px; /* ou la taille que tu préfères */
+  height: 50px; /* doit être égale à la largeur */
+  
+  /* Centrer le contenu du bouton */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Bordure arrondie pour faire un cercle */
   border-radius: 50%;
-  padding: 10px 20px;
+  
+  /* Autres styles de ton choix */
+  background-color: #ff0000;
   color: white;
-  font-weight: bold;
+  border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.btn-barre i {
-  font-size: 20px;
-  margin-right: 5px;
+.btn-barre:hover {
+  background-color: darkred;
+}
+
+.btn-barre ion-icon {
+  font-size: 24px; /* Ajuste la taille de l'icône si nécessaire */
 }
 
 /* ----------CSS pour l'interrupteur et le texte "Urgent" -------------------------------*/
@@ -486,7 +499,7 @@ input:checked + .slider:before {
 
 .texte-acceuil {
   transition: opacity 0.8s ease;
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -512,6 +525,16 @@ input:checked + .slider:before {
 @media (max-width: 692px) {
   .h1-bienvenue {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .p-bienvenue {
+    font-size: 12px;
+  }
+
+  .h1-bienvenue {
+    font-size: 20px;
   }
 }
 
@@ -620,11 +643,6 @@ section {
   position: relative;
   overflow: hidden;
   margin: 0px 0px 0px -70px;
-}
-.paragraph {
-  font-size: 14px;
-  padding: 0px 20px 20px 20px;
-  color: #ffff;
 }
 
 @media (max-width: 1159px) {
@@ -902,7 +920,7 @@ h2 {
 
 .text-section2 {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* Responsive Design for 970px and below */
@@ -934,6 +952,14 @@ h2 {
   .image-section-2 img {
     height: 250px;
   }
+
+  @media (max-width: 399px) {
+    .text-section2{
+      font-size: 12px;
+    }
+  }
+
+
 }
 
 /*------------------------map-------------------------------------------------------*/
@@ -1025,6 +1051,11 @@ iframe {
     height: 400px;
   }
 }
+@media screen and (max-width: 970px) {
+  .paragraph {
+    font-size: 12px;
+    }
+  }
 /*---------------------------footer-------------------------------------------------*/
 
 footer {

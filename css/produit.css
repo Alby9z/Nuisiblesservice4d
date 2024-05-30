@@ -707,6 +707,9 @@ h2 {
 
 /*---------------responsive-------1024Px--------------------------------------------*/
 @media screen and (max-width: 1024px) {
+  .back-produit {
+    margin: 45px 280px;
+  }
   .sous-menu .li-sous-menu a {
     font-size: 18px;
   }
@@ -731,6 +734,19 @@ h2 {
   .p-produit,
   .p-produit-rat,
   .paragraph {
+    font-size: 13px;
+  }
+  .text-section2 {
+    font-size: 13px;
+  }
+  .rats-souris,
+  .piegon-1 {
+    margin-left: 500px;
+  }
+  .section-right .text {
+    font-size: 13px;
+  }
+  .section-left .text {
     font-size: 13px;
   }
   .img-guêpe {
@@ -763,9 +779,6 @@ h2 {
   }
   .agreement-content {
     font-size: 23px;
-  }
-  .section {
-    display: block;
   }
   .map {
     display: flex;

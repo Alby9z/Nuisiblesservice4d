@@ -248,7 +248,7 @@ nav ul li {
 
 #icon-container img {
   width: 50px;
-  height: 50px; 
+  height: 50px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px;
@@ -644,9 +644,7 @@ section {
 
   @media (max-width: 1029px) {
     #carousel-vp {
-      width: calc(
-        2 * (250px + 10px)
-      ); /* Calcul de la largeur pour afficher 2 cases avec de l'espace entre */
+      width: calc(2 * (250px + 10px));
     }
   }
 
@@ -663,29 +661,25 @@ section {
 
 @media (max-width: 530px) {
   #carousel-vp {
-    width: calc(
-      1 * (250px + 10px)
-    ); /* Largeur réduite pour une seule case avec de l'espace entre */
-  }
+    width: calc(1 * (250px + 10px));
 
-  #cCarousel .arrow {
-    background: none;
-  }
+    #cCarousel .arrow {
+      background: none;
+    }
 
-  #cCarousel #prev {
-    left: -55px;
-  }
+    #cCarousel #prev {
+      left: -55px;
+    }
 
-  #cCarousel #next {
-    right: -45px;
+    #cCarousel #next {
+      right: -45px;
+    }
   }
 }
 
 @media (max-width: 359px) {
   #carousel-vp {
-    width: calc(
-      1 * (250px + 10px)
-    ); /* Largeur réduite pour une seule case avec de l'espace entre */
+    width: calc(1 * (250px + 10px));
   }
 
   #cCarousel .arrow {
@@ -811,6 +805,10 @@ section {
 }
 
 /*------------------------barre agreement------------------------------------------------------*/
+#image-certif-punaise {
+  height: 110px;
+  margin-top: -10px;
+}
 
 .barre-agreement {
   width: 100%;
@@ -945,12 +943,10 @@ h2 {
   }
 
   @media (max-width: 399px) {
-    .text-section2{
+    .text-section2 {
       font-size: 12px;
     }
   }
-
-
 }
 
 /*------------------------map-------------------------------------------------------*/
@@ -1045,8 +1041,8 @@ iframe {
 @media screen and (max-width: 970px) {
   .paragraph {
     font-size: 12px;
-    }
   }
+}
 /*---------------------------footer-------------------------------------------------*/
 
 footer {

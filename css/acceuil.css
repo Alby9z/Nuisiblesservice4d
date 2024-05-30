@@ -249,8 +249,8 @@ nav ul li {
 }
 
 #icon-container img {
-  width: 50px; /* Ajustez la taille selon vos besoins */
-  height: 50px; /* Ajustez la taille selon vos besoins */
+  width: 50px;
+  height: 50px; 
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px;
@@ -389,19 +389,12 @@ nav ul li {
 }
 
 .btn-barre {
-  /* Ajuster la largeur et la hauteur pour faire un bouton rond */
-  width: 50px; /* ou la taille que tu préfères */
-  height: 50px; /* doit être égale à la largeur */
-  
-  /* Centrer le contenu du bouton */
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* Bordure arrondie pour faire un cercle */
   border-radius: 50%;
-  
-  /* Autres styles de ton choix */
   background-color: #ff0000;
   color: white;
   border: none;
@@ -414,7 +407,7 @@ nav ul li {
 }
 
 .btn-barre ion-icon {
-  font-size: 24px; /* Ajuste la taille de l'icône si nécessaire */
+  font-size: 24px;
 }
 
 /* ----------CSS pour l'interrupteur et le texte "Urgent" -------------------------------*/

@@ -395,8 +395,9 @@ nav ul li {
 }
 
 .btn-barre {
-  width: 50px;
-  height: 50px;
+  margin: -7px -25px 0px 10px;
+  width: 65px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,6 +484,11 @@ input:checked + .slider:before {
   margin: 12px 0px 0px 30px;
   color: white;
   position: absolute;
+}
+
+:host .ionicon {
+  scale: 1.2;
+  stroke: currentcolor;
 }
 
 /* ------------------------top-section--------------------------------------------*/

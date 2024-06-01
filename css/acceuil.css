@@ -183,6 +183,7 @@ nav ul li {
 /*-------------------content-acceuil-----------------------------------------------*/
 
 .header__content {
+  margin-right: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1138,6 +1139,7 @@ footer {
 }
 
 .footer_about {
+  font-size: 11px;
   position: relative;
   top: -23px;
 }

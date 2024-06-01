@@ -523,6 +523,10 @@ footer {
   line-height: 15px;
 }
 
+.ul-footer {
+  margin-left: -40px;
+}
+
 .row {
   width: 100%;
   display: flex;
@@ -592,6 +596,7 @@ footer {
 }
 
 .footer_about {
+  font-size: 11px;
   position: relative;
   top: -23px;
 }

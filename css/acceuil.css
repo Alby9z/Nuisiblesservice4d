@@ -237,6 +237,11 @@ nav ul li {
 }
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
+
+.col-auto {
+  margin-left: 95px;
+}
+
 .from-group {
   margin-left: 90px;
 }

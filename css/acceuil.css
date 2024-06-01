@@ -53,6 +53,23 @@ body {
 }
 
 /*------------------------nav-bar---------------------------------------------------*/
+
+@keyframes backgroundSlide {
+  0% {
+    background-image: url("/img/Bandeau3.jpg");
+  }
+  50% {
+    background-image: url("/img/virus.jpeg");
+  }
+  100% {
+    background-image: url("/img/rats/rat1.jpg");
+  }
+}
+
+header {
+  animation: backgroundSlide 10s infinite;
+}
+
 header {
   background-image: url("/img/Bandeau3.jpg");
   height: 600px;

@@ -1332,6 +1332,10 @@ footer {
   text-decoration-color: #ff0000;
 }
 
+.ul-footer {
+  padding: 0;
+}
+
 .col ul li {
   list-style: none;
   margin-bottom: 12px;

@@ -585,13 +585,13 @@ footer {
   width: 100%;
   background: #252525;
   color: #fff;
-  padding: 50px 0 30px;
+  padding: 50px 0 20px;
   font-size: 13px;
   line-height: 15px;
 }
 
 .row {
-  margin: auto;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -599,13 +599,85 @@ footer {
 }
 
 .col {
-  flex-basis: 25%;
+  flex-basis: 100%;
   padding: 10px;
 }
 
-.col:nth-child(2),
-.col:nth-child(3) {
-  flex-basis: 15%;
+@media (min-width: 768px) {
+  .col {
+    flex-basis: 25%;
+  }
+  .search-block {
+    margin-right: -155px;
+  }
+  .titre-barre {
+    font-size: 26px;
+    margin: 10px -10px 10px 0px;
+  }
+  .container-nav-acceuil {
+    width: 50%;
+    margin: 0px 0px -10px 0px;
+  }
+  .col-lg {
+    width: 26%;
+  }
+  .form-control {
+    margin-left: -5px;
+  }
+  .form-controle {
+    margin: 0px -155px 35px 0px;
+  }
+  .btn-barre {
+    margin: -3px -75px 0px 10px;
+    width: 55px;
+    height: 50px;
+  }
+  .urgent {
+    margin: 50px 4px 4px 78px;
+  }
+}
+
+@media (max-width: 960px) {
+  .col-footer {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  .social_icon {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .social_icons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .row-footer {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .col {
+    flex-basis: 100%;
+    text-align: left;
+  }
+
+  .social_icons {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .social_icon {
+    margin: 0 5px;
+  }
 }
 
 .footer_logo {
@@ -628,9 +700,12 @@ footer {
 }
 
 .footer_email {
-  width: fit-content;
-  border-bottom: 1px solid #ff0000;
   margin: 20px 0;
+}
+
+.souligner-rouge {
+  text-decoration: underline;
+  text-decoration-color: #ff0000;
 }
 
 .col ul li {
@@ -687,7 +762,7 @@ footer {
   height: 30px;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 20px;
   color: #fff;
   background: #ff0000;
@@ -705,6 +780,7 @@ hr {
 
 footer .copyright {
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .bottom_line {
@@ -731,13 +807,22 @@ footer .copyright {
 
 @keyframes moveline {
   0% {
-    left: -20px;
+    left: 0;
   }
   100% {
     left: 100%;
   }
 }
 
-.ul-footer {
-  margin-left: -40px;
+@media (max-width: 1024px) {
+  #barre-nav-acceuil {
+    display: flex;
+    justify-content: start;
+  }
+  .search-block {
+    margin-right: -230px;
+  }
+  .container-nav-acceuil {
+    margin-left: 45px;
+  }
 }

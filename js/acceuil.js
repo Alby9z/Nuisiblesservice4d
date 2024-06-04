@@ -1,34 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const customSelect = document.querySelector(".custom-select");
-  const select = customSelect.querySelector("select");
-  const selectedOptionDiv = document.createElement("div");
-  selectedOptionDiv.className = "selected-option";
-  customSelect.insertBefore(selectedOptionDiv, select);
+  const selects = document.querySelectorAll(".custom-select select");
 
-  function updateSelectedOption() {
-    const selectedOption = select.options[select.selectedIndex];
-    const selectedText = selectedOption.textContent.trim();
-    const selectedImgSrc = selectedOption.getAttribute("data-img-src");
+  selects.forEach((select) => {
+    const options = select.querySelectorAll("option");
 
-    // Clear the current content
-    selectedOptionDiv.innerHTML = "";
-
-    // Add the image if it exists
-    if (selectedImgSrc) {
-      const selectedImg = document.createElement("img");
-      selectedImg.src = selectedImgSrc;
-      selectedImg.alt = selectedText;
-      selectedOptionDiv.appendChild(selectedImg);
-    }
-
-    // Add the selected text
-    const selectedTextNode = document.createTextNode(" " + selectedText);
-    selectedOptionDiv.appendChild(selectedTextNode);
-  }
-
-  select.addEventListener("change", updateSelectedOption);
-
-  updateSelectedOption(); // Update the selected option on page load
+    options.forEach((option) => {
+      const imgSrc = option.getAttribute("data-img-src");
+      if (imgSrc) {
+        option.style.backgroundImage = `url(${imgSrc})`;
+        option.style.backgroundRepeat = "no-repeat";
+        option.style.backgroundPosition = "left center";
+        option.style.paddingLeft = "25px";
+      }
+    });
+  });
 });
 
 /*---------------------slider-card ------------------------------------------------------------------*/

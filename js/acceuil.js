@@ -1,18 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const selects = document.querySelectorAll(".custom-select select");
+  const selectWrappers = document.querySelectorAll(".custom-select-wrapper");
 
-  selects.forEach((select) => {
-    const options = select.querySelectorAll("option");
+  selectWrappers.forEach((wrapper) => {
+    const select = wrapper.querySelector(".custom-select");
+    const list = wrapper.querySelector(".select-list");
 
-    options.forEach((option) => {
-      const imgSrc = option.getAttribute("data-img-src");
-      if (imgSrc) {
-        option.style.backgroundImage = `url(${imgSrc})`;
-        option.style.backgroundRepeat = "no-repeat";
-        option.style.backgroundPosition = "left center";
-        option.style.paddingLeft = "25px";
-      }
+    select.addEventListener("click", () => {
+      list.style.display = list.style.display === "block" ? "none" : "block";
     });
+
+    list.querySelectorAll(".select-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        select.innerHTML = item.innerHTML;
+        select.dataset.value = item.dataset.value;
+        list.style.display = "none";
+      });
+    });
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".custom-select-wrapper")) {
+      document.querySelectorAll(".select-list").forEach((list) => {
+        list.style.display = "none";
+      });
+    }
   });
 });
 

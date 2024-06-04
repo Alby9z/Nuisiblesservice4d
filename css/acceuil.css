@@ -62,7 +62,6 @@ header {
   text-align: center;
   background-position: center;
 }
-
 .devis {
   position: absolute;
   height: 110px;
@@ -183,6 +182,7 @@ nav ul li {
 /*-------------------content-acceuil-----------------------------------------------*/
 
 .header__content {
+  margin-right: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,6 +237,14 @@ nav ul li {
 }
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
+
+.col-auto {
+  margin-left: 95px;
+}
+
+.from-group {
+  margin-left: 90px;
+}
 
 #icon-container {
   display: flex;
@@ -387,8 +395,9 @@ nav ul li {
 }
 
 .btn-barre {
-  width: 50px;
-  height: 50px;
+  margin: -7px -25px 0px 10px;
+  width: 65px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,7 +414,7 @@ nav ul li {
 }
 
 .btn-barre ion-icon {
-  font-size: 24px;
+  font-size: 29px;
 }
 
 /* ----------CSS pour l'interrupteur et le texte "Urgent" -------------------------------*/
@@ -475,6 +484,11 @@ input:checked + .slider:before {
   margin: 12px 0px 0px 30px;
   color: white;
   position: absolute;
+}
+
+:host .ionicon {
+  scale: 1.2;
+  stroke: currentcolor;
 }
 
 /* ------------------------top-section--------------------------------------------*/
@@ -806,7 +820,7 @@ section {
 
 /*------------------------barre agreement------------------------------------------------------*/
 #image-certif-punaise {
-  height: 110px;
+  height: 104px;
   margin-top: -10px;
 }
 
@@ -1071,6 +1085,34 @@ footer {
   .col {
     flex-basis: 25%;
   }
+  .search-block {
+    margin-right: -155px;
+  }
+  .titre-barre {
+    font-size: 26px;
+    margin: 10px -10px 10px 0px;
+  }
+  .container-nav-acceuil {
+    width: 50%;
+    margin: 0px 0px -10px 0px;
+  }
+  .col-lg {
+    width: 26%;
+  }
+  .form-control {
+    margin-left: -5px;
+  }
+  .form-controle {
+    margin: 0px -155px 35px 0px;
+  }
+  .btn-barre {
+    margin: -3px -75px 0px 10px;
+    width: 55px;
+    height: 50px;
+  }
+  .urgent {
+    margin: 50px 4px 4px 78px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1124,6 +1166,7 @@ footer {
 }
 
 .footer_about {
+  font-size: 11px;
   position: relative;
   top: -23px;
 }
@@ -1246,5 +1289,21 @@ footer .copyright {
   }
   100% {
     left: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .row {
+    flex-wrap: nowrap;
+  }
+  #barre-nav-acceuil {
+    display: flex;
+    justify-content: start;
+  }
+  .search-block {
+    margin-right: -230px;
+  }
+  .container-nav-acceuil {
+    margin-left: 45px;
   }
 }

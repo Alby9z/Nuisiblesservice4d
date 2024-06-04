@@ -616,6 +616,7 @@ footer {
 }
 
 .footer_about {
+  font-size: 11px;
   position: relative;
   top: -23px;
 }

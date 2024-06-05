@@ -133,104 +133,86 @@
           <div class="search-block">
             <p class="titre-barre">J’aimerais Me Débarrasser</p>
             <form action="/rechercher" class="chercher" method="post">
-              <div class="row justify-content-lg-center">
-                <div class="col-lg col-12">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nuisible-select">Nuisibles</label>
                   <div class="custom-select-wrapper">
                     <div class="custom-select">
-                      <select name="nuisible" id="nuisible-select">
-                        <option value="" disabled selected>
-                          Choisissez un nuisible
-                        </option>
-                        <option value="1" data-img-src="public\icon\rat.png">
+                      <div class="selected-options">Choisissez un nuisible</div>
+                      <ul class="select-list multiselect">
+                        <li class="select-option" data-value="1">
                           Rats ou Souris
-                        </option>
-                        <option value="2" data-img-src="img\icon\guêpe.png">
+                        </li>
+                        <li class="select-option" data-value="2">
                           Guêpes & Abeille
-                        </option>
-                        <option value="3" data-img-src="img\icon\frelon.png">
+                        </li>
+                        <li class="select-option" data-value="3">
                           Frelons Asiatique
-                        </option>
-                        <option value="4" data-img-src="img\icon\punaise.png">
+                        </li>
+                        <li class="select-option" data-value="4">
                           Punaise De Lit
-                        </option>
-                        <option value="5" data-img-src="img\icon\puce.png">
-                          Puce
-                        </option>
-                        <option value="6" data-img-src="img\icon\piegon.png">
+                        </li>
+                        <li class="select-option" data-value="5">Puce</li>
+                        <li class="select-option" data-value="6">
                           Dépigeonnage
-                        </option>
-                        <option value="7" data-img-src="img\icon\fouine.png">
+                        </li>
+                        <li class="select-option" data-value="7">
                           Fouines & Martres
-                        </option>
-                        <option value="8" data-img-src="img\icon\cafard.png">
+                        </li>
+                        <li class="select-option" data-value="8">
                           Cafards & Blattes
-                        </option>
-                        <option value="9" data-img-src="img\icon\fourmis.png">
-                          Fourmis
-                        </option>
-                        <option value="10" data-img-src="img\icon\gale.png">
-                          Gale
-                        </option>
-                        <option value="11" data-img-src="img\icon\diogene.png">
+                        </li>
+                        <li class="select-option" data-value="9">Fourmis</li>
+                        <li class="select-option" data-value="10">Gale</li>
+                        <li class="select-option" data-value="11">
                           Syndrôme De Diogéne
-                        </option>
-                        <option
-                          value="12"
-                          data-img-src="/img/icon/poubelle.png"
-                        >
+                        </li>
+                        <li class="select-option" data-value="12">
                           Cave-Local
-                        </option>
-                        <option
-                          value="13"
-                          data-img-src="/img/icon/desinfection.png"
-                        >
+                        </li>
+                        <li class="select-option" data-value="13">
                           Désinfection
-                        </option>
-                        <option value="14" data-img-src="/img/icon/eco.png">
+                        </li>
+                        <li class="select-option" data-value="14">
                           Traitements éco-responsables
-                        </option>
-                      </select>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg col-12">
+                <div class="form-group">
+                  <label for="type-select">Type</label>
+                  <select name="type" id="type-select" class="form-control">
+                    <option value="particulier">Je suis un particulier</option>
+                    <option value="professionnel">
+                      Je suis une entreprise
+                    </option>
+                  </select>
+                </div>
+                <div class="form-group-code">
                   <div class="form-group">
-                    <select name="type" class="form-control">
-                      <option value="particulier">
-                        Je suis un particulier
-                      </option>
-                      <option value="professionnel">
-                        Je suis une entreprise
-                      </option>
-                    </select>
+                    <label for="cp">Code postal</label>
+                    <input
+                      type="text"
+                      name="cp"
+                      id="cp"
+                      class="form-controle"
+                      placeholder="Code postal"
+                      required
+                    />
                   </div>
                 </div>
-                <div class="col-lg-3 col-12">
-                  <div class="form-group cp-field">
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        name="cp"
-                        class="form-controle"
-                        placeholder="Code postal"
-                        required
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="switch-container">
+                <div class="form-group switch-group">
+                  <label class="label" for="urgent-switch">Urgent</label>
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" id="urgent-switch" />
                     <span class="slider round"></span>
                   </label>
-                  <span class="urgent">Urgent</span>
                 </div>
-                <div class="col-auto">
-                  <div class="form-group">
-                    <button type="submit" class="btn-barre btn-red btn-rounded">
-                      <ion-icon name="search-outline"></ion-icon>
-                    </button>
-                  </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-barre btn-red btn-rounded">
+                    <ion-icon name="search-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </form>

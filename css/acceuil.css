@@ -343,10 +343,11 @@ nav ul li {
   width: 33%;
 }
 
-.btn-barre {
+form {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .form-control {
@@ -356,6 +357,28 @@ nav ul li {
   height: 47px;
   background-color: #585858;
   color: white;
+}
+
+.form-group {
+  margin: 0 0 0 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.form-group-code {
+  margin: 0 0 0 -45px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -125px;
+}
+
+.label {
+  margin-left: 110px;
 }
 
 .form-controle {
@@ -395,9 +418,9 @@ nav ul li {
 }
 
 .btn-barre {
-  margin: -7px -25px 0px 10px;
-  width: 65px;
-  height: 60px;
+  margin: 19px -113px 0px 60px;
+  width: 55px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,7 +443,7 @@ nav ul li {
 /* ----------CSS pour l'interrupteur et le texte "Urgent" -------------------------------*/
 
 .switch {
-  margin: 7px -10px 0px 5px;
+  margin: 7px -67px 0px 47px;
   position: relative;
   display: inline-block;
   width: 60px;

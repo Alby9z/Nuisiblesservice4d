@@ -1071,7 +1071,6 @@ footer {
 .row {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -1296,18 +1295,4 @@ footer .copyright {
   }
 }
 
-@media (max-width: 1024px) {
-  .row {
-    flex-wrap: nowrap;
-  }
-  #barre-nav-acceuil {
-    display: flex;
-    justify-content: start;
-  }
-  .search-block {
-    margin-right: -230px;
-  }
-  .container-nav-acceuil {
-    margin-left: 45px;
-  }
-}
+

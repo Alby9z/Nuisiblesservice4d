@@ -593,7 +593,6 @@ footer {
 .row {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -708,6 +707,10 @@ footer {
   text-decoration-color: #ff0000;
 }
 
+.ul-footer {
+  padding: 0;
+}
+
 .col ul li {
   list-style: none;
   margin-bottom: 12px;
@@ -811,18 +814,5 @@ footer .copyright {
   }
   100% {
     left: 100%;
-  }
-}
-
-@media (max-width: 1024px) {
-  #barre-nav-acceuil {
-    display: flex;
-    justify-content: start;
-  }
-  .search-block {
-    margin-right: -230px;
-  }
-  .container-nav-acceuil {
-    margin-left: 45px;
   }
 }

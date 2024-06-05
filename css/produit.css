@@ -526,7 +526,6 @@ footer {
 .row {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -751,22 +750,6 @@ footer .copyright {
   }
 }
 
-@media (max-width: 1024px) {
-  .row {
-    flex-wrap: nowrap;
-  }
-  #barre-nav-acceuil {
-    display: flex;
-    justify-content: start;
-  }
-  .search-block {
-    margin-right: -230px;
-  }
-  .container-nav-acceuil {
-    margin-left: 45px;
-  }
-}
-
 /*---------------responsive-------1024Px--------------------------------------------*/
 @media screen and (max-width: 1024px) {
   .back-produit {
@@ -847,12 +830,6 @@ footer .copyright {
     justify-content: center;
     margin-bottom: 10px;
     width: 100%;
-  }
-  .ul-footer {
-    font-size: 12px;
-  }
-  .social_icon {
-    transform: scale(0.9);
   }
 }
 
@@ -960,33 +937,6 @@ footer .copyright {
   }
   .paragraph {
     font-size: 13px;
-  }
-  .row {
-    width: 100%;
-    flex-wrap: nowrap;
-  }
-  .col {
-    flex-basis: 38%;
-    padding: 0px 0 0 5px;
-  }
-  footer .col-footer {
-    display: none;
-  }
-  .h3-footer {
-    font-size: 15px;
-  }
-  .col:nth-child(2),
-  .col:nth-child(3) {
-    flex-basis: 55%;
-    padding: 0px 0px 0px 15px;
-  }
-  .col-intervention {
-    flex-basis: 68%;
-    padding: 0px 0px 0px 0px;
-  }
-  .social_icons {
-    display: flex;
-    transform: scale(0.9);
   }
 }
 
@@ -1152,24 +1102,6 @@ footer .copyright {
   .h3-intervention {
     font-size: 21px;
   }
-  .row {
-    flex-wrap: wrap;
-  }
-  footer .footer_logo,
-  .footer_about {
-    display: none;
-  }
-  .col:nth-child(2),
-  .col:nth-child(3) {
-    flex-basis: 60%;
-    padding: 0px 0px 0px 15px;
-  }
-  .col-intervention {
-    padding: 0px 0px 0px 15px;
-  }
-  .social_icon {
-    transform: scale(0.8);
-  }
 }
 
 /*-----responsive----------375px----------------------------------------------------*/
@@ -1249,20 +1181,5 @@ footer .copyright {
   .h3-intervention {
     text-align: center;
     font-size: 21px;
-  }
-  .row {
-    flex-wrap: wrap;
-  }
-  footer .footer_logo,
-  .footer_about {
-    display: none;
-  }
-  .col:nth-child(2),
-  .col:nth-child(3) {
-    flex-basis: 60%;
-    padding: 0px 0px 0px 15px;
-  }
-  .col-intervention {
-    padding: 0px 0px 0px 15px;
   }
 }

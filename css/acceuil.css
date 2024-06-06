@@ -276,9 +276,10 @@ nav ul li {
 }
 
 .custom-select select {
-  width: calc(100% - 20px);
+  margin-top: -25px;
+  content-visibility: hidden;
+  width: calc(20% - -123px);
   padding: 10px;
-  border: none;
   border-radius: 5px;
   background-color: #585858;
   color: white;
@@ -327,6 +328,51 @@ nav ul li {
   background: #7c7c7c;
 }
 
+/* Media Queries pour différents breakpoints */
+@media screen and (max-width: 1024px) {
+  .form-row {
+    margin: 0px 0px 25px -125px;
+    display: flex;
+    align-items: center;
+    margin-left: -75px;
+  }
+  .container-nav-acceuil {
+    width: 60%;
+    margin: -20px 0px -10px -145px;
+  }
+  .col-auto {
+    margin-left: 60px;
+  }
+  .form-group {
+    margin-left: 55px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-auto {
+    margin-left: 40px;
+  }
+  .form-group {
+    margin-left: 35px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .col-auto {
+    margin-left: 0;
+  }
+  .form-group {
+    margin-left: 0;
+  }
+  .form-row {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .label-poste {
+    margin: 0;
+  }
+}
+
 .form-group {
   margin-left: 45px;
   display: flex;
@@ -349,7 +395,7 @@ nav ul li {
 }
 
 #type-select {
-  height: 51px;
+  height: 40px;
 }
 
 .label-poste {
@@ -364,7 +410,7 @@ nav ul li {
   border-radius: 5px;
   border: solid 2px white;
   margin-left: 10px;
-  height: 47px;
+  height: 40px;
   background-color: #585858;
   color: white;
 }
@@ -373,7 +419,7 @@ nav ul li {
   border-radius: 5px;
   border: solid 2px white;
   margin: 11px -155px 5px 0px;
-  height: 50px;
+  height: 40px;
   background-color: #585858;
   color: white;
 }
@@ -1093,10 +1139,6 @@ footer {
   .titre-barre {
     font-size: 26px;
     margin: 10px -10px 10px 0px;
-  }
-  .container-nav-acceuil {
-    width: 50%;
-    margin: 0px 0px -10px 0px;
   }
   .col-lg {
     width: 26%;

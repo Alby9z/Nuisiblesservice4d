@@ -1109,6 +1109,20 @@ footer .copyright {
 
 /*-----responsive----------375px----------------------------------------------------*/
 @media screen and (max-width: 375px) {
+  .section-right .text {
+    font-size: 12px;
+    margin: 0px;
+  }
+  .section-2 .text ul {
+    margin: 0px -40px 0px -35px;
+  }
+  .section-left .text {
+    font-size: 12px;
+    margin: 10px 15px 0px 6px;
+  }
+  .row-footer {
+    flex-wrap: wrap;
+  }
   .header__navegation {
     font-size: 14px;
     margin-top: 83px;
@@ -1174,6 +1188,9 @@ footer .copyright {
   }
   .agreement-content {
     font-size: 18px;
+  }
+  .map {
+    width: 93%;
   }
   .container {
     display: block;

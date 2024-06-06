@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const urgent = document.getElementById("urgent-switch").checked;
 
     // Construire l'URL de redirection avec les paramètres du formulaire
-    const baseUrl = "/js/recherche.js"; // URL de la page de recherche
+    const baseUrl = "/rechercher"; // URL de la page de recherche
     const queryParams = `?nuisible=${nuisible}&type=${type}&cp=${codePostal}&urgent=${urgent}`;
 
     const redirectUrl = baseUrl + queryParams;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Fonction pour récupérer les résultats de la recherche du serveur
 function getSearchResults() {
-  fetch("/js/recherche.js")
+  fetch("/recherche.js") // Mettez ici l'URL correcte pour récupérer les résultats JSON depuis votre backend
     .then((response) => response.json())
     .then((data) => {
       const resultsContainer = document.getElementById("results-container");

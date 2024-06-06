@@ -660,8 +660,8 @@ footer {
 
 @media (max-width: 767px) {
   .row-footer {
-    justify-content: flex-start;
     text-align: left;
+    flex-wrap: wrap;
   }
 
   .col {

@@ -237,13 +237,12 @@ nav ul li {
 }
 
 /* -----------------------barre-rechch- acceuil--------------------------------------------*/
-
 .col-auto {
   margin-left: 95px;
 }
 
 .form-group {
-  margin-left: 90px; /* Vous avez peut-être voulu dire .form-group ici */
+  margin-left: 90px;
 }
 
 #icon-container {
@@ -273,22 +272,16 @@ nav ul li {
   position: relative;
   width: 100%;
   background-color: #585858;
-  color: white; /* Ajout pour assurer que le texte est blanc */
+  color: white;
 }
 
 .custom-select select {
-  width: calc(100% - 20px); /* Ajustement pour la largeur du select */
+  width: calc(100% - 20px);
   padding: 10px;
   border: none;
   border-radius: 5px;
   background-color: #585858;
   color: white;
-  appearance: none; /* Supprime les styles de l'élément select natif */
-}
-
-.custom-select .selected-option {
-  display: none;
-  align-items: center;
 }
 
 .custom-select .selected-option img {
@@ -302,9 +295,7 @@ nav ul li {
   position: absolute;
   background: #ddd;
   border: 1px solid #cfd0f9;
-  width: calc(
-    100% - 4px
-  ); /* Ajustement pour la largeur de la liste déroulante */
+  width: calc(100% - 4px);
   z-index: 1;
   list-style: none;
   margin: 0;
@@ -326,10 +317,10 @@ nav ul li {
 }
 
 .custom-select ul li img {
-  width: 30px; /* Ajustez la taille de l'icône selon vos besoins */
+  width: 30px;
   height: 30px;
   margin-right: 10px;
-  border-radius: 50%; /* Pour un affichage rond, si nécessaire */
+  border-radius: 50%;
 }
 
 .custom-select ul li:hover {
@@ -352,8 +343,17 @@ nav ul li {
   margin-left: -125px;
 }
 
+.label-nuisible,
+.label-type {
+  margin-bottom: 5px;
+}
+
+#type-select {
+  height: 51px;
+}
+
 .label-poste {
-  margin-left: 150px;
+  margin: 0px 15px 0 150px;
 }
 
 .label {
@@ -372,8 +372,8 @@ nav ul li {
 .form-controle {
   border-radius: 5px;
   border: solid 2px white;
-  margin: 5px -160px 6px 0px;
-  height: 47px;
+  margin: 11px -155px 5px 0px;
+  height: 50px;
   background-color: #585858;
   color: white;
 }
@@ -412,7 +412,6 @@ nav ul li {
 }
 
 /* ----------CSS pour l'interrupteur et le texte "Urgent" -------------------------------*/
-
 .switch {
   margin: 7px -67px 0px -20px;
   position: relative;
@@ -451,11 +450,7 @@ nav ul li {
 }
 
 input:checked + .slider {
-  background-color: #db0101;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #ff0000;
+  background-color: #db0303;
 }
 
 input:checked + .slider:before {
@@ -474,27 +469,6 @@ input:checked + .slider:before {
   margin: 12px 0px 0px 30px;
   color: white;
   position: absolute;
-}
-
-/* Correction pour les icônes dans la liste déroulante */
-
-.custom-select ul li {
-  background-color: #585858;
-  padding: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.custom-select ul li img {
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%; /* Ajout de bordure arrondie pour l'icône */
-}
-
-.custom-select ul li:hover {
-  background: #7c7c7c;
 }
 
 .btn-barre {

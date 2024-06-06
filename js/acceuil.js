@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         select.options[selectedIndex].getAttribute("data-icon");
 
       selectedOption.innerHTML = `
-        <i class="selected-icon" style="background-image: url('${selectedOptionIcon}')"></i>
+        <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
         ${selectedOptionText}
       `;
     });
@@ -25,18 +25,51 @@ document.addEventListener("DOMContentLoaded", function () {
       select.options[initialSelectedIndex].getAttribute("data-icon");
 
     selectedOption.innerHTML = `
-      <i class="selected-icon" style="background-image: url('${initialOptionIcon}')"></i>
+      <img class="selected-icon" src="${initialOptionIcon}" alt="${initialOptionText}">
       ${initialOptionText}
     `;
   });
 
-  // Gestion de la soumission du formulaire (à compléter selon votre besoin)
+  // Gestion de la soumission du formulaire
   const form = document.querySelector(".chercher");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-    // Ajoutez ici la logique de soumission du formulaire
-    // Vous pouvez récupérer les valeurs des champs ici si nécessaire
+
+    const nuisible = document.getElementById("nuisible-select").value;
+    const type = document.getElementById("type-select").value;
+    const codePostal = document.getElementById("cp").value;
+    const urgent = document.getElementById("urgent-switch").checked;
+
+    // Ajoutez ici votre logique de traitement ou d'envoi des données du formulaire
+    console.log({
+      nuisible,
+      type,
+      codePostal,
+      urgent,
+    });
+
+    // Si vous souhaitez soumettre le formulaire réellement, retirez `event.preventDefault()`
+    // et décommentez la ligne suivante
+    // form.submit();
   });
+});
+
+/*---------------------particulier ------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+  const selectType = document.getElementById("type-select");
+
+  // Écouter les changements sur le select
+  selectType.addEventListener("change", function () {
+    const selectedOption = selectType.options[selectType.selectedIndex].value;
+    console.log("Type sélectionné :", selectedOption);
+    // Vous pouvez ajouter ici la logique supplémentaire en fonction du type sélectionné
+  });
+
+  // Sélectionner une option par défaut (option particulier)
+  selectType.value = "particulier";
+
+  // Log pour vérifier la sélection par défaut
+  console.log("Type sélectionné par défaut :", selectType.value);
 });
 
 /*---------------------slider-card ------------------------------------------------------------------*/

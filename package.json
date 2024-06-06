@@ -4,13 +4,18 @@
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
-    "jquery": "^3.7.1",
-    "purgecss": "^6.0.0"
+    "jquery": "^3.7.1"
   },
   "scripts": {
-    "purgecss": "purgecss --config purgecss.config.js --output distdossierpurger "
+    "purgecss-accueil": "purgecss --config purgecss-accueil.config.js",
+    "purgecss-produit": "purgecss --config purgecss-produit.config.js",
+    "purgecss-anim-galerie": "purgecss --config purgecss-anim-galerie.config.js",
+    "purgecss-avis": "purgecss --config purgecss-avis.config.js",
+    "purgecss-politiques": "purgecss --config purgecss-politiques.config.js",
+    "purgecss-contact": "purgecss --config purgecss-contact.config.js"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.30"
+    "@types/jquery": "^3.5.30",
+    "purgecss": "^6.0.0"
   }
 }

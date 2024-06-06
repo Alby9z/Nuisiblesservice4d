@@ -1,0 +1,21 @@
+module.exports = {
+  content: [
+    "html/Cafard_Blatte.html",
+    "html/Cave-local.html",
+    "html/Dépigeonnage.html",
+    "html/dératisation.html",
+    "html/désinfection.html",
+    "html/Fouine_Martre.html",
+    "html/fourmis.html",
+    "html/Frelon_Asiatique.html",
+    "html/Cafard_Blatte.html",
+    "html/gale.html",
+    "html/Guêpes-frelons.html",
+    "html/puce.html",
+    "html/Punaise_De_Lit.html",
+    "html/Syndrome_De_Diogéne.html",
+    "html/Éco-responsable.html",
+  ],
+  css: ["css/produit.css"],
+  output: "dist/purge-produit.css",
+};

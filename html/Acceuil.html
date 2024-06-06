@@ -138,45 +138,64 @@
                   <label for="nuisible-select">Nuisibles</label>
                   <div class="custom-select-wrapper">
                     <div class="custom-select">
-                      <div class="selected-options">Choisissez un nuisible</div>
-                      <ul class="select-list multiselect">
-                        <li class="select-option" data-value="1">
+                      <div class="selected-option">
+                        <i class="selected-icon"></i>
+                        Choisissez un nuisible
+                      </div>
+                      <select
+                        id="nuisible-select"
+                        name="nuisible"
+                        class="form-control"
+                      >
+                        <option value="" selected disabled>
+                          Choisissez un nuisible
+                        </option>
+                        <option value="1" data-icon="/img/icon/rat.webp">
                           Rats ou Souris
-                        </li>
-                        <li class="select-option" data-value="2">
+                        </option>
+                        <option value="2" data-icon="/img/icon/guêpe.webp">
                           Guêpes & Abeille
-                        </li>
-                        <li class="select-option" data-value="3">
+                        </option>
+                        <option value="3" data-icon="/img/icon/frelon.webp">
                           Frelons Asiatique
-                        </li>
-                        <li class="select-option" data-value="4">
+                        </option>
+                        <option value="4" data-icon="/img/icon/flea.webp">
                           Punaise De Lit
-                        </li>
-                        <li class="select-option" data-value="5">Puce</li>
-                        <li class="select-option" data-value="6">
+                        </option>
+                        <option value="5" data-icon="/img/icon/puce.webp">
+                          Puce
+                        </option>
+                        <option value="6" data-icon="/img/icon/piegon.webp">
                           Dépigeonnage
-                        </li>
-                        <li class="select-option" data-value="7">
+                        </option>
+                        <option value="7" data-icon="/img/icon/fouine.webp">
                           Fouines & Martres
-                        </li>
-                        <li class="select-option" data-value="8">
+                        </option>
+                        <option value="8" data-icon="/img/icon/cafard.webp">
                           Cafards & Blattes
-                        </li>
-                        <li class="select-option" data-value="9">Fourmis</li>
-                        <li class="select-option" data-value="10">Gale</li>
-                        <li class="select-option" data-value="11">
+                        </option>
+                        <option value="9" data-icon="/img/icon/fourmis.webp">
+                          Fourmis
+                        </option>
+                        <option value="10" data-icon="/img/icon/gale.webp">
+                          Gale
+                        </option>
+                        <option value="11" data-icon="/img/icon/diogene.webp">
                           Syndrôme De Diogéne
-                        </li>
-                        <li class="select-option" data-value="12">
+                        </option>
+                        <option value="12" data-icon="/img/icon/poubelle.webp">
                           Cave-Local
-                        </li>
-                        <li class="select-option" data-value="13">
+                        </option>
+                        <option
+                          value="13"
+                          data-icon="/img/icon/desinfection.webp"
+                        >
                           Désinfection
-                        </li>
-                        <li class="select-option" data-value="14">
+                        </option>
+                        <option value="14" data-icon="/img/icon/eco.webp">
                           Traitements éco-responsables
-                        </li>
-                      </ul>
+                        </option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -191,7 +210,7 @@
                 </div>
                 <div class="form-group-code">
                   <div class="form-group">
-                    <label for="cp">Code postal</label>
+                    <label class="label-poste" for="cp">Code postal</label>
                     <input
                       type="text"
                       name="cp"
@@ -210,7 +229,11 @@
                   </label>
                 </div>
                 <div class="form-group">
-                  <button type="submit" class="btn-barre btn-red btn-rounded">
+                  <button
+                    id="btn-barre"
+                    type="submit"
+                    class="btn-barre btn-red btn-rounded"
+                  >
                     <ion-icon name="search-outline"></ion-icon>
                   </button>
                 </div>

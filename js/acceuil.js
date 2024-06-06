@@ -2,28 +2,40 @@ document.addEventListener("DOMContentLoaded", function () {
   const selectWrappers = document.querySelectorAll(".custom-select-wrapper");
 
   selectWrappers.forEach((wrapper) => {
-    const select = wrapper.querySelector(".custom-select");
-    const list = wrapper.querySelector(".select-list");
+    const select = wrapper.querySelector(".custom-select select");
+    const selectedOption = wrapper.querySelector(".selected-option");
 
-    select.addEventListener("click", () => {
-      list.style.display = list.style.display === "block" ? "none" : "block";
+    // Mettre à jour l'icône sélectionnée lors du changement dans la liste déroulante
+    select.addEventListener("change", () => {
+      const selectedIndex = select.selectedIndex;
+      const selectedOptionText = select.options[selectedIndex].text;
+      const selectedOptionIcon =
+        select.options[selectedIndex].getAttribute("data-icon");
+
+      selectedOption.innerHTML = `
+        <i class="selected-icon" style="background-image: url('${selectedOptionIcon}')"></i>
+        ${selectedOptionText}
+      `;
     });
 
-    list.querySelectorAll(".select-item").forEach((item) => {
-      item.addEventListener("click", () => {
-        select.innerHTML = item.innerHTML;
-        select.dataset.value = item.dataset.value;
-        list.style.display = "none";
-      });
-    });
+    // Initialiser avec la première option sélectionnée
+    const initialSelectedIndex = select.selectedIndex;
+    const initialOptionText = select.options[initialSelectedIndex].text;
+    const initialOptionIcon =
+      select.options[initialSelectedIndex].getAttribute("data-icon");
+
+    selectedOption.innerHTML = `
+      <i class="selected-icon" style="background-image: url('${initialOptionIcon}')"></i>
+      ${initialOptionText}
+    `;
   });
 
-  document.addEventListener("click", function (event) {
-    if (!event.target.closest(".custom-select-wrapper")) {
-      document.querySelectorAll(".select-list").forEach((list) => {
-        list.style.display = "none";
-      });
-    }
+  // Gestion de la soumission du formulaire (à compléter selon votre besoin)
+  const form = document.querySelector(".chercher");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    // Ajoutez ici la logique de soumission du formulaire
+    // Vous pouvez récupérer les valeurs des champs ici si nécessaire
   });
 });
 

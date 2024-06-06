@@ -434,8 +434,11 @@ a {
 }
 
 .map {
-  margin-right: 2px;
   flex: 1;
+  margin: 0 20px 20px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 /*------------------------section-2- acceuil------------------------------------------------------*/

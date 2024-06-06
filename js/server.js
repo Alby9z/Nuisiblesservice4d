@@ -4,12 +4,20 @@ const path = require("path");
 
 const app = express();
 
-// Configuration du moteur de templates Handlebars
-app.engine("handlebars", exphbs());
-app.set("view engine", "handlebars");
+// Configuration du moteur de template handlebars
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main", // Layout par défaut
+    extname: ".handlebars", // Extension des fichiers de template
+    layoutsDir: path.join(__dirname, "views/layouts"), // Dossier des layouts
+    partialsDir: path.join(__dirname, "views/partials"), // Dossier des partials
+  })
+);
+app.set("view engine", "handlebars"); // Définition du moteur de template
 
 // Définition du dossier des fichiers statiques (CSS, JS, images, etc.)
-app.use(express.static(path.join(__dirname, "Nuisiblesservice4d")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Exemple de route pour /rechercher
 app.get("/rechercher", (req, res) => {

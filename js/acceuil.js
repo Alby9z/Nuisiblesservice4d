@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const secondCaret = document.querySelector(".second");
   const featShow = document.querySelector(".feat-show");
   const servShow = document.querySelector(".serv-show");
+  const menuBtn = document.querySelector(".nav-burger ul li.active a"); // Sélectionne le bouton "Menu"
 
   // Ajoute un événement de clic pour le bouton burger
   btnBurger.addEventListener("click", function () {
@@ -25,6 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
   servBtn.addEventListener("click", function () {
     servShow.classList.toggle("show1");
     secondCaret.classList.toggle("rotate");
+  });
+
+  // Ajoute un événement de clic pour le bouton "Menu" pour fermer le menu burger
+  menuBtn.addEventListener("click", function () {
+    sidebarBurger.classList.remove("show");
+    btnBurger.classList.remove("click");
   });
 
   // Pour chaque élément de sous-menu, ajoutez une gestion du clic pour fermer le menu

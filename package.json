@@ -1,20 +1,23 @@
 {
+  "name": "nuisiblesservice4d",
+  "version": "1.0.0",
+  "description": "Nuisibles Service 4D",
+  "main": "index.js",
+  "scripts": {
+    "build": "purgecss --config purgecss.config.js"
+  },  
+  "author": "Martin Brian",
+  "license": "ISC",
+  "devDependencies": {
+    "purgecss": "^6.0.0"
+  },
   "dependencies": {
     "animate.css": "^4.1.1",
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
-    "express-handlebars": "^7.1.2",
-    "jquery": "^3.7.1"
+    "purgecss": "^6.0.0"
   },
   "scripts": {
-    "purgecss-accueil": "purgecss --config purgecss-accueil.config.js",
-    "purgecss-produit": "purgecss --config purgecss-produit.config.js",
-    "purgecss-anim-galerie": "purgecss --config purgecss-anim-galerie.config.js",
-    "purgecss-politiques": "purgecss --config purgecss-politiques.js"
-  },
-  "devDependencies": {
-    "@types/jquery": "^3.5.30",
-    "cssnano": "^7.0.2",
-    "purgecss": "^6.0.0"
+    "purgecss": "purgecss --config purgecss.config.js --output distdossierpurger "
   }
 }

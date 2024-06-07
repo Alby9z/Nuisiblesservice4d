@@ -1,4 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Sélectionne les éléments du DOM
+  const btnBurger = document.querySelector(".btn-burger");
+  const sidebarBurger = document.querySelector(".sidebar-burger");
+  const featBtn = document.querySelector(".feat-btn");
+  const servBtn = document.querySelector(".serv-btn");
+  const firstCaret = document.querySelector(".first");
+  const secondCaret = document.querySelector(".second");
+  const featShow = document.querySelector(".feat-show");
+  const servShow = document.querySelector(".serv-show");
+
+  // Ajoute un événement de clic pour le bouton burger
+  btnBurger.addEventListener("click", function () {
+    btnBurger.classList.toggle("click");
+    sidebarBurger.classList.toggle("show");
+  });
+
+  // Ajoute un événement de clic pour le bouton des fonctionnalités (feat-btn)
+  featBtn.addEventListener("click", function () {
+    featShow.classList.toggle("show");
+    firstCaret.classList.toggle("rotate");
+  });
+
+  // Ajoute un événement de clic pour le bouton des services (serv-btn)
+  servBtn.addEventListener("click", function () {
+    servShow.classList.toggle("show1");
+    secondCaret.classList.toggle("rotate");
+  });
+
+  // Pour chaque élément de sous-menu, ajoutez une gestion du clic pour fermer le menu
+  const subMenuItems = document.querySelectorAll(".li-sous-menu a");
+  subMenuItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      sidebarBurger.classList.remove("show");
+      btnBurger.classList.remove("click");
+    });
+  });
+});
+
+// ------------------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
   const selectWrappers = document.querySelectorAll(".custom-select-wrapper");
 
   selectWrappers.forEach((wrapper) => {

@@ -630,46 +630,46 @@ footer .copyright {
 }
 @media screen and (max-width: 1024px) {
   .back-cafard {
-    height: 600px;
-  }
-  .back-cave {
-    height: 655px;
+    height: 669px;
   }
   .back-piegons {
-    height: 637px;
+    height: 789px;
   }
   .back-rat {
     height: 690px;
   }
   .back-desinfection {
-    height: 630px;
+    height: 715px;
   }
   .back-eco {
-    height: 630px;
+    height: 735px;
   }
   .back-fouine {
-    height: 650px;
+    height: 756px;
   }
   .back-fourmis {
-    height: 670px;
+    height: 780px;
   }
   .back-frelon {
     height: 810px;
   }
   .back-gale {
-    height: 650px;
+    height: 770px;
   }
   .back-guepes {
     height: 710px;
   }
   .back-puce {
-    height: 630px;
+    height: 715px;
   }
   .back-punaise {
-    height: 710px;
+    height: 705px;
   }
   .back-diogene {
-    height: 615px;
+    height: 750px;
+  }
+  .back-cave {
+    height: 760px;
   }
   .sous-menu .li-sous-menu a {
     font-size: 18px;
@@ -720,6 +720,48 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 768px) {
+  .back-cafard {
+    height: 935px;
+  }
+  .back-piegons {
+    height: 1010px;
+  }
+  .back-rat {
+    height: 915px;
+  }
+  .back-fouine {
+    height: 1028px;
+  }
+  .back-fourmis {
+    height: 1025px;
+  }
+  .back-frelon {
+    height: 1077px;
+  }
+  .back-gale {
+    height: 1010px;
+  }
+  .back-guepes {
+    height: 970px;
+  }
+  .back-puce {
+    height: 995px;
+  }
+  .back-punaise {
+    height: 975px;
+  }
+  .back-diogene {
+    height: 1005px;
+  }
+  .back-cave {
+    height: 1013px;
+  }
+  .back-desinfection {
+    height: 1003px;
+  }
+  .back-eco {
+    height: 1012px;
+  }
   .section-2 {
     padding: 8px;
   }
@@ -735,7 +777,7 @@ footer .copyright {
   }
   .h1-produit {
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 30px;
   }
   .rats-souris,
   .piegon-1 {
@@ -808,6 +850,40 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 425px) {
+  .back-cafard,
+  .back-piegons,
+  .back-eco {
+    height: 843px;
+  }
+  .back-rat {
+    height: 875px;
+  }
+  .back-fouine {
+    height: 902px;
+  }
+  .back-fourmis {
+    height: 945px;
+  }
+  .back-frelon {
+    height: 924px;
+  }
+  .back-gale {
+    height: 865px;
+  }
+  .back-guepes {
+    height: 883px;
+  }
+  .back-puce,
+  .back-desinfection {
+    height: 924px;
+  }
+  .back-punaise,
+  .back-diogene {
+    height: 865px;
+  }
+  .back-cave {
+    height: 885px;
+  }
   .section-right .text {
     margin: 0px;
   }
@@ -893,7 +969,7 @@ footer .copyright {
   .h1-produit {
     margin-bottom: 15px;
     margin-top: 15px;
-    font-size: 23px;
+    font-size: 24px;
   }
   .details-tab {
     padding: 0.2rem 1rem;
@@ -933,6 +1009,44 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 375px) {
+  .back-cafard {
+    height: 915px;
+  }
+  .back-piegons {
+    height: 934px;
+  }
+  .back-rat {
+    height: 966px;
+  }
+  .back-fouine {
+    height: 1014px;
+  }
+  .back-fourmis {
+    height: 1033px;
+  }
+  .back-frelon {
+    height: 1033px;
+  }
+  .back-gale {
+    height: 974px;
+  }
+  .back-guepes,
+  .back-desinfection {
+    height: 995px;
+  }
+  .back-puce {
+    height: 1033px;
+  }
+  .back-punaise {
+    height: 974px;
+  }
+  .back-diogene,
+  .back-eco {
+    height: 954px;
+  }
+  .back-cave {
+    height: 985px;
+  }
   .section-right .text {
     font-size: 12px;
     margin: 0px;
@@ -987,6 +1101,7 @@ footer .copyright {
     font-size: 18px;
   }
   .map {
+    margin-left: 4px;
     width: 97%;
   }
   .image-container img {

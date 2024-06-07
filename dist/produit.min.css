@@ -287,6 +287,9 @@ a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
+iframe {
+  height: 521px;
+}
 .section-2 {
   display: flex;
   align-items: center;
@@ -612,11 +615,13 @@ footer .copyright {
   }
   .map {
     display: flex;
-    margin-right: 0;
+    margin-left: 85px;
     justify-content: center;
     margin-bottom: 10px;
+    width: 78%;
   }
   .paragraph {
+    text-align: center;
     font-size: 13px;
   }
 }

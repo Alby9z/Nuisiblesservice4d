@@ -140,10 +140,145 @@ nav ul li {
     font-weight: 700;
   }
 }
-.back-produit {
-  margin: 45px 400px;
+.back-cafard {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 600px;
+  background-image: url(/img/icon/cafard.webp);
+  background-attachment: fixed;
   position: absolute;
   z-index: -2;
+  width: 100%;
+}
+.back-cave {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 655px;
+  background-image: url(/img/icon/poubelle.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-piegons {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 637px;
+  background-image: url(/img/icon/piegon.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-rat {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 615px;
+  background-image: url(/img/icon/rat.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-desinfection {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 630px;
+  background-image: url(/img/icon/desinfection.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-eco {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 630px;
+  background-image: url(/img/icon/eco.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-fouine {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 650px;
+  background-image: url(/img/icon/fouine.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-fourmis {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 670px;
+  background-image: url(/img/icon/fourmis.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-frelon {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 650px;
+  background-image: url(/img/icon/frelon.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-gale {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 650px;
+  background-image: url(/img/icon/gale.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-guepes {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 650px;
+  background-image: url(/img/icon/guêpe.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-puce {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 630px;
+  background-image: url(/img/icon/puce.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-punaise {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 600px;
+  background-image: url(/img/icon/flea.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+.back-diogene {
+  opacity: 0.5;
+  margin-top: -24px;
+  height: 615px;
+  background-image: url(/img/icon/diogene.webp);
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
 }
 .border-details {
   font-size: 14px;
@@ -494,9 +629,6 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 1024px) {
-  .back-produit {
-    margin: 45px 280px;
-  }
   .sous-menu .li-sous-menu a {
     font-size: 18px;
   }
@@ -552,13 +684,6 @@ footer .copyright {
   .details-content {
     margin-left: -40px;
   }
-  .back-produit {
-    margin: -20px 150px;
-  }
-  .section-left .text {
-    font-size: 13px;
-    margin: 15px -20px 15px 10px;
-  }
   .text-section2 {
     font-size: 12px;
   }
@@ -589,6 +714,14 @@ footer .copyright {
     font-size: 14px;
     margin-right: 45px;
   }
+  .border-details {
+    font-size: 12px;
+  }
+  .details-content {
+    details {
+      font-size: 12px;
+    }
+  }
   .paragraph {
     font-size: 12px;
   }
@@ -598,8 +731,15 @@ footer .copyright {
     margin-left: -30px;
   }
   .btn-produit {
-    margin: 20px 0px 25px 315px;
+    margin: 20px 0px 25px 265px;
     width: 25%;
+  }
+  .section-left .text {
+    font-size: 12px;
+    margin: 15px -20px 15px 10px;
+  }
+  .section-right .text {
+    font-size: 12px;
   }
   .agreement-content {
     font-size: 22px;
@@ -742,6 +882,13 @@ footer .copyright {
   .h3-intervention {
     font-size: 21px;
   }
+  .map {
+    margin-left: 9px;
+    width: 98%;
+  }
+  .row-footer {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 375px) {
   .section-right .text {
@@ -798,7 +945,7 @@ footer .copyright {
     font-size: 18px;
   }
   .map {
-    width: 93%;
+    width: 97%;
   }
   .image-container img {
     height: 70px;

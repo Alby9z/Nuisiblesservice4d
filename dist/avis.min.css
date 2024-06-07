@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
 body {
   font-family: "poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
-
 header {
   background-image: url("/img/Bandeau3.jpg");
   height: 109px;
@@ -16,8 +14,6 @@ header {
   background-position: center;
   font-family: "poppins", sans-serif;
 }
-
-/*---------------------menu-burger--------------------------------------------------*/
 .burger {
   display: none;
   position: fixed;
@@ -25,21 +21,18 @@ header {
   right: 15px;
   z-index: 999;
 }
-
 #myNav {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 998;
 }
-
 #hamburger-icon {
   display: block;
   width: 30px;
   height: 30px;
   position: relative;
 }
-
 .span-burger {
   display: block;
   width: 100%;
@@ -48,34 +41,26 @@ header {
   margin-bottom: 5px;
   border-radius: 25px;
 }
-
-/*------------------fin-burger------------------------------------------------------*/
-
 #logo-img {
   margin: -28px 10px 10px 10px;
 }
-
 .logo img {
   margin-top: -25px;
   float: left;
   width: 150px;
 }
-
 .header__navegation {
   float: right;
   padding: 30px 40px 0 0;
 }
-
 .header__navegation ul {
   padding: 0;
   list-style-type: none;
   color: #fff;
 }
-
 nav ul li {
   display: inline-block;
 }
-
 .header__navegation ul li a {
   position: relative;
   color: #c2c2c2;
@@ -83,11 +68,9 @@ nav ul li {
   padding: 5px 10px;
   font-size: 1.1em;
 }
-
 .header__navegation a:hover {
   color: #fff;
 }
-
 .header__navegation a::after {
   position: absolute;
   content: "";
@@ -98,12 +81,9 @@ nav ul li {
   background-color: #ff0000;
   transition: all 0.5s ease;
 }
-
 .header__navegation a:hover::after {
   width: 100%;
 }
-
-/*--------nav--------------sous-menu------------------------------------------------*/
 .sous-menu {
   margin-left: -15px;
   opacity: 0.9;
@@ -114,32 +94,26 @@ nav ul li {
   box-shadow: 0 2px 5px rgba(0, 0, 0.2);
   z-index: 1;
 }
-
 .sous-menu .li-sous-menu {
   display: block;
   padding: 10px;
 }
-
 .sous-menu .li-sous-menu a {
   color: #fff;
   text-decoration: none;
 }
-
 .sous-menu-maladie-1 {
   background-color: #ff0000;
   transition: all 0.5s ease;
 }
-
 .sous-menu-maladie-2 {
   background-color: #22ca00;
   transition: all 0.5s ease;
   border-radius: 0 0 10px 10px;
 }
-
 .header__navegation li:hover .sous-menu {
   display: block;
 }
-
 #testimonial-area {
   background-image: url(/img/back.jpg);
   background-size: cover;
@@ -153,21 +127,17 @@ nav ul li {
   font-size: 30px;
   line-height: 30px;
 }
-
 .h2-avis {
   color: white;
 }
-
 .container-avis {
   display: block;
 }
-
 .testi-wrap {
   position: relative;
   height: 650px;
   margin-top: -50px;
 }
-
 .client-single {
   margin-top: 20px;
   text-align: center;
@@ -175,13 +145,11 @@ nav ul li {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-
 .client-info,
 .client-comment {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 .client-single {
   &.inactive {
     .client-comment,
@@ -252,7 +220,7 @@ nav ul li {
     &:before {
       border-radius: 100%;
       content: "";
-      background-image: -webkit-gradient(
+      background-image: (
         linear,
         left top,
         left bottom,
@@ -308,13 +276,11 @@ span i {
   margin: 40px 0 24px;
   display: inline-block;
 }
-
 .client-info,
 .p-avis {
   color: #ffffff;
   font-weight: 600;
 }
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #testimonial-area .section-heading .h2-avis {
     font-size: 30px;
@@ -356,7 +322,6 @@ span i {
     padding: 100px 0 0;
   }
 }
-
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   #testimonial-area .section-heading .h2-avis {
     font-size: 30px;
@@ -405,7 +370,6 @@ span i {
     height: 630px;
   }
 }
-
 @media only screen and (min-width: 360px) and (max-width: 479px) {
   #testimonial-area .section-heading .h2-avis {
     font-size: 30px;
@@ -459,7 +423,6 @@ span i {
     height: 600px;
   }
 }
-
 @media only screen and (min-width: 320px) and (max-width: 359px) {
   #testimonial-area .section-heading .h2-avis {
     font-size: 30px;
@@ -512,9 +475,6 @@ span i {
     height: 550px;
   }
 }
-
-/*---------------------------formulaire avis----------------------------------------*/
-
 .section-avis {
   max-width: 600px;
   margin: 0 auto;
@@ -523,12 +483,10 @@ span i {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .form-avis {
   background-image: url(/img/back.jpg);
   background-size: cover;
 }
-
 .note-avis {
   padding: 35px;
   text-align: center;
@@ -536,18 +494,15 @@ span i {
   margin: 0px 0px 15px;
   color: #fff;
 }
-
 form {
   display: flex;
   flex-direction: column;
 }
-
 form label {
   font-size: 1em;
   margin-bottom: 5px;
   color: #ffffff;
 }
-
 form input[type="text"],
 form input[type="email"],
 form textarea {
@@ -559,12 +514,10 @@ form textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
 form textarea {
   resize: vertical;
   min-height: 100px;
 }
-
 form button[type="submit"] {
   padding: 10px 20px;
   background-color: #4caf50;
@@ -574,13 +527,9 @@ form button[type="submit"] {
   cursor: pointer;
   font-size: 1em;
 }
-
 form button[type="submit"]:hover {
   background-color: #45a049;
 }
-
-/*---------------------------footer-------------------------------------------------*/
-
 footer {
   width: 100%;
   background: #252525;
@@ -589,19 +538,16 @@ footer {
   font-size: 13px;
   line-height: 15px;
 }
-
 .row {
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
-
 .col {
   flex-basis: 100%;
   padding: 10px;
 }
-
 @media (min-width: 768px) {
   .col {
     flex-basis: 25%;
@@ -635,13 +581,11 @@ footer {
     margin: 50px 4px 4px 78px;
   }
 }
-
 @media (max-width: 960px) {
   .col-footer {
     display: none;
   }
 }
-
 @media (max-width: 1000px) and (min-width: 768px) {
   .social_icon {
     width: 25px;
@@ -650,82 +594,67 @@ footer {
     font-size: 18px;
     margin-right: 10px;
   }
-
   .social_icons {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
   }
 }
-
 @media (max-width: 767px) {
   .row-footer {
     text-align: left;
     flex-wrap: wrap;
   }
-
   .col {
     flex-basis: 100%;
     text-align: left;
   }
-
   .social_icons {
     display: flex;
     justify-content: flex-start;
   }
-
   .social_icon {
     margin: 0 5px;
   }
 }
-
 .footer_logo {
   width: 134px;
   position: relative;
   top: -30px;
   left: -10px;
 }
-
 .footer_about {
   font-size: 11px;
   position: relative;
   top: -23px;
 }
-
 .col h3 {
   width: fit-content;
   margin-bottom: 40px;
   position: relative;
 }
-
 .footer_email {
   margin: 20px 0;
 }
-
 .souligner-rouge {
   text-decoration: underline;
   text-decoration-color: #ff0000;
 }
-
 .ul-footer {
   padding: 0;
 }
-
 .col ul li {
   list-style: none;
   margin-bottom: 12px;
 }
-
 .col ul li a {
   text-decoration: none;
   color: #fff;
 }
-
 .li-footer:hover {
   border-bottom: 1px solid white;
   display: inline-block;
 }
-
 .col form {
   padding-bottom: 15px;
   display: flex;
@@ -734,12 +663,10 @@ footer {
   border-bottom: 1px solid #ff0000;
   margin-bottom: 50px;
 }
-
 .col form .icon {
   font-size: 18px;
   margin-right: 10px;
 }
-
 .col form input {
   width: 100%;
   background: transparent;
@@ -747,19 +674,16 @@ footer {
   border: 0;
   outline: none;
 }
-
 .col form button {
   background: transparent;
   border: 0;
   outline: none;
   cursor: pointer;
 }
-
 .col form button .icon_right {
   font-size: 16px;
   color: #ccc;
 }
-
 .col .social_icons .social_icon {
   width: 30px;
   height: 30px;
@@ -773,19 +697,16 @@ footer {
   padding: 5px;
   cursor: pointer;
 }
-
 hr {
   width: 90%;
   border: 0;
   border-bottom: 1px solid #ccc;
   margin: 20px auto;
 }
-
 footer .copyright {
   text-align: center;
   margin-bottom: 5px;
 }
-
 .bottom_line {
   width: 100%;
   height: 5px;
@@ -796,7 +717,6 @@ footer .copyright {
   left: 0;
   overflow: hidden;
 }
-
 .bottom_line span {
   width: 15px;
   height: 100%;
@@ -807,7 +727,6 @@ footer .copyright {
   left: 10px;
   animation: moveline 2s linear infinite;
 }
-
 @keyframes moveline {
   0% {
     left: 0;

@@ -10,12 +10,11 @@
     "purgecss-accueil": "purgecss --config purgecss-accueil.config.js",
     "purgecss-produit": "purgecss --config purgecss-produit.config.js",
     "purgecss-anim-galerie": "purgecss --config purgecss-anim-galerie.config.js",
-    "purgecss-avis": "purgecss --config purgecss-avis.config.js",
-    "purgecss-politiques": "purgecss --config purgecss-politiques.config.js",
-    "purgecss-contact": "purgecss --config purgecss-contact.config.js"
+    "purgecss-politiques": "purgecss --config purgecss-politiques.js"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.30",
+    "cssnano": "^7.0.2",
     "purgecss": "^6.0.0"
   }
 }

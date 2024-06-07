@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       selectedOption.innerHTML = `
         <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
-        ${selectedOptionText}
-      `;
+        ${selectedOptionText}`;
     });
 
     // Initialiser avec la première option sélectionnée

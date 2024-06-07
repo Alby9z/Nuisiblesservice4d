@@ -54,6 +54,7 @@ body {
 }
 .sidebar-burger.show {
   left: -45px;
+  z-index: 5;
 }
 .sidebar-burger header {
   color: white;

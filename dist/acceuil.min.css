@@ -20,13 +20,14 @@ body {
   background-repeat: no-repeat;
 }
 .btn-burger {
+  display: none;
   position: absolute;
-  top: 15px;
-  left: 45px;
+  top: 40px;
+  right: 65px;
   height: 45px;
   width: 45px;
   text-align: center;
-  background: #1b1b1b;
+  background: #8b0000;
   border-radius: 3px;
   cursor: pointer;
   transition: left 0.4s ease;
@@ -52,7 +53,7 @@ body {
   overflow-y: auto;
 }
 .sidebar-burger.show {
-  left: 0px;
+  left: -45px;
 }
 .sidebar-burger header {
   color: white;
@@ -409,6 +410,14 @@ nav ul li {
   }
 }
 @media screen and (max-width: 425px) {
+  .header__navegation {
+    display: none;
+  }
+  .btn-burger {
+    top: 70px;
+    right: 20px;
+    display: block;
+  }
   .form-group {
     margin-left: 0;
   }

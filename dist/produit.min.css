@@ -629,6 +629,48 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 1024px) {
+  .back-cafard {
+    height: 600px;
+  }
+  .back-cave {
+    height: 655px;
+  }
+  .back-piegons {
+    height: 637px;
+  }
+  .back-rat {
+    height: 690px;
+  }
+  .back-desinfection {
+    height: 630px;
+  }
+  .back-eco {
+    height: 630px;
+  }
+  .back-fouine {
+    height: 650px;
+  }
+  .back-fourmis {
+    height: 670px;
+  }
+  .back-frelon {
+    height: 810px;
+  }
+  .back-gale {
+    height: 650px;
+  }
+  .back-guepes {
+    height: 710px;
+  }
+  .back-puce {
+    height: 630px;
+  }
+  .back-punaise {
+    height: 710px;
+  }
+  .back-diogene {
+    height: 615px;
+  }
   .sous-menu .li-sous-menu a {
     font-size: 18px;
   }

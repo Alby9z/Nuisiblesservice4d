@@ -4,20 +4,19 @@
   "description": "Nuisibles Service 4D",
   "main": "index.js",
   "scripts": {
-    "build": "purgecss --config purgecss.config.js"
-  },  
+    "purgecss": "purgecss --config purgecss.config.js --output dist "
+  },
   "author": "Martin Brian",
   "license": "ISC",
   "devDependencies": {
     "purgecss": "^6.0.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "animate.css": "^4.1.1",
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
     "purgecss": "^6.0.0"
-  },
-  "scripts": {
-    "purgecss": "purgecss --config purgecss.config.js --output distdossierpurger "
   }
 }

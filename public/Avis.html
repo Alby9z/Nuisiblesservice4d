@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Google Maps API -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIepsPLhG4ymXTVhMRCnekr7gB65GDD3o&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/dist/avis.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Nuisibles_Services_4D_Avis</title>
+  </head>
+  <body>
+    <header id="header_galerie">
+      <!---------------------logo + devis-------------------------------------------------->
+      <div class="logo">
+        <img src="/img/logo-valide-23122021.png" alt="logo" />
+      </div>
+      <!-----------------------nav-header-------------------------------------------------->
+      <div class="burger">
+        <a id="hamburger-icon" href="#" class="open-close-btn">
+          <span class="span-burger"></span>
+          <span class="span-burger"></span>
+          <span class="span-burger"></span>
+        </a>
+      </div>
+      <!-- Navigation -->
+      <div id="myNav" class="overlay">
+        <nav class="header__navegation">
+          <ul>
+            <li><a href="/public/Acceuil.html">Acceuil</a></li>
+            <li>
+              <a href="#">Nos Préstations</a>
+              <ul class="sous-menu sous-menu-responsive">
+                <li class="li-sous-menu">
+                  <a href="/public/Dératisation.html">Rats & Souris</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Guêpes-frelons.html">Guêpes & Abeille</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Frelon_Asiatique.html">Frelons Asiatique</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Punaise_De_Lit.html">Punaise De Lit</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Puce.html">Puce</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Dépigeonnage.html">Dépigeonnage</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Fouine_Martre.html">Fouiness et Martres</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Cafard_Blatte.html">Cafards & Blattes</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Fourmis.html">Fourmis</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Gale.html">Gale</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Syndrome_De_Diogéne.html"
+                    >Symdrôme De Diogéne</a
+                  >
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/public/Cave-Local.html">Cave-Local</a>
+                </li>
+                <li class="li-sous-menu sous-menu-maladie-1">
+                  <a href="/public/Désinfection.html">Désinfection</a>
+                </li>
+                <li class="li-sous-menu sous-menu-maladie-2">
+                  <a href="/public/Éco-responsable.html">Éco-responsable</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/public/Galerie_Photo.html">Galerie</a></li>
+            <li>
+              <a href="/Contact/Contact.html">Contact</a>
+              <ul class="sous-menu sous-menu-responsive">
+                <li class="li-sous-menu">
+                  <a href="/Contact/Contact70.html">Haute-Saône</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/Contact/Contact25.html">Doubs & Haut-Doubs</a>
+                </li>
+                <li class="li-sous-menu">
+                  <a href="/Contact/Contact90.html">Territoire De Belfort</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/public/Avis.html">Avis</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <script
+        src="https://static.elfsight.com/platform/platform.js"
+        data-use-service-core
+        defer
+      ></script>
+      <div
+        class="elfsight-app-b31e5e9d-508f-4700-ac02-530e6dd4f618"
+        data-elfsight-app-lazy
+      ></div>
+    </main>
+
+    <!-----------------------footer------------------------------------------------------>
+    <footer>
+      <div class="row row-footer">
+        <div class="col col-footer">
+          <img
+            src="/img/logo-valide-23122021.png"
+            alt="logo-footer"
+            class="footer_logo"
+          />
+          <p class="footer_about">
+            "Nuisibles services 4D est spécialisé dans la gestion efficace des
+            nuisibles. Nous offrons des solutions professionnelles fiables et
+            expérimentés, nous assurons un environnement propre et sécurisé pour
+            nos clients."
+          </p>
+        </div>
+        <div class="col">
+          <h3 class="h3-footer">
+            Sièges Social
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p>
+            <ion-icon name="mail-outline"></ion-icon>&nbsp;&nbsp;25200
+            Montbéliard
+          </p>
+          <p>FRANCE</p>
+          <p class="footer_email">
+            <span class="souligner-rouge">nuisiblesservices4d@gmail.com</span>
+          </p>
+          <h4>
+            <ion-icon name="call-outline"></ion-icon>&nbsp;&nbsp;06-41-40-71-75
+          </h4>
+        </div>
+        <div class="col">
+          <h3 class="h3-footer">
+            Liens Utiles
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <ul class="ul-footer">
+            <li class="li-footer">
+              <a href="/politiques/Conditions_D'utilisations.html"
+                >Condition D'utilisation</a
+              >
+            </li>
+            <li class="li-footer">
+              <a href="/politiques//Politiques_De_Confidentialités.html"
+                >Politique De Confidentialité</a
+              >
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/Politiques_De_Sécurite.html"
+                >Politique De Sécurité</a
+              >
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/Politiques_De_Cookies.html"
+                >Politique De Cookies</a
+              >
+            </li>
+            <li class="li-footer">
+              <a href="/politiques/Mentions_Légales.html">Mentions Légales</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col col-intervention">
+          <h3 class="h3-footer">
+            Horaires D'intervention
+            <div class="bottom_line"><span></span></div>
+          </h3>
+          <p>Lundi - Vendredi</p>
+          <p>8h00 à 19h00</p>
+          <br />
+          <p>Samedi</p>
+          <p>9h00 à 18h00</p>
+          <br /><br />
+          <div class="social_icons">
+            <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+            <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+            <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+            <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">Digiprogtech Ⓒ 2024 - All Rights Reserved</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/avis.min.js"></script>
+    <script src="/js/server.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

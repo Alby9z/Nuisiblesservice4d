@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const btnBurger = document.querySelector(".btn-burger");
+
+  btnBurger.addEventListener("click", function () {
+    this.classList.toggle("click");
+  });
+});
 
 // ------------------------------------------------------------------------
 

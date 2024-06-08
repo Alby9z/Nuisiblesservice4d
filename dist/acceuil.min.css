@@ -301,6 +301,18 @@ nav ul li {
   font-weight: 500;
   text-align: center;
 }
+.logo-barre {
+  padding-left: 15px;
+  margin-right: -105px;
+  width: 100px;
+  height: auto;
+}
+.logo-barre1 {
+  padding-right: 15px;
+  margin-left: -140px;
+  width: 100px;
+  height: auto;
+}
 .btn {
   padding: 5px 20px;
   background-color: red;
@@ -402,14 +414,13 @@ input:checked + .slider:before {
 
 .container-rechch {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 175px;
 }
 
 .container-fluid,
 .container-rechch {
   padding: 0 7px;
-  margin: 0 32px;
+  margin: 0 175px;
 }
 
 #search-form-home .search-block {
@@ -419,10 +430,10 @@ input:checked + .slider:before {
 
 .search-block h2 {
   color: #fff;
-  font-size: 17px;
+  font-size: 25px;
   text-transform: none;
   letter-spacing: 0.05em;
-  margin-bottom: 25px;
+  margin: 0px 0px 25px 25px;
   font-weight: 700;
   line-height: 1.2;
 }

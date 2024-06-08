@@ -499,6 +499,9 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 425px) {
+  .sidebar-burger.show {
+    left: -80px;
+  }
   header {
     height: 550px;
   }
@@ -553,6 +556,9 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 375px) {
+  .sidebar-burger.show {
+    left: -130px;
+  }
   .form-groupe {
     display: flex;
     margin: 15px 0 0 -40px;

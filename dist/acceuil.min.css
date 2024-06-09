@@ -314,11 +314,13 @@ nav ul li {
   width: 95%;
   height: 150px;
   box-shadow: 2px 1px 9px 0px #702929, -7px -1px 20px #000;
+  margin-top: 40px;
 }
 .logo-barre,
 .logo-barre1 {
   width: 90px;
   height: auto;
+  display: none;
 }
 .logo-barre {
   margin-left: -13px;
@@ -352,13 +354,19 @@ nav ul li {
   background-color: #898989;
   border: solid 2px white;
   border-radius: 5px;
+  padding: 5px 0px 5px 35px;
 }
 form {
   display: flex;
   justify-content: space-around;
+  gap: 20px;
+}
+
+.form-group{
+  position: relative;
+  margin-top: -20px;
 }
 .switch {
-  margin: 5px 0px 0px -63px;
   position: relative;
   display: inline-block;
   width: 60px;
@@ -402,16 +410,9 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.form-group {
-  margin: -36px 0 10px 66px;
-}
 .form-groupe {
   margin: -25px 90px 5px 0px;
   display: contents;
-}
-.label {
-  margin-left: -58px;
-  display: flex;
 }
 .btn-barre {
   margin: 0 30px 0 27px;
@@ -433,16 +434,15 @@ input:checked + .slider:before {
   display: none;
 }
 @media (max-width: 1024px) {
-  .logo-barre,
-  .logo-barre1 {
-    width: 90px;
-  }
   form {
     display: flex;
     justify-content: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .correction {
+    margin-bottom: 15px;
+  }
   .br-rechch {
     margin-bottom: 20px;
   }
@@ -458,14 +458,16 @@ input:checked + .slider:before {
   .logo-barre1 {
     width: 100px;
     margin: 10px 0;
+    display: block;
   }
   .form-group {
-    margin: 0 0 0 -290px;
+    margin: 0 0 0 -350px;
     display: grid;
   }
   form {
     flex-direction: column;
     align-items: center;
+    gap: 0px;
   }
   .btn-barre {
     margin: 30px 0px 0px -360px;
@@ -477,7 +479,7 @@ input:checked + .slider:before {
     width: 300px;
   }
   .form-group {
-    margin: 0 0 0 -185px;
+    margin: 0 0 0 -240px;
   }
   .btn-barre {
     margin: 30px 0px 0px -260px;
@@ -529,9 +531,6 @@ input:checked + .slider:before {
   }
   .container-rechch {
     margin: 0 10px;
-  }
-  .form-group {
-    margin: 10px 0 0 -225px;
   }
   .switch {
     margin: 5px 0;
@@ -1053,7 +1052,7 @@ footer {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .br-rechch {
     width: 410px;
     padding: 5px 0px 5px 35px;

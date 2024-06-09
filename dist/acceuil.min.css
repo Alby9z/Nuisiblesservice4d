@@ -358,7 +358,7 @@ form {
   justify-content: space-around;
 }
 .switch {
-  margin: 15px 0px 0px -63px;
+  margin: 5px 0px 0px -63px;
   position: relative;
   display: inline-block;
   width: 60px;
@@ -468,9 +468,31 @@ input:checked + .slider:before {
     align-items: center;
   }
   .btn-barre {
-    margin: 10px 0;
+    margin: 30px 0px 0px -360px;
   }
 }
+
+@media (max-width: 490px) {
+  select.br-rechch, input.br-rechch {
+    width: 300px;
+  }
+  .form-group {
+    margin: 0 0 0 -185px;
+  }
+  .btn-barre {
+    margin: 30px 0px 0px -260px;
+  }
+  .search-block h2 {
+    font-size: larger;
+  }
+}
+
+@media (max-width: 690px) {
+  .row {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 425px) {
   .header__content h2 {
     font-size: 21px;
@@ -487,30 +509,16 @@ input:checked + .slider:before {
   .barre {
     display: flex;
     justify-content: center;
-    margin-left: -172px;
-    width: 331%;
-  }
-  .select-type {
-    width: 345%;
-    margin-left: -97px;
-  }
-  .select-type2 {
-    width: 395%;
-    margin-left: -103px;
   }
   #search-form-home {
     width: 88%;
   }
   .h1-bienvenue,
   .search-block h2 {
-    margin: 0px 0px 10px 29px;
     font-size: larger;
   }
   .container-carousel {
     flex-direction: column;
-  }
-  .row {
-    flex-wrap: wrap;
   }
   #search-form-home {
     padding: 10px;
@@ -534,48 +542,33 @@ input:checked + .slider:before {
   form {
     justify-content: center;
   }
-  .btn-barre {
-    width: 40%;
-    height: 27px;
-  }
 }
 @media (max-width: 375px) {
-  .select-type2 {
-    width: 190%;
-    margin-left: -49px;
-  }
-  .select-type {
-    width: 174%;
-    margin-left: -42px;
-  }
-  .justify-content-lg-center {
-    width: 33%;
-    margin: 0 -125px 8px 0;
-  }
   .sidebar-burger.show {
     left: -130px;
   }
   .form-group {
-    margin: 15px 0 0 -165px;
+    margin: 10px 0 0 -210px;
   }
   .h1-bienvenue,
   .search-block h2 {
-    margin: 0px 0px 10px 23px;
     font-size: 16px;
   }
   .logo-barre,
   .logo-barre1 {
     width: 70px;
   }
-  .btn-barre {
-    width: 40%;
-    height: 27px;
-  }
   .btn-barre ion-icon {
     font-size: 24px;
   }
   .container-rechch {
     margin: 0 5px;
+  }
+  select.br-rechch, input.br-rechch {
+    width: 270px;
+  }
+  .btn-barre {
+    margin: 30px 0px 0px -235px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1060,7 +1053,7 @@ footer {
     display: none;
   }
 }
-@media (max-width: 1000px) and (min-width: 768px) {
+@media (max-width: 768px) {
   .br-rechch {
     width: 410px;
     padding: 5px 0px 5px 35px;

@@ -317,16 +317,17 @@ nav ul li {
 }
 .logo-barre,
 .logo-barre1 {
-  width: 100px;
+  width: 90px;
   height: auto;
 }
 .logo-barre {
+  margin-left: -13px;
   padding-left: 15px;
-  margin-right: -105px;
+  margin-right: -80px;
 }
 .logo-barre1 {
   padding-right: 15px;
-  margin-left: -140px;
+  margin-right: -13px;
 }
 .container-rechch {
   width: 100%;
@@ -411,26 +412,24 @@ input:checked + .slider:before {
 }
 .form-groupe {
   margin: -25px 90px 5px 0px;
+  display: contents;
 }
 .label {
   margin-left: -58px;
   display: flex;
 }
 .btn-barre {
-  width: 430%;
-  height: 48px;
-  display: flex;
+  margin: 0 30px 0 27px;
+  width: 6%;
+  height: 50px;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
+  border-radius: 50%;
   background-color: red;
-  color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 20px;
+  margin-top: -3px;
 }
 .btn-barre:hover {
   background-color: #8b0000;
@@ -441,7 +440,7 @@ input:checked + .slider:before {
 @media (max-width: 1024px) {
   .logo-barre,
   .logo-barre1 {
-    width: 88px;
+    width: 90px;
   }
   .search-block h2 {
     margin: 0 0 25px 62px;
@@ -455,6 +454,7 @@ input:checked + .slider:before {
   form {
     display: flex;
     justify-content: center;
+    margin-right: -70px;
   }
   .justify-content-lg-center {
     width: 35%;
@@ -473,7 +473,7 @@ input:checked + .slider:before {
     margin: 0 -70px 8px 0;
   }
   .search-block h2 {
-    text-align: center;
+    margin-left: 167px;
   }
   #search-form-home {
     flex-direction: column;
@@ -481,24 +481,29 @@ input:checked + .slider:before {
   }
   .logo-barre,
   .logo-barre1 {
+    width: 100px;
     margin: 10px 0;
   }
   .container-rechch {
     margin: 0 20px;
   }
   .form-group {
-    margin: 0;
+    margin: 0 0 0 -270px;
   }
   form {
     flex-direction: column;
     align-items: center;
   }
   .btn-barre {
-    width: 80%;
+    height: 30px;
+    width: 32%;
     margin: 10px 0;
   }
 }
 @media (max-width: 425px) {
+  .header__content h2 {
+    font-size: 21px;
+  }
   .sidebar-burger.show {
     left: -80px;
   }
@@ -511,6 +516,16 @@ input:checked + .slider:before {
   .barre {
     display: flex;
     justify-content: center;
+    margin-left: -172px;
+    width: 331%;
+  }
+  .select-type {
+    width: 345%;
+    margin-left: -97px;
+  }
+  .select-type2 {
+    width: 395%;
+    margin-left: -103px;
   }
   #search-form-home {
     width: 88%;
@@ -537,10 +552,7 @@ input:checked + .slider:before {
     margin: 0 10px;
   }
   .form-group {
-    display: flex;
-    margin: 5px 0;
-    align-items: center;
-    justify-content: center;
+    margin: 10px 0 0 -225px;
   }
   .switch {
     margin: 5px 0;
@@ -552,26 +564,28 @@ input:checked + .slider:before {
     justify-content: center;
   }
   .btn-barre {
-    width: 90%;
+    width: 40%;
+    height: 27px;
   }
 }
 @media (max-width: 375px) {
+  .select-type2 {
+    width: 190%;
+    margin-left: -49px;
+  }
+  .select-type {
+    width: 174%;
+    margin-left: -42px;
+  }
+  .justify-content-lg-center {
+    width: 33%;
+    margin: 0 -125px 8px 0;
+  }
   .sidebar-burger.show {
     left: -130px;
   }
-  .form-groupe {
-    display: flex;
-    margin: 15px 0 0 -40px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-  }
   .form-group {
-    display: flex;
-    margin: 15px 0 0 -40px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+    margin: 15px 0 0 -165px;
   }
   .h1-bienvenue,
   .search-block h2 {
@@ -580,11 +594,11 @@ input:checked + .slider:before {
   }
   .logo-barre,
   .logo-barre1 {
-    width: 60px;
+    width: 70px;
   }
   .btn-barre {
-    width: 100%;
-    height: 40px;
+    width: 40%;
+    height: 27px;
   }
   .btn-barre ion-icon {
     font-size: 24px;
@@ -612,7 +626,7 @@ input:checked + .slider:before {
     margin: 150px 0px;
   }
   .h1-acceuil {
-    font-size: 40px;
+    font-size: 36px;
   }
   .header__navegation {
     display: none;
@@ -1076,6 +1090,14 @@ footer {
   }
 }
 @media (max-width: 1000px) and (min-width: 768px) {
+  .br-rechch {
+    margin-left: 40px;
+    width: 412px;
+  }
+  .barre .form-control {
+    width: 160%;
+    margin-left: -104px;
+  }
   .social_icon {
     width: 25px;
     height: 25px;

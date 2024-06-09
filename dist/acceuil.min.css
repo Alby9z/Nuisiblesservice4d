@@ -310,7 +310,7 @@ nav ul li {
   justify-content: center;
   background-color: #585858;
   align-items: center;
-  margin: 18px 27px 0;
+  margin: auto;
   width: 95%;
   height: 150px;
   box-shadow: 2px 1px 9px 0px #702929, -7px -1px 20px #000;
@@ -329,16 +329,12 @@ nav ul li {
   padding-right: 15px;
   margin-right: -13px;
 }
-.container-rechch {
-  width: 100%;
-  margin: 0 175px;
-}
 .search-block h2 {
   color: #fff;
   font-size: 25px;
   text-transform: none;
   letter-spacing: 0.05em;
-  margin: 0px 0px 25px 25px;
+  margin-bottom: 25px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -347,7 +343,6 @@ nav ul li {
 }
 .barre .form-control {
   height: 40px;
-  padding: 5px 0px 5px 35px;
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: left center;
@@ -420,7 +415,7 @@ input:checked + .slider:before {
 }
 .btn-barre {
   margin: 0 30px 0 27px;
-  width: 6%;
+  width: 12%;
   height: 50px;
   align-items: center;
   justify-content: center;
@@ -442,61 +437,37 @@ input:checked + .slider:before {
   .logo-barre1 {
     width: 90px;
   }
-  .search-block h2 {
-    margin: 0 0 25px 62px;
-  }
-  .br-rechch {
-    margin-right: 22px;
-  }
-  .barre .form-control {
-    width: 70%;
-  }
   form {
     display: flex;
     justify-content: center;
-    margin-right: -70px;
-  }
-  .justify-content-lg-center {
-    width: 35%;
-    margin: 0 -70px 0 0;
-  }
-  .container-rechch {
-    margin: 0 50px;
   }
 }
 @media (max-width: 768px) {
   .br-rechch {
     margin-bottom: 20px;
   }
-  .justify-content-lg-center {
-    width: 35%;
-    margin: 0 -70px 8px 0;
-  }
   .search-block h2 {
-    margin-left: 167px;
+    text-align: center;
   }
   #search-form-home {
     flex-direction: column;
     height: auto;
+    margin-top: 15px;
   }
   .logo-barre,
   .logo-barre1 {
     width: 100px;
     margin: 10px 0;
   }
-  .container-rechch {
-    margin: 0 20px;
-  }
   .form-group {
-    margin: 0 0 0 -270px;
+    margin: 0 0 0 -290px;
+    display: grid;
   }
   form {
     flex-direction: column;
     align-items: center;
   }
   .btn-barre {
-    height: 30px;
-    width: 32%;
     margin: 10px 0;
   }
 }
@@ -1091,12 +1062,8 @@ footer {
 }
 @media (max-width: 1000px) and (min-width: 768px) {
   .br-rechch {
-    margin-left: 40px;
-    width: 412px;
-  }
-  .barre .form-control {
-    width: 160%;
-    margin-left: -104px;
+    width: 410px;
+    padding: 5px 0px 5px 35px;
   }
   .social_icon {
     width: 25px;

@@ -488,6 +488,7 @@ input:checked + .slider:before {
 }
 @media (max-width: 425px) {
   .sidebar-burger.show {
+    border-radius: 15px;
     left: -80px;
   }
   .br-rechch {

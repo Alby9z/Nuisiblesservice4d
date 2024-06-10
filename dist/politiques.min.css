@@ -6,7 +6,15 @@ body {
   margin: 0;
   padding: 0;
 }
-
+header {
+  background-image: url(/img/Bandeau3.jpg);
+  height: 125px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  background-position: center;
+}
 .politiques {
   background-image: url("/img/back.jpg");
   padding: 20px;
@@ -26,6 +34,7 @@ body {
   text-align: center;
 }
 .p-politique {
+  font-size: 15px;
   color: #ffff;
 }
 .collecte,
@@ -46,6 +55,7 @@ body {
     width: 80%;
   }
 }
+
 footer {
   width: 100%;
   background: #252525;
@@ -65,7 +75,10 @@ footer {
   flex-basis: 100%;
   padding: 10px;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .p-politique {
+    font-size: 14px;
+  }
   .col {
     flex-basis: 25%;
   }
@@ -177,5 +190,15 @@ footer .copyright {
   }
   100% {
     left: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .p-politique {
+    font-size: 13px;
+  }
+}
+@media (max-width: 375px) {
+  .p-politique {
+    font-size: 12px;
   }
 }

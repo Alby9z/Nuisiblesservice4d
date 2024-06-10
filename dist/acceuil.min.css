@@ -726,9 +726,6 @@ section {
     width: calc(2 * (250px + 10px));
   }
 }
-#cCarousel #prev {
-  left: -114px;
-}
 @media (max-width: 774px) {
   #carousel-vp {
     width: calc(1 * (250px + 10px));

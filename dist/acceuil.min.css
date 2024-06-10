@@ -199,6 +199,12 @@ header {
     transform: rotate(360deg);
   }
 }
+.btn {
+  background-color: red;
+  height: 25px;
+  width: 45%;
+  border-radius: 15px;
+}
 .logo img {
   float: left;
   width: 150px;
@@ -362,7 +368,7 @@ form {
   gap: 20px;
 }
 
-.form-group{
+.form-group {
   position: relative;
   margin-top: -20px;
 }
@@ -434,6 +440,12 @@ input:checked + .slider:before {
   display: none;
 }
 @media (max-width: 1024px) {
+  .btn-produit {
+    width: 27%;
+  }
+  .devis {
+    right: 107px;
+  }
   form {
     display: flex;
     justify-content: center;
@@ -475,7 +487,8 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 490px) {
-  select.br-rechch, input.br-rechch {
+  select.br-rechch,
+  input.br-rechch {
     width: 300px;
   }
   .form-group {
@@ -543,6 +556,9 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 375px) {
+  .agreement-content h2 {
+    font-size: 30px;
+  }
   .sidebar-burger.show {
     left: -130px;
   }
@@ -563,7 +579,8 @@ input:checked + .slider:before {
   .container-rechch {
     margin: 0 5px;
   }
-  select.br-rechch, input.br-rechch {
+  select.br-rechch,
+  input.br-rechch {
     width: 270px;
   }
   .btn-barre {
@@ -581,12 +598,12 @@ input:checked + .slider:before {
 @media screen and (max-width: 425px) {
   .devis {
     height: 85px;
-    margin-top: 294px;
-    right: 21px;
+    margin-top: 330px;
+    right: 15px;
   }
   .header__content {
     display: block;
-    margin: 150px 0px;
+    margin: 185px 0px;
   }
   .h1-acceuil {
     font-size: 36px;
@@ -997,6 +1014,7 @@ iframe {
 }
 @media screen and (max-width: 970px) {
   .section {
+    text-align: center;
     display: flex;
     flex-direction: column;
   }
@@ -1036,6 +1054,18 @@ footer {
   padding: 10px;
 }
 @media (min-width: 768px) {
+  .devis {
+    height: 95px;
+    margin-top: 295px;
+    right: 68px;
+  }
+  .header__content {
+    margin: 56px 100px 0px 100px;
+  }
+  .h1-acceuil {
+    margin-top: -130px;
+    font-size: 53px;
+  }
   .col {
     flex-basis: 25%;
   }

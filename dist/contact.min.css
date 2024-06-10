@@ -163,7 +163,7 @@ textarea {
 }
 header {
   background-image: url(/img/Bandeau3.jpg);
-  height: 600px;
+  height: 155px;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 20px;
@@ -348,10 +348,6 @@ nav ul li {
   border: solid 2px white;
   border-radius: 5px;
 }
-form {
-  display: flex;
-  justify-content: space-around;
-}
 .switch {
   margin: 15px 0px 0px -63px;
   position: relative;
@@ -443,10 +439,6 @@ input:checked + .slider:before {
   .barre .form-control {
     width: 70%;
   }
-  form {
-    display: flex;
-    justify-content: center;
-  }
   .justify-content-lg-center {
     width: 35%;
     margin: 0 -70px 0 0;
@@ -491,10 +483,10 @@ input:checked + .slider:before {
 }
 @media (max-width: 425px) {
   .sidebar-burger.show {
-    left: -80px;
+    left: 0px;
   }
   header {
-    height: 550px;
+    height: 155px;
   }
   .br-rechch {
     margin: 10px;
@@ -547,9 +539,6 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 375px) {
-  .sidebar-burger.show {
-    left: -130px;
-  }
   .form-groupe {
     display: flex;
     margin: 15px 0 0 -40px;
@@ -610,8 +599,8 @@ input:checked + .slider:before {
   }
   .btn-burger {
     border-radius: 50%;
-    top: 23px;
-    right: 10px;
+    top: 60px;
+    right: -140px;
     display: block;
   }
   .form-row {
@@ -1141,10 +1130,6 @@ footer .copyright {
   }
   .contact-form:before {
     right: 325px;
-  }
-  .info {
-    display: flex;
-    justify-content: space-between;
   }
   .social-media {
     display: flex;

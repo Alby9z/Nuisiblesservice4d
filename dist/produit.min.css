@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 .body-produit {
+  margin: 0;
   background-image: url("/img/back.jpg");
   color: #ddd;
   font-size: 18px;
@@ -159,7 +160,7 @@
 }
 header {
   background-image: url(/img/Bandeau3.jpg);
-  height: 600px;
+  height: 125px;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 20px;
@@ -488,9 +489,6 @@ input:checked + .slider:before {
 @media (max-width: 425px) {
   .sidebar-burger.show {
     left: -80px;
-  }
-  header {
-    height: 550px;
   }
   .br-rechch {
     margin: 10px;

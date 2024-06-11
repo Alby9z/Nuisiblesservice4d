@@ -6,6 +6,7 @@
   font-size: 18px;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "poppins", sans-serif;
 }
 .btn-burger {
   display: none;
@@ -835,16 +836,18 @@ input:checked + .slider:before {
   border-radius: 39%;
 }
 .btn-produit {
-  margin: 20px 0px 25px 550px;
-  width: 20%;
-  padding: 9px 20px;
-  background-color: #ff0000;
-  color: #fff;
-  border-radius: 25px;
-  font-weight: 400;
-  font-size: 15px;
+  background-color: #ff0000; /* Red color */
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
+  margin: auto;
 }
 .btn-produit:hover {
   background-color: #db0101;
@@ -937,7 +940,7 @@ iframe {
 .section-left .text {
   font-size: 14px;
   order: 1;
-  margin: 15px 80px 15px 10px;
+  margin: 15px 10px 15px 80px;
 }
 .section-right .text {
   font-size: 14px;
@@ -963,6 +966,7 @@ h2 {
   display: flex;
   margin-bottom: 15px;
   justify-content: center;
+  padding: 20px 20px 0px;
 }
 .text-section2 {
   color: white;
@@ -1198,10 +1202,6 @@ footer .copyright {
   .section-left .text {
     font-size: 13px;
   }
-  .btn-produit {
-    margin: 20px 0px 25px 420px;
-    padding: 5px;
-  }
   .agreement-content {
     font-size: 23px;
   }
@@ -1306,10 +1306,6 @@ footer .copyright {
     font-size: 13px;
     width: 115%;
     margin-left: -30px;
-  }
-  .btn-produit {
-    margin: 20px 0px 25px 265px;
-    width: 25%;
   }
   .section-left .text {
     font-size: 12px;
@@ -1474,12 +1470,6 @@ footer .copyright {
     padding: 0;
     margin: 0px 0px 0px -24px;
   }
-  .btn-produit {
-    margin: 20px 0px 20px 109px;
-    width: 45%;
-    padding: 5px;
-    font-size: 12px;
-  }
   .p-produit,
   .paragraph {
     font-size: 12px;
@@ -1579,12 +1569,6 @@ footer .copyright {
   .details-tab {
     font-size: 12px;
     padding: 0.2rem 1rem;
-  }
-  .btn-produit {
-    margin: 20px 0px 20px 109px;
-    width: 45%;
-    padding: 5px;
-    font-size: 12px;
   }
   .p-produit,
   .paragraph {

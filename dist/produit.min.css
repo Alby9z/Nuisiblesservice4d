@@ -668,7 +668,7 @@ input:checked + .slider:before {
 .back-rat {
   opacity: 0.5;
   margin-top: -24px;
-  height: 814px;
+  height: 591px;
   background-image: url(/img/icon/rat.webp);
   background-attachment: fixed;
   position: absolute;
@@ -738,7 +738,7 @@ input:checked + .slider:before {
 .back-guepes {
   opacity: 0.5;
   margin-top: -24px;
-  height: 650px;
+  height: 646px;
   background-image: url(/img/icon/guêpe.webp);
   background-attachment: fixed;
   position: absolute;

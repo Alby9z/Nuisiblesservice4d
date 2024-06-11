@@ -647,7 +647,7 @@ input:checked + .slider:before {
 .back-cave {
   opacity: 0.5;
   margin-top: -24px;
-  height: 655px;
+  height: 661px;
   background-image: url(/img/icon/poubelle.webp);
   background-attachment: fixed;
   position: absolute;
@@ -657,7 +657,7 @@ input:checked + .slider:before {
 .back-piegons {
   opacity: 0.5;
   margin-top: -24px;
-  height: 637px;
+  height: 639px;
   background-image: url(/img/icon/piegon.webp);
   background-attachment: fixed;
   position: absolute;
@@ -667,7 +667,7 @@ input:checked + .slider:before {
 .back-rat {
   opacity: 0.5;
   margin-top: -24px;
-  height: 615px;
+  height: 814px;
   background-image: url(/img/icon/rat.webp);
   background-attachment: fixed;
   position: absolute;
@@ -677,7 +677,7 @@ input:checked + .slider:before {
 .back-desinfection {
   opacity: 0.5;
   margin-top: -24px;
-  height: 630px;
+  height: 660px;
   background-image: url(/img/icon/desinfection.webp);
   background-attachment: fixed;
   position: absolute;
@@ -687,7 +687,7 @@ input:checked + .slider:before {
 .back-eco {
   opacity: 0.5;
   margin-top: -24px;
-  height: 630px;
+  height: 838px;
   background-image: url(/img/icon/eco.webp);
   background-attachment: fixed;
   position: absolute;
@@ -707,7 +707,7 @@ input:checked + .slider:before {
 .back-fourmis {
   opacity: 0.5;
   margin-top: -24px;
-  height: 670px;
+  height: 904px;
   background-image: url(/img/icon/fourmis.webp);
   background-attachment: fixed;
   position: absolute;
@@ -717,7 +717,7 @@ input:checked + .slider:before {
 .back-frelon {
   opacity: 0.5;
   margin-top: -24px;
-  height: 650px;
+  height: 836px;
   background-image: url(/img/icon/frelon.webp);
   background-attachment: fixed;
   position: absolute;
@@ -727,7 +727,7 @@ input:checked + .slider:before {
 .back-gale {
   opacity: 0.5;
   margin-top: -24px;
-  height: 650px;
+  height: 837px;
   background-image: url(/img/icon/gale.webp);
   background-attachment: fixed;
   position: absolute;
@@ -747,7 +747,7 @@ input:checked + .slider:before {
 .back-puce {
   opacity: 0.5;
   margin-top: -24px;
-  height: 630px;
+  height: 837px;
   background-image: url(/img/icon/puce.webp);
   background-attachment: fixed;
   position: absolute;
@@ -757,7 +757,7 @@ input:checked + .slider:before {
 .back-punaise {
   opacity: 0.5;
   margin-top: -24px;
-  height: 600px;
+  height: 823px;
   background-image: url(/img/icon/flea.webp);
   background-attachment: fixed;
   position: absolute;
@@ -767,7 +767,7 @@ input:checked + .slider:before {
 .back-diogene {
   opacity: 0.5;
   margin-top: -24px;
-  height: 615px;
+  height: 814px;
   background-image: url(/img/icon/diogene.webp);
   background-attachment: fixed;
   position: absolute;
@@ -1350,7 +1350,7 @@ footer .copyright {
     height: 843px;
   }
   .back-rat {
-    height: 875px;
+    height: 879px;
   }
   .back-fouine {
     height: 902px;

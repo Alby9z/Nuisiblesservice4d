@@ -438,7 +438,8 @@ input:checked + .slider:before {
   background-color: #8b0000;
 }
 .btn-barre ion-icon {
-  display: none;
+  color: white;
+  font-size: large;
 }
 @media (max-width: 1024px) {
   .btn-produit {
@@ -725,6 +726,9 @@ section {
   #carousel-vp {
     width: calc(2 * (250px + 10px));
   }
+}
+#cCarousel #prev {
+  left: -114px;
 }
 @media (max-width: 774px) {
   #carousel-vp {
@@ -1051,14 +1055,17 @@ footer {
   flex-basis: 100%;
   padding: 10px;
 }
+
+@media (min-width: 320px) {
+  .header__content {
+    margin: 56px 100px 0px 100px;
+  }
+}
 @media (min-width: 768px) {
   .devis {
     height: 95px;
     margin-top: 295px;
     right: 68px;
-  }
-  .header__content {
-    margin: 56px 100px 0px 100px;
   }
   .h1-acceuil {
     margin-top: -130px;

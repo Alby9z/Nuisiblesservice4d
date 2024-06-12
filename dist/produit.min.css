@@ -455,6 +455,12 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 768px) {
+  .section-2 .text ul {
+    margin-left: -35px;
+  }
+  ul {
+    margin-left: -26px;
+  }
   .br-rechch {
     margin-bottom: 20px;
   }
@@ -489,6 +495,9 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 425px) {
+  ul {
+    margin-left: 0;
+  }
   .sidebar-burger.show {
     border-radius: 15px;
     left: -80px;
@@ -635,10 +644,10 @@ input:checked + .slider:before {
     font-weight: 700;
   }
 }
-.back-cafard {
+/* .back-cafard {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1810px;
+  height: 100vh;
   background-image: url(/img/icon/cafard.webp);
   background-attachment: fixed;
   position: absolute;
@@ -648,7 +657,7 @@ input:checked + .slider:before {
 .back-cave {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1666px;
+  height: 100vh;
   background-image: url(/img/icon/poubelle.webp);
   background-attachment: fixed;
   position: absolute;
@@ -658,7 +667,7 @@ input:checked + .slider:before {
 .back-piegons {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1675px;
+  height: 100vh;
   background-image: url(/img/icon/piegon.webp);
   background-attachment: fixed;
   position: absolute;
@@ -668,7 +677,7 @@ input:checked + .slider:before {
 .back-rat {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1695px;
+  height: 100vh;
   background-image: url(/img/icon/rat.webp);
   background-attachment: fixed;
   position: absolute;
@@ -678,7 +687,7 @@ input:checked + .slider:before {
 .back-desinfection {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1615px;
+  height: 100vh;
   background-image: url(/img/icon/desinfection.webp);
   background-attachment: fixed;
   position: absolute;
@@ -688,7 +697,7 @@ input:checked + .slider:before {
 .back-eco {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1740px;
+  height: 100vh;
   background-image: url(/img/icon/eco.webp);
   background-attachment: fixed;
   position: absolute;
@@ -698,7 +707,7 @@ input:checked + .slider:before {
 .back-fouine {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1490px;
+  height: 100vh;
   background-image: url(/img/icon/fouine.webp);
   background-attachment: fixed;
   position: absolute;
@@ -708,7 +717,7 @@ input:checked + .slider:before {
 .back-fourmis {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1660px;
+  height: 100vh;
   background-image: url(/img/icon/fourmis.webp);
   background-attachment: fixed;
   position: absolute;
@@ -718,7 +727,7 @@ input:checked + .slider:before {
 .back-frelon {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1700px;
+  height: 100vh;
   background-image: url(/img/icon/frelon.webp);
   background-attachment: fixed;
   position: absolute;
@@ -728,7 +737,7 @@ input:checked + .slider:before {
 .back-gale {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1677px;
+  height: 100vh;
   background-image: url(/img/icon/gale.webp);
   background-attachment: fixed;
   position: absolute;
@@ -738,7 +747,7 @@ input:checked + .slider:before {
 .back-guepes {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1697px;
+  height: 100vh;
   background-image: url(/img/icon/guêpe.webp);
   background-attachment: fixed;
   position: absolute;
@@ -748,7 +757,7 @@ input:checked + .slider:before {
 .back-puce {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1680px;
+  height: 100vh;
   background-image: url(/img/icon/puce.webp);
   background-attachment: fixed;
   position: absolute;
@@ -758,7 +767,7 @@ input:checked + .slider:before {
 .back-punaise {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1615px;
+  height: 100vh;
   background-image: url(/img/icon/flea.webp);
   background-attachment: fixed;
   position: absolute;
@@ -768,12 +777,31 @@ input:checked + .slider:before {
 .back-diogene {
   opacity: 0.5;
   margin-top: -24px;
-  height: 1770px;
+  height: 100vh;
   background-image: url(/img/icon/diogene.webp);
   background-attachment: fixed;
   position: absolute;
   z-index: -2;
   width: 100%;
+} */
+.container-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.back-frelon {
+  opacity: 0.5;
+  height: calc(100vh - 20px); /* Réduire de la hauteur du footer */
+  background-image: url("/img/icon/frelon.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .border-details {
   font-size: 14px;
@@ -841,7 +869,7 @@ input:checked + .slider:before {
   border: none;
   border-radius: 15px;
   color: white;
-  padding: 10px 20px;
+  padding: 5px 20px;
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -1126,46 +1154,25 @@ footer .copyright {
     left: 100%;
   }
 }
-@media screen and (max-width: 1024px) {
-  .back-guepes {
-    height: 1865px;
-  }
-  .back-frelon {
-    height: 1925px;
-  }
-  .back-punaise {
-    height: 1750px;
-  }
-  .back-puce {
-    height: 1845px;
-  }
-  .back-piegons {
-    height: 1900px;
-  }
-  .back-fouine {
-    height: 1775px;
-  }
-  .back-cafard {
-    height: 1820px;
-  }
-  .back-fourmis {
-    height: 1767px;
-  }
-  .back-gale {
-    height: 1863px;
-  }
-  .back-diogene {
-    height: 1920px;
-  }
-  .back-cave {
-    height: 1820px;
-  }
-  .back-desinfection {
-    height: 1711px;
-  }
+@media screen and (max-width: ) and (min-width: ) {
+  .back-guepes,
+  .back-frelon,
+  .back-punaise,
+  .back-puce,
+  .back-piegons,
+  .back-fouine,
+  .back-cafard,
+  .back-fourmis,
+  .back-gale,
+  .back-diogene,
+  .back-cave,
+  .back-desinfection,
   .back-eco {
-    height: 1896px;
+    height: 3500px;
   }
+}
+
+@media screen and (max-width: 1024px) {
   .sous-menu .li-sous-menu a {
     font-size: 18px;
   }
@@ -1211,48 +1218,6 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 768px) {
-  .back-rat {
-    height: 1827px;
-  }
-  .back-guepes {
-    height: 2093px;
-  }
-  .back-frelon {
-    height: 2172px;
-  }
-  .back-punaise {
-    height: 2023px;
-  }
-  .back-puce {
-    height: 2138px;
-  }
-  .back-piegons {
-    height: 2100px;
-  }
-  .back-fouine {
-    height: 2064px;
-  }
-  .back-cafard {
-    height: 2086px;
-  }
-  .back-fourmis {
-    height: 2033px;
-  }
-  .back-gale {
-    height: 2053px;
-  }
-  .back-diogene {
-    height: 2203px;
-  }
-  .back-cave {
-    height: 2077px;
-  }
-  .back-desinfection {
-    height: 2048px;
-  }
-  .back-eco {
-    height: 2154px;
-  }
   .section-2 {
     padding: 8px;
   }
@@ -1337,27 +1302,6 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 425px) {
-  .back-rat {
-    height: 1867px;
-  }
-  .back-guepes {
-    height: 2184px;
-  }
-  .back-frelon {
-    height: 2202px;
-  }
-  .back-puce {
-    height: 2224px;
-  }
-  .back-piegons {
-    height: 2078px;
-  }
-  .back-gale {
-    height: 2057px;
-  }
-  .back-diogene {
-    height: 2168px;
-  }
   .section-right .text {
     margin: 0px;
   }
@@ -1368,7 +1312,7 @@ footer .copyright {
     display: block;
   }
   .section-2 .text ul {
-    margin: 0px -40px 0px -35px;
+    margin: 0px 0px 0px -35px;
   }
   .section-2 {
     display: block;
@@ -1469,56 +1413,20 @@ footer .copyright {
     font-size: 21px;
   }
   .map {
-    margin-left: 9px;
-    width: 98%;
+    margin-left: 10px;
+    width: 95%;
   }
   .row-footer {
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 375px) {
-  .back-rat {
-    height: 1977px;
-  }
-  .back-guepes {
-    height: 2293px;
-  }
-  .back-punaise {
-    height: 2087px;
-  }
-  .back-puce {
-    height: 2294px;
-  }
-  .back-piegons {
-    height: 2313px;
-  }
-  .back-fouine {
-    height: 2264px;
-  }
-  .back-cafard {
-    height: 2175px;
-  }
-  .back-fourmis {
-    height: 2090px;
-  }
-  .back-diogene {
-    height: 2301px;
-  }
-  .back-cave {
-    height: 2237px;
-  }
-  .back-desinfection {
-    height: 2294px;
-  }
-  .back-eco {
-    height: 2206px;
-  }
   .section-right .text {
     font-size: 12px;
     margin: 0px;
   }
   .section-2 .text ul {
-    margin: 0px -40px 0px -35px;
+    margin: 0px 0px 0px -42px;
   }
   .section-left .text {
     font-size: 12px;

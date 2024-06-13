@@ -431,8 +431,8 @@ input:checked + .slider:before {
   display: contents;
 }
 .btn-barre {
-  margin: 0 30px 0 27px;
-  width: 12%;
+  margin: 0 20px 0 -20px;
+  width: 6%;
   height: 50px;
   align-items: center;
   justify-content: center;
@@ -450,7 +450,7 @@ input:checked + .slider:before {
   height: 50px;
   color: white;
   font-size: large;
-  width: 45%;
+  width: 35%;
 }
 @media (max-width: 1024px) {
   .devis {
@@ -683,6 +683,12 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   color: #fff;
   margin: 60px 145px 10px;
+}
+.label-type {
+  margin-top: -25px;
+}
+.correction {
+  margin: -25px -53px 0px -135px;
 }
 @keyframes slideInDown {
   0% {

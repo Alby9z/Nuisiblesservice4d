@@ -698,6 +698,14 @@ input:checked + .slider:before {
     transform: translateY(0);
   }
 }
+@media (max-width: 1000px) {
+  .label-type {
+    margin: 0px;
+  }
+  .correction {
+    margin: 0px;
+  }
+}
 @media (max-width: 857px) {
   .texte-acceuil {
     margin: 60px 65px 10px 60px;
@@ -769,14 +777,17 @@ section {
     width: calc(3 * 250px + 2 * 10px);
     margin: 0;
   }
+  #cCarousel #prev {
+    left: -60px;
+  }
+  #cCarousel #next {
+    right: 70px;
+}
 }
 @media (max-width: 1029px) {
   #carousel-vp {
     width: calc(2 * (250px + 10px));
   }
-}
-#cCarousel #prev {
-  left: -130px;
 }
 @media (max-width: 774px) {
   #carousel-vp {

@@ -169,15 +169,26 @@ footer .copyright {
   height: 5px;
   background: #767676;
   border-radius: 3px;
-  position: absolute;
-  top: 25px;
+  position: relative;
   left: 0;
   overflow: hidden;
 }
-.bottom_line span {
+.bottom_line-numero {
+  width: 34%;
+  top: -30px;
+}
+.bottom_line-lien {
+  width: 29%;
+  top: -30px;
+}
+.bottom_line-horaire {
+  width: 59%;
+  top: -30px;
+}
+.span-footer {
   width: 15px;
   height: 100%;
-  background: #ff0000;
+  background: red;
   border-radius: 3px;
   position: absolute;
   top: 0;

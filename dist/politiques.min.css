@@ -16,9 +16,8 @@ header {
   background-position: center;
 }
 .politiques {
-  background-image: url("/img/back.jpg");
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #202020;
 }
 .li-footer:hover {
   border-bottom: 1px solid white;
@@ -29,13 +28,25 @@ header {
   margin: 0 auto;
 }
 .h1-politique {
+  font-size: 40px;
   color: #ffff;
   margin-bottom: 35px;
   text-align: center;
 }
+.h2-politique {
+  display: inline-block;
+  border-bottom: solid 1px;
+  color: #ffff;
+  margin: 10px 0;
+}
 .p-politique {
   font-size: 15px;
-  color: #ffff;
+  color: #d7c9c9;
+}
+.p-politique a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #8b8dff;
 }
 .collecte,
 .utilisation,

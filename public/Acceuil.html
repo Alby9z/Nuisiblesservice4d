@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -17,6 +21,33 @@
     <title>Nuisibles_Services_4D_Acceuil</title>
   </head>
   <body class="body body-produit">
+    <div id="cookie-banner">
+      <p>
+        Nous utilisons des cookies pour améliorer votre expérience sur notre
+        site. En continuant à naviguer sur ce site, vous acceptez notre
+        utilisation des cookies.
+        <a href="/politiques/Politiques_De_Cookies.html">En savoir plus</a>.
+      </p>
+      <button onclick="managePreferences()">Gérer mes préférences</button>
+      <button onclick="acceptAllCookies()">Tout accepter</button>
+      <button onclick="declineAllCookies()">Tout refuser</button>
+    </div>
+  
+    <div id="cookie-preferences-modal" style="display: none">
+      <div class="modal-content">
+        <h2>Gérer les préférences des cookies</h2>
+        <label>
+          <input type="checkbox" id="preferences-cookies" /> Activer les cookies
+          de préférence
+        </label>
+        <label>
+          <input type="checkbox" id="analytics-cookies" /> Activer les cookies
+          d'analyse
+        </label>
+        <button onclick="savePreferences()">Enregistrer</button>
+        <button onclick="closePreferences()">Fermer</button>
+      </div>
+    </div> 
     <header class="header">
       <img class="devis" src="/img/devis-grt.png" alt="logo-devis">
       <div class="logo">
@@ -931,6 +962,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/avis.min.js"></script>
+    <script src="/js/cookies.js"></script>
     <script src="/server.js"></script>
     <script src="/js/acceuil.js"></script>
     <script

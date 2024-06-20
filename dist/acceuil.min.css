@@ -517,8 +517,9 @@ input:checked + .slider:before {
   .form-group {
     margin: 0 0 0 -240px;
   }
-  .btn-barre {
-    margin: 30px 0px 0px -260px;
+  #btn-barre {
+    margin: 30px 0px 0px -255px;
+    width: 16%;
   }
   .search-block h2 {
     font-size: larger;
@@ -561,8 +562,8 @@ input:checked + .slider:before {
   .search-block h2 {
     font-size: larger;
   }
-  #search-form-home {
-    padding: 10px;
+  label {
+    margin-left: 10px;
   }
   .logo-barre,
   .logo-barre1 {
@@ -609,8 +610,13 @@ input:checked + .slider:before {
   input.br-rechch {
     width: 270px;
   }
-  .btn-barre {
-    margin: 30px 0px 0px -235px;
+  #btn-barre {
+    margin: 30px 0px 0px -225px;
+    width: 17%;
+  }
+  label {
+    font-size: small;
+    margin-left: 10px;
   }
 }
 
@@ -1158,6 +1164,13 @@ footer {
   .br-rechch {
     width: 410px;
     padding: 5px 0px 5px 35px;
+    display: block;
+  }
+  select#type-select {
+    margin-top: 10px;
+  }
+  input#cp {
+    margin-top: 10px;
   }
   .social_icon {
     width: 25px;
@@ -1170,6 +1183,9 @@ footer {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
+  }
+  .btn-barre {
+    width: 12%;
   }
 }
 @media (max-width: 767px) {

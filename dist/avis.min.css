@@ -12,7 +12,6 @@ body {
   height: 45px;
   width: 45px;
   text-align: center;
-  background: #fff;
   border-radius: 3px;
   cursor: pointer;
   transition: transform 0.4s ease;
@@ -21,7 +20,7 @@ body {
   display: block;
   width: 30px;
   height: 4px;
-  background-color: #000;
+  background-color: #b9b9b9;
   margin: 6px auto;
   border-radius: 3px;
   transition: transform 0.4s ease, opacity 0.2s ease;
@@ -199,6 +198,7 @@ header {
   padding: 0;
   list-style-type: none;
   color: #fff;
+  margin: 0px;
 }
 nav ul li {
   display: inline-block;
@@ -601,6 +601,12 @@ input:checked + .slider:before {
   .h1-acceuil {
     font-size: 40px;
   }
+  .form-row {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 706px) {
   .header__navegation {
     display: none;
   }
@@ -609,10 +615,6 @@ input:checked + .slider:before {
     top: 23px;
     right: 10px;
     display: block;
-  }
-  .form-row {
-    flex-direction: column;
-    margin-left: 0;
   }
 }
 #testimonial-area {
@@ -1216,18 +1218,7 @@ footer .copyright {
   position: relative;
   left: 0;
   overflow: hidden;
-}
-.bottom_line-numero {
-  width: 34%;
-  top: -30px;
-}
-.bottom_line-lien {
-  width: 29%;
-  top: -30px;
-}
-.bottom_line-horaire {
-  width: 59%;
-  top: -30px;
+  margin-top: 10px;
 }
 .span-footer {
   width: 15px;

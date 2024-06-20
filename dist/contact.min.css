@@ -18,7 +18,6 @@ textarea {
   height: 45px;
   width: 45px;
   text-align: center;
-  background: #fff;
   border-radius: 3px;
   cursor: pointer;
   transition: transform 0.4s ease;
@@ -27,7 +26,7 @@ textarea {
   display: block;
   width: 30px;
   height: 4px;
-  background-color: #000;
+  background-color: #b9b9b9;
   margin: 6px auto;
   border-radius: 3px;
   transition: transform 0.4s ease, opacity 0.2s ease;
@@ -595,18 +594,25 @@ input:checked + .slider:before {
   .h1-acceuil {
     font-size: 40px;
   }
-  .header__navegation {
-    display: none;
-  }
-  .btn-burger {
-    border-radius: 50%;
-    top: 60px;
-    right: -140px;
-    display: block;
-  }
   .form-row {
     flex-direction: column;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 706px) {
+  .btn-burger {
+    border-radius: 50%;
+    top: 23px;
+    right: 10px;
+    display: block;
+  }
+  .header__navegation {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .btn-burger {
+    right: -130px;
   }
 }
 .container {
@@ -1082,10 +1088,6 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 1024px) {
-  .header__navegation {
-    font-size: 15px;
-    padding: 35px 30px 0 0;
-  }
   .h3-intervention {
     font-size: 16px;
   }
@@ -1131,10 +1133,6 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 768px) {
-  .header__navegation {
-    padding: 55px 20px 0 0;
-    font-size: 15px;
-  }
   .contact-info .title {
     justify-content: center;
     display: flex;

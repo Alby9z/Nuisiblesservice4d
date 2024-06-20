@@ -30,7 +30,6 @@ body {
   height: 45px;
   width: 45px;
   text-align: center;
-  background: #fff;
   border-radius: 3px;
   cursor: pointer;
   transition: transform 0.4s ease;
@@ -188,7 +187,7 @@ header {
   position: absolute;
   height: 110px;
   display: flex;
-  margin-top: 250px;
+  margin-top: 350px;
   right: 250px;
   transition: transform 0.3s ease-in-out;
   animation: rotation 40s linear infinite;
@@ -204,11 +203,41 @@ header {
     transform: rotate(360deg);
   }
 }
+@media (max-width: 1329px) {
+  .devis{
+    right: 170px;
+  }
+}
+@media (max-width: 1219px) {
+  .devis{
+    right: 100px;
+  }
+}
+@media (max-width: 1019px) {
+  .devis{
+    right: 50px;
+  }
+}
+@media (max-width: 924px) {
+  .devis{
+    right: 25px;
+  }
+}
+@media (max-width: 805px) {
+  .devis{
+    display: none;
+  }
+}
 .btn {
   background-color: red;
   height: 25px;
-  min-width: 20%;
+  width: 50%; 
+  min-width: 170px; 
+  max-width: 170px; 
   border-radius: 15px;
+}
+.btn:hover {
+  background-color: #cc0000;
 }
 .btn-contact {
   display: flex;
@@ -294,15 +323,14 @@ nav ul li {
   text-align: center;
 }
 .header__content {
-  margin-right: 150px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   height: 100%;
   color: #fff;
   font-size: 37px;
   font-weight: 600;
   text-align: center;
+  margin-top: 400px;
 }
 .red {
   font-family: serif;
@@ -456,9 +484,6 @@ input:checked + .slider:before {
   width: 35%;
 }
 @media (max-width: 1024px) {
-  .devis {
-    right: 107px;
-  }
   form {
     display: flex;
     justify-content: center;
@@ -641,7 +666,6 @@ input:checked + .slider:before {
 @media screen and (max-width: 768px) {
   .devis {
     margin-top: 285px;
-    right: 20px;
     height: 100px;
   }
 }
@@ -658,11 +682,6 @@ input:checked + .slider:before {
   .devis {
     height: 85px;
     margin-top: 330px;
-    right: 15px;
-  }
-  .header__content {
-    display: block;
-    margin: 185px 0px;
   }
   .h1-acceuil {
     font-size: 36px;
@@ -1133,12 +1152,6 @@ footer {
   flex-basis: 100%;
   padding: 10px;
 }
-
-@media (min-width: 320px) {
-  .header__content {
-    margin: 56px 100px 0px 100px;
-  }
-}
 @media (min-width: 768px) {
   .h1-acceuil {
     margin-top: -130px;
@@ -1153,6 +1166,29 @@ footer {
   .titre-barre {
     font-size: 26px;
     margin: 10px -10px 10px 0;
+  }
+}
+@media (max-width: 768px) {
+  .h1-acceuil {
+    margin-top: -130px;
+    font-size: 45px;
+  }
+  .header__content h2 {
+    font-size: 16px;
+  }
+  .h3-acceuil {
+    font-size: 10px;
+  }
+}
+@media (max-width: 449px) {
+  .h1-acceuil {
+    margin-top: -130px;
+    font-size: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .header__content {
+    margin-top: 370px;
   }
 }
 @media (max-width: 960px) {
@@ -1291,6 +1327,10 @@ footer .copyright {
   text-align: center;
   margin-bottom: 5px;
 }
+.h3-footer {
+  position: relative; 
+  display: inline-block;
+}
 .bottom_line {
   width: 100%;
   height: 5px;
@@ -1299,18 +1339,7 @@ footer .copyright {
   position: relative;
   left: 0;
   overflow: hidden;
-}
-.bottom_line-numero {
-  width: 34%;
-  top: -30px;
-}
-.bottom_line-lien {
-  width: 29%;
-  top: -30px;
-}
-.bottom_line-horaire {
-  width: 59%;
-  top: -30px;
+  margin-top: 5px;
 }
 .span-footer {
   width: 15px;

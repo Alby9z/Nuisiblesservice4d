@@ -19,6 +19,10 @@ body {
   justify-content: space-between;
   background-repeat: no-repeat;
 }
+.img-bar .img- {
+  width: 25px;
+  display: block;
+}
 .fa-search:before {
   content: "\f002";
 }
@@ -38,7 +42,7 @@ body {
   display: block;
   width: 30px;
   height: 4px;
-  background-color: #000;
+  background-color: #b9b9b9;
   margin: 6px auto;
   border-radius: 3px;
   transition: transform 0.4s ease, opacity 0.2s ease;
@@ -711,6 +715,7 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   color: #fff;
   margin: 60px 145px 10px;
+  gap: 20px;
 }
 .label-type {
   margin-top: -25px;
@@ -747,9 +752,6 @@ input:checked + .slider:before {
 @media screen and (max-width: 399px) {
   .p-bienvenue {
     font-size: 12px;
-  }
-  .h1-bienvenue {
-    font-size: 20px;
   }
 }
 a {
@@ -1056,6 +1058,9 @@ h2 {
   }
   .image-section-2 img {
     height: 250px;
+  }
+  .h1-bienvenue {
+    text-align: center;
   }
 }
 @media (max-width: 399px) {

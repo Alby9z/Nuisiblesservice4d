@@ -776,20 +776,33 @@ section {
   margin: 0 0 0 -70px;
 }
 @media (max-width: 1159px) {
+  #cCarousel {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
   #carousel-vp {
     width: calc(3 * 250px + 2 * 10px);
     margin: 0;
   }
   #cCarousel #prev {
-    left: -60px;
+    left: 10px;
   }
   #cCarousel #next {
-    right: 70px;
+    right: 10px;
   }
 }
 @media (max-width: 1029px) {
   #carousel-vp {
     width: calc(2 * (250px + 10px));
+  }
+  #cCarousel #prev {
+    left: 35px;
+  }
+  #cCarousel #next {
+    right: 40px;
   }
 }
 @media (max-width: 774px) {
@@ -799,28 +812,24 @@ section {
 }
 @media (max-width: 530px) {
   #carousel-vp {
-    width: calc(1 * (250px + 10px));
+    width: calc(1 * (240px + 10px));
   }
   #cCarousel #prev {
-    left: -55px;
+    left: 10px;
   }
   #cCarousel #next {
-    right: -45px;
+    right: 15px;
   }
 }
-@media (max-width: 359px) {
-  #carousel-vp {
-    margin-left: 90px;
-    width: calc(1 * (250px + 10px));
-  }
+@media (max-width: 499px) {
   #cCarousel .arrow {
     background: none;
   }
   #cCarousel #prev {
-    left: -40px;
+    left: 0px;
   }
   #cCarousel #next {
-    right: -30px;
+    right: 5px;
   }
 }
 #cCarousel #cCarousel-inner {

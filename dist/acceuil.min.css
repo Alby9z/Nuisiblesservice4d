@@ -208,36 +208,36 @@ header {
   }
 }
 @media (max-width: 1329px) {
-  .devis{
+  .devis {
     right: 170px;
   }
 }
 @media (max-width: 1219px) {
-  .devis{
+  .devis {
     right: 100px;
   }
 }
 @media (max-width: 1019px) {
-  .devis{
+  .devis {
     right: 50px;
   }
 }
 @media (max-width: 924px) {
-  .devis{
+  .devis {
     right: 25px;
   }
 }
 @media (max-width: 805px) {
-  .devis{
+  .devis {
     display: none;
   }
 }
 .btn {
   background-color: red;
   height: 25px;
-  width: 50%; 
-  min-width: 170px; 
-  max-width: 170px; 
+  width: 50%;
+  min-width: 170px;
+  max-width: 170px;
   border-radius: 15px;
 }
 .btn:hover {
@@ -809,7 +809,7 @@ section {
     margin: auto;
     display: flex;
     justify-content: center;
-}
+  }
   #carousel-vp {
     width: calc(3 * 250px + 2 * 10px);
     margin: 0;
@@ -1333,7 +1333,7 @@ footer .copyright {
   margin-bottom: 5px;
 }
 .h3-footer {
-  position: relative; 
+  position: relative;
   display: inline-block;
 }
 .bottom_line {
@@ -1377,16 +1377,22 @@ footer .copyright {
   z-index: 1000;
 }
 #cookie-banner a {
-  color: #ffffff;
+  color: #569cd6;
   text-decoration: underline;
 }
+#cookie-banner p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 #cookie-banner button {
+  border-radius: 5px;
   background-color: #ffffff;
   color: #000000;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   margin-left: 10px;
+  box-shadow: 0 0 10px 0 rgba(126, 34, 34, 0.5);
 }
 #cookie-preferences-modal {
   position: fixed;
@@ -1394,30 +1400,27 @@ footer .copyright {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  background-color: white;
+  background-color: #585858;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(126, 34, 34, 0.5);
 }
-
 .modal-content {
-  background: white;
+  background: #ececec;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
 }
-
 .modal-content h2 {
   margin-bottom: 20px;
 }
-
 .modal-content label {
   display: block;
   margin-bottom: 15px;
 }
-
 .modal-content button {
+  border-radius: 5px;
   padding: 10px 20px;
   background-color: #585858;
   color: white;
@@ -1425,7 +1428,20 @@ footer .copyright {
   cursor: pointer;
   margin-right: 10px;
 }
-
-.modal-content button:hover {
-  background-color: #4f0f0f;
+.modal-content button:hover,
+#cookie-banner button:hover {
+  background-color: #db0303;
+}
+.cookie-description {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.a-preference {
+  border-bottom: solid 1px #569cd6;
+  display: inline-block;
+  color: #569cd6;
+}
+.p-preference {
+  margin-top: 10px;
+  font-size: 13px;
 }

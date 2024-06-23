@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Sélectionne les éléments du DOM
   const btnBurger = document.querySelector(".btn-burger");
   const sidebarBurger = document.querySelector(".sidebar-burger");
   const featBtn = document.querySelector(".feat-btn");
@@ -8,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const secondCaret = document.querySelector(".second");
   const featShow = document.querySelector(".feat-show");
   const servShow = document.querySelector(".serv-show");
-  const menuBtn = document.querySelector(".nav-burger ul li.active a"); // Sélectionne le bouton "Menu"
+  const menuBtn = document.querySelector(".nav-burger ul li.active a");
 
   // Ajoute un événement de clic pour le bouton burger
   btnBurger.addEventListener("click", function () {
@@ -43,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const btnBurger = document.querySelector(".btn-burger");
 
@@ -51,45 +51,45 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ------------------------------------------------------------------------
+// ----------------------logo barre rechch--------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  const selectWrappers = document.querySelectorAll(".custom-select-wrapper");
+  const selectElement = document.querySelector(
+    ".barre select[name='Nuisibles']"
+  );
+  const selectedOptionDisplay = document.querySelector(".selected-option");
 
-  selectWrappers.forEach((wrapper) => {
-    const select = wrapper.querySelector(".custom-select select");
-    const selectedOption = wrapper.querySelector(".selected-option");
+  // Fonction pour mettre à jour l'affichage de l'option sélectionnée
+  function updateSelectedOptionDisplay() {
+    const selectedIndex = selectElement.selectedIndex;
+    const selectedOptionText = selectElement.options[selectedIndex].text;
+    const selectedOptionIcon =
+      selectElement.options[selectedIndex].getAttribute("data-icon");
 
-    // Mettre à jour l'icône sélectionnée lors du changement dans la liste déroulante
-    select.addEventListener("change", () => {
-      const selectedIndex = select.selectedIndex;
-      const selectedOptionText = select.options[selectedIndex].text;
-      const selectedOptionIcon =
-        select.options[selectedIndex].getAttribute("data-icon");
+    if (selectedOptionIcon) {
+      selectedOptionDisplay.innerHTML = `
+              <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
+              ${selectedOptionText}
+          `;
+    } else {
+      selectedOptionDisplay.innerHTML = selectedOptionText;
+    }
+  }
 
-      selectedOption.innerHTML = `
-        <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
-        ${selectedOptionText}`;
-    });
+  // Mettre à jour l'affichage lors du chargement de la page
+  updateSelectedOptionDisplay();
 
-    // Initialiser avec la première option sélectionnée
-    const initialSelectedIndex = select.selectedIndex;
-    const initialOptionText = select.options[initialSelectedIndex].text;
-    const initialOptionIcon =
-      select.options[initialSelectedIndex].getAttribute("data-icon");
+  // Mettre à jour l'affichage lors du changement de sélection
+  selectElement.addEventListener("change", updateSelectedOptionDisplay);
+});
 
-    selectedOption.innerHTML = `
-      <img class="selected-icon" src="${initialOptionIcon}" alt="${initialOptionText}">
-      ${initialOptionText}
-    `;
-  });
-
-  // Gestion de la soumission du formulaire
-  const form = document.querySelector(".chercher");
+// ------------ Gestion de la soumission du formulaire ------------
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".search-form");
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const nuisible = document.getElementById("nuisible-select").value;
+    const nuisible = document.querySelector("select[name='Nuisibles']").value;
     const type = document.getElementById("type-select").value;
     const codePostal = document.getElementById("cp").value;
     const urgent = document.getElementById("urgent-switch").checked;
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Si vous souhaitez soumettre le formulaire réellement, retirez `event.preventDefault()`
     // et décommentez la ligne suivante
-    // form.submit();
+    form.submit();
   });
 });
 
@@ -127,68 +127,72 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*---------------------slider-card ------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+  const prev = document.querySelector("#prev");
+  const next = document.querySelector("#next");
 
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
+  let carouselVp = document.querySelector("#carousel-vp");
 
-let carouselVp = document.querySelector("#carousel-vp");
+  let cCarouselInner = document.querySelector("#cCarousel-inner");
+  let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
 
-let cCarouselInner = document.querySelector("#cCarousel-inner");
-let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
+  let leftValue = 0;
 
-let leftValue = 0;
+  const totalMovementSize =
+    parseFloat(
+      document.querySelector(".cCarousel-item").getBoundingClientRect().width,
+      10
+    ) +
+    parseFloat(
+      window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
+      10
+    );
 
-// Variable used to set the carousel movement value (card's width + gap)
-const totalMovementSize =
-  parseFloat(
-    document.querySelector(".cCarousel-item").getBoundingClientRect().width,
-    10
-  ) +
-  parseFloat(
-    window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
-    10
-  );
+  prev.addEventListener("click", () => {
+    if (!leftValue == 0) {
+      leftValue -= -totalMovementSize;
+      cCarouselInner.style.left = leftValue + "px";
+    }
+  });
 
-prev.addEventListener("click", () => {
-  if (!leftValue == 0) {
-    leftValue -= -totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
+  next.addEventListener("click", () => {
+    const carouselVpWidth = carouselVp.getBoundingClientRect().width;
+    if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
+      leftValue -= totalMovementSize;
+      cCarouselInner.style.left = leftValue + "px";
+    }
+  });
+
+  const mediaQuery510 = window.matchMedia("(max-width: 510px)");
+  const mediaQuery770 = window.matchMedia("(max-width: 770px)");
+
+  mediaQuery510.addEventListener("change", mediaManagement);
+  mediaQuery770.addEventListener("change", mediaManagement);
+
+  let oldViewportWidth = window.innerWidth;
+
+  function mediaManagement() {
+    const newViewportWidth = window.innerWidth;
+
+    if (
+      leftValue <= -totalMovementSize &&
+      oldViewportWidth < newViewportWidth
+    ) {
+      leftValue += totalMovementSize;
+      cCarouselInner.style.left = leftValue + "px";
+      oldViewportWidth = newViewportWidth;
+    } else if (
+      leftValue <= -totalMovementSize &&
+      oldViewportWidth > newViewportWidth
+    ) {
+      leftValue -= totalMovementSize;
+      cCarouselInner.style.left = leftValue + "px";
+      oldViewportWidth = newViewportWidth;
+    }
   }
 });
 
-next.addEventListener("click", () => {
-  const carouselVpWidth = carouselVp.getBoundingClientRect().width;
-  if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
-    leftValue -= totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-  }
-});
-
-const mediaQuery510 = window.matchMedia("(max-width: 510px)");
-const mediaQuery770 = window.matchMedia("(max-width: 770px)");
-
-mediaQuery510.addEventListener("change", mediaManagement);
-mediaQuery770.addEventListener("change", mediaManagement);
-
-let oldViewportWidth = window.innerWidth;
-
-function mediaManagement() {
-  const newViewportWidth = window.innerWidth;
-
-  if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
-    leftValue += totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
-  } else if (
-    leftValue <= -totalMovementSize &&
-    oldViewportWidth > newViewportWidth
-  ) {
-    leftValue -= totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
-  }
-}
-
+/*---------------------Menu maker ---------------------------------------------------------------*/
 (function ($) {
   $.fn.menumaker = function (options) {
     var cssmenu = $(this),

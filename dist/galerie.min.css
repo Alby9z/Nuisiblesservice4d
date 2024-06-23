@@ -422,7 +422,7 @@ input:checked + .slider:before {
   max-width: 600px;
   height: 2px;
   background-color: red;
-  margin: 60px auto;
+  margin: 40px auto;
   display: block;
 }
 .btn-barre {

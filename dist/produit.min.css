@@ -4,7 +4,6 @@
   margin: 0;
   background-image: url("/img/back.jpg");
   color: #ddd;
-  font-size: 18px;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "poppins", sans-serif;
@@ -17,7 +16,6 @@
   height: 45px;
   width: 45px;
   text-align: center;
-  background: #fff;
   border-radius: 3px;
   cursor: pointer;
   transition: transform 0.4s ease;
@@ -26,7 +24,7 @@
   display: block;
   width: 30px;
   height: 4px;
-  background-color: #000;
+  background-color: #b9b9b9;
   margin: 6px auto;
   border-radius: 3px;
   transition: transform 0.4s ease, opacity 0.2s ease;
@@ -160,6 +158,17 @@
   height: 25px;
   margin: 10px;
 }
+@media screen and (max-width: 706px) {
+  .btn-burger {
+    border-radius: 50%;
+    top: 23px;
+    right: 10px;
+    display: block;
+  }
+  .header__navegation {
+    display: none;
+  }
+}
 header {
   background-image: url(/img/Bandeau3.jpg);
   height: 125px;
@@ -203,6 +212,7 @@ header {
   padding: 0;
   list-style-type: none;
   color: #fff;
+  margin: 0;
 }
 nav ul li {
   display: inline-block;
@@ -458,9 +468,6 @@ input:checked + .slider:before {
   .section-2 .text ul {
     margin-left: -35px;
   }
-  ul {
-    margin-left: -26px;
-  }
   .br-rechch {
     margin-bottom: 20px;
   }
@@ -516,9 +523,6 @@ input:checked + .slider:before {
   .search-block h2 {
     margin: 0px 0px 10px 29px;
     font-size: larger;
-  }
-  .container-carousel {
-    flex-direction: column;
   }
   .row {
     flex-wrap: wrap;
@@ -610,15 +614,6 @@ input:checked + .slider:before {
   }
   .h1-acceuil {
     font-size: 40px;
-  }
-  .header__navegation {
-    display: none;
-  }
-  .btn-burger {
-    border-radius: 50%;
-    top: 23px;
-    right: 10px;
-    display: block;
   }
   .form-row {
     flex-direction: column;
@@ -969,19 +964,26 @@ a {
 }
 .section {
   display: flex;
+  flex-wrap: wrap;
 }
 .h3-intervention {
-  border-bottom: 2px solid white;
+  font-size: 23px;
+  border-bottom: 2px solid #fff;
   display: inline-block;
 }
+.content {
+  flex: 1;
+  min-width: 50%;
+}
 .title {
-  border-top: solid 3px #ff0000;
+  border-top: solid 2px red;
   padding: 20px 20px 0;
   color: #ffff;
 }
 .paragraph {
   font-size: 14px;
-  padding: 0px 20px 20px 20px;
+  padding: 20px;
+  margin-top: 20px;
   color: #ffff;
 }
 .text {
@@ -991,17 +993,21 @@ a {
   padding: 0 20px 0 20px;
 }
 .text-block {
-  padding: 0px 10px 0 10px;
+  padding: 20px;
 }
 .map {
   flex: 1;
-  margin: 0 20px 20px;
+  margin: 20px;
   border: 2px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  overflow: hidden;
 }
 iframe {
-  height: 521px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 .section-2 {
   display: flex;
@@ -1087,7 +1093,7 @@ footer {
     display: none;
   }
 }
-@media (max-width: 1000px) and (min-width: 768px) {
+@media (max-width: 1000px) {
   .social_icon {
     width: 25px;
     height: 25px;
@@ -1164,7 +1170,7 @@ footer {
   line-height: 30px;
   font-size: 20px;
   color: #fff;
-  background: #ff0000;
+  background: red;
   margin-right: 15px;
   padding: 5px;
   cursor: pointer;
@@ -1187,18 +1193,7 @@ footer .copyright {
   position: relative;
   left: 0;
   overflow: hidden;
-}
-.bottom_line-numero {
-  width: 34%;
-  top: -30px;
-}
-.bottom_line-lien {
-  width: 29%;
-  top: -30px;
-}
-.bottom_line-horaire {
-  width: 59%;
-  top: -30px;
+  margin-top: 10px;
 }
 .span-footer {
   width: 15px;
@@ -1257,10 +1252,6 @@ footer .copyright {
   .sous-menu .li-sous-menu a {
     font-size: 18px;
   }
-  .header__navegation {
-    font-size: 15px;
-    padding: 35px 30px 0 0;
-  }
   .h1-produit {
     font-size: 30px;
     margin-bottom: -1rem;
@@ -1271,8 +1262,7 @@ footer .copyright {
   .details-tab {
     font-size: 16px;
   }
-  .p-produit,
-  .paragraph {
+  .p-produit {
     font-size: 13px;
   }
   .text-section2 {
@@ -1288,15 +1278,6 @@ footer .copyright {
   .section-left .text {
     font-size: 13px;
   }
-  .agreement-content {
-    font-size: 23px;
-  }
-  .map {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    width: 100%;
-  }
 }
 @media screen and (max-width: 768px) {
   .section-2 {
@@ -1307,10 +1288,6 @@ footer .copyright {
   }
   .text-section2 {
     font-size: 12px;
-  }
-  .header__navegation {
-    padding: 35px 30px 0 0;
-    font-size: 15px;
   }
   .h1-produit {
     margin-bottom: 20px;
@@ -1343,9 +1320,6 @@ footer .copyright {
       font-size: 12px;
     }
   }
-  .paragraph {
-    font-size: 12px;
-  }
   .p-produit-details {
     font-size: 13px;
     width: 115%;
@@ -1358,29 +1332,6 @@ footer .copyright {
   .section-right .text {
     font-size: 12px;
   }
-  .agreement-content {
-    font-size: 22px;
-  }
-  .section {
-    display: block;
-  }
-  .title {
-    text-align: center;
-  }
-  .h3-intervention {
-    font-size: 27px;
-  }
-  .map {
-    display: flex;
-    margin-left: 85px;
-    justify-content: center;
-    margin-bottom: 10px;
-    width: 78%;
-  }
-  .paragraph {
-    text-align: center;
-    font-size: 13px;
-  }
 }
 @media screen and (max-width: 425px) {
   .section-right .text {
@@ -1388,9 +1339,6 @@ footer .copyright {
   }
   .section-left .text {
     margin: 0px;
-  }
-  .container-carousel {
-    display: block;
   }
   .section-2 .text ul {
     margin: 0px 0px 0px -35px;
@@ -1484,20 +1432,12 @@ footer .copyright {
   .paragraph {
     font-size: 12px;
   }
-  .agreement-content {
-    font-size: 20px;
-  }
   .image-container img {
     height: 70px;
   }
-  .h3-intervention {
-    font-size: 21px;
-  }
-  .map {
-    margin-left: 10px;
-    width: 95%;
-  }
-  .row-footer {
+}
+@media screen and (max-width: 690px) {
+  .row {
     flex-wrap: wrap;
   }
 }
@@ -1512,9 +1452,6 @@ footer .copyright {
   .section-left .text {
     font-size: 12px;
     margin: 10px 15px 0px 6px;
-  }
-  .row-footer {
-    flex-wrap: wrap;
   }
   .header__navegation {
     font-size: 14px;
@@ -1546,18 +1483,33 @@ footer .copyright {
   .paragraph {
     font-size: 12px;
   }
-  .agreement-content {
-    font-size: 18px;
-  }
-  .map {
-    margin-left: 4px;
-    width: 97%;
-  }
   .image-container img {
     height: 70px;
   }
-  .h3-intervention {
-    text-align: center;
-    font-size: 21px;
+}
+@media screen and (max-width: 970px) {
+  .section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+  .paragraph {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  .map {
+    margin-top: 20px;
+  }
+  .google-map {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container-carousel {
+      flex-direction: column;
   }
 }

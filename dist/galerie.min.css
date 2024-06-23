@@ -449,6 +449,7 @@ input:checked + .slider:before {
 }
 @media screen and (max-width: 1024px) {
   #ul-galerie {
+    width: 75%;
     margin: 25px 0 80px 155px;
   }
   #ul-galerie .li-galerie:nth-child(5) img {
@@ -718,6 +719,7 @@ input:checked + .slider:before {
   padding: 50px;
 }
 .ul-galerie {
+  width: 70%;
   margin: 35px 0px 80px 250px;
   list-style: none;
   float: left;

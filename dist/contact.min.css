@@ -8,7 +8,7 @@
 body,
 input,
 textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: "poppins", sans-serif;
 }
 .btn-burger {
   display: none;
@@ -1056,7 +1056,7 @@ footer .copyright {
   margin-bottom: 5px;
 }
 .h3-footer {
-  position: relative; 
+  position: relative;
   display: inline-block;
 }
 .bottom_line {

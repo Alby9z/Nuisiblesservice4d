@@ -8,447 +8,197 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/acceuil.min.css">
+    <style>
+        /* Ajout de styles pour améliorer la visibilité des éléments */
+        body {
+            background-color: white;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .result-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .result-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .result-title {
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+
+        .result-description {
+            margin: 0;
+        }
+
+        .section__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .section__hero {
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <img class="devis" src="/img/devis-grt.png" alt="logo-devis">
         <div class="logo">
-          <img src="/img/logo-valide-23122021.png" alt="logo">
+            <img src="/img/logo-valide-23122021.png" alt="logo">
         </div>
         <div class="btn-burger">
-          <div class="span-burger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+            <div class="span-burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
         <nav class="nav-burger sidebar-burger">
-          <ul>
-            <li class="active"><a href="#">Menu</a></li>
-            <li class="li-sous-menu">
-              <a href="/public/Acceuil.html">Acceuil</a>
-            </li>
-            <li>
-              <a href="#" class="feat-btn">
-                Nos Préstations
-                <span><ion-icon name="chevron-down-outline"></ion-icon></span>
-              </a>
-              <ul class="feat-show">
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/rat.webp"
-                    alt="icon-rat">
-                  <a href="/public/Dératisation.html">Rats & Souris</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/guêpe.webp"
-                    alt="icon-guepe">
-                  <a href="/public/Guêpes-frelons.html">Guêpes-frelons</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/frelon.webp"
-                    alt="icon-frelon">
-                  <a href="/public/Frelon_Asiatique.html">Frelon Asiatique</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/flea.webp"
-                    alt="icon-punaise">
-                  <a href="/public/Punaise_De_Lit.html">Punaise De Lit</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/puce.webp"
-                    alt="icon-puce">
-                  <a href="/public/Puce.html">Puce</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/piegon.webp"
-                    alt="icon-depiegonnage">
-                  <a href="/public/Dépigeonnage.html">Dépigeonnage</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/fouine.webp"
-                    alt="icon-fouine">
-                  <a href="/public/Fouine_Martre.html">Fouine-Martre</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/cafard.webp"
-                    alt="icon-cafard">
-                  <a href="/public/Cafard_Blatte.html">Cafard-Blatte</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/fourmis.webp"
-                    alt="icon-fourmis">
-                  <a href="/public/Fourmis.html">Fourmis</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/gale.webp"
-                    alt="icon-gale">
-                  <a href="/public/Gale.html">La Gale</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/diogene.webp"
-                    alt="icon-diogene">
-                  <a href="/public/Syndrome_De_Diogéne.html">Symdrôme Diogéne</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/poubelle.webp"
-                    alt="icon-cave">
-                  <a href="/public/Cave-local.html">Cave-local</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/desinfection.webp"
-                    alt="icon-desinfection">
-                  <a href="/public/Désinfection.html">Désinfection</a>
-                </li>
-                <li class="li-sous-menu">
-                  <img
-                    class="img-burger"
-                    src="/img/icon/eco.webp"
-                    alt="icon-eco">
-                  <a href="/public/Éco-responsable.html">Éco-Responsable</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="serv-btn">
-                Services
-                <span><ion-icon name="chevron-down-outline"></ion-icon></span>
-              </a>
-              <ul class="serv-show">
-                <li><a href="/contact/contact.html">Contact</a></li>
-                <li><a href="/contact/contact70.html">contact-70</a></li>
-                <li><a href="/contact/contact90.html">contact-90</a></li>
-                <li><a href="/contact/contact25.html">contact-25</a></li>
-                <li><a href="/contact/contact68.html">contact-68</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="/public/Galerie_Photo.html" class="serv-btn">
-                Galerie-Photos
-              </a>
-            </li>
-            <li>
-              <a href="/public/Avis.html" class="serv-btn"> Avis </a>
-            </li>
-          </ul>
+            <!-- Le contenu du menu burger -->
         </nav>
         <div class="content-burger">
-          <div class="header-burger"></div>
+            <div class="header-burger"></div>
         </div>
         <div id="myNav" class="overlay">
-          <nav class="header__navegation">
-            <ul>
-              <li><a href="/public/Acceuil.html">Acceuil</a></li>
-              <li>
-                <a href="#">Nos Préstations</a>
-                <ul class="sous-menu sous-menu-responsive">
-                  <li class="li-sous-menu">
-                    <a href="/public/Dératisation.html">Rats & Souris</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Guêpes-frelons.html">Guêpes & Abeille</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Frelon_Asiatique.html">Frelons Asiatique</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Punaise_De_Lit.html">Punaise De Lit</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Puce.html">Puce</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Dépigeonnage.html">Dépigeonnage</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/html/Fouine_Martre.html">Fouiness et Martres</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Cafard_Blatte.html">Cafards & Blattes</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Fourmis.html">Fourmis</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Gale.html">Gale</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Syndrome_De_Diogéne.html"
-                      >Symdrôme De Diogéne</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/public/Cave-Local.html">Cave-Local</a>
-                  </li>
-                  <li class="li-sous-menu sous-menu-maladie-1">
-                    <a href="/public/Désinfection.html">Désinfection</a>
-                  </li>
-                  <li class="li-sous-menu sous-menu-maladie-2">
-                    <a href="/public/Éco-responsable.html">Éco-responsable</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="/public/Galerie_Photo.html">Galerie</a></li>
-              <li>
-                <a href="/Contact/Contact.html">Contact</a>
-                <ul class="sous-menu sous-menu-responsive">
-                  <li class="li-sous-menu">
-                    <a href="/Contact/Contact70.html">Haute-Saône</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/Contact/Contact25.html">Doubs & Haut-Doubs</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/Contact/Contact90.html">Territoire De Belfort</a>
-                  </li>
-                  <li class="li-sous-menu">
-                    <a href="/Contact/contact68.html">Alsace Haut-Rhin (68)</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="/public/Avis.html">Avis</a></li>
-            </ul>
-          </nav>
+            <!-- Le contenu de la navigation overlay -->
         </div>
-        <div class="header__content">
-          <h1 class="h1-acceuil">
-            <span class="red">N</span>uisibles
-            <span class="red">S</span>ervices<span class="red"> 4D</span>
-          </h1>
-          <h2 class="h2-acceuil">Votre partenaire contre les nuisances</h2>
-          <h3 class="h3-acceuil">
-            Efficacité garantie pour des résultats impeccables.
-          </h3><div class="btn-contact">
-          <button class="btn btn-red" onclick="window.location.href='/contact/contact.html';">Contactez-Nous</button>
-        </div>
-        </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="/public/Acceuil.html">Acceuil</a></li>
-        <li>
-          <a href="#">Nos Préstations</a>
-          <ul class="sous-menu sous-menu-responsive">
-            <li class="li-sous-menu">
-              <a href="/public/Dératisation.html">Rats & Souris</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Guêpes-frelons.html">Guêpes & Abeille</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Frelon_Asiatique.html">Frelons Asiatique</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Punaise_De_Lit.html">Punaise De Lit</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Puce.html">Puce</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Dépigeonnage.html">Dépigeonnage</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/html/Fouine_Martre.html">Fouiness et Martres</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Cafard_Blatte.html">Cafards & Blattes</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Fourmis.html">Fourmis</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Gale.html">Gale</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Syndrome_De_Diogéne.html"
-                >Symdrôme De Diogéne</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/public/Cave-Local.html">Cave-Local</a>
-            </li>
-            <li class="li-sous-menu sous-menu-maladie-1">
-              <a href="/public/Désinfection.html">Désinfection</a>
-            </li>
-            <li class="li-sous-menu sous-menu-maladie-2">
-              <a href="/public/Éco-responsable.html">Éco-responsable</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="/public/Galerie_Photo.html">Galerie</a></li>
-        <li>
-          <a href="/Contact/Contact.html">Contact</a>
-          <ul class="sous-menu sous-menu-responsive">
-            <li class="li-sous-menu">
-              <a href="/Contact/Contact70.html">Haute-Saône</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/Contact/Contact25.html">Doubs & Haut-Doubs</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/Contact/Contact90.html">Territoire De Belfort</a>
-            </li>
-            <li class="li-sous-menu">
-              <a href="/Contact/contact68.html">Alsace Haut-Rhin (68)</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="/public/Avis.html">Avis</a></li>
-        </ul>
-    </nav>
-</header>
+    </header>
     <main>
-        <section id="search-results">
-            <!-- Ici seront affichés les résultats de recherche dynamiquement -->
+        <section class="section__hero">
+            <h2 class="section__title">Résultats de Recherche</h2>
+            <h1>Résultats de la recherche pour "<span id="search-query"></span>"</h1>
+            <div class="container search-results" id="results-container">
+                <!-- Les résultats de recherche seront insérés ici par JavaScript -->
+            </div>
         </section>
     </main>
     <footer>
-        <div class="row row-footer">
-          <div class="col col-footer">
-            <img
-              src="/img/logo-valide-23122021.png"
-              alt="logo-footer"
-              class="footer_logo">
-            <p class="footer_about">
-              "Nuisibles services 4D est spécialisé dans la gestion efficace des
-              nuisibles. Nous offrons des solutions professionnelles fiables et
-              expérimentés, nous assurons un environnement propre et sécurisé pour
-              nos clients."
-            </p>
-          </div>
-          <div class="col">
-            <h3 class="h3-footer">
-              Sièges Social
-              <div class="bottom_line bottom_line-numero"><span class="span-footer"></span></div>
-            </h3>
-            <p>
-              <ion-icon name="mail-sharp"></ion-icon>&nbsp;&nbsp;25200 Montbéliard
-            </p>
-            <p>FRANCE</p>
-            <p class="footer_email">
-              <span class="souligner-rouge">nuisiblesservices4d@gmail.com</span>
-            </p>
-            <h4>
-              <ion-icon name="call-sharp"></ion-icon>&nbsp;&nbsp;06-41-40-71-75
-            </h4>
-          </div>        
-          <div class="col">
-            <h3 class="h3-footer">
-              Liens Utiles
-              <div class="bottom_line bottom_line-lien"><span class="span-footer"></span></div>
-            </h3>
-            <ul class="ul-footer">
-              <li class="li-footer">
-                <a href="/politiques/Conditions_D'utilisations.html">Condition D'utilisation</a>
-              </li>
-              <li class="li-footer">
-                <a href="/politiques/Politiques_De_Confidentialités.html">Politique De Confidentialité</a>
-              </li>
-              <li class="li-footer">
-                <a href="/politiques/Politiques_De_Sécurite.html">Politique De Sécurité</a>
-              </li>
-              <li class="li-footer">
-                <a href="/politiques/Politiques_De_Cookies.html">Politique De Cookies</a>
-              </li>
-              <li class="li-footer">
-                <a href="/politiques/Mentions_Légales.html">Mentions Légales</a>
-              </li>
+        <div class="footer-content">
+            <img class="devis-footer" src="/img/devis-gratuit.webp" alt="logo-devis-gratuit">
+            <ul>
+                <li><a href="/public/Mentions-légales.html">Mentions légales</a></li>
+                <li><a href="/public/Politique-de-confidentialité.html">Politique de confidentialité</a></li>
+                <li><a href="/public/Plan-du-site.html">Plan du site</a></li>
             </ul>
-          </div>        
-          <div class="col col-intervention">
-            <h3 class="h3-footer">
-              Horaires D'intervention
-              <div class="bottom_line bottom_line-horaire"><span class="span-footer"></span></div>
-            </h3>
-            <p>Lundi - Vendredi</p>
-            <p>8h00 à 19h00</p>
-            <br>
-            <p>Samedi</p>
-            <p>9h00 à 18h00</p>
-            <br><br>
-            <div class="social_icons">
-              <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
-              <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
-              <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
-            </div>
-          </div>           
         </div>
-        <hr>
-        <p class="copyright">Quickshipdeals Ⓒ 2024 - All Rights Reserved</p>
-      </footer>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="/js/avis.min.js"></script>
-      <script src="/js/cookies.js"></script>
-      <script src="/server.js"></script>
-      <script src="/js/acceuil.js"></script>
-      <script
-        src="https://static.elfsight.com/platform/platform.js"
-        data-use-service-core
-        defer></script>
-      <script
-        src="https://kit.fontawesome.com/64d58efce2.js"
-        crossorigin="anonymous"></script>
-      <script
-        async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIepsPLhG4ymXTVhMRCnekr7gB65GDD3o&callback=console.debug&libraries=maps,marker&v=beta"></script>
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </footer>
+    <script src="/js/acceuil.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const nuisible = urlParams.get('nuisible');
-            const type = urlParams.get('type');
-            const codePostal = urlParams.get('codePostal');
-            const urgent = urlParams.get('urgent') === 'true';
+        // Simuler des résultats de recherche
+        const searchQuery = "termites";
+        const searchResults = [
+            {
+                title: "Cafard_Blatte",
+                description: "Description de la page",
+                link: "/public/Cafard_Blatte.html",
+                image: "/img/icon/cafard.webp"
+            },
+            {
+                title: "Cave-local",
+                description: "Description de la page",
+                link: "/public/Cave-local.html",
+                image: "/img/icon/poubelle.webp"
+            },
+            {
+                title: "Dépiegonnage",
+                description: "Description de la page",
+                link: "/public/Dépigeonnage.html",
+                image: "/img/icon/piegon.webp"
+            },
+            {
+                title: "Dératisation",
+                description: "Description de la page",
+                link: "/public/Dératisation.html",
+                image: "/img/icon/poubelle.webp"
+            },
+            {
+                title: "Désinfection",
+                description: "Description de la page",
+                link: "/public/Désinfection.html",
+                image: "/img/icon/desinfection.webp"
+            },
+            {
+                title: "Éco-responsable",
+                description: "Description de la page",
+                link: "/public/Éco-responsable.html",
+                image: "/img/icon/eco.webp"
+            },
+            {
+                title: "Fouine_Martre",
+                description: "Description de la page",
+                link: "/public/Fouine_Martre.html",
+                image: "/img/icon/fouine.webp"
+            },
+            {
+                title: "Cave-local",
+                description: "Description de la page",
+                link: "/public/Cave-local.html",
+                image: "/img/icon/poubelle.webp"
+            },
+            {
+                title: "Cave-local",
+                description: "Description de la page",
+                link: "/public/Cave-local.html",
+                image: "/img/icon/poubelle.webp"
+            },
+            {
+                title: "Cave-local",
+                description: "Description de la page",
+                link: "/public/Cave-local.html",
+                image: "/img/icon/poubelle.webp"
+            }
+            // Ajoutez d'autres résultats si nécessaire
+        ];
 
-            // Affichage des résultats (exemple simple)
-            const resultsSection = document.getElementById('search-results');
-            resultsSection.innerHTML = `
-                <h2>Résultats de recherche</h2>
-                <p>Nuisible : ${nuisible}</p>
-                <p>Type : ${type}</p>
-                <p>Code Postal : ${codePostal}</p>
-                <p>Urgent : ${urgent ? 'Oui' : 'Non'}</p>
-            `;
+        // Mettre à jour le texte de la requête de recherche
+        document.getElementById('search-query').innerText = searchQuery;
 
-            // Ici vous pouvez ajouter votre logique pour afficher les résultats réels
+        // Sélectionner le conteneur des résultats
+        const resultsContainer = document.getElementById('results-container');
+
+        // Fonction pour créer un élément de résultat
+        function createResultItem(result) {
+            const resultItem = document.createElement('div');
+            resultItem.className = 'result-item';
+
+            const img = document.createElement('img');
+            img.src = result.image;
+            img.alt = `icon-${result.title}`;
+            img.className = 'result-icon';
+            resultItem.appendChild(img);
+
+            const title = document.createElement('h2');
+            title.className = 'result-title';
+            const link = document.createElement('a');
+            link.href = result.link;
+            link.innerText = result.title;
+            title.appendChild(link);
+            resultItem.appendChild(title);
+
+            const description = document.createElement('p');
+            description.className = 'result-description';
+            description.innerText = result.description;
+            resultItem.appendChild(description);
+
+            return resultItem;
+        }
+
+        // Ajouter les résultats au conteneur
+        searchResults.forEach(result => {
+            const resultItem = createResultItem(result);
+            resultsContainer.appendChild(resultItem);
         });
     </script>
 </body>

@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     )}&urgent=${encodeURIComponent(urgent)}`;
 
     // Redirige vers la page des résultats de recherche avec les paramètres de requête
-    window.location.href = "/search.html" + queryString;
+    window.location.href = "/public/search.html" + queryString;
   });
 
   // Gestion de la sélection des options

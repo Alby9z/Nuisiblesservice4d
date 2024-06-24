@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résultats de recherche</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/acceuil.min.css">
     <style>
-        /* Ajout de styles pour améliorer la visibilité des éléments */
         body {
             background-color: white;
             color: black;
@@ -50,6 +45,13 @@
         .section__hero {
             padding: 20px;
         }
+
+        #content-display {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -82,6 +84,9 @@
             <div class="container search-results" id="results-container">
                 <!-- Les résultats de recherche seront insérés ici par JavaScript -->
             </div>
+            <div id="content-display">
+                <!-- Le contenu de la page sélectionnée sera affiché ici -->
+            </div>
         </section>
     </main>
     <footer>
@@ -96,7 +101,6 @@
     </footer>
     <script src="/js/acceuil.js"></script>
     <script>
-        // Simuler des résultats de recherche
         const searchQuery = "termites";
         const searchResults = [
             {
@@ -112,7 +116,7 @@
                 image: "/img/icon/poubelle.webp"
             },
             {
-                title: "Dépiegonnage",
+                title: "Dépigeonnage",
                 description: "Description de la page",
                 link: "/public/Dépigeonnage.html",
                 image: "/img/icon/piegon.webp"
@@ -159,16 +163,13 @@
                 link: "/public/Cave-local.html",
                 image: "/img/icon/poubelle.webp"
             }
-            // Ajoutez d'autres résultats si nécessaire
         ];
 
-        // Mettre à jour le texte de la requête de recherche
         document.getElementById('search-query').innerText = searchQuery;
 
-        // Sélectionner le conteneur des résultats
         const resultsContainer = document.getElementById('results-container');
+        const contentDisplay = document.getElementById('content-display');
 
-        // Fonction pour créer un élément de résultat
         function createResultItem(result) {
             const resultItem = document.createElement('div');
             resultItem.className = 'result-item';
@@ -184,6 +185,10 @@
             const link = document.createElement('a');
             link.href = result.link;
             link.innerText = result.title;
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                loadContent(result.link);
+            });
             title.appendChild(link);
             resultItem.appendChild(title);
 
@@ -195,7 +200,19 @@
             return resultItem;
         }
 
-        // Ajouter les résultats au conteneur
+        function loadContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    contentDisplay.innerHTML = data;
+                    contentDisplay.style.display = 'block';
+                })
+                .catch(error => {
+                    contentDisplay.innerHTML = '<p>Erreur de chargement du contenu.</p>';
+                    contentDisplay.style.display = 'block';
+                });
+        }
+
         searchResults.forEach(result => {
             const resultItem = createResultItem(result);
             resultsContainer.appendChild(resultItem);

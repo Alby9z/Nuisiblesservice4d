@@ -1474,7 +1474,7 @@ footer .copyright {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #898989;
   border: 1px solid #ccc;
   border-radius: 5px;
   max-height: 200px;
@@ -1502,7 +1502,7 @@ footer .copyright {
 }
 
 .options-list li:hover {
-  background-color: #f0f0f0;
+  background-color: #cac7c7;
 }
 .justify-content-lg-center {
   width: 220px;

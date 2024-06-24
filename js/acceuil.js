@@ -97,32 +97,63 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-// ------------ Gestion de la soumission du formulaire ------------
+// --------------gestion rechch ----------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".search-form");
+  const form = document.getElementById("search-form");
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const nuisible = document.querySelector("select[name='Nuisibles']").value;
+    const selectedOption = document.querySelector(
+      ".selected-option .selected-content"
+    ).textContent;
+    const nuisible =
+      selectedOption !== "Choisissez un nuisible" ? selectedOption : "";
     const type = document.getElementById("type-select").value;
     const codePostal = document.getElementById("cp").value;
     const urgent = document.getElementById("urgent-switch").checked;
 
-    // Ajoutez ici votre logique de traitement ou d'envoi des données du formulaire
-    console.log({
-      nuisible,
-      type,
-      codePostal,
-      urgent,
-    });
+    const queryString = `?nuisible=${encodeURIComponent(
+      nuisible
+    )}&type=${encodeURIComponent(type)}&codePostal=${encodeURIComponent(
+      codePostal
+    )}&urgent=${encodeURIComponent(urgent)}`;
 
-    // Si vous souhaitez soumettre le formulaire réellement, retirez `event.preventDefault()`
-    // et décommentez la ligne suivante
-    form.submit();
+    // Redirige vers la page des résultats de recherche avec les paramètres de requête
+    window.location.href = "/search.html" + queryString;
+  });
+
+  // Gestion de la sélection des options
+  const optionsList = document.querySelector(".options-list");
+  optionsList.addEventListener("click", function (event) {
+    const target = event.target.closest("li");
+    if (target) {
+      const selectedContent = target.innerText.trim();
+      document.querySelector(".selected-option .selected-content").textContent =
+        selectedContent;
+      document.querySelector("input[name='Nuisibles']").value =
+        target.dataset.value;
+    }
   });
 });
+// ------------------resultat rechch --------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const nuisible = urlParams.get("nuisible");
+  const type = urlParams.get("type");
+  const codePostal = urlParams.get("codePostal");
+  const urgent = urlParams.get("urgent");
 
+  // Utilisez ces valeurs pour afficher les résultats de recherche dynamiquement
+  const resultsSection = document.getElementById("search-results");
+  resultsSection.innerHTML = `
+      <h2>Résultats de recherche</h2>
+      <p>Nuisible: ${nuisible}</p>
+      <p>Type: ${type}</p>
+      <p>Code Postal: ${codePostal}</p>
+      <p>Urgent: ${urgent}</p>
+  `;
+});
 /*---------------------particulier ------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
   const selectType = document.getElementById("type-select");

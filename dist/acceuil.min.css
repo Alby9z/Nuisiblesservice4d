@@ -401,7 +401,7 @@ nav ul li {
   background-position: left center;
 }
 .br-rechch {
-  height: 40px;
+  height: 42px;
   background-color: #898989;
   border: solid 2px white;
   border-radius: 5px;
@@ -1453,21 +1453,57 @@ footer .copyright {
 }
 
 .selected-option {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5px;
+  height: 43px;
+  position: relative;
   display: flex;
   align-items: center;
-}
-
-.selected-option .selected-content {
-  display: flex;
-  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #898989;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
 }
 
 .selected-option img {
-  width: 20px; /* Ajustez la taille selon vos besoins */
-  height: 20px; /* Ajustez la taille selon vos besoins */
-  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.options-list {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.options-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-list li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.options-list li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.options-list li:hover {
+  background-color: #f0f0f0;
+}
+.justify-content-lg-center {
+  width: 220px;
 }

@@ -52,35 +52,50 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ----------------------logo barre rechch--------------------------------------------------
-
 document.addEventListener("DOMContentLoaded", function () {
-  const selectElement = document.querySelector(
-    ".barre select[name='Nuisibles']"
-  );
   const selectedOptionDisplay = document.querySelector(".selected-option");
+  const optionsList = document.querySelector(".options-list");
+  const selectedContent = document.querySelector(
+    ".selected-option .selected-content"
+  );
+  const hiddenInput = document.querySelector('input[name="Nuisibles"]');
 
-  // Fonction pour mettre à jour l'affichage de l'option sélectionnée
-  function updateSelectedOptionDisplay() {
-    const selectedIndex = selectElement.selectedIndex;
-    const selectedOptionText = selectElement.options[selectedIndex].text;
-    const selectedOptionIcon =
-      selectElement.options[selectedIndex].getAttribute("data-icon");
+  // Afficher/Masquer la liste d'options
+  selectedOptionDisplay.addEventListener("click", function () {
+    optionsList.style.display =
+      optionsList.style.display === "block" ? "none" : "block";
+  });
 
-    if (selectedOptionIcon) {
-      selectedOptionDisplay.innerHTML = `
-              <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
-              ${selectedOptionText}
-          `;
-    } else {
-      selectedOptionDisplay.innerHTML = selectedOptionText;
-    }
+  // Mettre à jour l'affichage de l'option sélectionnée
+  function updateSelectedOptionDisplay(selectedLi) {
+    const selectedOptionText = selectedLi.textContent.trim();
+    const selectedOptionIcon = selectedLi.getAttribute("data-icon");
+    const selectedOptionValue = selectedLi.getAttribute("data-value");
+
+    selectedContent.innerHTML = `
+      <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
+      ${selectedOptionText}
+    `;
+    hiddenInput.value = selectedOptionValue;
+    optionsList.style.display = "none";
   }
 
-  // Mettre à jour l'affichage lors du chargement de la page
-  updateSelectedOptionDisplay();
+  // Gérer la sélection d'une option
+  document.querySelectorAll(".options-list li").forEach(function (li) {
+    li.addEventListener("click", function () {
+      updateSelectedOptionDisplay(li);
+    });
+  });
 
-  // Mettre à jour l'affichage lors du changement de sélection
-  selectElement.addEventListener("change", updateSelectedOptionDisplay);
+  // Fermer la liste d'options si on clique en dehors
+  document.addEventListener("click", function (e) {
+    if (
+      !selectedOptionDisplay.contains(e.target) &&
+      !optionsList.contains(e.target)
+    ) {
+      optionsList.style.display = "none";
+    }
+  });
 });
 
 // ------------ Gestion de la soumission du formulaire ------------

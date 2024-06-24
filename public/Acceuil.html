@@ -311,61 +311,94 @@
       <div id="search-form-home">
         <img class="logo-barre" src="/img/logo-barre/anti-fourmis.png" alt="logo-barre">
         <div class="container-rechch">
-          <div class="search-block">
-            <h2>J'aimerais me débarasser de</h2>
-            <form action="/search" class="search-form" method="post">
-              <div class="justify-content-lg-center">
-                <div class="barre col-lg col-12">
-                  <select name="Nuisibles" class="br-rechch form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                    <option value="">Choisissez un nuisible</option>
-                    <option value="1" data-icon="/img/icon/rat.webp">Rats ou Souris</option>
-                    <option value="2" data-icon="/img/icon/guêpe.webp">Guêpes & Abeille</option>
-                    <option value="3" data-icon="/img/icon/frelon.webp">Frelons Asiatique</option>
-                    <option value="4" data-icon="/img/icon/flea.webp">Punaise De Lit</option>
-                    <option value="5" data-icon="/img/icon/puce.webp">Puce</option>
-                    <option value="6" data-icon="/img/icon/piegon.webp">Dépigeonnage</option>
-                    <option value="7" data-icon="/img/icon/fouine.webp">Fouines & Martres</option>
-                    <option value="8" data-icon="/img/icon/cafard.webp">Cafards & Blattes</option>
-                    <option value="9" data-icon="/img/icon/fourmis.webp">Fourmis</option>
-                    <option value="10" data-icon="/img/icon/gale.webp">Gale</option>
-                    <option value="11" data-icon="/img/icon/diogene.webp">Syndrôme De Diogéne</option>
-                    <option value="12" data-icon="/img/icon/poubelle.webp">Cave-Local</option>
-                    <option value="13" data-icon="/img/icon/desinfection.webp">Désinfection</option>
-                    <option value="14" data-icon="/img/icon/eco.webp">Traitements éco-responsables</option>
-                  </select>
-                  <div class="selected-option"></div>
-                </div>
-              </div>
-              <div class="label-type">
-                <label for="type-select">Sélectionnez le type :</label>
-                <select id="type-select" class="br-rechch select-type" name="Type">
-                  <option value="particulier">Je suis un particulier</option>
-                  <option value="professionnel">Je suis une entreprise</option>
-                </select>
-              </div>
-              <div>
-                <div class="correction">
-                  <label for="cp">Code postal :</label>
-                  <input id="cp" class="br-rechch select-type2" type="text" name="cp" placeholder="Code postal">
-                </div>
-              </div>
-              <div class="form-group switch-group">
-                <label class="label" for="urgent-switch">Urgent</label>
-                <label class="switch">
-                  <input type="checkbox" id="urgent-switch">
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="form-groupe">
-                <button id="btn-barre" type="submit" class="btn-barre btn-red btn-rounded">
-                  <ion-icon name="search"></ion-icon>
-                </button>
-              </div>
-            </form>
-          </div>
+            <div class="search-block">
+                <h2>J'aimerais me débarrasser de</h2>
+                <form action="/search" class="search-form" method="post">
+                    <div class="justify-content-lg-center">
+                        <div class="barre col-lg col-12 position-relative">
+                            <div class="selected-option">
+                                <span class="selected-content">Choisissez un nuisible</span>
+                            </div>
+                            <div class="options-list">
+                                <ul>
+                                    <li data-value="1" data-icon="/img/icon/rat.webp">
+                                        <img src="/img/icon/rat.webp" alt="Rats ou Souris"> Rats ou Souris
+                                    </li>
+                                    <li data-value="2" data-icon="/img/icon/guêpe.webp">
+                                        <img src="/img/icon/guêpe.webp" alt="Guêpes & Abeilles"> Guêpes & Abeilles
+                                    </li>
+                                    <li data-value="3" data-icon="/img/icon/frelon.webp">
+                                        <img src="/img/icon/frelon.webp" alt="Frelons Asiatiques"> Frelons Asiatiques
+                                    </li>
+                                    <li data-value="4" data-icon="/img/icon/flea.webp">
+                                        <img src="/img/icon/flea.webp" alt="Punaises de Lit"> Punaises de Lit
+                                    </li>
+                                    <li data-value="5" data-icon="/img/icon/puce.webp">
+                                        <img src="/img/icon/puce.webp" alt="Puce"> Puce
+                                    </li>
+                                    <li data-value="6" data-icon="/img/icon/piegon.webp">
+                                        <img src="/img/icon/piegon.webp" alt="Dépigeonnage"> Dépigeonnage
+                                    </li>
+                                    <li data-value="7" data-icon="/img/icon/fouine.webp">
+                                        <img src="/img/icon/fouine.webp" alt="Fouines & Martres"> Fouines & Martres
+                                    </li>
+                                    <li data-value="8" data-icon="/img/icon/cafard.webp">
+                                        <img src="/img/icon/cafard.webp" alt="Cafards & Blattes"> Cafards & Blattes
+                                    </li>
+                                    <li data-value="9" data-icon="/img/icon/fourmis.webp">
+                                        <img src="/img/icon/fourmis.webp" alt="Fourmis"> Fourmis
+                                    </li>
+                                    <li data-value="10" data-icon="/img/icon/gale.webp">
+                                        <img src="/img/icon/gale.webp" alt="Gale"> Gale
+                                    </li>
+                                    <li data-value="11" data-icon="/img/icon/diogene.webp">
+                                        <img src="/img/icon/diogene.webp" alt="Syndrome de Diogène"> Syndrome de Diogène
+                                    </li>
+                                    <li data-value="12" data-icon="/img/icon/poubelle.webp">
+                                        <img src="/img/icon/poubelle.webp" alt="Cave-Local"> Cave-Local
+                                    </li>
+                                    <li data-value="13" data-icon="/img/icon/desinfection.webp">
+                                        <img src="/img/icon/desinfection.webp" alt="Désinfection"> Désinfection
+                                    </li>
+                                    <li data-value="14" data-icon="/img/icon/eco.webp">
+                                        <img src="/img/icon/eco.webp" alt="Traitements éco-responsables"> Traitements éco-responsables
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="Nuisibles" class="selected-value">
+                        </div>
+                    </div>
+                    <div class="label-type">
+                        <label for="type-select">Sélectionnez le type :</label>
+                        <select id="type-select" class="br-rechch select-type" name="Type">
+                            <option value="particulier">Je suis un particulier</option>
+                            <option value="professionnel">Je suis une entreprise</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div class="correction">
+                            <label for="cp">Code postal :</label>
+                            <input id="cp" class="br-rechch select-type2" type="text" name="cp" placeholder="Code postal">
+                        </div>
+                    </div>
+                    <div class="form-group switch-group">
+                        <label class="label" for="urgent-switch">Urgent</label>
+                        <label class="switch">
+                            <input type="checkbox" id="urgent-switch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="form-groupe">
+                        <button id="btn-barre" type="submit" class="btn-barre btn-red btn-rounded">
+                            <ion-icon name="search"></ion-icon>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <img class="logo-barre1" src="/img/logo-barre//anti-punaise.png" alt="logo-barre1">
-      </div>    
+        <img class="logo-barre1" src="/img/logo-barre/anti-punaise.png" alt="logo-barre1">
+    </div>
+        
       <div class="separator"></div>
       <div class="texte-acceuil">
         <h1 class="h1-bienvenue">Bienvenue chez Nuisibles Services 4D</h1>

@@ -60,10 +60,18 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const hiddenInput = document.querySelector('input[name="Nuisibles"]');
 
+  // Assurer que la liste d'options est fermée par défaut
+  optionsList.style.display = "none";
+
   // Afficher/Masquer la liste d'options
   selectedOptionDisplay.addEventListener("click", function () {
-    optionsList.style.display =
-      optionsList.style.display === "block" ? "none" : "block";
+    if (optionsList.style.display === "none" || optionsList.style.display === "") {
+      optionsList.style.display = "block";
+      optionsList.classList.add("open");
+    } else {
+      optionsList.style.display = "none";
+      optionsList.classList.remove("open");
+    }
   });
 
   // Mettre à jour l'affichage de l'option sélectionnée
@@ -78,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     hiddenInput.value = selectedOptionValue;
     optionsList.style.display = "none";
+    optionsList.classList.remove("open");
   }
 
   // Gérer la sélection d'une option
@@ -94,9 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
       !optionsList.contains(e.target)
     ) {
       optionsList.style.display = "none";
+      optionsList.classList.remove("open");
     }
   });
 });
+
 // --------------gestion rechch ----------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("search-form");

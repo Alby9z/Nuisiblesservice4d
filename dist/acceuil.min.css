@@ -1480,6 +1480,11 @@ footer .copyright {
   max-height: 200px;
   overflow-y: auto;
   z-index: 1000;
+  position: relative;
+}
+
+.options-list.open {
+  margin-bottom: -200px;
 }
 
 .options-list ul {

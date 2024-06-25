@@ -359,7 +359,7 @@ nav ul li {
   color: #cfcfcf;
 }
 .selected-content {
-  font-size: 14px;
+  font-size: small;
 }
 #search-form-home {
   border-radius: 10px;
@@ -532,6 +532,10 @@ input:checked + .slider:before {
   .btn-barre {
     margin: 30px 0px 0px -360px;
   }
+  #justify-content-lg-center {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 706px) {
   .btn-burger {
@@ -587,8 +591,8 @@ input:checked + .slider:before {
     margin: 10px;
   }
   .barre {
-    display: flex;
-    justify-content: center;
+    width: 93%;
+    margin-left: 11px;
   }
   #search-form-home {
     width: 88%;
@@ -1464,7 +1468,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px 0px 5px 35px;
   background-color: #898989;
   border: 2px solid #ffffff;
   border-radius: 5px;

@@ -80,6 +80,8 @@
     <main>
         <section class="section__hero">
             <h2 class="section__title">Résultats de Recherche</h2>
+            <input type="text" id="search-input" placeholder="Rechercher...">
+            <button id="search-button">Rechercher</button>
             <h1>Résultats de la recherche pour "<span id="search-query"></span>"</h1>
             <div class="container search-results" id="results-container">
                 <!-- Les résultats de recherche seront insérés ici par JavaScript -->
@@ -99,124 +101,6 @@
             </ul>
         </div>
     </footer>
-    <script src="/js/acceuil.js"></script>
-    <script>
-        const searchQuery = "termites";
-        const searchResults = [
-            {
-                title: "Cafard_Blatte",
-                description: "Description de la page",
-                link: "/public/Cafard_Blatte.html",
-                image: "/img/icon/cafard.webp"
-            },
-            {
-                title: "Cave-local",
-                description: "Description de la page",
-                link: "/public/Cave-local.html",
-                image: "/img/icon/poubelle.webp"
-            },
-            {
-                title: "Dépigeonnage",
-                description: "Description de la page",
-                link: "/public/Dépigeonnage.html",
-                image: "/img/icon/piegon.webp"
-            },
-            {
-                title: "Dératisation",
-                description: "Description de la page",
-                link: "/public/Dératisation.html",
-                image: "/img/icon/poubelle.webp"
-            },
-            {
-                title: "Désinfection",
-                description: "Description de la page",
-                link: "/public/Désinfection.html",
-                image: "/img/icon/desinfection.webp"
-            },
-            {
-                title: "Éco-responsable",
-                description: "Description de la page",
-                link: "/public/Éco-responsable.html",
-                image: "/img/icon/eco.webp"
-            },
-            {
-                title: "Fouine_Martre",
-                description: "Description de la page",
-                link: "/public/Fouine_Martre.html",
-                image: "/img/icon/fouine.webp"
-            },
-            {
-                title: "Cave-local",
-                description: "Description de la page",
-                link: "/public/Cave-local.html",
-                image: "/img/icon/poubelle.webp"
-            },
-            {
-                title: "Cave-local",
-                description: "Description de la page",
-                link: "/public/Cave-local.html",
-                image: "/img/icon/poubelle.webp"
-            },
-            {
-                title: "Cave-local",
-                description: "Description de la page",
-                link: "/public/Cave-local.html",
-                image: "/img/icon/poubelle.webp"
-            }
-        ];
-
-        document.getElementById('search-query').innerText = searchQuery;
-
-        const resultsContainer = document.getElementById('results-container');
-        const contentDisplay = document.getElementById('content-display');
-
-        function createResultItem(result) {
-            const resultItem = document.createElement('div');
-            resultItem.className = 'result-item';
-
-            const img = document.createElement('img');
-            img.src = result.image;
-            img.alt = `icon-${result.title}`;
-            img.className = 'result-icon';
-            resultItem.appendChild(img);
-
-            const title = document.createElement('h2');
-            title.className = 'result-title';
-            const link = document.createElement('a');
-            link.href = result.link;
-            link.innerText = result.title;
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                loadContent(result.link);
-            });
-            title.appendChild(link);
-            resultItem.appendChild(title);
-
-            const description = document.createElement('p');
-            description.className = 'result-description';
-            description.innerText = result.description;
-            resultItem.appendChild(description);
-
-            return resultItem;
-        }
-
-        function loadContent(url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    contentDisplay.innerHTML = data;
-                    contentDisplay.style.display = 'block';
-                })
-                .catch(error => {
-                    contentDisplay.innerHTML = '<p>Erreur de chargement du contenu.</p>';
-                    contentDisplay.style.display = 'block';
-                });
-        }
-
-        searchResults.forEach(result => {
-            const resultItem = createResultItem(result);
-            resultsContainer.appendChild(resultItem);
-        });
-    </script>
+    <script src="/js/result.js"></script>
 </body>
 </html>

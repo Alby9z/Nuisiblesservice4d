@@ -359,7 +359,7 @@ nav ul li {
   color: #cfcfcf;
 }
 .selected-content {
-  font-size: small;
+  font-size: 15px;
 }
 #search-form-home {
   border-radius: 10px;
@@ -411,7 +411,7 @@ nav ul li {
   background-color: #898989;
   border: solid 2px white;
   border-radius: 5px;
-  padding: 5px 0px 5px 35px;
+  padding: 5px 0px 5px 10px;
 }
 form {
   display: flex;

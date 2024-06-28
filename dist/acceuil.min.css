@@ -240,6 +240,19 @@ header {
   max-width: 170px;
   border-radius: 15px;
 }
+.btn-bas-acceuil {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.btn-red {
+  background-color: red;
+  height: 30px;
+  width: 56%;
+  max-width: 280px;
+  border-radius: 15px;
+}
 .btn:hover {
   background-color: #cc0000;
 }
@@ -564,19 +577,16 @@ input:checked + .slider:before {
     font-size: larger;
   }
 }
-
 @media screen and (max-width: 690px) {
   .row {
     flex-wrap: wrap;
   }
 }
-
 @media screen and (max-width: 1000px) {
   .container-carousel {
     flex-direction: column;
   }
 }
-
 @media screen and (max-width: 425px) {
   .header__content h2 {
     font-size: 21px;
@@ -659,7 +669,6 @@ input:checked + .slider:before {
     margin-left: 10px;
   }
 }
-
 @media screen and (max-width: 578px) {
   .h1-acceuil {
     font-size: 40px;
@@ -671,20 +680,17 @@ input:checked + .slider:before {
     font-size: 10px;
   }
 }
-
 @media screen and (max-width: 514px) {
   .btn {
     width: 65%;
   }
 }
-
 @media screen and (max-width: 768px) {
   .devis {
     margin-top: 285px;
     height: 100px;
   }
 }
-
 @media screen and (max-width: 1024px) {
   .form-row {
     margin: 0 0 25px -125px;
@@ -709,7 +715,6 @@ input:checked + .slider:before {
     margin-left: 0;
   }
 }
-
 .separator {
   width: 50%;
   max-width: 600px;
@@ -1461,7 +1466,6 @@ footer .copyright {
 .select-container {
   position: relative;
 }
-
 .selected-option {
   height: 43px;
   position: relative;
@@ -1473,13 +1477,11 @@ footer .copyright {
   border: 2px solid #ffffff;
   border-radius: 5px;
 }
-
 .selected-option img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-
 .options-list {
   top: 100%;
   left: 0;
@@ -1492,17 +1494,14 @@ footer .copyright {
   z-index: 1000;
   position: relative;
 }
-
 .options-list.open {
   margin-bottom: -200px;
 }
-
 .options-list ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .options-list li {
   font-size: 14px;
   padding: 10px;
@@ -1510,13 +1509,11 @@ footer .copyright {
   display: flex;
   align-items: center;
 }
-
 .options-list li img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-
 .options-list li:hover {
   background-color: #cac7c7;
 }

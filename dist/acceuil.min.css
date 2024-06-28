@@ -1468,7 +1468,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 5px 0px 5px 35px;
+  padding: 5px 0px 5px 5px;
   background-color: #898989;
   border: 2px solid #ffffff;
   border-radius: 5px;
@@ -1522,4 +1522,7 @@ footer .copyright {
 }
 .justify-content-lg-center {
   width: 220px;
+}
+.barre {
+  margin-top: -25px;
 }

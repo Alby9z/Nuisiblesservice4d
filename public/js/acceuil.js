@@ -59,11 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ".selected-option .selected-content"
   );
   const hiddenInput = document.querySelector('input[name="Nuisibles"]');
+  const searchForm = document.getElementById("search-form");
 
-  // Assurer que la liste d'options est fermée par défaut
   optionsList.style.display = "none";
 
-  // Afficher/Masquer la liste d'options
   selectedOptionDisplay.addEventListener("click", function () {
     if (
       optionsList.style.display === "none" ||
@@ -77,29 +76,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Mettre à jour l'affichage de l'option sélectionnée
-  function updateSelectedOptionDisplay(selectedLi) {
-    const selectedOptionText = selectedLi.textContent.trim();
-    const selectedOptionIcon = selectedLi.getAttribute("data-icon");
-    const selectedOptionValue = selectedLi.getAttribute("data-value");
-
-    selectedContent.innerHTML = `
-      <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
-      ${selectedOptionText}
-    `;
-    hiddenInput.value = selectedOptionValue;
-    optionsList.style.display = "none";
-    optionsList.classList.remove("open");
-  }
-
-  // Gérer la sélection d'une option
   document.querySelectorAll(".options-list li").forEach(function (li) {
     li.addEventListener("click", function () {
-      updateSelectedOptionDisplay(li);
+      const selectedOptionText = li.textContent.trim();
+      const selectedOptionIcon = li.getAttribute("data-icon");
+      const selectedOptionValue = li.getAttribute("data-value");
+
+      selectedContent.innerHTML = `
+              <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
+              ${selectedOptionText}
+          `;
+      hiddenInput.value = selectedOptionValue;
+      optionsList.style.display = "none";
+      optionsList.classList.remove("open");
     });
   });
 
-  // Fermer la liste d'options si on clique en dehors
   document.addEventListener("click", function (e) {
     if (
       !selectedOptionDisplay.contains(e.target) &&
@@ -107,6 +99,42 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
       optionsList.style.display = "none";
       optionsList.classList.remove("open");
+    }
+  });
+
+  searchForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nuisible = hiddenInput.value;
+    const type = document.getElementById("type-select").value;
+    const codePostal = document.getElementById("cp").value;
+    const urgent = document.getElementById("urgent-switch").checked
+      ? "oui"
+      : "non";
+
+    // Dictionnaire pour les redirections
+    const redirections = {
+      1: "/public/Dératisation.html",
+      2: "/public/Guêpes-frelons.html",
+      3: "/public/Frelon_Asiatique.html",
+      4: "/public/Punaise_De_Lit.html",
+      5: "/public/Puce.html",
+      6: "/public/Dépigeonnage.html",
+      7: "/public/Fouine_Martre.html",
+      8: "/public/Cafard_Blatte.html",
+      9: "/public/Fourmis.html",
+      10: "/public/gale.html",
+      11: "/public/Syndrome_De_Diogéne.html",
+      12: "/public/Cave-local.html",
+      13: "/public/Désinfection.html",
+      14: "/public/Éco-responsable.html",
+    };
+
+    // Rediriger vers la page correspondante
+    const pageUrl = redirections[nuisible];
+    if (pageUrl) {
+      const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`;
+      window.location.href = `${pageUrl}${queryString}`;
     }
   });
 });

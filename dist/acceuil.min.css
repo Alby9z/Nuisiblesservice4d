@@ -344,6 +344,13 @@ nav ul li {
 strong {
   color: #f36767;
 }
+.strong {
+  color: #000;
+}
+.h2-acceuil {
+  font-size: 22px;
+  color: #b7b7b7;
+}
 .header__content {
   display: flex;
   flex-direction: column;

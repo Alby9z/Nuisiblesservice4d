@@ -11,6 +11,13 @@
 strong {
   color: #ffff;
 }
+.btn-bas-acceuil {
+  padding: 0px 650px 0px 0px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
 .btn-burger {
   display: none;
   position: absolute;

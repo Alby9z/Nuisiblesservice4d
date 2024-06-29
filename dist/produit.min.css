@@ -11,12 +11,20 @@
 strong {
   color: #ffff;
 }
+.btn-red {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  background-color: red;
+  height: 30px;
+  width: 56%;
+  max-width: 280px;
+  border-radius: 15px;
+}
 .btn-bas-acceuil {
   padding: 0px 650px 0px 0px;
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
-  margin-top: 25px;
 }
 .btn-burger {
   display: none;
@@ -656,16 +664,6 @@ input:checked + .slider:before {
     color: #f36767;
     font-weight: 700;
   }
-}
-.btn {
-  background-color: red;
-  height: 25px;
-  width: 50%;
-  min-width: 170px;
-  max-width: 170px;
-  border-radius: 15px;
-  border-style: none;
-  margin: 20px;
 }
 .btn-contact {
   display: flex;

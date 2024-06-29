@@ -261,6 +261,21 @@ header {
   display: flex;
   justify-content: center;
 }
+#btn-geolocation {
+  height: 45px;
+  width: 45px;
+  background-color: #3135b3;
+  border-radius: 50%;
+  margin: 0 65px 0 0;
+}
+.géo {
+  color: #ffff;
+  margin-top: 15px;
+  position: absolute;
+  margin-left: -27px;
+  font-size: 10px;
+  width: 100px;
+}
 .icon-inner,
 .ionicon,
 svg {
@@ -497,7 +512,25 @@ input:checked + .slider:before {
   display: contents;
 }
 .btn-barre {
-  margin: 0 20px -10px -20px;
+  margin: 0px 50px 0px -20px;
+  width: 6%;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: -3px;
+}
+.icon-geo {
+  margin-top: 5px;
+  scale: 2;
+  color: #ffffff;
+}
+.btn-barre-geo {
+  margin: 0px 50px 0px -20px;
   width: 6%;
   height: 50px;
   align-items: center;
@@ -509,10 +542,15 @@ input:checked + .slider:before {
   transition: background-color 0.3s ease;
   margin-top: -3px;
 }
+.form-group-geo {
+  margin-top: -7px;
+  position: relative;
+}
 .btn-barre:hover {
   background-color: #8b0000;
 }
 .btn-barre ion-icon {
+  scale: 1.3;
   height: 50px;
   color: white;
   font-size: large;
@@ -525,6 +563,9 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 1000px) {
+  #btn-geolocation {
+    margin: 35px 345px 0 0;
+  }
   .correction {
     margin-bottom: 15px;
   }

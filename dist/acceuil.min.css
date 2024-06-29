@@ -241,6 +241,7 @@ header {
   border-radius: 15px;
 }
 .btn-bas-acceuil {
+  padding: 0px 650px 0px 0px;
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
@@ -337,7 +338,11 @@ nav ul li {
   width: 100%;
 }
 .p-bienvenue {
+  color: #cbcbcb;
   text-align: center;
+}
+strong {
+  color: #f36767;
 }
 .header__content {
   display: flex;

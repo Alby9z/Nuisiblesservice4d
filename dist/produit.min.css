@@ -8,6 +8,9 @@
   background-size: cover;
   font-family: "poppins", sans-serif;
 }
+strong {
+  color: #ffff;
+}
 .btn-burger {
   display: none;
   position: absolute;
@@ -643,7 +646,7 @@ input:checked + .slider:before {
   line-height: 1.66;
   margin: 25px 170px 20px;
   strong {
-    color: #ddd;
+    color: #f36767;
     font-weight: 700;
   }
 }

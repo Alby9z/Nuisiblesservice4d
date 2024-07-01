@@ -262,8 +262,8 @@ header {
   justify-content: center;
 }
 #btn-geolocation {
-  height: 45px;
-  width: 45px;
+  height: 50px;
+  width: 50px;
   background-color: #3135b3;
   border-radius: 50%;
   margin: 0 65px 0 0;
@@ -512,9 +512,9 @@ input:checked + .slider:before {
   display: contents;
 }
 .btn-barre {
-  margin: 0px 50px 0px -20px;
+  margin: 0px 0px 0px -25px;
   width: 6%;
-  height: 52px;
+  height: 50px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -522,11 +522,11 @@ input:checked + .slider:before {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: -3px;
+  margin-top: -7px;
 }
 .icon-geo {
   margin-top: 5px;
-  scale: 2;
+  scale: 2.8;
   color: #ffffff;
 }
 .btn-barre-geo {
@@ -550,11 +550,13 @@ input:checked + .slider:before {
   background-color: #8b0000;
 }
 .btn-barre ion-icon {
-  scale: 1.3;
+  scale: 0.8;
   height: 50px;
   color: white;
   font-size: large;
-  width: 35%;
+  width: 100%;
+  align-items: center;
+  display: flex;
 }
 @media (max-width: 1024px) {
   form {
@@ -615,6 +617,9 @@ input:checked + .slider:before {
   }
 }
 @media screen and (max-width: 490px) {
+  #btn-geolocation {
+    margin: 35px 235px 0 0;
+  }
   select.br-rechch,
   input.br-rechch {
     width: 300px;
@@ -685,6 +690,9 @@ input:checked + .slider:before {
   }
 }
 @media screen and (max-width: 375px) {
+  #btn-geolocation {
+    margin: 35px 205px 0 0;
+  }
   .agreement-content {
     font-size: 23px;
   }
@@ -1107,6 +1115,12 @@ h2 {
   font-size: 14px;
 }
 @media (max-width: 970px) {
+  .btn-bas-acceuil {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
   .section-2 {
     flex-direction: column;
   }
@@ -1184,6 +1198,15 @@ iframe {
 .content {
   flex: 1;
   min-width: 50%;
+}
+@media (max-width: 970px) and (min-width: 320px) {
+  .btn-bas-acceuil {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
 }
 @media screen and (max-width: 970px) {
   .section {
@@ -1273,14 +1296,8 @@ footer {
 @media (max-width: 1000px) {
   .br-rechch {
     width: 410px;
-    padding: 5px 0px 5px 35px;
+    padding: 5px 0px 5px 5px;
     display: block;
-  }
-  select#type-select {
-    margin-top: 10px;
-  }
-  input#cp {
-    margin-top: 10px;
   }
   .social_icon {
     width: 25px;
@@ -1295,8 +1312,8 @@ footer {
     flex-wrap: nowrap;
   }
   .btn-barre {
-    scale: 1.2;
-    margin: -44px 0px 30px -20px;
+    scale: 1;
+    margin: -47px 0px 30px -20px;
     width: 12%;
   }
 }
@@ -1525,7 +1542,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 5px 0px 5px 5px;
+  padding: 5px 0px 5px 8px;
   background-color: #898989;
   border: 2px solid #ffffff;
   border-radius: 5px;

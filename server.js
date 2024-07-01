@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
-const exphbs = require("express-handlebars");
+const { engine } = require("express-handlebars");
+const helmet = require("helmet");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,23 +15,34 @@ app.use(express.static(path.join(__dirname, "public")));
 // Configuration de Handlebars comme moteur de template
 app.engine(
   "handlebars",
-  exphbs({
-    defaultLayout: "main", // Spécifie le layout par défaut des pages
-    extname: ".handlebars", // Extension des fichiers de template
+  engine({
+    defaultLayout: "main",
+    extname: ".handlebars",
   })
 );
 app.set("view engine", "handlebars");
 
+// Utiliser helmet pour configurer les en-têtes de sécurité, y compris CSP
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        "script-src": ["'self'", "'unsafe-eval'"], // Ajout de 'unsafe-eval'
+        // Vous pouvez ajouter d'autres directives ici
+      },
+    },
+  })
+);
+
+// Route pour la page d'accueil
+app.get("/", (req, res) => {
+  res.render("home");
+});
+
 // Route POST pour gérer la soumission du formulaire de recherche
 app.post("/search", (req, res) => {
-  // Récupérer les données du formulaire depuis req.body
   const { Nuisibles, cp, type, urgent } = req.body;
-
-  // Vous pouvez maintenant traiter ces données comme vous le souhaitez
-  // Par exemple, les enregistrer dans une base de données, effectuer une recherche, etc.
-
-  // Ensuite, vous pouvez rediriger l'utilisateur vers une autre page ou envoyer une réponse HTML
-  // Ici, nous redirigeons vers une vue Handlebars pour afficher les résultats
   res.redirect(
     `/result?Nuisibles=${Nuisibles}&cp=${cp}&type=${type}&urgent=${urgent}`
   );
@@ -39,7 +51,12 @@ app.post("/search", (req, res) => {
 // Route pour afficher les résultats avec Handlebars
 app.get("/result", (req, res) => {
   const { Nuisibles, cp, type, urgent } = req.query;
-  res.render("result", { Nuisibles, cp, type, urgent });
+  // Simuler des résultats de recherche pour l'exemple
+  const results = [
+    { name: "Rat", type: "Rongeur", description: "Rat trouvé dans le grenier" },
+    { name: "Souris", type: "Rongeur", description: "Souris dans la cuisine" },
+  ];
+  res.render("result", { Nuisibles, cp, type, urgent, results });
 });
 
 // Démarrer le serveur

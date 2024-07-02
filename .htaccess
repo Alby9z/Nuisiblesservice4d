@@ -1,9 +1,52 @@
 # Activer la réécriture d'URL
-RewriteEngine On
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-# Redirection de http vers https
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    # Définir acceuil.html comme fichier par défaut
+    DirectoryIndex Acceuil.html
 
-# Gestion des erreurs
-ErrorDocument 500 /500.html
+    # Si le fichier ou le dossier n'existe pas, réécrire l'URL vers acceuil.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ Acceuil.html [L]
+</IfModule>
+
+# Configurations de sécurité de base
+
+# Désactiver l'affichage du listing des répertoires
+Options -Indexes
+
+# Bloquer l'accès aux fichiers .htaccess
+<Files .htaccess>
+    Require all denied
+</Files>
+
+# Bloquer l'accès à des fichiers sensibles
+<FilesMatch "\.(htpasswd|ini|phps|fla|psd|log|sh|tpl|zip|exe|pl)$">
+    Require all denied
+</FilesMatch>
+
+# Protection contre le clicjacking
+<IfModule mod_headers.c>
+    Header always append X-Frame-Options SAMEORIGIN
+</IfModule>
+
+# Protection contre les attaques XSS
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Protection contre le vol de contenu
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Définir une politique de sécurité du contenu de base (ajustez selon vos besoins)
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self';"
+</IfModule>
+
+# Bloquer l'accès aux fichiers de configuration sensibles
+<FilesMatch "(^#.*#|\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)|~)$">
+    Require all denied
+</FilesMatch>

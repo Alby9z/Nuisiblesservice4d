@@ -617,6 +617,10 @@ input:checked + .slider:before {
     display: block;
   }
 }
+.elfsight-app-b31e5e9d-508f-4700-ac02-530e6dd4f618 {
+  margin-top: 200px;
+  margin-bottom: 175px;
+}
 #testimonial-area {
   background-image: url(../../img/back.jpg);
   background-size: cover;

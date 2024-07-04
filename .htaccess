@@ -1,27 +1,14 @@
-<<<<<<< HEAD
 # Activer la réécriture d'URL
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Définir index.html comme fichier par défaut
-    DirectoryIndex index.html
-
-    # Si le fichier ou le dossier n'existe pas, réécrire l'URL vers index.html
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.html [L]
-=======
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-
-    # Définir acceuil.html comme fichier par défaut
+    # Définir Acceuil.html comme fichier par défaut
     DirectoryIndex Acceuil.html
 
-    # Si le fichier ou le dossier n'existe pas, réécrire l'URL vers acceuil.html
+    # Si le fichier ou le dossier n'existe pas, réécrire l'URL vers Acceuil.html
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ Acceuil.html [L]
->>>>>>> e120226 (Ajout des fichiers non suivis)
 </IfModule>
 
 # Configurations de sécurité de base

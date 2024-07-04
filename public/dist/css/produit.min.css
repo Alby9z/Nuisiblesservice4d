@@ -2,7 +2,7 @@
 .body-produit {
   font-family: "poppins", sans-serif;
   margin: 0;
-  background-image: url("/public/img/back.jpg");
+  background-image: url("../../img/back.jpg");
   color: #ddd;
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,7 +201,7 @@ strong {
   }
 }
 header {
-  background-image: url(/public/img/Bandeau3.jpg);
+  background-image: url(../../img/Bandeau3.jpg);
   height: 125px;
   background-repeat: no-repeat;
   background-size: cover;

@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 header {
-  background-image: url(/public/img/Bandeau3.jpg);
+  background-image: url(../../img/Bandeau3.jpg);
   height: 155px;
   background-repeat: no-repeat;
   background-size: cover;

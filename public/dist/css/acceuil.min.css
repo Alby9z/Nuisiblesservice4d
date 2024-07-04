@@ -11,7 +11,7 @@
 }
 body {
   font-family: "poppins", sans-serif;
-  background-image: url(/public/img/back.jpg);
+  background-image: url(../../img/back.jpg);
   background-size: cover;
   color: #000;
   display: flex;
@@ -179,7 +179,7 @@ body {
   margin: 10px;
 }
 header {
-  background-image: url(/public/img/Bandeau3.jpg);
+  background-image: url(../../img/Bandeau3.jpg);
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;

@@ -9,31 +9,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const servShow = document.querySelector(".serv-show");
   const menuBtn = document.querySelector(".nav-burger ul li.active a");
 
-  // Ajoute un événement de clic pour le bouton burger
-  btnBurger.addEventListener("click", function () {
-    btnBurger.classList.toggle("click");
-    sidebarBurger.classList.toggle("show");
-  });
+  if (btnBurger && sidebarBurger) {
+    btnBurger.addEventListener("click", function () {
+      btnBurger.classList.toggle("click");
+      sidebarBurger.classList.toggle("show");
+    });
+  }
 
-  // Ajoute un événement de clic pour le bouton des fonctionnalités (feat-btn)
-  featBtn.addEventListener("click", function () {
-    featShow.classList.toggle("show");
-    firstCaret.classList.toggle("rotate");
-  });
+  if (featBtn && featShow && firstCaret) {
+    featBtn.addEventListener("click", function () {
+      featShow.classList.toggle("show");
+      firstCaret.classList.toggle("rotate");
+    });
+  }
 
-  // Ajoute un événement de clic pour le bouton des services (serv-btn)
-  servBtn.addEventListener("click", function () {
-    servShow.classList.toggle("show1");
-    secondCaret.classList.toggle("rotate");
-  });
+  if (servBtn && servShow && secondCaret) {
+    servBtn.addEventListener("click", function () {
+      servShow.classList.toggle("show1");
+      secondCaret.classList.toggle("rotate");
+    });
+  }
 
-  // Ajoute un événement de clic pour le bouton "Menu" pour fermer le menu burger
-  menuBtn.addEventListener("click", function () {
-    sidebarBurger.classList.remove("show");
-    btnBurger.classList.remove("click");
-  });
+  if (menuBtn && sidebarBurger && btnBurger) {
+    menuBtn.addEventListener("click", function () {
+      sidebarBurger.classList.remove("show");
+      btnBurger.classList.remove("click");
+    });
+  }
 
-  // Pour chaque élément de sous-menu, ajoutez une gestion du clic pour fermer le menu
   const subMenuItems = document.querySelectorAll(".li-sous-menu a");
   subMenuItems.forEach((item) => {
     item.addEventListener("click", function () {
@@ -46,9 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const btnBurger = document.querySelector(".btn-burger");
 
-  btnBurger.addEventListener("click", function () {
-    this.classList.toggle("click");
-  });
+  if (btnBurger) {
+    btnBurger.addEventListener("click", function () {
+      this.classList.toggle("click");
+    });
+  }
 });
 
 // ----------------------logo barre rechch--------------------------------------------------
@@ -158,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
 /*---------------------slider-card ------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
   const prev = document.querySelector("#prev");
@@ -166,6 +172,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let carouselVp = document.querySelector("#carousel-vp");
 
   let cCarouselInner = document.querySelector("#cCarousel-inner");
+
+  if (!cCarouselInner) return; // Vérifiez que cCarouselInner existe
+
   let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
 
   let leftValue = 0;

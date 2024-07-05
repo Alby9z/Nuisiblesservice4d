@@ -46,17 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btnBurger = document.querySelector(".btn-burger");
-
-  if (btnBurger) {
-    btnBurger.addEventListener("click", function () {
-      this.classList.toggle("click");
-    });
-  }
-});
-
-// ----------------------logo barre rechch--------------------------------------------------
+// ----------------------logo barre recherche--------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const selectedOptionDisplay = document.querySelector(".selected-option");
   const optionsList = document.querySelector(".options-list");
@@ -103,7 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("click", function (e) {
     if (
+      selectedOptionDisplay &&
       !selectedOptionDisplay.contains(e.target) &&
+      optionsList &&
       !optionsList.contains(e.target)
     ) {
       optionsList.style.display = "none";
@@ -168,15 +160,12 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const prev = document.querySelector("#prev");
   const next = document.querySelector("#next");
+  const carouselVp = document.querySelector("#carousel-vp");
+  const cCarouselInner = document.querySelector("#cCarousel-inner");
 
-  let carouselVp = document.querySelector("#carousel-vp");
-
-  let cCarouselInner = document.querySelector("#cCarousel-inner");
-
-  if (!cCarouselInner) return; // Vérifiez que cCarouselInner existe
+  if (!prev || !next || !carouselVp || !cCarouselInner) return; // Vérifiez que ces éléments existent
 
   let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
-
   let leftValue = 0;
 
   const totalMovementSize =
@@ -190,8 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
   prev.addEventListener("click", () => {
-    if (!leftValue == 0) {
-      leftValue -= -totalMovementSize;
+    if (leftValue !== 0) {
+      leftValue += totalMovementSize;
       cCarouselInner.style.left = leftValue + "px";
     }
   });

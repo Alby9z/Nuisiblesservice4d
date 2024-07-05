@@ -1483,6 +1483,7 @@ footer .copyright {
   box-shadow: 0 0 10px 0 rgba(126, 34, 34, 0.5);
 }
 #cookie-preferences-modal {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;

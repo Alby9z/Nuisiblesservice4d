@@ -9,31 +9,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const servShow = document.querySelector(".serv-show");
   const menuBtn = document.querySelector(".nav-burger ul li.active a");
 
-  // Ajoute un événement de clic pour le bouton burger
-  btnBurger.addEventListener("click", function () {
-    btnBurger.classList.toggle("click");
-    sidebarBurger.classList.toggle("show");
-  });
+  if (btnBurger && sidebarBurger) {
+    btnBurger.addEventListener("click", function () {
+      btnBurger.classList.toggle("click");
+      sidebarBurger.classList.toggle("show");
+    });
+  }
 
-  // Ajoute un événement de clic pour le bouton des fonctionnalités (feat-btn)
-  featBtn.addEventListener("click", function () {
-    featShow.classList.toggle("show");
-    firstCaret.classList.toggle("rotate");
-  });
+  if (featBtn && featShow && firstCaret) {
+    featBtn.addEventListener("click", function () {
+      featShow.classList.toggle("show");
+      firstCaret.classList.toggle("rotate");
+    });
+  }
 
-  // Ajoute un événement de clic pour le bouton des services (serv-btn)
-  servBtn.addEventListener("click", function () {
-    servShow.classList.toggle("show1");
-    secondCaret.classList.toggle("rotate");
-  });
+  if (servBtn && servShow && secondCaret) {
+    servBtn.addEventListener("click", function () {
+      servShow.classList.toggle("show1");
+      secondCaret.classList.toggle("rotate");
+    });
+  }
 
-  // Ajoute un événement de clic pour le bouton "Menu" pour fermer le menu burger
-  menuBtn.addEventListener("click", function () {
-    sidebarBurger.classList.remove("show");
-    btnBurger.classList.remove("click");
-  });
+  if (menuBtn && sidebarBurger && btnBurger) {
+    menuBtn.addEventListener("click", function () {
+      sidebarBurger.classList.remove("show");
+      btnBurger.classList.remove("click");
+    });
+  }
 
-  // Pour chaque élément de sous-menu, ajoutez une gestion du clic pour fermer le menu
   const subMenuItems = document.querySelectorAll(".li-sous-menu a");
   subMenuItems.forEach((item) => {
     item.addEventListener("click", function () {
@@ -43,15 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btnBurger = document.querySelector(".btn-burger");
-
-  btnBurger.addEventListener("click", function () {
-    this.classList.toggle("click");
-  });
-});
-
-// ----------------------logo barre rechch--------------------------------------------------
+// ----------------------logo barre recherche--------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const selectedOptionDisplay = document.querySelector(".selected-option");
   const optionsList = document.querySelector(".options-list");
@@ -61,20 +56,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const hiddenInput = document.querySelector('input[name="Nuisibles"]');
   const searchForm = document.getElementById("search-form");
 
-  optionsList.style.display = "none";
+  if (optionsList) {
+    optionsList.style.display = "none";
+  }
 
-  selectedOptionDisplay.addEventListener("click", function () {
-    if (
-      optionsList.style.display === "none" ||
-      optionsList.style.display === ""
-    ) {
-      optionsList.style.display = "block";
-      optionsList.classList.add("open");
-    } else {
-      optionsList.style.display = "none";
-      optionsList.classList.remove("open");
-    }
-  });
+  if (selectedOptionDisplay) {
+    selectedOptionDisplay.addEventListener("click", function () {
+      if (
+        optionsList.style.display === "none" ||
+        optionsList.style.display === ""
+      ) {
+        optionsList.style.display = "block";
+        optionsList.classList.add("open");
+      } else {
+        optionsList.style.display = "none";
+        optionsList.classList.remove("open");
+      }
+    });
+  }
 
   document.querySelectorAll(".options-list li").forEach(function (li) {
     li.addEventListener("click", function () {
@@ -83,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedOptionValue = li.getAttribute("data-value");
 
       selectedContent.innerHTML = `
-              <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
-              ${selectedOptionText}
-          `;
+        <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
+        ${selectedOptionText}
+      `;
       hiddenInput.value = selectedOptionValue;
       optionsList.style.display = "none";
       optionsList.classList.remove("open");
@@ -94,7 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("click", function (e) {
     if (
+      selectedOptionDisplay &&
       !selectedOptionDisplay.contains(e.target) &&
+      optionsList &&
       !optionsList.contains(e.target)
     ) {
       optionsList.style.display = "none";
@@ -102,52 +103,69 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  searchForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    const nuisible = hiddenInput.value;
-    const type = document.getElementById("type-select").value;
-    const codePostal = document.getElementById("cp").value;
-    const urgent = document.getElementById("urgent-switch").checked
-      ? "oui"
-      : "non";
+      const nuisible = hiddenInput.value;
+      const type = document.getElementById("type-select").value;
+      const codePostal = document.getElementById("cp").value;
+      const urgent = document.getElementById("urgent-switch").checked
+        ? "oui"
+        : "non";
 
-    // Dictionnaire pour les redirections
-    const redirections = {
-      1: "/public/Dératisation.html",
-      2: "/public/Guêpes-frelons.html",
-      3: "/public/Frelon_Asiatique.html",
-      4: "/public/Punaise_De_Lit.html",
-      5: "/public/Puce.html",
-      6: "/public/Dépigeonnage.html",
-      7: "/public/Fouine_Martre.html",
-      8: "/public/Cafard_Blatte.html",
-      9: "/public/Fourmis.html",
-      10: "/public/gale.html",
-      11: "/public/Syndrome_De_Diogéne.html",
-      12: "/public/Cave-local.html",
-      13: "/public/Désinfection.html",
-      14: "/public/Éco-responsable.html",
-    };
+      // Vérifications supplémentaires
+      if (!type) {
+        alert("Veuillez sélectionner votre type (particulier ou entreprise).");
+        return;
+      }
 
-    // Rediriger vers la page correspondante
-    const pageUrl = redirections[nuisible];
-    if (pageUrl) {
-      const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`;
-      window.location.href = `${pageUrl}${queryString}`;
-    }
-  });
+      if (!codePostal) {
+        alert("Veuillez entrer votre code postal.");
+        return;
+      }
+
+      // Dictionnaire pour les redirections avec chemins relatifs
+      const redirections = {
+        1: "Dératisation.html",
+        2: "Guêpes-frelons.html",
+        3: "Frelon_Asiatique.html",
+        4: "Punaise_De_Lit.html",
+        5: "Puce.html",
+        6: "Dépigeonnage.html",
+        7: "Fouine_Martre.html",
+        8: "Cafard_Blatte.html",
+        9: "Fourmis.html",
+        10: "Gale.html",
+        11: "Syndrome_De_Diogéne.html",
+        12: "Cave-local.html",
+        13: "Désinfection.html",
+        14: "Éco-responsable.html",
+      };
+
+      // Rediriger vers la page correspondante
+      const pageUrl = redirections[nuisible];
+      if (pageUrl) {
+        const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`;
+        console.log(`Redirection vers : ${pageUrl}${queryString}`);
+        window.location.href = `${pageUrl}${queryString}`;
+      } else {
+        alert("Veuillez sélectionner une catégorie de nuisible.");
+      }
+    });
+  }
 });
+
 /*---------------------slider-card ------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
   const prev = document.querySelector("#prev");
   const next = document.querySelector("#next");
+  const carouselVp = document.querySelector("#carousel-vp");
+  const cCarouselInner = document.querySelector("#cCarousel-inner");
 
-  let carouselVp = document.querySelector("#carousel-vp");
+  if (!prev || !next || !carouselVp || !cCarouselInner) return; // Vérifiez que ces éléments existent
 
-  let cCarouselInner = document.querySelector("#cCarousel-inner");
   let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
-
   let leftValue = 0;
 
   const totalMovementSize =
@@ -161,8 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
   prev.addEventListener("click", () => {
-    if (!leftValue == 0) {
-      leftValue -= -totalMovementSize;
+    if (leftValue !== 0) {
+      leftValue += totalMovementSize;
       cCarouselInner.style.left = leftValue + "px";
     }
   });

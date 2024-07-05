@@ -1228,3 +1228,7 @@ footer .copyright {
     padding: 3px 10px 5px 10px;
   }
 }
+iframe {
+  height: 450px;
+  border: 0;
+}

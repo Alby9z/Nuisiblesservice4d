@@ -1308,3 +1308,18 @@ footer .copyright {
     flex-direction: column;
   }
 }
+.text {
+  margin: 20px;
+}
+.h2-section2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.text-section2 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}

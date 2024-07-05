@@ -61,20 +61,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const hiddenInput = document.querySelector('input[name="Nuisibles"]');
   const searchForm = document.getElementById("search-form");
 
-  optionsList.style.display = "none";
+  if (optionsList) {
+    optionsList.style.display = "none";
+  }
 
-  selectedOptionDisplay.addEventListener("click", function () {
-    if (
-      optionsList.style.display === "none" ||
-      optionsList.style.display === ""
-    ) {
-      optionsList.style.display = "block";
-      optionsList.classList.add("open");
-    } else {
-      optionsList.style.display = "none";
-      optionsList.classList.remove("open");
-    }
-  });
+  if (selectedOptionDisplay) {
+    selectedOptionDisplay.addEventListener("click", function () {
+      if (
+        optionsList.style.display === "none" ||
+        optionsList.style.display === ""
+      ) {
+        optionsList.style.display = "block";
+        optionsList.classList.add("open");
+      } else {
+        optionsList.style.display = "none";
+        optionsList.classList.remove("open");
+      }
+    });
+  }
 
   document.querySelectorAll(".options-list li").forEach(function (li) {
     li.addEventListener("click", function () {
@@ -83,9 +87,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedOptionValue = li.getAttribute("data-value");
 
       selectedContent.innerHTML = `
-              <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
-              ${selectedOptionText}
-          `;
+        <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
+        ${selectedOptionText}
+      `;
       hiddenInput.value = selectedOptionValue;
       optionsList.style.display = "none";
       optionsList.classList.remove("open");
@@ -102,41 +106,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  searchForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    const nuisible = hiddenInput.value;
-    const type = document.getElementById("type-select").value;
-    const codePostal = document.getElementById("cp").value;
-    const urgent = document.getElementById("urgent-switch").checked
-      ? "oui"
-      : "non";
+      const nuisible = hiddenInput.value;
+      const type = document.getElementById("type-select").value;
+      const codePostal = document.getElementById("cp").value;
+      const urgent = document.getElementById("urgent-switch").checked
+        ? "oui"
+        : "non";
 
-    // Dictionnaire pour les redirections
-    const redirections = {
-      1: "/public/Dératisation.html",
-      2: "/public/Guêpes-frelons.html",
-      3: "/public/Frelon_Asiatique.html",
-      4: "/public/Punaise_De_Lit.html",
-      5: "/public/Puce.html",
-      6: "/public/Dépigeonnage.html",
-      7: "/public/Fouine_Martre.html",
-      8: "/public/Cafard_Blatte.html",
-      9: "/public/Fourmis.html",
-      10: "/public/gale.html",
-      11: "/public/Syndrome_De_Diogéne.html",
-      12: "/public/Cave-local.html",
-      13: "/public/Désinfection.html",
-      14: "/public/Éco-responsable.html",
-    };
+      if (!codePostal) {
+        alert("Veuillez entrer votre code postal.");
+        return;
+      }
 
-    // Rediriger vers la page correspondante
-    const pageUrl = redirections[nuisible];
-    if (pageUrl) {
-      const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`;
-      window.location.href = `${pageUrl}${queryString}`;
-    }
-  });
+      const redirections = {
+        1: "Dératisation.html",
+        2: "Guêpes-frelons.html",
+        3: "Frelon_Asiatique.html",
+        4: "Punaise_De_Lit.html",
+        5: "Puce.html",
+        6: "Dépigeonnage.html",
+        7: "Fouine_Martre.html",
+        8: "Cafard_Blatte.html",
+        9: "Fourmis.html",
+        10: "Gale.html",
+        11: "Syndrome_De_Diogéne.html",
+        12: "Cave-local.html",
+        13: "Désinfection.html",
+        14: "Éco-responsable.html",
+      };
+
+      // Rediriger vers la page correspondante
+      const pageUrl = redirections[nuisible];
+      if (pageUrl) {
+        const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`;
+        window.location.href = `${pageUrl}${queryString}`;
+      }
+    });
+  }
 });
 /*---------------------slider-card ------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {

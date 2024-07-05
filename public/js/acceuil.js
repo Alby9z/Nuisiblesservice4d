@@ -152,6 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`;
         console.log(`Redirection vers : ${pageUrl}${queryString}`);
         window.location.href = `${pageUrl}${queryString}`;
+      } else {
+        alert("Veuillez sélectionner une catégorie de nuisible.");
       }
     });
   }

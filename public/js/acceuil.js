@@ -117,11 +117,18 @@ document.addEventListener("DOMContentLoaded", function () {
         ? "oui"
         : "non";
 
+      // Vérifications supplémentaires
+      if (!type) {
+        alert("Veuillez sélectionner votre type (particulier ou entreprise).");
+        return;
+      }
+
       if (!codePostal) {
         alert("Veuillez entrer votre code postal.");
         return;
       }
 
+      // Dictionnaire pour les redirections avec chemins relatifs
       const redirections = {
         1: "Dératisation.html",
         2: "Guêpes-frelons.html",
@@ -143,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const pageUrl = redirections[nuisible];
       if (pageUrl) {
         const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`;
+        console.log(`Redirection vers : ${pageUrl}${queryString}`);
         window.location.href = `${pageUrl}${queryString}`;
       }
     });

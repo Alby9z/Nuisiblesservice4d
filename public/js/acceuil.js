@@ -3,11 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebarBurger = document.querySelector(".sidebar-burger");
   const featBtn = document.querySelector(".feat-btn");
   const servBtn = document.querySelector(".serv-btn");
-  const firstCaret = document.querySelector(".first");
-  const secondCaret = document.querySelector(".second");
   const featShow = document.querySelector(".feat-show");
   const servShow = document.querySelector(".serv-show");
-  const menuBtn = document.querySelector(".nav-burger ul li.active a");
 
   if (btnBurger && sidebarBurger) {
     btnBurger.addEventListener("click", function () {
@@ -16,24 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (featBtn && featShow && firstCaret) {
+  if (featBtn && featShow) {
     featBtn.addEventListener("click", function () {
       featShow.classList.toggle("show");
-      firstCaret.classList.toggle("rotate");
+      featBtn.querySelector("ion-icon").classList.toggle("rotate");
     });
   }
 
-  if (servBtn && servShow && secondCaret) {
+  if (servBtn && servShow) {
     servBtn.addEventListener("click", function () {
       servShow.classList.toggle("show1");
-      secondCaret.classList.toggle("rotate");
-    });
-  }
-
-  if (menuBtn && sidebarBurger && btnBurger) {
-    menuBtn.addEventListener("click", function () {
-      sidebarBurger.classList.remove("show");
-      btnBurger.classList.remove("click");
+      servBtn.querySelector("ion-icon").classList.toggle("rotate");
     });
   }
 

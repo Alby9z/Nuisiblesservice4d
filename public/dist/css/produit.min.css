@@ -1092,7 +1092,7 @@ footer .copyright {
   }
   .details-content {
     display: contents;
-}
+  }
   .p-produit {
     margin: 0;
   }
@@ -1324,7 +1324,10 @@ footer .copyright {
   font-size: 16px;
   margin-bottom: 15px;
 }
-ul {
+.ul {
   list-style-type: disc;
   padding-left: 20px;
+}
+.ul li {
+  margin-bottom: 10px;
 }

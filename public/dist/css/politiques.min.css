@@ -182,18 +182,6 @@ footer .copyright {
   left: 0;
   overflow: hidden;
 }
-.bottom_line-numero {
-  width: 34%;
-  top: -30px;
-}
-.bottom_line-lien {
-  width: 29%;
-  top: -30px;
-}
-.bottom_line-horaire {
-  width: 59%;
-  top: -30px;
-}
 .span-footer {
   width: 15px;
   height: 100%;

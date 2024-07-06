@@ -703,6 +703,11 @@ input:checked + .slider:before {
   font-weight: 600;
   text-align: center;
 }
+.h2-agreement {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: xx-large;
+}
 .section-galerie {
   color: #fff;
 }

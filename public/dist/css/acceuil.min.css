@@ -1047,6 +1047,11 @@ section {
   font-size: 25px;
   font-weight: 600;
 }
+.h2-agreement {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: xx-large;
+}
 .image-container {
   flex: 1;
   margin: 40px;

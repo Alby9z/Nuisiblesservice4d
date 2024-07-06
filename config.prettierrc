@@ -1,5 +1,6 @@
 {
-  "semi": false,
-  "singleQuote": true,
-  "trailingComma": "es5"
+  "editor.formatOnSave": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5"
 }

@@ -266,7 +266,6 @@ header {
   width: 50px;
   background-color: #3135b3;
   border-radius: 50%;
-  margin: 0 65px 0 0;
 }
 .géo {
   color: #ffff;
@@ -456,12 +455,16 @@ strong {
 form {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 30px;
 }
-
+.rechercher {
+  color: white;
+  font-size: 10px;
+}
 .form-group {
   position: relative;
-  margin-top: -20px;
+  margin-top: -25px;
+  display: grid;
 }
 .switch {
   position: relative;
@@ -512,7 +515,6 @@ input:checked + .slider:before {
   display: contents;
 }
 .btn-barre {
-  margin: 0px 0px 0px -25px;
   width: 6%;
   height: 50px;
   align-items: center;
@@ -523,6 +525,7 @@ input:checked + .slider:before {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: -7px;
+  margin-left: 10px;
 }
 .icon-geo {
   margin-top: 5px;
@@ -530,7 +533,6 @@ input:checked + .slider:before {
   color: #ffffff;
 }
 .btn-barre-geo {
-  margin: 0px 50px 0px -20px;
   width: 6%;
   height: 50px;
   align-items: center;
@@ -540,7 +542,6 @@ input:checked + .slider:before {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: -3px;
 }
 .form-group-geo {
   margin-top: -7px;
@@ -796,9 +797,11 @@ input:checked + .slider:before {
 }
 .label-type {
   margin-top: -25px;
+  display: grid;
 }
 .correction {
-  margin: -25px -53px 0px -135px;
+  display: grid;
+  margin-top: -25px;
 }
 @keyframes slideInDown {
   0% {

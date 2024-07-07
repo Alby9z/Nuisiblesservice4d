@@ -78,3 +78,11 @@ Options -Indexes
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresDefault "access plus 2 days"
 </IfModule>
+
+<Files "sitemap.xml">
+  Require all granted
+</Files>
+
+<Files "robots.txt">
+  Require all granted
+</Files>

@@ -2,10 +2,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Définir index.html comme fichier par défaut
+    # Définir Acceuil.html comme fichier par défaut
     DirectoryIndex Acceuil.html
 
-    # Si le fichier ou le dossier n'existe pas, réécrire l'URL vers index.html
+    # Si le fichier ou le dossier n'existe pas, réécrire l'URL vers Acceuil.html
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ Acceuil.html [L]
@@ -18,6 +18,11 @@ Options -Indexes
 <Files .htaccess>
     Require all denied
 </Files>
+
+# Bloquer l'accès à des fichiers sensibles
+<FilesMatch "\.(htpasswd|ini|phps|fla|psd|log|sh|tpl|zip|exe|pl)$">
+    Require all denied
+</FilesMatch>
 
 # Protection contre le clicjacking
 <IfModule mod_headers.c>
@@ -34,10 +39,15 @@ Options -Indexes
     Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
-# Définir une politique de sécurité du contenu de base
+# Définir une politique de sécurité du contenu de base (ajustez selon vos besoins)
 <IfModule mod_headers.c>
     Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self';"
 </IfModule>
+
+# Bloquer l'accès aux fichiers de configuration sensibles
+<FilesMatch "(^#.*#|\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)|~)$">
+    Require all denied
+</FilesMatch>
 
 # Activer la compression gzip pour améliorer les performances
 <IfModule mod_deflate.c>

@@ -204,6 +204,7 @@ nav ul li {
   display: inline-block;
 }
 .sous-menu {
+  max-height: 325px;
   margin-left: -15px;
   opacity: 0.9;
   border-radius: 10px;
@@ -212,6 +213,7 @@ nav ul li {
   background-color: #000;
   box-shadow: 0 2px 5px rgba(0, 0, 0.2);
   z-index: 1;
+  overflow-y: auto;
 }
 .sous-menu .li-sous-menu {
   display: block;

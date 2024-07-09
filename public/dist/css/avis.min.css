@@ -155,7 +155,7 @@ body {
   margin: 10px;
 }
 header {
-  background-image: url(../../img/Bandeau3.jpg);
+  background-image: url(../../img/Bandeau3.webp);
   height: 125px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -624,7 +624,7 @@ input:checked + .slider:before {
   margin-bottom: 175px;
 }
 #testimonial-area {
-  background-image: url(../../img/back.jpg);
+  background-image: url(../../img/back.webp);
   background-size: cover;
   font-size: 48px;
   line-height: 58px;
@@ -993,7 +993,7 @@ span i {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .form-avis {
-  background-image: url(../../img/back.jpg);
+  background-image: url(../../img/back.webp);
   background-size: cover;
 }
 .note-avis {

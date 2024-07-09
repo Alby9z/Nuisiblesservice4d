@@ -68,7 +68,7 @@ body {
   z-index: 5;
 }
 .sidebar-burger header {
-  color: white;
+  color: #fff;
   font-size: 25px;
   font-weight: 600;
   line-height: 65px;
@@ -94,7 +94,7 @@ body {
 }
 .nav-burger ul li a {
   position: relative;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
   padding-left: 40px;
@@ -122,13 +122,13 @@ body {
 }
 .nav-burger ul ul li {
   text-align: left;
-  margin: 0px 20px 0px 9px;
+  margin: 0 20px 0 9px;
   line-height: 20px;
 }
 .nav-burger ul ul li a {
   font-size: 13px;
   color: #e6e6e6;
-  margin: 0px 0px 0px -40px;
+  margin: 0 0 0 -40px;
 }
 .nav-burger ul li.active ul li a {
   color: #e6e6e6;
@@ -316,7 +316,7 @@ nav ul li {
   margin: 18px 27px 0;
   width: 95%;
   height: 150px;
-  box-shadow: 2px 1px 9px 0px #702929, -7px -1px 20px #000;
+  box-shadow: 2px 1px 9px 0 #702929, -7px -1px 20px #000;
 }
 .logo-barre,
 .logo-barre1 {
@@ -340,7 +340,7 @@ nav ul li {
   font-size: 25px;
   text-transform: none;
   letter-spacing: 0.05em;
-  margin: 0px 0px 25px 25px;
+  margin: 0 0 25px 25px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -349,7 +349,7 @@ nav ul li {
 }
 .barre .form-control {
   height: 40px;
-  padding: 5px 0px 5px 35px;
+  padding: 5px 0 5px 35px;
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: left center;
@@ -357,7 +357,7 @@ nav ul li {
 .br-rechch {
   height: 40px;
   background-color: #898989;
-  border: solid 2px white;
+  border: solid 2px #fff;
   border-radius: 5px;
 }
 form {
@@ -365,7 +365,7 @@ form {
   justify-content: space-around;
 }
 .switch {
-  margin: 15px 0px 0px -63px;
+  margin: 15px 0 0 -63px;
   position: relative;
   display: inline-block;
   width: 60px;
@@ -413,7 +413,7 @@ input:checked + .slider:before {
   margin: -36px 0 10px 66px;
 }
 .form-groupe {
-  margin: -25px 90px 5px 0px;
+  margin: -25px 90px 5px 0;
 }
 .label {
   margin-left: -58px;
@@ -440,7 +440,7 @@ input:checked + .slider:before {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 20px;
 }
 .btn-barre:hover {
@@ -548,7 +548,7 @@ input:checked + .slider:before {
   }
   #ul-galerie {
     display: flex;
-    margin: 0px 0px 80px 82px;
+    margin: 0 0 80px 82px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -591,7 +591,7 @@ input:checked + .slider:before {
   }
   .h1-bienvenue,
   .search-block h2 {
-    margin: 0px 0px 10px 29px;
+    margin: 0 0 10px 29px;
     font-size: larger;
   }
   .row {
@@ -649,7 +649,7 @@ input:checked + .slider:before {
   }
   .h1-bienvenue,
   .search-block h2 {
-    margin: 0px 0px 10px 23px;
+    margin: 0 0 10px 23px;
     font-size: 16px;
   }
   .logo-barre,
@@ -688,7 +688,7 @@ input:checked + .slider:before {
   }
   .header__content {
     display: block;
-    margin: 150px 0px;
+    margin: 150px 0;
   }
   .h1-acceuil {
     font-size: 40px;
@@ -737,7 +737,7 @@ input:checked + .slider:before {
 }
 .ul-galerie {
   width: 70%;
-  margin: 35px 0px 80px 250px;
+  margin: 35px 0 80px 250px;
   list-style: none;
   float: left;
   padding: 10px;

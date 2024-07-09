@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap";
 * {
   margin: 0;
   padding: 0;
@@ -58,7 +58,7 @@ textarea {
   z-index: 5;
 }
 .sidebar-burger header {
-  color: white;
+  color: #fff;
   font-size: 25px;
   font-weight: 600;
   line-height: 65px;
@@ -84,7 +84,7 @@ textarea {
 }
 .nav-burger ul li a {
   position: relative;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
   padding-left: 40px;
@@ -112,13 +112,13 @@ textarea {
 }
 .nav-burger ul ul li {
   text-align: left;
-  margin: 0px 20px 0px 9px;
+  margin: 0 20px 0 9px;
   line-height: 20px;
 }
 .nav-burger ul ul li a {
   font-size: 13px;
   color: #e6e6e6;
-  margin: 0px 0px 0px -40px;
+  margin: 0 0 0 -40px;
 }
 .nav-burger ul li.active ul li a {
   color: #e6e6e6;
@@ -306,7 +306,7 @@ nav ul li {
   margin: 18px 27px 0;
   width: 95%;
   height: 150px;
-  box-shadow: 2px 1px 9px 0px #702929, -7px -1px 20px #000;
+  box-shadow: 2px 1px 9px 0 #702929, -7px -1px 20px #000;
 }
 .logo-barre,
 .logo-barre1 {
@@ -330,7 +330,7 @@ nav ul li {
   font-size: 25px;
   text-transform: none;
   letter-spacing: 0.05em;
-  margin: 0px 0px 25px 25px;
+  margin: 0 0 25px 25px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -339,7 +339,7 @@ nav ul li {
 }
 .barre .form-control {
   height: 40px;
-  padding: 5px 0px 5px 35px;
+  padding: 5px 0 5px 35px;
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: left center;
@@ -347,11 +347,11 @@ nav ul li {
 .br-rechch {
   height: 40px;
   background-color: #898989;
-  border: solid 2px white;
+  border: solid 2px #fff;
   border-radius: 5px;
 }
 .switch {
-  margin: 15px 0px 0px -63px;
+  margin: 15px 0 0 -63px;
   position: relative;
   display: inline-block;
   width: 60px;
@@ -399,7 +399,7 @@ input:checked + .slider:before {
   margin: -36px 0 10px 66px;
 }
 .form-groupe {
-  margin: -25px 90px 5px 0px;
+  margin: -25px 90px 5px 0;
 }
 .label {
   margin-left: -58px;
@@ -418,7 +418,7 @@ input:checked + .slider:before {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 20px;
 }
 .btn-barre:hover {
@@ -485,7 +485,7 @@ input:checked + .slider:before {
 }
 @media (max-width: 425px) {
   .sidebar-burger.show {
-    left: 0px;
+    left: 0;
   }
   header {
     height: 155px;
@@ -502,7 +502,7 @@ input:checked + .slider:before {
   }
   .h1-bienvenue,
   .search-block h2 {
-    margin: 0px 0px 10px 29px;
+    margin: 0 0 10px 29px;
     font-size: larger;
   }
   .container-carousel {
@@ -557,7 +557,7 @@ input:checked + .slider:before {
   }
   .h1-bienvenue,
   .search-block h2 {
-    margin: 0px 0px 10px 23px;
+    margin: 0 0 10px 23px;
     font-size: 16px;
   }
   .logo-barre,
@@ -591,7 +591,7 @@ input:checked + .slider:before {
   }
   .header__content {
     display: block;
-    margin: 150px 0px;
+    margin: 150px 0;
   }
   .h1-acceuil {
     font-size: 40px;
@@ -641,7 +641,7 @@ input:checked + .slider:before {
   grid-template-columns: repeat(2, 1fr);
 }
 .contact-form {
-  background-color: black;
+  background-color: #000;
   position: relative;
 }
 .circle {
@@ -666,7 +666,7 @@ input:checked + .slider:before {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #ff0000;
+  background-color: red;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -740,7 +740,7 @@ textarea.input {
   width: 100%;
 }
 .btn:hover {
-  background-color: #ff0000;
+  background-color: red;
   color: #ffff;
 }
 .input-container span {
@@ -762,7 +762,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #ff0000;
+  background-color: red;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -792,7 +792,7 @@ textarea.input {
 }
 .text {
   color: #333;
-  margin: 1.5rem 0 2rem 0;
+  margin: 1.5rem 0 2rem;
 }
 .information {
   display: flex;
@@ -802,14 +802,14 @@ textarea.input {
   font-size: 0.95rem;
 }
 .information i {
-  color: #ff0000;
+  color: red;
 }
 .icon {
   width: 28px;
   margin-right: 0.7rem;
 }
 .social-media {
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 0;
 }
 .social-media p {
   color: #333;
@@ -822,7 +822,7 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: #ff0000;
+  background-color: red;
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -837,7 +837,7 @@ textarea.input {
   position: absolute;
   width: 110px;
   height: 100px;
-  border: 22px solid #ff0000;
+  border: 22px solid red;
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
@@ -848,7 +848,7 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background-color: #ff0000;
+  background-color: red;
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
@@ -907,11 +907,11 @@ footer {
   }
   .titre-barre {
     font-size: 26px;
-    margin: 10px -10px 10px 0px;
+    margin: 10px -10px 10px 0;
   }
   .container-nav-acceuil {
     width: 50%;
-    margin: 0px 0px -10px 0px;
+    margin: 0 0 -10px;
   }
   .col-lg {
     width: 26%;
@@ -920,10 +920,10 @@ footer {
     margin-left: -5px;
   }
   .form-controle {
-    margin: 0px -155px 35px 0px;
+    margin: 0 -155px 35px 0;
   }
   .btn-barre {
-    margin: -3px -75px 0px 10px;
+    margin: -3px -75px 0 10px;
     width: 55px;
     height: 50px;
   }
@@ -988,7 +988,7 @@ footer {
 }
 .souligner-rouge {
   text-decoration: underline;
-  text-decoration-color: #ff0000;
+  text-decoration-color: red;
 }
 .ul-footer {
   padding: 0;
@@ -1002,7 +1002,7 @@ footer {
   color: #fff;
 }
 .li-footer:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fff;
   display: inline-block;
 }
 .col form {
@@ -1010,7 +1010,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid red;
   margin-bottom: 50px;
 }
 .col form .icon {
@@ -1042,7 +1042,7 @@ footer {
   line-height: 30px;
   font-size: 20px;
   color: #fff;
-  background: #ff0000;
+  background: red;
   margin-right: 15px;
   padding: 5px;
   cursor: pointer;
@@ -1112,9 +1112,9 @@ footer .copyright {
     position: absolute;
     width: 26px;
     height: 26px;
-    background-color: #ff0000;
+    background-color: red;
     transform: rotate(45deg);
-    top: 0%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
   }
@@ -1128,10 +1128,10 @@ footer .copyright {
     right: 50%;
   }
   .text {
-    margin: 1rem 0 1.5rem 0;
+    margin: 1rem 0 1.5rem;
   }
   .social-media {
-    padding: 1.5rem 0 0 0;
+    padding: 1.5rem 0 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1198,7 +1198,7 @@ footer .copyright {
   .header__navegation ul li a {
     color: #fff;
     font-size: 17px;
-    font-weight: bold;
+    font-weight: 700;
   }
   .paragraph {
     font-size: 18px;
@@ -1227,7 +1227,7 @@ footer .copyright {
     right: 225px;
   }
   nav ul li {
-    padding: 3px 10px 5px 10px;
+    padding: 3px 10px 5px;
   }
 }
 iframe {

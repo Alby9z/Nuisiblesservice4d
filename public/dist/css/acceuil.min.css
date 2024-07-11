@@ -1474,14 +1474,23 @@ footer .copyright {
   box-shadow: 0 0 10px 0 rgba(126, 34, 34, 0.5);
   z-index: 1000;
 }
+
 #cookie-banner a {
   color: #569cd6;
   text-decoration: underline;
 }
+
 #cookie-banner p {
   font-size: 14px;
   margin-bottom: 10px;
 }
+
+#cookie-banner .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espace de 10px entre chaque bouton */
+}
+
 #cookie-banner button {
   border-radius: 5px;
   background-color: #fff;
@@ -1489,9 +1498,9 @@ footer .copyright {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  margin-left: 10px;
   box-shadow: 0 0 10px 0 rgba(126, 34, 34, 0.5);
 }
+
 #cookie-preferences-modal {
   display: none;
   position: fixed;
@@ -1603,4 +1612,27 @@ footer .copyright {
 }
 .barre {
   margin-top: -25px;
+}
+@media screen and (max-width: 505px) {
+  #cookie-banner .button-container {
+    flex-direction: column;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}
+@media screen and (max-width: 362px) {
+  #cookie-banner .button-container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 880px) {
+  #cookie-preferences-modal {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 880px) {
+  #cookie-preferences-modal {
+    width: 95%;
+  }
 }

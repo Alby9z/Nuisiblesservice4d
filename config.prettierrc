@@ -2,10 +2,15 @@
   "semi": false,
   "singleQuote": true,
   "trailingComma": "es5",
-  "useTabs": false,
-  "tabWidth": 4,
   "bracketSpacing": true,
+  "jsxBracketSameLine": true,
   "htmlWhitespaceSensitivity": "ignore",
-  "proseWrap": "preserve"
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "prettier-ignore": true
+      }
+    }
+  ]
 }
-

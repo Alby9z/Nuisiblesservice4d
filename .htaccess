@@ -1,7 +1,3 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^nuisiblesservices4d.fr [NC]
-RewriteRule ^(.*)$ http://www.nuisiblesservices4d.fr/$1 [L,R=301]
-
 # Activer la réécriture d'URL
 <IfModule mod_rewrite.c>
     RewriteEngine On

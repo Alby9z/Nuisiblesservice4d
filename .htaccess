@@ -79,5 +79,12 @@ Options -Indexes
     ExpiresDefault "access plus 2 days"
 </IfModule>
 
+<Files "sitemap.xml">
+    Require all granted
+</Files>
+
+<Files "robots.txt">
+    Require all granted
+</Files>
 
 

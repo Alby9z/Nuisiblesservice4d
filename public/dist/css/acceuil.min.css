@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap';
 *,
 ::before,
 ::after {
@@ -7,10 +7,10 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 body {
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
   background-image: url(../../img/back.webp);
   background-size: cover;
   color: #000;
@@ -24,7 +24,7 @@ body {
   display: block;
 }
 .fa-search:before {
-  content: "\f002";
+  content: '\f002';
 }
 .btn-burger {
   display: none;
@@ -342,7 +342,7 @@ nav ul li {
 }
 .header__navegation a::after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: 0;
   left: 0;
   width: 0;
@@ -492,7 +492,7 @@ form {
 }
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;

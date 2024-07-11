@@ -5,6 +5,10 @@
     # Définir Acceuil.html comme fichier par défaut
     DirectoryIndex Acceuil.html
 
+    # Exclude sitemap.xml from being rewritten
+    RewriteCond %{REQUEST_URI} !^/sitemap.xml$
+    RewriteCond %{REQUEST_URI} !^/robots.txt$
+
     # Si le fichier ou le dossier n'existe pas, réécrire l'URL vers Acceuil.html
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
@@ -79,6 +83,7 @@ Options -Indexes
     ExpiresDefault "access plus 2 days"
 </IfModule>
 
+# Bloquer l'accès aux fichiers spécifiques
 <Files "sitemap.xml">
     Require all granted
 </Files>
@@ -86,5 +91,3 @@ Options -Indexes
 <Files "robots.txt">
     Require all granted
 </Files>
-
-

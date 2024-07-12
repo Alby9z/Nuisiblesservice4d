@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /private/
-Disallow: /tmp/
-Disallow: /admin/
-Disallow: /cgi-bin/
-Allow: /
-
-Sitemap: https://nuisiblesservices4d.fr/sitemap.xml

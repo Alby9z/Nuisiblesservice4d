@@ -78,6 +78,7 @@ Options -Indexes
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType img/webp "access plus 1 year"
 
   # Video
   ExpiresByType video/webm "access plus 1 year"

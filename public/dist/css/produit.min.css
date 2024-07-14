@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 .body-produit {
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
   margin: 0;
-  background-image: url("../../img/back.webp");
+  background-image: url('../../img/back.webp');
   color: #ddd;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 strong {
   color: #ffff;
@@ -292,7 +292,7 @@ nav ul li {
 }
 .header__navegation a::after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: 0;
   left: 0;
   width: 0;
@@ -427,7 +427,7 @@ form {
 }
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;
@@ -881,7 +881,6 @@ iframe {
 }
 .image-section-2 img {
   max-width: 100%;
-  height: auto;
 }
 h2 {
   margin-top: 0;

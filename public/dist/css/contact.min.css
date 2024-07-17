@@ -686,7 +686,7 @@ form {
 }
 .input-container {
   position: relative;
-  margin: 1rem 0;
+  margin: 3.3rem 0;
 }
 
 .input {
@@ -734,7 +734,7 @@ textarea.input {
 .input:not(:placeholder-shown) + label,
 textarea:focus + label,
 textarea:not(:placeholder-shown) + label {
-  top: -10px;
+  top: -20px;
   left: 15px;
   font-size: 0.75rem;
   color: #fafafa;

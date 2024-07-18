@@ -688,7 +688,6 @@ form {
   position: relative;
   margin: 1rem 0;
 }
-
 .input {
   width: 100%;
   outline: none;
@@ -702,7 +701,6 @@ form {
   border-radius: 5px;
   transition: 0.3s;
 }
-
 textarea.input {
   padding: 0.8rem 1.2rem;
   min-height: 150px;
@@ -710,7 +708,6 @@ textarea.input {
   resize: none;
   overflow-y: auto;
 }
-
 .input-container label {
   position: absolute;
   top: 50%;
@@ -724,12 +721,10 @@ textarea.input {
   z-index: 1000;
   transition: 0.3s ease-in-out;
 }
-
 .input-container.textarea label {
   top: 1rem;
   transform: translateY(0);
 }
-
 .input:focus + label,
 .input:not(:placeholder-shown) + label,
 textarea:focus + label,
@@ -739,7 +734,6 @@ textarea:not(:placeholder-shown) + label {
   font-size: 0.75rem;
   color: #fafafa;
 }
-
 .btn {
   padding: 0.6rem 1.3rem;
   background-color: #bfb7b7;
@@ -754,7 +748,6 @@ textarea:not(:placeholder-shown) + label {
   margin: 0;
   width: 100%;
 }
-
 .btn:hover {
   background-color: red;
   color: #ffff;

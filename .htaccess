@@ -5,7 +5,7 @@
     # Définir Acceuil.html comme fichier par défaut
     DirectoryIndex Acceuil.html
 
-    # Exclude sitemap.xml from being rewritten
+    # Exclude sitemap.xml and robots.txt from being rewritten
     RewriteCond %{REQUEST_URI} !^/sitemap.xml$
     RewriteCond %{REQUEST_URI} !^/robots.txt$
 
@@ -71,14 +71,13 @@ Options -Indexes
 <IfModule mod_expires.c>
   ExpiresActive On
 
- # Images
+  # Images
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
-  ExpiresByType img/webp "access plus 1 year"
 
   # Video
   ExpiresByType video/webm "access plus 1 year"
@@ -111,4 +110,3 @@ Options -Indexes
 <Files "robots.txt">
     Require all granted
 </Files>
-

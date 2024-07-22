@@ -665,9 +665,9 @@ input:checked + .slider:before {
   margin-bottom: -1em;
   text-align: center;
   color: #fff;
-  span {
-    color: #77b728;
-  }
+}
+.h1-produit span {
+  color: #77b728;
 }
 .p-produit {
   font-size: 14px;
@@ -675,10 +675,10 @@ input:checked + .slider:before {
   color: #ffff;
   line-height: 1.66;
   margin: 25px 170px 20px;
-  strong {
-    color: #f36767;
-    font-weight: 700;
-  }
+}
+.p-produit strong {
+  color: #f36767;
+  font-weight: 700;
 }
 .btn-contact {
   display: flex;
@@ -705,9 +705,9 @@ input:checked + .slider:before {
   margin-right: 0.35rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
-  &::-webkit-details-marker {
-    display: none;
-  }
+}
+.details-tab::-webkit-details-marker {
+  display: none;
 }
 .details-tabs {
   margin: 100px 150px 0 150px;
@@ -720,22 +720,20 @@ input:checked + .slider:before {
   order: 1;
   padding: 1rem;
   width: 100%;
-  details {
-    font-size: 14px;
-    summary {
-      font-weight: 500;
-    }
-    margin: 1.5rem;
-  }
+}
+.details-content details {
+  font-size: 14px;
+  margin: 1.5rem;
+}
+.details-content details summary {
+  font-weight: 500;
 }
 .details-item {
   display: contents;
-  &[open] {
-    & > .details-tab {
-      background: #fff;
-      color: #333;
-    }
-  }
+}
+.details-item[open] > .details-tab {
+  background: #fff;
+  color: #333;
 }
 .rats-souris,
 .piegon-1 {
@@ -1121,10 +1119,8 @@ footer .copyright {
   .border-details {
     font-size: 12px;
   }
-  .details-content {
-    details {
-      font-size: 12px;
-    }
+  .details-content details {
+    font-size: 12px;
   }
   .p-produit-details {
     font-size: 13px;
@@ -1154,10 +1150,8 @@ footer .copyright {
   .section-2 {
     display: block;
   }
-  .details-content {
-    details {
-      font-size: 12px;
-    }
+  .details-content details {
+    font-size: 12px;
   }
   .border-details {
     font-size: 12px;
@@ -1334,4 +1328,16 @@ footer .copyright {
 }
 .logo-mabi {
   border-radius: 50%;
+}
+.bottom_line-numero {
+  width: 31%;
+  margin: 10px 0;
+}
+.bottom_line-lien {
+  width: 23%;
+  margin: 10px 0;
+}
+.bottom_line-horaire {
+  width: 47%;
+  margin: 10px 0;
 }

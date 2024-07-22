@@ -363,10 +363,6 @@ strong {
 .strong {
   color: #000;
 }
-.h2-acceuil {
-  font-size: 22px;
-  color: #b7b7b7;
-}
 .header__content {
   display: flex;
   flex-direction: column;
@@ -390,14 +386,12 @@ strong {
   font-size: 13px;
   margin-bottom: 50px;
 }
-.header__content h2 {
+#h2 {
+  font-family: Figtree;
   color: #bdbdbd;
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
-}
-.header h2 {
-  color: #cfcfcf;
 }
 .selected-content {
   font-size: 15px;
@@ -649,7 +643,7 @@ input:checked + .slider:before {
   }
 }
 @media screen and (max-width: 425px) {
-  .header__content h2 {
+  #h2 {
     font-size: 21px;
   }
   .sidebar-burger.show {
@@ -1109,10 +1103,9 @@ section {
   max-width: 100%;
   height: auto;
 }
-h2 {
-  margin-top: 0;
-}
 .h2-section2 {
+  font-weight: bold;
+  font-size: 25px;
   border-top: solid 1px red;
   color: #fff;
   display: flex;
@@ -1280,17 +1273,25 @@ footer {
     margin-top: -130px;
     font-size: 45px;
   }
-  .header__content h2 {
-    font-size: 16px;
+  #h2 {
+    font-size: 17px;
   }
   .h3-acceuil {
     font-size: 10px;
   }
 }
 @media (max-width: 449px) {
+  #h2 {
+    font-weight: bold;
+    font-size: 14px;
+  }
   .h1-acceuil {
     margin-top: -130px;
-    font-size: 40px;
+    font-size: 36px;
+  }
+  #p-acceuil {
+    font-size: 14px;
+    margin: 4px 0px 50px 0px;
   }
 }
 @media (max-width: 425px) {
@@ -1638,4 +1639,28 @@ footer .copyright {
 }
 .logo-mabi {
   border-radius: 50%;
+}
+.p-acceuil {
+  font-size: 15px;
+  margin: 5px 0px 50px 0px;
+}
+.h1-bienvenue,
+.p-intervention {
+  font-size: 27px;
+  font-weight: bold;
+}
+.title-card {
+  font-weight: bold;
+}
+.bottom_line-numero {
+  width: 31%;
+  margin: 10px 0;
+}
+.bottom_line-lien {
+  width: 23%;
+  margin: 10px 0;
+}
+.bottom_line-horaire {
+  width: 47%;
+  margin: 10px 0;
 }

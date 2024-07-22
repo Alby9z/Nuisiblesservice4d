@@ -1243,3 +1243,15 @@ iframe {
   height: 450px;
   border: 0;
 }
+.bottom_line-numero {
+  width: 31%;
+  margin: 10px 0;
+}
+.bottom_line-lien {
+  width: 23%;
+  margin: 10px 0;
+}
+.bottom_line-horaire {
+  width: 47%;
+  margin: 10px 0;
+}

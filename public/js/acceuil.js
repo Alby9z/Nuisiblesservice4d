@@ -5,28 +5,24 @@ document.addEventListener('DOMContentLoaded', function () {
   const servBtn = document.querySelector('.serv-btn')
   const featShow = document.querySelector('.feat-show')
   const servShow = document.querySelector('.serv-show')
-
   if (btnBurger && sidebarBurger) {
     btnBurger.addEventListener('click', function () {
       btnBurger.classList.toggle('click')
       sidebarBurger.classList.toggle('show')
     })
   }
-
   if (featBtn && featShow) {
     featBtn.addEventListener('click', function () {
       featShow.classList.toggle('show')
       featBtn.querySelector('ion-icon').classList.toggle('rotate')
     })
   }
-
   if (servBtn && servShow) {
     servBtn.addEventListener('click', function () {
       servShow.classList.toggle('show1')
       servBtn.querySelector('ion-icon').classList.toggle('rotate')
     })
   }
-
   const subMenuItems = document.querySelectorAll('.li-sous-menu a')
   subMenuItems.forEach((item) => {
     item.addEventListener('click', function () {
@@ -35,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 })
-
-// ----------------------logo barre recherche--------------------------------------------------
 document.addEventListener('DOMContentLoaded', function () {
   const selectedOptionDisplay = document.querySelector('.selected-option')
   const optionsList = document.querySelector('.options-list')
@@ -45,11 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
   )
   const hiddenInput = document.querySelector('input[name="Nuisibles"]')
   const searchForm = document.getElementById('search-form')
-
   if (optionsList) {
     optionsList.style.display = 'none'
   }
-
   if (selectedOptionDisplay) {
     selectedOptionDisplay.addEventListener('click', function () {
       if (
@@ -64,13 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
   }
-
   document.querySelectorAll('.options-list li').forEach(function (li) {
     li.addEventListener('click', function () {
       const selectedOptionText = li.textContent.trim()
       const selectedOptionIcon = li.getAttribute('data-icon')
       const selectedOptionValue = li.getAttribute('data-value')
-
       selectedContent.innerHTML = `
         <img class="selected-icon" src="${selectedOptionIcon}" alt="${selectedOptionText}">
         ${selectedOptionText}
@@ -80,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
       optionsList.classList.remove('open')
     })
   })
-
   document.addEventListener('click', function (e) {
     if (
       selectedOptionDisplay &&
@@ -92,11 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
       optionsList.classList.remove('open')
     }
   })
-
   if (searchForm) {
     searchForm.addEventListener('submit', function (e) {
       e.preventDefault()
-
       const nuisible = hiddenInput.value
       const type = document.getElementById('type-select').value
       const codePostal = document.getElementById('cp').value
@@ -104,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ? 'oui'
         : 'non'
 
-      // Vérifications supplémentaires
       if (!type) {
         alert('Veuillez sélectionner votre type (particulier ou entreprise).')
         return
@@ -114,8 +100,6 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Veuillez entrer votre code postal.')
         return
       }
-
-      // Dictionnaire pour les redirections avec chemins relatifs
       const redirections = {
         1: 'Dératisation.html',
         2: 'Guêpes-frelons.html',
@@ -133,8 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
         14: 'Désinfection.html',
         15: 'Éco-responsable.html',
       }
-
-      // Rediriger vers la page correspondante
       const pageUrl = redirections[nuisible]
       if (pageUrl) {
         const queryString = `?type=${type}&cp=${codePostal}&urgent=${urgent}`
@@ -146,19 +128,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 })
-
-/*---------------------slider-card ------------------------------------------------------------------*/
 document.addEventListener('DOMContentLoaded', function () {
   const prev = document.querySelector('#prev')
   const next = document.querySelector('#next')
   const carouselVp = document.querySelector('#carousel-vp')
   const cCarouselInner = document.querySelector('#cCarousel-inner')
-
-  if (!prev || !next || !carouselVp || !cCarouselInner) return // Vérifiez que ces éléments existent
-
+  if (!prev || !next || !carouselVp || !cCarouselInner) return
   let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width
   let leftValue = 0
-
   const totalMovementSize =
     parseFloat(
       document.querySelector('.cCarousel-item').getBoundingClientRect().width,
@@ -168,14 +145,12 @@ document.addEventListener('DOMContentLoaded', function () {
       window.getComputedStyle(cCarouselInner).getPropertyValue('gap'),
       10
     )
-
   prev.addEventListener('click', () => {
     if (leftValue !== 0) {
       leftValue += totalMovementSize
       cCarouselInner.style.left = leftValue + 'px'
     }
   })
-
   next.addEventListener('click', () => {
     const carouselVpWidth = carouselVp.getBoundingClientRect().width
     if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
@@ -183,18 +158,13 @@ document.addEventListener('DOMContentLoaded', function () {
       cCarouselInner.style.left = leftValue + 'px'
     }
   })
-
   const mediaQuery510 = window.matchMedia('(max-width: 510px)')
   const mediaQuery770 = window.matchMedia('(max-width: 770px)')
-
   mediaQuery510.addEventListener('change', mediaManagement)
   mediaQuery770.addEventListener('change', mediaManagement)
-
   let oldViewportWidth = window.innerWidth
-
   function mediaManagement() {
     const newViewportWidth = window.innerWidth
-
     if (
       leftValue <= -totalMovementSize &&
       oldViewportWidth < newViewportWidth
@@ -212,8 +182,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 })
-
-/*---------------------Menu maker ---------------------------------------------------------------*/
 ;(function ($) {
   $.fn.menumaker = function (options) {
     var cssmenu = $(this),
@@ -268,7 +236,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 })(jQuery)
-
 ;(function ($) {
   $(document).ready(function () {
     $('#cssmenu').menumaker({

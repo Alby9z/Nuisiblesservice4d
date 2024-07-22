@@ -543,6 +543,10 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 425px) {
+  .h2-galerie {
+    font-size: 28px;
+    margin-top: 0;
+  }
   .p-galerie {
     font-size: 13px;
   }
@@ -1105,4 +1109,16 @@ footer .copyright {
 }
 .logo-mabi {
   border-radius: 50%;
+}
+.bottom_line-numero {
+  width: 31%;
+  margin: 10px 0;
+}
+.bottom_line-lien {
+  width: 23%;
+  margin: 10px 0;
+}
+.bottom_line-horaire {
+  width: 47%;
+  margin: 10px 0;
 }

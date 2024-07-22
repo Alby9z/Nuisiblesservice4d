@@ -1,8 +1,8 @@
 * {
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 body {
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -208,4 +208,16 @@ footer .copyright {
   .p-politique {
     font-size: 12px;
   }
+}
+.bottom_line-numero {
+  width: 31%;
+  margin: 10px 0;
+}
+.bottom_line-lien {
+  width: 23%;
+  margin: 10px 0;
+}
+.bottom_line-horaire {
+  width: 47%;
+  margin: 10px 0;
 }

@@ -6,7 +6,6 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://nuisiblesservices4d.fr/</loc>
   <lastmod>2024-07-20T14:58:37+00:00</lastmod>
@@ -18,22 +17,22 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/politiques/Politiques_De_Confidentialit%C3%A9s.html</loc>
+  <loc>https://nuisiblesservices4d.fr/politiques/Politiques_De_Confidentialites.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/Acceuil.html</loc>
+  <loc>https://nuisiblesservices4d.fr/Accueil.html</loc>
   <lastmod>2024-07-20T14:58:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/D%C3%A9ratisation.html</loc>
+  <loc>https://nuisiblesservices4d.fr/Deratisation.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/Gu%C3%AApes-frelons.html</loc>
+  <loc>https://nuisiblesservices4d.fr/Guepes-Frelons.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -48,7 +47,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/D%C3%A9pigeonnage.html</loc>
+  <loc>https://nuisiblesservices4d.fr/Depigeonnage.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -73,7 +72,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/Syndrome_De_Diog%C3%A9ne.html</loc>
+  <loc>https://nuisiblesservices4d.fr/Syndrome_De_Diogène.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -88,12 +87,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/D%C3%A9sinfection.html</loc>
+  <loc>https://nuisiblesservices4d.fr/Désinfection.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/%C3%89co-responsable.html</loc>
+  <loc>https://nuisiblesservices4d.fr/Eco-responsable.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -138,20 +137,19 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/politiques/Conditions_D'utilisations.html</loc>
+  <loc>https://nuisiblesservices4d.fr/politiques/Conditions_D_utilisations.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/politiques/Politiques_De_S%C3%A9curite.html</loc>
+  <loc>https://nuisiblesservices4d.fr/politiques/Politiques_De_Securite.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nuisiblesservices4d.fr/politiques/Mentions_L%C3%A9gales.html</loc>
+  <loc>https://nuisiblesservices4d.fr/politiques/Mentions_Legales.html</loc>
   <lastmod>2024-07-20T13:50:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>

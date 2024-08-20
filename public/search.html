@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de recherche - Services Nuisibles 4D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/acceuil.min.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .result-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .result-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .result-title {
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+
+        .result-description {
+            margin: 0;
+        }
+
+        .section__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .section__hero {
+            padding: 20px;
+        }
+
+        #content-display {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img class="devis" src="/img/devis-grt.png" alt="logo-devis" title="Logo Devis Gratuit">
+        <div class="logo">
+            <img src="/img/logo-valide-23122021.png" alt="logo" title="Logo Services Nuisibles 4D">
+        </div>
+        <div class="btn-burger">
+            <div class="span-burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <nav class="nav-burger sidebar-burger">
+            <!-- Le contenu du menu burger -->
+        </nav>
+        <div class="content-burger">
+            <div class="header-burger"></div>
+        </div>
+        <div id="myNav" class="overlay">
+            <!-- Le contenu de la navigation overlay -->
+        </div>
+    </header>
+    <main>
+        <section class="section__hero">
+            <h2 class="section__title" title="Résultats de Recherche">Résultats de Recherche</h2>
+            <input type="text" id="search-input" placeholder="Rechercher..." title="Barre de recherche">
+            <button id="search-button" title="Bouton de recherche">Rechercher</button>
+            <h1>Résultats de la recherche pour "<span id="search-query"></span>"</h1>
+            <div class="container search-results" id="results-container">
+                <!-- Les résultats de recherche seront insérés ici par JavaScript -->
+            </div>
+            <div id="content-display">
+                <!-- Le contenu de la page sélectionnée sera affiché ici -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <img class="devis-footer" src="/img/devis-gratuit.webp" alt="logo-devis-gratuit" title="Logo Devis Gratuit">
+            <ul>
+                <li><a href="/public/Mentions-légales.html" title="Mentions Légales">Mentions légales</a></li>
+                <li><a href="/public/Politique-de-confidentialité.html" title="Politique de Confidentialité">Politique de confidentialité</a></li>
+                <li><a href="/public/Plan-du-site.html" title="Plan du Site">Plan du site</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./js/result.js"></script>
+    <script src="./js/acceuil.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    }).then(response => response.text()).then(data => {
+        alert(data);
+    }).catch(error => {
+        console.error('Error:', error);
+        alert('Une erreur est survenue lors de l\'envoi du message.');
+    });
+});

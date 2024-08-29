@@ -1,47 +1,57 @@
 <?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
+
+// Import PHPMailer classes into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-require 'contact/PHPMailer/src/Exception.php';
-require 'contact/PHPMailer/src/PHPMailer.php';
-require 'contact/PHPMailer/src/SMTP.php';
+// Inclure les fichiers nécessaires de PHPMailer
+require __DIR__ . '/PHPMailer/src/Exception.php';
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer/src/SMTP.php';
+require __DIR__ . '/../../config.php'; 
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Récupérer et sécuriser les données POST
+    $name = isset($_POST['name']) ? htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8') : '';
+    $email = isset($_POST['email']) ? htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') : '';
+    $subject = isset($_POST['subject']) ? htmlspecialchars($_POST['subject'], ENT_QUOTES, 'UTF-8') : '';
+    $message = isset($_POST['message']) ? htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8') : '';
 
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'imap.ionos.fr';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'info_contact@nuisiblesservices4d.fr';                     //SMTP username
-    $mail->Password   = 'zpsDnnmjA8rV9Bc';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    // Créer une instance de PHPMailer
+    $mail = new PHPMailer(true);
 
-    //Recipients
-    $mail->setFrom('info_contact@nuisiblesservices4d.fr', 'Nuisibles Services 4D');
-    $mail->addAddress('lukas.dias2004@gmail.com', 'Lukas');     //Add a recipient
-    //$mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo('info_contact@nuisiblesservices4d.fr', 'Nuisibles Services 4D');
-    //$mail->addCC('cc@example.com');
-    //$mail->addBCC('bcc@example.com');
+    try {
+        // Définir l'encodage UTF-8
+        $mail->CharSet = 'UTF-8';
 
-    //Attachments
-    //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+        // Paramètres du serveur
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;  // Activer la sortie de débogage détaillée
+        $mail->isSMTP();                        // Utiliser SMTP pour l'envoi
+        $mail->Host       = 'smtp.ionos.fr';    // Définir le serveur SMTP
+        $mail->SMTPAuth   = true;               // Activer l'authentification SMTP
+        $mail->Username   = SMTP_USERNAME;      // Nom d'utilisateur SMTP
+        $mail->Password   = SMTP_PASSWORD;      // Mot de passe SMTP
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // Activer le chiffrement TLS implicite
+        $mail->Port       = 465;                // Port à utiliser pour la connexion SMTP
 
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        // Paramètres de l'email
+        $mail->setFrom('info_contact@nuisiblesservices4d.fr', 'Nuisibles Services 4D');
+        $mail->addAddress('lukas.dias2004@gmail.com');  // Ajouter un destinataire
 
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        // Contenu de l'email
+        $mail->isHTML(true);  // Configurer l'email au format HTML
+        $mail->Subject = $subject;
+        $mail->Body    = "Nom: $name<br>Email: $email<br>Sujet: $subject<br>Message:<br>$message";
+        $mail->AltBody = "Nom: $name\nEmail: $email\nMessage:\nSujet: $subject\n$message";  // Version texte brut
+
+        // Envoyer l'email
+        $mail->send();
+        echo 'Email envoyé avec succès !';
+    } catch (Exception $e) {
+        echo "Échec de l'envoi de l'email : {$mail->ErrorInfo}";
+    }
+} else {
+    echo 'Méthode de requête non supportée.';
 }
+?>

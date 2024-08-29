@@ -1,13 +1,9 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(this);
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    }).then(response => response.text()).then(data => {
-        alert(data);
-    }).catch(error => {
-        console.error('Error:', error);
-        alert('Une erreur est survenue lors de l\'envoi du message.');
-    });
+document.getElementById("contactForm").addEventListener("submit",function(e) {
+    e.preventDefault(),e=new FormData(this),fetch("send_email.php", {
+        method:"POST",body:e
+    })
+    .then(e=>e.text()).then(e=> {
+        document.getElementById("confirmationMessage").style.display="block",document.getElementById("contactForm").reset()
+    })
+    .catch(e=>console.error("Erreur:",e))
 });

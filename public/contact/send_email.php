@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Paramètres de l'email
         $mail->setFrom('info_contact@nuisiblesservices4d.fr', 'Nuisibles Services 4D');
-        $mail->addAddress('lukas.dias2004@gmail.com');  // Ajouter un destinataire
+        $mail->addAddress('nuisibles.services4d@gmail.com');  // Ajouter un destinataire
 
         // Contenu de l'email
         $mail->isHTML(true);  // Configurer l'email au format HTML

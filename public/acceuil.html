@@ -59,13 +59,13 @@
           En savoir plus</a>.
       </p>
       <div class="button-container">
-        <button onclick="managePreferences()" title="Gérer mes préférences">
+        <button role="button" type="button" aria-label="button gérer mes préférences" onclick="managePreferences()" title="Gérer mes préférences">
           Gérer mes préférences
         </button>
-        <button onclick="acceptAllCookies()" title="Tout accepter">
+        <button role="button" type="button" aria-label="button Tout accepter" onclick="acceptAllCookies()" title="Tout accepter">
           Tout accepter
         </button>
-        <button onclick="declineAllCookies()" title="Tout refuser">
+        <button role="button" type="button" aria-label="button Tout refuser" onclick="declineAllCookies()" title="Tout refuser">
           Tout refuser
         </button>
       </div>
@@ -112,12 +112,16 @@
           </p>
         </label>
         <button
+          type="button"
+          role="button"
           onclick="savePreferences()"
           title="Enregistrer"
           aria-label="Enregistrer les préférences">
           Enregistrer
         </button>
         <button
+          type="button"
+          role="button"
           onclick="closePreferences()"
           title="Fermer"
           aria-label="Fermer les préférences">
@@ -693,8 +697,10 @@
         </h3>
         <div class="btn-contact">
           <button
+            type="button"
+            role="button"
             class="btn btn-red"
-            onclick='window.open("./contact/contact.html","noopener,noreferrer")'
+            onclick='window.location.href="./contact/contact.html"'
             title="Contactez-Nous"
             aria-label="Contactez-Nous">
             Contactez-Nous
@@ -960,6 +966,7 @@
               </div>
               <div class="form-group-geo">
                 <button
+                  role="button"
                   type="button"
                   id="btn-geolocation"
                   class="btn-barre-geo btn-red btn-rounded"
@@ -971,7 +978,8 @@
               </div>
               <div class="form-groupe">
                 <button
-                  type="submit"
+                  role="button"
+                  type="button"
                   id="btn-barre"
                   class="btn-barre btn-red btn-rounded"
                   title="Rechercher"
@@ -1065,6 +1073,8 @@
                       votre tranquillité.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="guepes-frelons.html"'
                       title="En savoir plus sur la destruction des nids de guêpes"
                       aria-label="page Guêpes-frelons">
@@ -1103,6 +1113,8 @@
                       de votre propriété.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="deratisation.html"'
                       title="En savoir plus sur la dératisation"
                       aria-label="page dératisation">
@@ -1141,6 +1153,8 @@
                       .
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="depigeonnage.html"'
                       title="En savoir plus sur le dépigeonnage"
                       aria-label="page dépigeonnage">
@@ -1181,6 +1195,8 @@
                       dès maintenant !
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="cave_local.html"'
                       title="En savoir plus sur le nettoyage de caves et locaux"
                       aria-label="page cave & local">
@@ -1219,6 +1235,8 @@
                       sont chers.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="desinfection.html"'
                       title="En savoir plus sur la désinfection"
                       aria-label="page désinfection">
@@ -1258,6 +1276,8 @@
                       tranquillité durable.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="cafard_blatte.html"'
                       title="En savoir plus sur la lutte contre les cafards et blattes"
                       aria-label="page cafard & blatte">
@@ -1298,6 +1318,8 @@
                       efficacement et pour protéger votre espace.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="fouine_martre.html"'
                       title="En savoir plus sur la lutte contre les fouines et martres"
                       aria-label="page fouine & martre">
@@ -1335,6 +1357,8 @@
                       et prévenir leur retour.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="fourmis.html"'
                       title="En savoir plus sur la lutte contre les fourmis"
                       aria-label="page fourmis">
@@ -1373,6 +1397,8 @@
                       .
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="frelon_asiatique.html"'
                       title="En savoir plus sur la lutte contre les frelons"
                       aria-label="page frelon asiatique">
@@ -1412,6 +1438,8 @@
                       sécurisé.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="gale.html"'
                       title="En savoir plus sur la lutte contre la gale"
                       aria-label="page gale">
@@ -1450,6 +1478,8 @@
                       et prévenir leur réapparition.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="puce.html"'
                       title="En savoir plus sur la lutte contre les puces"
                       aria-label="page puce">
@@ -1489,6 +1519,8 @@
                       et la préservation de vos biens.
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="traitement_boiserie.html"'
                       title="En savoir plus sur le traitement du bois"
                       aria-label="page traitement boiserie">
@@ -1528,7 +1560,9 @@
                       <strong class="strong">durable</strong>
                       .
                     </p>
-                    <button
+                    <button 
+                      role="button"
+                      type="button"
                       onclick='window.location.href="punaise_de_lit.html"'
                       title="En savoir plus sur la lutte contre les punaises de lit"
                       aria-label="page punaise de lit">
@@ -1566,7 +1600,9 @@
                       <strong class="strong">efficacité</strong>
                       .
                     </p>
-                    <button
+                    <button 
+                      role="button"
+                      type="button"
                       onclick='window.location.href="syndrome_de_diogene.html"'
                       title="En savoir plus sur la gestion du syndrome de Diogène"
                       aria-label="page syndrome de diogène">
@@ -1604,6 +1640,8 @@
                       .
                     </p>
                     <button
+                      role="button"
+                      type="button"
                       onclick='window.location.href="eco_responsable.html"'
                       title="En savoir plus sur les pratiques éco-responsables"
                       aria-label="page eco-responsable">
@@ -1702,6 +1740,8 @@
       </section>
       <div class="btn-bas-acceuil">
         <button
+          role="button"
+          type="button"
           class="btn btn-red"
           onclick='window.location.href="./contact/contact.html"'
           title="Contactez-Nous"
@@ -1815,6 +1855,8 @@
     </div>
     <div class="btn-bas-acceuil">
       <button
+        role="button"
+        type="button"
         class="btn btn-red"
         onclick='window.location.href="./contact/contact.html"'
         title="Contactez-Nous"

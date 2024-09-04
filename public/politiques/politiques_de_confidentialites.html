@@ -51,6 +51,107 @@
     <title>Nuisibles_Services_4d_Politique-De-Confidentialité</title>
   </head>
   <body>
+    <div id="cookie-banner">
+      <p>
+        Nous utilisons des cookies pour améliorer votre expérience sur notre
+        site. En continuant à naviguer sur ce site, vous acceptez notre
+        utilisation des cookies.
+        <a
+          href="politiques/politiques_de_cookies.html"
+          rel="noopener noreferrer"
+          title="En savoir plus sur notre politique de cookies">
+          En savoir plus</a>.
+      </p>
+      <div class="button-container">
+        <button id="manage-cookies" role="button" type="button" aria-label="button gérer mes préférences" onclick="managePreferences()" title="Gérer mes préférences">
+          Gérer mes préférences
+        </button>
+        <button id="accept-cookies" role="button" type="button" aria-label="button Tout accepter" onclick="acceptAllCookies()" title="Tout accepter">
+          Tout accepter
+        </button>
+        <button id="reject-cookies" role="button" type="button" aria-label="button Tout refuser" onclick="declineAllCookies()" title="Tout refuser">
+          Tout refuser
+        </button>
+      </div>
+    </div>
+    <div id="cookie-preferences-modal">
+      <div class="modal-content">
+        <p>Gérer les préférences des cookies</p>
+        <label>
+          <input
+            type="checkbox"
+            id="preferences-cookies"
+            title="Activer les cookies de préférence"
+            aria-label="Activer les cookies de préférence, Ces cookies permettent de mémoriser vos préférences sur le site, comme votre langue préférée ou la région dans laquelle vous vous trouvez.">
+          Activer les cookies de préférence
+          <p class="cookie-description">
+            Ces cookies permettent de mémoriser vos préférences sur le site,
+            comme votre langue préférée ou la région dans laquelle vous vous
+            trouvez.
+          </p>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            id="analytics-cookies"
+            title="Activer les cookies d'analyse"
+            aria-label="Activer les cookies d'analyse, Ces cookies nous permettent de comprendre comment notre site est utilisé et à améliorer votre expérience de navigation. Les données recueillies sont anonymes.">
+          Activer les cookies d'analyse
+          <p class="cookie-description">
+            Ces cookies nous permettent de comprendre comment notre site est
+            utilisé et à améliorer votre expérience de navigation. Les données
+            recueillies sont anonymes.
+          </p>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            id="marketing-cookies"
+            title="Activer les cookies de marketing"
+            aria-label="Activer les cookies de marketing, Ces cookies sont utilisés pour vous présenter des publicités pertinentes pour vous et vos centres d'intérêt.">
+          Activer les cookies de marketing
+          <p class="cookie-description">
+            Ces cookies sont utilisés pour vous présenter des publicités
+            pertinentes pour vous et vos centres d'intérêt.
+          </p>
+        </label>
+        <button
+          type="button"
+          role="button"
+          onclick="savePreferences()"
+          title="Enregistrer"
+          aria-label="Enregistrer les préférences">
+          Enregistrer
+        </button>
+        <button
+          type="button"
+          role="button"
+          onclick="closePreferences()"
+          title="Fermer"
+          aria-label="Fermer les préférences">
+          Fermer
+        </button>
+        <p class="p-preference">
+          Pour plus d'informations, consultez notre
+          <a
+            class="a-preference"
+            href="politiques/politiques_de_confidentialites.html"
+            rel="noopener noreferrer"
+            title="Politique de confidentialité"
+            aria-label="Consulter la politique de confidentialité">
+            Politique de confidentialité
+          </a>et notre
+          <a
+            class="a-preference"
+            href="politiques/politiques_de_cookies.html"
+            rel="noopener noreferrer"
+            title="Politique de cookies"
+            aria-label="Consulter la politique de cookies">
+            Politique de cookies
+          </a>.
+        </p>
+      </div>
+    </div>
     <header id="header-politique">
       <div class="logo">
         <img
@@ -760,6 +861,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/acceuil.js"></script>
+    <script src="../js/cookies.js" defer></script>
     <script
       src="https://static.elfsight.com/platform/platform.js"
       data-use-service-core

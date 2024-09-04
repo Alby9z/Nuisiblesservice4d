@@ -1828,4 +1828,7 @@ footer .copyright {
 .title-card {
     font-weight:700
 }
-.logo-facebook {}
+#ancre {
+    color: #fff;
+    font-weight: 500;
+}

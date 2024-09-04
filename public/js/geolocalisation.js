@@ -1,1 +1,50 @@
-document.addEventListener("DOMContentLoaded",function(){let e=document.getElementById("btn-geolocation"),o=document.getElementById("cp"),t=document.querySelector(".google-map");function s(e){let s=e.coords.latitude,a=e.coords.longitude;console.log(`Latitude : ${s}, Longitude : ${a}`),fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${s}&lon=${a}`).then(e=>e.json()).then(e=>{if(console.log(e),e.address&&e.address.postcode){let n=e.address.postcode;o.value=n,console.log(`Code postal : ${n}`)}else alert("Impossible d'obtenir le code postal \xe0 à partir de la position.");t.src=`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d43114.71689098716!2d${a}!3d${s}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1711764725539!5m2!1sfr!2sfr`}).catch(e=>console.error("Erreur:",e))}function a(e){switch(e.code){case e.PERMISSION_DENIED:alert("L'utilisateur a refuser\xe9 la demande de g\xe9olocalisation.");break;case e.POSITION_UNAVAILABLE:alert("Les informations de localisation sont indisponibles.");break;case e.TIMEOUT:alert("La demande de g\xe9olocalisation a expir\xe9.");break;case e.UNKNOWN_ERROR:alert("Une erreur inconnue s'est produite.")}}e.addEventListener("click ",function(){navigator.geolocation?navigator.geolocation.getCurrentPosition(s,a):alert("La g\xe9olocalisation n'est pas support\xe9e par ce navigateur.")})});
+document.addEventListener("DOMContentLoaded", function() {
+    let e = document.getElementById("btn-geolocation");
+    let o = document.getElementById("cp");
+    let t = document.querySelector(".google-map");
+    function s(position) {
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+
+        console.log(`Latitude : ${latitude}, Longitude : ${longitude}`);
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                if (data.address && data.address.postcode) {
+                    let postcode = data.address.postcode;
+                    o.value = postcode;
+                    console.log(`Code postal : ${postcode}`);
+                } else {
+                    alert("Impossible d'obtenir le code postal à partir de la position.");
+                }
+
+                t.src = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d43114.71689098716!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1711764725539!5m2!1sfr!2sfr`;
+            })
+            .catch(error => console.error("Erreur :", error));
+    }
+    function a(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("L'utilisateur a refusé la demande de géolocalisation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("Les informations de localisation sont indisponibles.");
+                break;
+            case error.TIMEOUT:
+                alert("La demande de géolocalisation a expiré.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("Une erreur inconnue s'est produite.");
+                break;
+        }
+    }
+    e.addEventListener("click", function() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(s, a);
+        } else {
+            alert("La géolocalisation n'est pas supportée par ce navigateur.");
+        }
+    });
+});

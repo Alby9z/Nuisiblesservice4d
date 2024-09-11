@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const banner = document.getElementById('cookie-banner');
     const modal = document.getElementById('cookie-preferences-modal');
 
-    // Vérifie si le consentement a déjà été donné
     const userConsent = getCookie('user_consent');
 
     if (!userConsent) {
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelector('#cookie-preferences-modal button[onclick="savePreferences()"]').addEventListener('click', function() {
         modal.style.display = 'none';
-        // Sauvegarder les préférences ici
+        
     });
 
     document.querySelector('#cookie-preferences-modal button[onclick="closePreferences()"]').addEventListener('click', function() {

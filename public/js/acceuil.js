@@ -5,14 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
         l = document.querySelector(".serv-btn"),
         i = document.querySelector(".feat-show"),
         s = document.querySelector(".serv-show");
-
     if (e && t) {
         e.addEventListener("click", function() {
             e.classList.toggle("click");
             t.classList.toggle("show");
         });
     }
-
     if (n && i) {
         n.addEventListener("click", function() {
             i.classList.toggle("show");
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (icon) icon.classList.toggle("rotate");
         });
     }
-
     if (l && s) {
         l.addEventListener("click", function() {
             s.classList.toggle("show1");
@@ -28,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (icon) icon.classList.toggle("rotate");
         });
     }
-
     let o = document.querySelectorAll(".li-sous-menu a");
     o.forEach(n => {
         n.addEventListener("click", function() {
@@ -37,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
 document.addEventListener("DOMContentLoaded", function() {
     let e = document.querySelector(".selected-option"),
         t = document.querySelector(".options-list"),
@@ -46,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
         i = document.getElementById("search-form");
 
     if (t) t.style.display = "none";
-
     if (e) {
         e.addEventListener("click", function() {
             if (t) {
@@ -60,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
     document.querySelectorAll(".options-list li").forEach(function(e) {
         e.addEventListener("click", function() {
             let i = e.textContent.trim(),
@@ -74,14 +67,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-
     document.addEventListener("click", function(n) {
         if (e && !e.contains(n.target) && t && !t.contains(n.target)) {
             t.style.display = "none";
             t.classList.remove("open");
         }
     });
-
     if (i) {
         i.addEventListener("submit", function(e) {
             e.preventDefault();
@@ -98,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("Veuillez entrer votre code postal.");
                 return;
             }
-
             let o = {
                 1: "deratisation.html",
                 2: "guepes-frelons.html",
@@ -116,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 14: "desinfection.html",
                 15: "eco-responsable.html"
             }[t];
-
             if (o) {
                 let r = `?type=${n}&cp=${i}&urgent=${s}`;
                 console.log(`Redirection vers : ${o} ${r}`);
@@ -127,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
 document.addEventListener("DOMContentLoaded", function() {
     let e = document.querySelector("#prev"),
         t = document.querySelector("#next"),
@@ -135,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function() {
         l = document.querySelector("#cCarousel-inner");
 
     if (!e || !t || !n || !l) return;
-
     let i = l.getBoundingClientRect().width,
         s = 0,
         o = parseFloat(document.querySelector(".cCarousel-item").getBoundingClientRect().width, 10) +
@@ -147,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function() {
             l.style.left = s + "px";
         }
     });
-
     t.addEventListener("click", () => {
         let e = n.getBoundingClientRect().width;
         if (i - Math.abs(s) > e) {
@@ -155,14 +141,11 @@ document.addEventListener("DOMContentLoaded", function() {
             l.style.left = s + "px";
         }
     });
-
     let r = window.matchMedia("(max-width: 510px)"),
         a = window.matchMedia("(max-width: 770px)");
-
     r.addEventListener("change", u);
     a.addEventListener("change", u);
     let c = window.innerWidth;
-
     function u() {
         let e = window.innerWidth;
         if (s <= -o && c < e) {
@@ -176,11 +159,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
-
 document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
     let formData = new FormData(this);
-
     fetch("send_email.php", {
         method: "POST",
         body: formData
@@ -189,3 +170,4 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         document.getElementById("contactForm").reset();
     }).catch(error => console.error("Erreur:", error));
 });
+

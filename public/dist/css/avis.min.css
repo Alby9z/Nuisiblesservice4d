@@ -1201,8 +1201,9 @@ footer {
     padding:0
 }
 .col ul li {
+    font-size: 12px;
     list-style:none;
-    margin-bottom:12px
+    margin-bottom:10px
 }
 .col ul li a {
     text-decoration:none;
@@ -1302,6 +1303,7 @@ footer .copyright {
     }
 }
 .p-footer {
+    font-size: 13px;
     margin:0
 }
 .avis-commentaire {
@@ -1420,4 +1422,16 @@ footer .copyright {
     #cookie-preferences-modal {
         width:95%
     }
+}
+p {
+    font-size: 12px;
+}
+.a {
+    font-size: 12px;
+    text-decoration:none;
+    color:#ffffff
+}
+.a:hover {
+    border-bottom: solid 1px #fff;
+    display: inline;
 }

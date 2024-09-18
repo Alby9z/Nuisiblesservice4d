@@ -115,3 +115,6 @@ Options -Indexes
 <Files "robots.txt">
     Require all granted
 </Files>
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>

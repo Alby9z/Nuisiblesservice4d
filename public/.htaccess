@@ -116,31 +116,6 @@ Options -Indexes
 <Files "robots.txt">
     Require all granted
 </Files>
-
 <FilesMatch "^\.ht">
     Require all denied
 </FilesMatch>
-
-# Empêche le hotlinking des images
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^https:(www\.)?nuisiblesservices4d.fr [NC]
-RewriteRule \.(jpg|jpeg|png|gif|bmp)$ - [F,NC,L]
-
-# Protection des cookies (Security, SameSite et HttpOnly)
-<IfModule mod_headers.c>
-    Header always edit Set-Cookie ^(.*)$ "$1;HttpOnly;Secure;SameSite=Strict"
-</IfModule>
-
-# Forcer HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Politique de sécurité du contenu (CSP)
-<IfModule mod_headers.c>
-    Header set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'https://nuisiblesservices4d.fr'; style-src 'self' 'https://nuisiblesservices4d.fr'; font-src 'self';"
-</IfModule>
-
-# Activer HSTS pour forcer HTTPS
-<IfModule mod_headers.c>
-    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-</IfModule>

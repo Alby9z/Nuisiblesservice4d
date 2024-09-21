@@ -41,7 +41,8 @@ body {
     -webkit-transition: -webkit-transform 0.4s ease;
     -moz-transition: -moz-transform 0.4s ease;
     -o-transition: -o-transform 0.4s ease;
-    transition:transform 0.4s ease
+    transition:transform 0.4s ease;
+    z-index: 9999;
 }
 .btn-burger .bar {
     display:block;
@@ -920,7 +921,6 @@ input:checked+.slider:before {
     background-color:#252525;
     text-align:center;
     padding:2em 0;
-    margin-bottom:80px
 }
 .agreement-content {
     color:#fff;
@@ -1009,9 +1009,6 @@ iframe {
     }
     .paragraph {
         margin-top:0
-    }
-    .google-map {
-        height:400px
     }
     .paragraph {
         font-size:12px
@@ -1367,7 +1364,9 @@ footer .copyright {
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgb(255 0 0 / 41%);
     max-width: 1200px;
-    margin: 50px 0px 70px 70px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .containere {
     display: -webkit-box; 
@@ -1391,7 +1390,6 @@ footer .copyright {
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     flex: 1; 
-    min-width: 300px;
 }
 .sub-title {
     font-size: 25px;
@@ -1404,6 +1402,8 @@ footer .copyright {
 .locations-list {
     list-style-type: none;
     margin-bottom: 20px;
+    text-align: center;
+    padding: 0;
 }
 .hours-list li,
 .locations-list li {
@@ -1434,6 +1434,12 @@ footer .copyright {
     .locations-list li {
         font-size: 13px;
     }
+    .intervention-section {
+        flex-direction: column;
+    }
+    .google-map {
+        height: 370px;
+    }
 }
 p {
     font-size: 12px;
@@ -1453,4 +1459,69 @@ p {
 .a:hover {
     border-bottom: solid 1px #fff;
     display: inline;
+}
+@media (max-width: 1099px) {
+    .text-block {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+    }
+    .text-block {
+        padding: 0;
+    }
+}
+@media (max-width: 500px) {
+    .containere {
+        margin: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .containere {
+        padding: 35px 30px 0px 30px;
+    }
+    .intervention-section {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+@media (max-width: 400px) {
+    .hours-list li, .locations-list li {
+        font-size: x-small;
+    }
+    .sub-title {
+        font-size: small;
+    }
+}
+@media (max-width: 399px) {
+    .text-block {
+        padding: 0 20px 30px 20px;
+    }
+}
+.btn-red {
+    background-color: red;
+    height: 30px;
+    width: 56%;
+    max-width: 280px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    min-width: 170px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 15px;
 }

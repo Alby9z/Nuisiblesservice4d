@@ -44,7 +44,8 @@ body {
     -webkit-transition: -webkit-transform 0.4s ease; 
     -moz-transition: -moz-transform 0.4s ease;      
     -o-transition: -o-transform 0.4s ease;
-    transition:transform 0.4s ease
+    transition:transform 0.4s ease;
+    z-index: 9999;
 }
 .btn-burger .bar {
     display:block;
@@ -209,7 +210,7 @@ header {
     background-position:center
 }
 .devis {
-    width: 10%;
+    width: 130px;
     position:absolute;
     height:130px;
     display: -webkit-box; 
@@ -273,7 +274,6 @@ header {
     border-radius:15px
 }
 .btn-bas-acceuil {
-    padding:0 650px 0 0;
     display: -webkit-box; 
     display: -moz-box; 
     display: -ms-flexbox;
@@ -1329,13 +1329,13 @@ section {
 .paragraph {
     line-height: 20px;
     font-size:12px;
-    padding: 0 50px 30px 20px;
+    padding: 0 20px 30px 20px;
     margin-top: 30px;
     color:#fff
 }
 .text-block {
     flex:1;
-    padding: 0px 0px 20px 70px;
+    padding: 0px 50px 20px 70px;
 }
 .map {
     flex:1;
@@ -1405,9 +1405,6 @@ iframe {
     .paragraph {
         margin-top:0
     }
-    .google-map {
-        height:400px
-    }
     .paragraph {
         font-size:12px
     }
@@ -1472,7 +1469,7 @@ footer {
         margin:4px 0 50px 0
     }
 }
-@media (max-width:425px) {
+@media (max-width:768px) {
     .header__content {
         margin-top:370px
     }
@@ -1868,7 +1865,9 @@ footer .copyright {
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgb(255 0 0 / 41%);
     max-width: 1200px;
-    margin: 50px 0px 70px 70px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .containere {
     display: -webkit-box; 
@@ -1892,7 +1891,6 @@ footer .copyright {
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     flex: 1; 
-    min-width: 300px;
 }
 .sub-title {
     font-size: 25px;
@@ -1935,6 +1933,12 @@ footer .copyright {
     .locations-list li {
         font-size: 16px;
     }
+    .intervention-section {
+        flex-direction: column;
+    }
+    .google-map {
+        height: 370px;
+    }
 }
 p {
     font-size: 12px;
@@ -1954,4 +1958,47 @@ p {
 .a:hover {
     border-bottom: solid 1px #fff;
     display: inline;
+}
+@media (max-width: 1099px) {
+    .text-block {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+    }
+    .text-block {
+        padding: 0;
+    }
+}
+@media (max-width: 500px) {
+    .containere {
+        margin: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .containere {
+        padding: 35px 30px 0px 30px;
+    }
+    .intervention-section {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+@media (max-width: 400px) {
+    .hours-list li, .locations-list li {
+        font-size: x-small;
+    }
+    .sub-title {
+        font-size: small;
+    }
 }

@@ -87,9 +87,6 @@ body {
     line-height:60px;
     border-top:1px solid rgb(255 255 255 / .1)
 }
-.nav-burger ul li:last-child {
-    border-bottom:1px solid rgb(255 255 255 / .05)
-}
 .nav-burger ul li a {
     position:relative;
     color:#fff;
@@ -120,7 +117,7 @@ body {
 }
 .nav-burger ul ul li {
     text-align:left;
-    margin:0 20px 0 9px;
+    margin:0 20px 15px 9px;
     line-height:20px
 }
 .nav-burger ul ul li a {

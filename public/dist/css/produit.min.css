@@ -129,9 +129,6 @@ strong {
     line-height:60px;
     border-top:1px solid rgb(255 255 255 / .1)
 }
-.nav-burger ul li:last-child {
-    border-bottom:1px solid rgb(255 255 255 / .05)
-}
 .nav-burger ul li a {
     position:relative;
     color:#fff;
@@ -162,7 +159,7 @@ strong {
 }
 .nav-burger ul ul li {
     text-align:left;
-    margin:0 20px 0 9px;
+    margin:0 20px 15px 9px;
     line-height:20px
 }
 .nav-burger ul ul li a {
@@ -1608,7 +1605,7 @@ footer .copyright {
     gap: 30px;
     flex-wrap: wrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 35px 50px 0px 50px;
+    padding: 35px 50px 35px 50px;
     border-radius: 20px;
     margin: 50px;
 }
@@ -1705,7 +1702,7 @@ p {
 }
 @media (max-width: 500px) {
     .containere {
-        padding: 35px 30px 0px 30px;
+        padding: 35px 30px 35px 30px;
     }
     .intervention-section {
         margin-right: 15px;

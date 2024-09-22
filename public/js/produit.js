@@ -1,2 +1,1 @@
-document.addEventListener("DOMContentLoaded", function() {let summaries = document.querySelectorAll("summary");summaries.forEach((summary) => {let details = summary.parentElement;details.removeAttribute("open");summary.addEventListener("click", function(e) {e.preventDefault(); if (!details.hasAttribute("open")) {details.setAttribute("open", "true");} else {details.removeAttribute("open");}});});});
-
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll("summary");e.forEach(e=>{let t=e.parentElement;t.removeAttribute("open"),e.addEventListener("click",function(e){e.preventDefault(),t.hasAttribute("open")?t.removeAttribute("open"):t.setAttribute("open","true")})})});

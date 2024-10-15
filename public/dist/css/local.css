@@ -5,6 +5,9 @@ body {
     display: flex;
     justify-content: center;
 }
+.strong {
+  color: #000;
+}
 .hero-section {
     position: relative;
     width: 60%;
@@ -862,5 +865,337 @@ em{
   margin-top: -25px;
   z-index: 1;
   }
-  
+}
+/* diogene */
+.header-diogene {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.h3-diogene {
+  margin-top: -15px;
+}
+
+.services-diogene .services-info-diogene {
+  height: 320px;
+	margin: 0 10px 30px;
+	padding: 10px;
+	border: 1px solid #9b9357;
+	border-radius: 3px;
+}
+
+.services-diogene a {
+	color: black;
+	padding: 3px;
+	border-bottom: 1px dashed #222;
+}
+
+.art {
+	border-top: 1px solid #c4be95;
+	border-bottom: 2px solid #222;
+}
+
+.art .row-diogene { 
+	margin: 0;
+}
+
+.art .container-fluid, 
+.art .no-padding {
+	padding: 0;
+}
+
+.art h3 {
+  display: flex;
+  justify-content: center;
+	margin-bottom: 20px;
+}
+.services-diogene {
+  width: 20%;
+  display: contents;
+}
+.row-diogene {
+  width: 95%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+.row-diogene2 {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+.container-diogene {
+  background-color: #121127;
+  display: flex;
+  justify-content: center;
+}
+/* carousel */
+#cCarousel {
+  position:relative;
+  max-width:900px;
+  margin:auto
+}
+#cCarousel .arrow {
+  position:absolute;
+  top:45%;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  width:45px;
+  height:45px;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  z-index:1;
+  font-size:26px;
+  color:#fff;
+  background:#00000072;
+  cursor:pointer
+}
+.container-carousel,.section {
+  display:flex
+}
+#cCarousel #prev {
+  left:-130px
+}
+#cCarousel #next {
+  right:-122px
+}
+#carousel-vp {
+  width:1030px;
+  height:400px;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  margin:0 0 0 -70px
+}
+@media (max-width:1159px) {
+  #cCarousel {
+      position:relative;
+      max-width:900px;
+      margin:auto;
+      display:-webkit-box;
+      display:-moz-box;
+      display:-ms-flexbox;
+      display:-webkit-flex;
+      display:flex;
+      justify-content:center
   }
+  #carousel-vp {
+      width:calc(3 * 250px + 2 * 10px);
+      margin:0
+  }
+  #cCarousel #prev {
+      left:10px
+  }
+  #cCarousel #next {
+      right:10px
+  }
+}
+@media (max-width:1029px) {
+  #carousel-vp {
+      width:calc(2 * (250px + 10px))
+  }
+  #cCarousel #prev {
+      left:35px
+  }
+  #cCarousel #next {
+      right:40px
+  }
+}
+@media (max-width:774px) {
+  #carousel-vp {
+      width:calc(1 * (250px + 10px))
+  }
+}
+@media (max-width:530px) {
+  #carousel-vp {
+      width:calc(1 * (240px + 10px))
+  }
+  #cCarousel #prev {
+      left:10px
+  }
+  #cCarousel #next {
+      right:15px
+  }
+}
+@media (max-width:499px) {
+  #cCarousel .arrow {
+      background:none
+  }
+  #cCarousel #prev {
+      left:0
+  }
+  #cCarousel #next {
+      right:5px
+  }
+}
+#cCarousel #cCarousel-inner {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  position:absolute;
+  -webkit-transition:0.3s ease-in-out;
+  -moz-transition:0.3s ease-in-out;
+  -o-transition:0.3s ease-in-out;
+  transition:0.3s ease-in-out;
+  gap:10px;
+  left:0
+}
+.cCarousel-item {
+  perspective:1000px;
+  width:250px;
+  height:286px;
+  border:2px solid #fff;
+  border-radius:15px;
+  overflow:hidden;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  flex-direction:column
+}
+.cCarousel-item img {
+  width:100%;
+  object-fit:cover;
+  min-height:246px;
+  color:#fff
+}
+.cCarousel-item .infos {
+  height:100%;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  background:#fff;
+  color:#000
+}
+.cCarousel-item .infos button {
+  background:#cbcbcb;
+  padding:6px 25px;
+  border-radius:25px;
+  color:#000;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer
+}
+.card {
+  width:100%;
+  height:100%;
+  position:relative;
+  transform-style:preserve-3d;
+  -webkit-transition:-webkit-transform 0.6s;
+  -moz-transition:-moz-transform 0.6s;
+  -o-transition:-o-transform 0.6s;
+  transition:transform 0.6s
+}
+.card-front,.card-back {
+  position:absolute;
+  width:100%;
+  backface-visibility:hidden
+}
+.card-front {
+  z-index:2;
+  transform:rotateY(0deg)
+}
+.card-back {
+  transform:rotateY(180deg);
+  background-color:#fff;
+  padding:20px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  text-align:center
+}
+.cCarousel-item:hover .card {
+  transform:rotateY(180deg)
+}
+.card-back .infos {
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100%
+}
+.product-desc__text {
+  font-size:13px;
+  height:205px
+}
+#img-fouine {
+  height:0
+}
+.card-back button {
+  padding:10px 20px;
+  background-color:red;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  -webkit-transition:background-color 0.3s;
+  -moz-transition:background-color 0.3s;
+  -o-transition:background-color 0.3s;
+  transition:background-color 0.3s
+}
+.card-back button:hover {
+  background-color:red
+}
+#image-certif-punaise {
+  height:104px;
+  margin-top:-10px
+}
+.logo-carousel-section {
+  width:100%;
+  overflow:hidden;
+  padding:20px 0;
+  box-shadow:1px 2px 8px rgb(0 0 0 / .5);
+  background-color:#252525
+}
+.logo-carousel {
+  display:flex;
+  justify-content:space-between;
+  animation:scroll 20s linear infinite;
+  width:calc(150px * 12 + 20px * 12)
+}
+.logo-img {
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:0 20px;
+  background-color:#f4f4f4
+}
+@keyframes scroll {
+  0% {
+      transform:translateX(0)
+  }
+  100% {
+      transform:translateX(-50%)
+  }
+}

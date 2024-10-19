@@ -732,15 +732,13 @@ body {
 }
 .bgpic1 {
   background-position: center;
-  width: 1200px;
-  height: 150px;
-	background-image: url("/public/img/rats/rat3.webp");
+  width: 800px;
+  height: 200px;
 }
 .bgpic2 {
   background-position: center;
-  width: 1200px;
-  height: 150px;
-	background-image: url("/public/img/tof-section/cycle-rat.webp");
+  width: 800px;
+  height: 200px;
 }
 /* desinfection */
 

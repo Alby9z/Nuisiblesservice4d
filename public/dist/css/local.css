@@ -641,7 +641,7 @@ body {
   margin-bottom: 90px;
 }
 
-.about .information {
+.about .information2 {
   width: 30%;
   float: left;
   margin-left: 3.33333%
@@ -663,7 +663,6 @@ body {
 
 
 .about .information img {
-  display: block;
   width: 360px;
   height: 195px;
   border-radius: 5px;
@@ -1206,4 +1205,27 @@ em{
 .title-card {
   font-size: 16px;
   margin-top: 5px;
+}
+
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 160px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+@media (max-width: 1460px) {
+    .container {
+      flex-direction: column;
+      gap: 80px;
+    }
+    .about .information img {
+      width: 100%;
+    }
 }

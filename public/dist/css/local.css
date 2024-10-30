@@ -40,7 +40,7 @@ body {
   width: 50%;
   height: 2px;
   background-color: red;
-  margin: 0px 0px 25px 205px;
+  margin-left: 25%;
 }
   .overlay {
     z-index: 10;

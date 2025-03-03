@@ -1,1 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () { let e = document.getElementById("btn-geolocation"), o = document.getElementById("cp"), t = document.querySelector(".google-map"); function s(position) { let latitude = position.coords.latitude, longitude = position.coords.longitude; console.log(`Latitude : ${latitude}, Longitude : ${longitude}`); fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`).then(response => response.json()).then(data => { console.log(data); if (data.address && data.address.postcode) { let postcode = data.address.postcode; o.value = postcode; console.log(`Code postal : ${postcode}`) } else { alert("Impossible d'obtenir le code postal à partir de la position.") } t.src = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d43114.71689098716!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1711764725539!5m2!1sfr!2sfr` }).catch(error => console.error("Erreur :", error)) } function a(error) { switch (error.code) { case error.PERMISSION_DENIED: alert("L'utilisateur a refusé la demande de géolocalisation."); break; case error.POSITION_UNAVAILABLE: alert("Les informations de localisation sont indisponibles."); break; case error.TIMEOUT: alert("La demande de géolocalisation a expiré."); break; case error.UNKNOWN_ERROR: alert("Une erreur inconnue s'est produite."); break } } e.addEventListener("click", function () { navigator.geolocation ? navigator.geolocation.getCurrentPosition(s, a) : alert("La géolocalisation n'est pas supportée par ce navigateur.") }) });
+// Déclaration des secteurs et villes associées
+const secteurs = {
+    "boiserie": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "cafard": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "cave": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "depigeonnage": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "deratisation": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "desinfection": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "diogene": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "eco": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "fouine": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "fourmis": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "frelon": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "gale": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "guepes": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "puce": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+    "punaise": ["Territoire de Belfort", "Plateaux de Besançon", "Région Dijonnaise", "Héricourt et ses Alentours", "Pays de Montbeliard", "Mulhouse", "Région Strasbourgeoise", "Vesoul et ses Environs"],
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    const categoryItems = document.querySelectorAll(".options-list li");
+    const villeSelect = document.getElementById("villes");
+
+    categoryItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const selectedCategory = item.getAttribute("title").toLowerCase().trim();
+
+            villeSelect.innerHTML = '<option value="">Sélectionnez une ville</option>';
+
+            if (secteurs[selectedCategory]) {
+                secteurs[selectedCategory].forEach(ville => {
+                    const option = document.createElement("option");
+                    option.value = ville;
+                    option.textContent = ville.charAt(0).toUpperCase() + ville.slice(1);
+                    villeSelect.appendChild(option);
+                });
+            }
+        });
+    });
+});
+

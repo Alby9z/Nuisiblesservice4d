@@ -634,7 +634,7 @@
                       <li
                         data-value="1"
                         data-icon="./img/icon/rat.webp"
-                        title="Rats ou Souris">
+                        title="deratisation">
                         <img
                           loading="lazy"
                           src="./img/icon/rat.webp"
@@ -647,7 +647,7 @@
                       <li
                         data-value="2"
                         data-icon="./img/icon/guêpe.webp"
-                        title="Guêpes et Frelons">
+                        title="guepes">
                         <img
                           loading="lazy"
                           src="./img/icon/guêpe.webp"
@@ -660,7 +660,7 @@
                       <li
                         data-value="3"
                         data-icon="./img/icon/frelon.webp"
-                        title="Frelons Asiatiques">
+                        title="frelon">
                         <img
                           loading="lazy"
                           src="./img/icon/frelon.webp"
@@ -673,7 +673,7 @@
                       <li
                         data-value="4"
                         data-icon="./img/icon/flea.webp"
-                        title="Punaises de Lit">
+                        title="punaise">
                         <img
                           loading="lazy"
                           src="./img/icon/flea.webp"
@@ -686,7 +686,7 @@
                       <li
                         data-value="5"
                         data-icon="./img/icon/puce.webp"
-                        title="Puces">
+                        title="puce">
                         <img
                           loading="lazy"
                           src="./img/icon/puce.webp"
@@ -712,7 +712,7 @@
                       <li
                         data-value="7"
                         data-icon="./img/icon/fouine.webp"
-                        title="Fouines et Martres">
+                        title="fouine">
                         <img
                           loading="lazy"
                           src="./img/icon/fouine.webp"
@@ -725,7 +725,7 @@
                       <li
                         data-value="8"
                         data-icon="./img/icon/cafard.webp"
-                        title="Cafards et Blattes">
+                        title="cafard">
                         <img
                           loading="lazy"
                           src="./img/icon/cafard.webp"
@@ -764,7 +764,7 @@
                       <li
                         data-value="11"
                         data-icon="./img/icon/diogene.webp"
-                        title="Syndrome de Diogène">
+                        title="diogene">
                         <img
                           loading="lazy"
                           src="./img/icon/diogene.webp"
@@ -777,7 +777,7 @@
                       <li
                         data-value="12"
                         data-icon="./img/icon/poubelle.webp"
-                        title="Cave et Local">
+                        title="cave">
                         <img
                           loading="lazy"
                           src="./img/icon/poubelle.webp"
@@ -790,7 +790,7 @@
                       <li
                         data-value="13"
                         data-icon="./img/icon/bois.webp"
-                        title="Traitement de la Boiserie">
+                        title="boiserie">
                         <img
                           loading="lazy"
                           src="./img/icon/bois.webp"
@@ -816,7 +816,7 @@
                       <li
                         data-value="15"
                         data-icon="./img/icon/eco.webp"
-                        title="Traitements Éco">
+                        title="eco">
                         <img
                           loading="lazy"
                           src="./img/icon/eco.webp"
@@ -846,14 +846,10 @@
                 </select>
               </div>
               <div class="correction">
-                <label for="cp">Code postal :</label>
-                <input
-                  id="cp"
-                  class="br-rechch select-type2"
-                  type="text"
-                  name="cp"
-                  placeholder="Code postal"
-                  title="Code postal">
+                <label for="villes">Secteur :</label>
+                <select id="villes" class="br-rechch select-type2" title="Choisissez la ville">
+                  <option value="">Sélectionnez une ville</option>
+                </select>
               </div>
               <div class="form-group switch-group">
                 <label class="label" for="urgent-switch">Urgent</label>
@@ -864,17 +860,6 @@
                     title="Intervention urgente">
                   <span class="slider round"></span>
                 </label>
-              </div>
-              <div class="form-group-geo">
-                <button
-                  type="button"
-                  id="btn-geolocation"
-                  class="btn-barre-geo btn-red btn-rounded"
-                  title="Utiliser ma position"
-                  aria-label="Géolocalisation">
-                  <ion-icon name="locate-outline" class="icon-geo"></ion-icon>
-                  <p class="géo">Utiliser ma position</p>
-                </button>
               </div>
               <div class="form-groupe">
                 <button
@@ -1889,6 +1874,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/acceuil.js"></script>
     <script src="./js/geolocalisation.js"></script>
+    <script src="./js/result.js"></script>
     <script
       src="https://static.elfsight.com/platform/platform.js"
       data-use-service-core

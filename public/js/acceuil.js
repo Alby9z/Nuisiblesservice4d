@@ -1,2 +1,124 @@
-document.addEventListener("DOMContentLoaded", function () { let e = document.querySelector(".btn-burger"), t = document.querySelector(".sidebar-burger"), n = document.querySelector(".feat-btn"), l = document.querySelector(".serv-btn"), i = document.querySelector(".feat-show"), s = document.querySelector(".serv-show"); if (e && t) { e.addEventListener("click", function () { e.classList.toggle("click"); t.classList.toggle("show") }) } if (n && i) { n.addEventListener("click", function () { i.classList.toggle("show"); let icon = n.querySelector("ion-icon"); if (icon) icon.classList.toggle("rotate") }) } if (l && s) { l.addEventListener("click", function () { s.classList.toggle("show1"); let icon = l.querySelector("ion-icon"); if (icon) icon.classList.toggle("rotate") }) } let o = document.querySelectorAll(".li-sous-menu a"); o.forEach(n => { n.addEventListener("click", function () { t.classList.remove("show"); e.classList.remove("click") }) }) }); document.addEventListener("DOMContentLoaded", function () { let e = document.querySelector(".selected-option"), t = document.querySelector(".options-list"), n = document.querySelector(".selected-option .selected-content"), l = document.querySelector('input[name="Nuisibles"]'), i = document.getElementById("search-form"); if (t) t.style.display = "none"; if (e) { e.addEventListener("click", function () { if (t) { if (t.style.display === "none" || t.style.display === "") { t.style.display = "block"; t.classList.add("open") } else { t.style.display = "none"; t.classList.remove("open") } } }) } document.querySelectorAll(".options-list li").forEach(function (e) { e.addEventListener("click", function () { let i = e.textContent.trim(), s = e.getAttribute("data-icon"), o = e.getAttribute("data-value"); if (n && l) { n.innerHTML = `<img class="selected-icon" src="${s}" alt="${i}"> ${i}`; l.value = o; t.style.display = "none"; t.classList.remove("open") } }) }); document.addEventListener("click", function (n) { if (e && !e.contains(n.target) && t && !t.contains(n.target)) { t.style.display = "none"; t.classList.remove("open") } }); if (i) { i.addEventListener("submit", function (e) { e.preventDefault(); let t = l ? l.value : null, n = document.getElementById("type-select").value, i = document.getElementById("cp").value, s = document.getElementById("urgent-switch").checked ? "oui" : "non"; if (!n) { alert("Veuillez sélectionner votre type (particulier ou entreprise)."); return } if (!i) { alert("Veuillez entrer votre code postal."); return } let o = { 1: "deratisation.html", 2: "guepes-frelons.html", 3: "frelon_asiatique.html", 4: "punaise_de_lit.html", 5: "puce.html", 6: "depigeonnage.html", 7: "fouine_martre.html", 8: "cafard_blatte.html", 9: "fourmis.html", 10: "gale.html", 11: "syndrome_de_diogene.html", 12: "cave-local.html", 13: "traitement_boiserie.html", 14: "desinfection.html", 15: "eco-responsable.html" }[t]; if (o) { let r = `?type=${n}&cp=${i}&urgent=${s}`; console.log(`Redirection vers : ${o} ${r}`); window.location.href = `${o}${r}` } else { alert("Veuillez sélectionner une catégorie de nuisible.") } }) } }); document.addEventListener("DOMContentLoaded", function () { let e = document.querySelector("#prev"), t = document.querySelector("#next"), n = document.querySelector("#carousel-vp"), l = document.querySelector("#cCarousel-inner"); if (!e || !t || !n || !l) return; let i = l.getBoundingClientRect().width, s = 0, o = parseFloat(document.querySelector(".cCarousel-item").getBoundingClientRect().width, 10) + parseFloat(window.getComputedStyle(l).getPropertyValue("gap"), 10); e.addEventListener("click", () => { if (s !== 0) { s += o; l.style.left = s + "px" } }); t.addEventListener("click", () => { let e = n.getBoundingClientRect().width; if (i - Math.abs(s) > e) { s -= o; l.style.left = s + "px" } }); let r = window.matchMedia("(max-width: 510px)"), a = window.matchMedia("(max-width: 770px)"); r.addEventListener("change", u); a.addEventListener("change", u); let c = window.innerWidth; function u() { let e = window.innerWidth; if (s <= -o && c < e) { s += o; l.style.left = s + "px"; c = e } else if (s <= -o && c > e) { s -= o; l.style.left = s + "px"; c = e } } }); document.getElementById("contactForm").addEventListener("submit", function (e) { e.preventDefault(); let formData = new FormData(this); fetch("send_email.php", { method: "POST", body: formData }).then(response => response.text()).then(responseText => { document.getElementById("confirmationMessage").style.display = "block"; document.getElementById("contactForm").reset() }).catch(error => console.error("Erreur:", error)) });
+document.addEventListener("DOMContentLoaded", function () {
+    // Gestion du menu burger
+    let burgerBtn = document.querySelector(".btn-burger"),
+        sidebar = document.querySelector(".sidebar-burger"),
+        featBtn = document.querySelector(".feat-btn"),
+        servBtn = document.querySelector(".serv-btn"),
+        featShow = document.querySelector(".feat-show"),
+        servShow = document.querySelector(".serv-show");
 
+    if (burgerBtn && sidebar) {
+        burgerBtn.addEventListener("click", function () {
+            burgerBtn.classList.toggle("click");
+            sidebar.classList.toggle("show");
+        });
+    }
+
+    if (featBtn && featShow) {
+        featBtn.addEventListener("click", function () {
+            featShow.classList.toggle("show");
+            let icon = featBtn.querySelector("ion-icon");
+            if (icon) icon.classList.toggle("rotate");
+        });
+    }
+
+    if (servBtn && servShow) {
+        servBtn.addEventListener("click", function () {
+            servShow.classList.toggle("show1");
+            let icon = servBtn.querySelector("ion-icon");
+            if (icon) icon.classList.toggle("rotate");
+        });
+    }
+
+    let submenuLinks = document.querySelectorAll(".li-sous-menu a");
+    submenuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            sidebar.classList.remove("show");
+            burgerBtn.classList.remove("click");
+        });
+    });
+});
+
+// Sélectionner une option dans la liste déroulante
+document.addEventListener("DOMContentLoaded", function () {
+    let selectedOption = document.querySelector(".selected-option"),
+        optionsList = document.querySelector(".options-list"),
+        selectedContent = document.querySelector(".selected-option .selected-content"),
+        nuisibleInput = document.querySelector('input[name="Nuisibles"]');
+
+    if (optionsList) optionsList.style.display = "none";
+
+    if (selectedOption) {
+        selectedOption.addEventListener("click", function () {
+            if (optionsList) {
+                optionsList.style.display = (optionsList.style.display === "none" || optionsList.style.display === "") ? "block" : "none";
+                optionsList.classList.toggle("open");
+            }
+        });
+    }
+
+    document.querySelectorAll(".options-list li").forEach(function (option) {
+        option.addEventListener("click", function () {
+            let text = option.textContent.trim(),
+                iconSrc = option.getAttribute("data-icon"),
+                value = option.getAttribute("data-value");
+
+            if (selectedContent && nuisibleInput) {
+                selectedContent.innerHTML = `<img class="selected-icon" src="${iconSrc}" alt="${text}"> ${text}`;
+                nuisibleInput.value = value;
+                optionsList.style.display = "none";
+                optionsList.classList.remove("open");
+            }
+        });
+    });
+
+    // Fermer la liste déroulante si on clique ailleurs
+    document.addEventListener("click", function (event) {
+        if (selectedOption && !selectedOption.contains(event.target) && optionsList && !optionsList.contains(event.target)) {
+            optionsList.style.display = "none";
+            optionsList.classList.remove("open");
+        }
+    });
+});
+
+// Carousel : gestion de la navigation
+document.addEventListener("DOMContentLoaded", function () {
+    let prevBtn = document.querySelector("#prev"),
+        nextBtn = document.querySelector("#next"),
+        carouselViewport = document.querySelector("#carousel-vp"),
+        carouselInner = document.querySelector("#cCarousel-inner");
+
+    if (!prevBtn || !nextBtn || !carouselViewport || !carouselInner) return;
+
+    let viewportWidth = carouselInner.getBoundingClientRect().width,
+        currentPosition = 0,
+        itemWidth = parseFloat(document.querySelector(".cCarousel-item").getBoundingClientRect().width, 10) + parseFloat(window.getComputedStyle(carouselInner).getPropertyValue("gap"), 10);
+
+    prevBtn.addEventListener("click", () => {
+        if (currentPosition !== 0) {
+            currentPosition += itemWidth;
+            carouselInner.style.left = currentPosition + "px";
+        }
+    });
+
+    nextBtn.addEventListener("click", () => {
+        if (viewportWidth - Math.abs(currentPosition) > carouselViewport.getBoundingClientRect().width) {
+            currentPosition -= itemWidth;
+            carouselInner.style.left = currentPosition + "px";
+        }
+    });
+
+    let mediaQuerySmall = window.matchMedia("(max-width: 510px)"),
+        mediaQueryMedium = window.matchMedia("(max-width: 770px)");
+
+    function handleResize() {
+        let width = window.innerWidth;
+        if (currentPosition <= -itemWidth && width !== window.innerWidth) {
+            currentPosition = width < window.innerWidth ? currentPosition + itemWidth : currentPosition - itemWidth;
+            carouselInner.style.left = currentPosition + "px";
+        }
+    }
+
+    mediaQuerySmall.addEventListener("change", handleResize);
+    mediaQueryMedium.addEventListener("change", handleResize);
+});

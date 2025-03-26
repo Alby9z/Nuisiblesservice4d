@@ -510,7 +510,6 @@ body {
 .about h1 {
   display: flex;
   justify-content: center;
-  margin-top: -90px;
   font-size: 30px;
   text-transform: uppercase;
   margin-bottom: 90px;
@@ -637,6 +636,7 @@ em{
   }
   
   .section1 .title_header{
+  text-align: center;
   width:45%;
   margin:5vh 4vw;
   text-transform:uppercase;
@@ -709,6 +709,7 @@ em{
   align-items: center;
 }
 .h3-diogene {
+  text-align: center;
   margin-top: -15px;
 }
 

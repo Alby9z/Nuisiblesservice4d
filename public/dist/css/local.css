@@ -298,6 +298,15 @@ body {
 #services-items {
   width: 65%;
 }
+#services-items2 {
+  width: 65%;
+}
+#services-items3 {
+  width: 65%;
+}
+#services-items4 {
+  width: 65%;
+}
 .services-item {
   border-radius: 20px;
   display: flex;
@@ -1197,10 +1206,16 @@ em{
     margin-bottom: 20px;
 }
 #services-items {
-  height: 850px;
+  height: auto;
 }
-#services-items {
-  height: 730px;
+#services-items2 {
+  height: auto;
+}
+#services-items3 {
+  height: auto;
+}
+#services-items4 {
+  height: auto;
 }
 .service-section {
   flex-direction: column;
@@ -1251,11 +1266,6 @@ em{
     height: 85px;
     width: 95%;
  }
-}
-@media (max-width: 566px) {
-  #services-items {
-    height: 850px;
-  }
 }
 @media screen and (max-width: 565px) {
   .img-cafard {
@@ -1308,11 +1318,6 @@ em{
   }
   #cCarousel #next {
       right:5px
-  }
-}
-@media (max-width: 496px) {
-  #services-items {
-    height: 900px;
   }
 }
 @media (max-width: 480px) {
@@ -1371,9 +1376,6 @@ em{
   .about .information h2 {
     font-size: 20px;
   }
-  #services-items {
-    height: 995px;
-  }
 }
 @media (max-width: 425px) {
   .info-card h2 {
@@ -1381,11 +1383,6 @@ em{
   }
   .services-item h2 {
     font-size: 23px;
-  }
-}
-@media (max-width: 408px) {
-  #services-items {
-    height: 1040px;
   }
 }
 @media screen and (max-width: 390px) {

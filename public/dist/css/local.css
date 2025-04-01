@@ -696,6 +696,8 @@ em{
   padding:10px;
   padding-left:30px;
   font-weight:300;
+  z-index: 11;
+  position: relative;
   }
   
   .section1 table td p{
